@@ -1,0 +1,136 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &7092432242074448966
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7092432242074448965}
+  - component: {fileID: 7092432242074448968}
+  - component: {fileID: 7092432242074448975}
+  - component: {fileID: 7092432242074448969}
+  - component: {fileID: 7092432242074448970}
+  - component: {fileID: 7092432242074448971}
+  - component: {fileID: 7092432242074448964}
+  m_Layer: 0
+  m_Name: AuthenticationManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7092432242074448965
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7092432242074448966}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &7092432242074448968
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7092432242074448966}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 51ab1e4b7adb38d48bb9f3728c551bc6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playfabRegistrationFields:
+    fullnameField: {fileID: 0}
+    emailAddressField: {fileID: 0}
+    passwordField: {fileID: 0}
+    passwordAgainField: {fileID: 0}
+    errorMessage: {fileID: 0}
+    registerAccountButton: {fileID: 0}
+    backButton: {fileID: 0}
+  playfabLoginFields:
+    emailAddressField: {fileID: 0}
+    passwordField: {fileID: 0}
+    errorMessage: {fileID: 0}
+    loginButton: {fileID: 0}
+    registerPanelButton: {fileID: 0}
+  loginPanel: {fileID: 0}
+  playfabRegisterPanel: {fileID: 0}
+--- !u!114 &7092432242074448975
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7092432242074448966}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe1eae0de738bb94a80619e75a8a28c2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  emailAddressField: {fileID: 0}
+  recoveryPanelButton: {fileID: 0}
+  resetButton: {fileID: 0}
+  backButton: {fileID: 0}
+  recoveryPanel: {fileID: 0}
+  loginPanel: {fileID: 0}
+--- !u!114 &7092432242074448969
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7092432242074448966}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e05fb16a3027e0f4c86c2616dc1e5328, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  guestLoginButton: {fileID: 0}
+--- !u!114 &7092432242074448970
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7092432242074448966}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0de2e69a95b301e4d8541afb5c4ae0f4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  googleLoginButton: {fileID: 0}
+--- !u!114 &7092432242074448971
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7092432242074448966}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9ab2f783b27891c4f8f07ad5b7ffd325, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  facebookLoginButton: {fileID: 0}
+--- !u!114 &7092432242074448964
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7092432242074448966}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 70161804e8e1c1e408ebf399918a8658, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1045 &1
+EditorBuildSettings:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Scenes:
+  - enabled: 1
+    path: Assets/BlockTilesCrypto/Scenes/Loading.unity
+    guid: ca18d8847d8c261419d1dd295b979a31
+  - enabled: 1
+    path: Assets/BlockTilesCrypto/Scenes/AuthenticationScene.unity
+    guid: 9fc0d4010bbf28b4594072e72b8655ab
+  - enabled: 1
+    path: Assets/BlockTilesCrypto/Scenes/MainMenuScene.unity
+    guid: 70d398d8334cece43b541e9c65022db2
+  - enabled: 1
+    path: Assets/BlockTilesCrypto/Scenes/GameScene.unity
+    guid: 83a81443daf70e3458000be3faf54e39
+  m_configObjects: {}

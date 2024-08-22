@@ -1,0 +1,369 @@
+# Strip out calls to Log class
+-assumenosideeffects class android.util.Log {
+    public static int v(...);
+    public static int i(...);
+    public static int d(...);
+    public static int w(...);
+    public static int e(...);
+}
+
+# Keep all Unity classes
+-keep class com.unity3d.** { *; }
+
+# Keep all classes in your main package
+-keep class com.GameSocStudios.BlockTilesCrypto.** { *; }
+
+-keep class com.google.ads.mediation.inmobi.** { *; }
+-keep class com.inmobi.mediation.** { *; }
+
+# Keep PlayFab classes
+-keep class com.playfab.** { *; }
+-dontwarn com.playfab.**
+
+# Keep Newtonsoft JSON classes (often used with PlayFab)
+-keep class com.fasterxml.jackson.** { *; }
+-dontwarn com.fasterxml.jackson.**
+
+# Keep Unity classes and methods
+-keep class com.unity3d.player.** { *; }
+-dontwarn com.unity3d.player.**
+
+# Keep your own classes
+-keep class PlayFabPersonal.Managers.** { *; }
+-dontwarn PlayFabPersonal.Managers.**
+
+
+
+# Keep native methods
+-keepclasseswithmembernames class * {
+    native <methods>;
+}
+
+# Keep Serializable classes
+-keepclassmembers class * implements java.io.Serializable {
+    static final long serialVersionUID;
+    private static final java.io.ObjectStreamField[] serialPersistentFields;
+    private void writeObject(java.io.ObjectOutputStream);
+    private void readObject(java.io.ObjectInputStream);
+    java.lang.Object writeReplace();
+    java.lang.Object readResolve();
+}
+
+
+# Keep Firebase classes
+-keep class com.google.firebase.** { *; }
+-dontwarn com.google.firebase.**
+
+# Keep Google Play Services classes
+-keep class com.google.android.gms.** { *; }
+-dontwarn com.google.android.gms.**
+
+# Keep Retrofit classes
+-keep class retrofit2.** { *; }
+-dontwarn retrofit2.**
+-keepattributes Signature
+-keepattributes *Annotation*
+
+# Keep OkHttp classes
+-keep class okhttp3.** { *; }
+-dontwarn okhttp3.**
+
+# Keep Gson classes
+-keep class com.google.gson.** { *; }
+-dontwarn com.google.gson.**
+
+# Keep Facebook SDK classes
+-keep class com.facebook.** { *; }
+-dontwarn com.facebook.**
+
+# Keep Play Services Ads classes
+-keep class com.google.android.gms.ads.** { *; }
+
+# Keep InMobi SDK classes
+-keep class com.inmobi.** { *; }
+-dontwarn com.inmobi.**
+
+# Keep InMobi mediation adapter classes
+-keep class com.google.ads.mediation.inmobi.** { *; }
+-dontwarn com.google.ads.mediation.inmobi.**
+
+# Keep classes for InMobi consent
+-keep class com.inmobi.consent.** { *; }
+-dontwarn com.inmobi.consent.**
+
+
+# Keep User Messaging Platform classes
+-keep class com.google.android.ump.** { *; }
+-dontwarn com.google.android.ump.**
+
+# Keep Google Play Games Plugin classes
+-keep class com.google.games.** { *; }
+-dontwarn com.google.games.**
+
+# Additional rules to prevent stripping
+-keep class com.google.android.gms.** { *; }
+-keep class com.google.ads.** { *; }
+-keep class com.unity3d.player.** { *; }
+
+# Keep classes and interfaces used by the Play Services
+-keep class com.google.android.gms.common.api.GoogleApiClient { *; }
+-keep interface com.google.android.gms.common.api.Api { *; }
+-keep class com.google.android.gms.common.api.Api { *; }
+
+# Keep Unity Ads classes
+-keep class com.unity3d.ads.** { *; }
+-dontwarn com.unity3d.ads.**
+
+# Keep annotations for the ads SDK
+-keepattributes *Annotation*
+-keep class * implements java.io.Serializable { *; }
+
+# Keep Google Mobile Ads mediation classes
+-keep class com.google.ads.mediation.** { *; }
+-dontwarn com.google.ads.mediation.**
+
+# Keep Unity IAP classes
+-keep class com.unity.purchasing.** { *; }
+-dontwarn com.unity.purchasing.**
+
+# Keep FlatBuffers classes (if you use FlatBuffers for data serialization)
+-keep class com.google.flatbuffers.** { *; }
+-dontwarn com.google.flatbuffers.**
+
+# AndroidX libraries
+-keep class androidx.** { *; }
+-dontwarn androidx.**
+
+# Facebook libraries
+-keep class com.facebook.android.** { *; }
+-dontwarn com.facebook.android.**
+
+# Google Play libraries
+-keep class com.google.android.play.** { *; }
+-dontwarn com.google.android.play.**
+
+# Anti-Cheat Toolkit (ACTk) ProGuard Rules
+-keep class com.codestage.** { *; }
+-dontwarn com.codestage.**
+
+# Limit optimization passes for faster builds
+-optimizationpasses 3
+
+# Optionally enable specific optimizations
+-optimizations !code/simplification/arithmetic
+
+-keep class net.codestage.actk.androidnative.ACTkAndroidRoutines { *; }
+-keep class net.codestage.actk.androidnative.CodeHashGenerator {public void GetCodeHash(...);}
+-keep class net.codestage.actk.androidnative.CodeHashCallback { *; }
+
+# Play Core Proguard Rules: Play In-app Update
+
+-keep class com.google.android.play.core.appupdate.AppUpdateInfo {
+    public java.lang.String packageName();
+    public int availableVersionCode();
+    public int updateAvailability();
+    public int installStatus();
+    public boolean isUpdateTypeAllowed(com.google.android.play.core.appupdate.AppUpdateOptions);
+    public boolean isUpdateTypeAllowed(int);
+    public int updatePriority();
+    public long bytesDownloaded();
+    public long totalBytesToDownload();
+    public java.lang.Integer clientVersionStalenessDays();
+}
+
+-keep class com.google.android.play.core.appupdate.AppUpdateManager {
+    public abstract void registerListener(com.google.android.play.core.install.InstallStateUpdatedListener);
+    public abstract void unregisterListener(com.google.android.play.core.install.InstallStateUpdatedListener);
+
+    public abstract com.google.android.gms.tasks.Task completeUpdate();
+    public abstract com.google.android.gms.tasks.Task getAppUpdateInfo();
+    public com.google.android.gms.tasks.Task startUpdateFlow(com.google.android.play.core.appupdate.AppUpdateInfo, android.app.Activity, com.google.android.play.core.appupdate.AppUpdateOptions);
+    public boolean startUpdateFlowForResult(com.google.android.play.core.appupdate.AppUpdateInfo, int, android.app.Activity, int);
+    public boolean startUpdateFlowForResult(com.google.android.play.core.appupdate.AppUpdateInfo, int, com.google.android.play.core.common.IntentSenderForResultStarter, int);
+    public boolean startUpdateFlowForResult(com.google.android.play.core.appupdate.AppUpdateInfo, android.app.Activity, com.google.android.play.core.appupdate.AppUpdateOptions, int);
+    public boolean startUpdateFlowForResult(com.google.android.play.core.appupdate.AppUpdateInfo, com.google.android.play.core.common.IntentSenderForResultStarter, com.google.android.play.core.appupdate.AppUpdateOptions, int);
+}
+
+-keep class com.google.android.play.core.appupdate.AppUpdateManagerFactory {
+    <init>();
+
+    public static com.google.android.play.core.appupdate.AppUpdateManager create(android.content.Context);
+}
+
+-keep class com.google.android.play.core.appupdate.AppUpdateOptions {
+    public abstract boolean allowAssetPackDeletion();
+    public abstract int appUpdateType();
+    public static com.google.android.play.core.appupdate.AppUpdateOptions$Builder newBuilder(int);
+    public static com.google.android.play.core.appupdate.AppUpdateOptions defaultOptions(int);
+}
+
+-keep class com.google.android.play.core.appupdate.AppUpdateOptions$Builder {
+    public abstract com.google.android.play.core.appupdate.AppUpdateOptions$Builder setAllowAssetPackDeletion(boolean);
+    public abstract com.google.android.play.core.appupdate.AppUpdateOptions$Builder setAppUpdateType(int);
+    public abstract com.google.android.play.core.appupdate.AppUpdateOptions build();
+}
+
+-keep class com.google.android.play.core.appupdate.testing.FakeAppUpdateManager {
+    public <init>(android.content.Context);
+
+    public void registerListener(com.google.android.play.core.install.InstallStateUpdatedListener);
+    public void unregisterListener(com.google.android.play.core.install.InstallStateUpdatedListener);
+
+    public com.google.android.gms.tasks.Task completeUpdate();
+    public com.google.android.gms.tasks.Task getAppUpdateInfo();
+    public boolean startUpdateFlowForResult(com.google.android.play.core.appupdate.AppUpdateInfo, int, android.app.Activity, int);
+    public boolean startUpdateFlowForResult(com.google.android.play.core.appupdate.AppUpdateInfo, int, com.google.android.play.core.common.IntentSenderForResultStarter, int);
+
+    public void setUpdateAvailable(int);
+    public void setUpdateAvailable(int, int);
+    public void setUpdateNotAvailable();
+    public void setInstallErrorCode(int);
+
+    public void userAcceptsUpdate();
+    public void userRejectsUpdate();
+
+    public void downloadStarts();
+    public void downloadCompletes();
+    public void userCancelsDownload();
+    public void downloadFails();
+
+    public void installCompletes();
+    public void installFails();
+
+    public boolean isConfirmationDialogVisible();
+    public boolean isImmediateFlowVisible();
+    public boolean isInstallSplashScreenVisible();
+    public java.lang.Integer getTypeForUpdateInProgress();
+
+    public void setClientVersionStalenessDays(java.lang.Integer);
+    public void setTotalBytesToDownload(long);
+    public void setBytesDownloaded(long);
+    public void setUpdatePriority(int);
+}
+
+-keep class com.google.android.play.core.install.InstallException {
+    public int getErrorCode();
+}
+
+-keep class com.google.android.play.core.install.InstallState {
+    public int installErrorCode();
+    public int installStatus();
+    public java.lang.String packageName();
+    public long bytesDownloaded();
+    public long totalBytesToDownload();
+}
+
+-keep class com.google.android.play.core.install.InstallStateUpdatedListener {
+   <init>();
+
+   public void onStateUpdate(com.google.android.play.core.install.InstallState);
+}
+
+-keep class com.google.android.play.core.install.NativeInstallStateUpdateListener {
+    <init>();
+
+    public void onStateUpdate(com.google.android.play.core.install.InstallState);
+}
+
+-keep class com.google.android.play.core.install.model.ActivityResult {
+    public static int RESULT_IN_APP_UPDATE_FAILED;
+}
+
+-keep class com.google.android.play.core.install.model.AppUpdateType {
+    public static int FLEXIBLE;
+    public static int IMMEDIATE;
+}
+
+-keep class com.google.android.play.core.install.model.InstallErrorCode {
+    public static int NO_ERROR;
+    public static int NO_ERROR_PARTIALLY_ALLOWED;
+    public static int ERROR_API_NOT_AVAILABLE;
+    public static int ERROR_APP_NOT_OWNED;
+    public static int ERROR_DOWNLOAD_NOT_PRESENT;
+    public static int ERROR_INSTALL_NOT_ALLOWED;
+    public static int ERROR_INSTALL_UNAVAILABLE;
+    public static int ERROR_INTERNAL_ERROR;
+    public static int ERROR_INVALID_REQUEST;
+    public static int ERROR_PLAY_STORE_NOT_FOUND;
+    public static int ERROR_UNKNOWN;
+}
+
+-keep class com.google.android.play.core.install.model.InstallStatus {
+    public static int CANCELED;
+    public static int DOWNLOADED;
+    public static int DOWNLOADING;
+    public static int FAILED;
+    public static int INSTALLED;
+    public static int INSTALLING;
+    public static int PENDING;
+    public static int REQUIRES_UI_INTENT;
+    public static int UNKNOWN;
+}
+
+-keep class com.google.android.play.core.install.model.UpdateAvailability {
+    public static int UNKNOWN;
+    public static int UPDATE_AVAILABLE;
+    public static int UPDATE_NOT_AVAILABLE;
+    public static int DEVELOPER_TRIGGERED_UPDATE_IN_PROGRESS;
+}
+
+# Play Core Proguard Rules: Play Core Common (always include this config)
+
+-keep class com.google.android.play.core.common.IntentSenderForResultStarter {
+    public void startIntentSenderForResult(android.content.IntentSender, int, android.content.Intent, int, int, int, android.os.Bundle);
+}
+
+-keep class com.google.android.play.core.common.LocalTestingException {
+}
+
+-keep class com.google.android.play.core.listener.StateUpdatedListener {
+    public abstract void onStateUpdate(java.lang.Object);
+}
+
+-keep @interface android.support.annotation.NonNull
+-keep @interface android.support.annotation.Nullable
+
+-keep class com.google.android.gms.tasks.OnCompleteListener {
+    public abstract void onComplete(com.google.android.gms.tasks.Task);
+}
+
+-keep class com.google.android.gms.tasks.OnFailureListener {
+    public abstract void onFailure(java.lang.Exception);
+}
+
+-keep class com.google.android.gms.tasks.OnSuccessListener {
+    public abstract void onSuccess(java.lang.Object);
+}
+
+-keep class com.google.android.gms.tasks.RuntimeExecutionException {
+}
+
+-keep class com.google.android.gms.tasks.Task {
+    <init>();
+
+    public com.google.android.gms.tasks.Task addOnCompleteListener(com.google.android.gms.tasks.OnCompleteListener);
+    public com.google.android.gms.tasks.Task addOnCompleteListener(java.util.concurrent.Executor, com.google.android.gms.tasks.OnCompleteListener);
+    public abstract com.google.android.gms.tasks.Task addOnFailureListener(com.google.android.gms.tasks.OnFailureListener);
+    public abstract com.google.android.gms.tasks.Task addOnFailureListener(java.util.concurrent.Executor, com.google.android.gms.tasks.OnFailureListener);
+    public abstract com.google.android.gms.tasks.Task addOnSuccessListener(com.google.android.gms.tasks.OnSuccessListener);
+    public abstract com.google.android.gms.tasks.Task addOnSuccessListener(java.util.concurrent.Executor, com.google.android.gms.tasks.OnSuccessListener);
+    public abstract java.lang.Exception getException();
+    public abstract java.lang.Object getResult();
+    public abstract java.lang.Object getResult(java.lang.Class);
+    public abstract boolean isComplete();
+    public abstract boolean isSuccessful();
+}
+
+-keep class com.google.android.gms.tasks.TaskExecutors {
+    public static java.util.concurrent.Executor MAIN_THREAD;
+}
+
+-keep class com.google.android.gms.tasks.Tasks {
+    public static java.lang.Object await(com.google.android.gms.tasks.Task);
+    public static java.lang.Object await(com.google.android.gms.tasks.Task, long, java.util.concurrent.TimeUnit);
+    public static com.google.android.gms.tasks.Task whenAll(java.util.Collection);
+}
+
+-keep class com.google.android.gms.common.api.ApiException {
+    public int getStatusCode();
+}

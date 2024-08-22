@@ -1,0 +1,1012 @@
+fileFormatVersion: 2
+guid: e2fa3c91a73f4cf08c72983366cfbf60
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 21300000
+    second: PuzzleWood_Homescene2_0000_score
+  - first:
+      213: 21300002
+    second: PuzzleWood_Homescene2_0003_box1-copy
+  - first:
+      213: 21300004
+    second: PuzzleWood_Homescene_0005_Rectangle-2-copy-4
+  - first:
+      213: 21300006
+    second: perfect
+  - first:
+      213: 21300008
+    second: PuzzleWood_Homescene2_0001_BG
+  - first:
+      213: 21300010
+    second: cool
+  - first:
+      213: 21300012
+    second: WhiteBackGround
+  - first:
+      213: 21300014
+    second: PuzzleWood_GameOver2_0001_music-on
+  - first:
+      213: 21300016
+    second: PuzzleWood_Pause2_0000_replay
+  - first:
+      213: 21300018
+    second: redblock
+  - first:
+      213: 21300020
+    second: PuzzleWood_Homescene2_0004_Vector-Smart-Object-copy-3
+  - first:
+      213: 21300022
+    second: excellent
+  - first:
+      213: 21300024
+    second: index-finger-cursor
+  - first:
+      213: 21300026
+    second: PuzzleWood_Homescene_0000_Vector-Smart-Object
+  - first:
+      213: 21300028
+    second: PuzzleWood_Homescene2_0000_pause
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 0
+    wrapV: 0
+    wrapW: 0
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 72.76596
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 0
+  spriteTessellationDetail: 0
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 1
+  swizzle: 50462976
+  cookieLightType: 1
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 1
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: 47
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 1
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 1
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 1
+  - serializedVersion: 3
+    buildTarget: iPhone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: 4
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 1
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 1
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 1
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 1
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: redblock
+      rect:
+        serializedVersion: 2
+        x: 255
+        y: 793
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -29, y: 11}
+        - {x: -11, y: -29}
+        - {x: -31, y: -37}
+      - - {x: 35, y: -37}
+        - {x: -31, y: -37}
+        - {x: -11, y: -29}
+      - - {x: 29, y: -11}
+        - {x: 35, y: -37}
+        - {x: -11, y: -29}
+      - - {x: 34, y: 37}
+        - {x: 35, y: -37}
+        - {x: 29, y: -11}
+      - - {x: 37, y: 26}
+        - {x: 35, y: -37}
+        - {x: 34, y: 37}
+      - - {x: 37, y: -35}
+        - {x: 35, y: -37}
+        - {x: 37, y: 26}
+      - - {x: -37, y: -27}
+        - {x: -37, y: 20}
+        - {x: -31, y: -37}
+      - - {x: -36, y: 28}
+        - {x: -31, y: -37}
+        - {x: -37, y: 20}
+      - - {x: -29, y: 11}
+        - {x: -31, y: -37}
+        - {x: -36, y: 28}
+      - - {x: -26, y: 37}
+        - {x: -29, y: 11}
+        - {x: -36, y: 28}
+      - - {x: 11, y: 29}
+        - {x: -29, y: 11}
+        - {x: -26, y: 37}
+      - - {x: 34, y: 37}
+        - {x: 11, y: 29}
+        - {x: -26, y: 37}
+      - - {x: 29, y: -11}
+        - {x: 11, y: 29}
+        - {x: 34, y: 37}
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: daf2f801172ce431bb55f588f896bdc7
+      internalID: 21300018
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: excellent
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 804
+        width: 255.883
+        height: 67
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -128, y: -33.5}
+        - {x: -128, y: 27.5}
+        - {x: 128, y: -33.5}
+      - - {x: -111, y: 33.5}
+        - {x: 128, y: -33.5}
+        - {x: -128, y: 27.5}
+      - - {x: 128, y: 33.5}
+        - {x: 128, y: -33.5}
+        - {x: -111, y: 33.5}
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7457faad9e9604d1d85af8f9b5a14fad
+      internalID: 21300022
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WhiteBackGround
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 937
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -32, y: -32}
+        - {x: -32, y: 32}
+        - {x: 32, y: -32}
+      - - {x: 32, y: 32}
+        - {x: 32, y: -32}
+        - {x: -32, y: 32}
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4dea3361c57ff4afcac012eb791ebd69
+      internalID: 21300012
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PuzzleWood_Homescene_0000_Vector-Smart-Object
+      rect:
+        serializedVersion: 2
+        x: 634
+        y: 588
+        width: 85
+        height: 97
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -42.5, y: -18.5}
+        - {x: -42.5, y: 38.5}
+        - {x: -7.5, y: -48.5}
+      - - {x: -26.5, y: 48.5}
+        - {x: -7.5, y: -48.5}
+        - {x: -42.5, y: 38.5}
+      - - {x: 35.5, y: 48.5}
+        - {x: -7.5, y: -48.5}
+        - {x: -26.5, y: 48.5}
+      - - {x: 33.5, y: -48.5}
+        - {x: -7.5, y: -48.5}
+        - {x: 35.5, y: 48.5}
+      - - {x: 42.5, y: -39.5}
+        - {x: 33.5, y: -48.5}
+        - {x: 35.5, y: 48.5}
+      - - {x: 42.5, y: 43.5}
+        - {x: 42.5, y: -39.5}
+        - {x: 35.5, y: 48.5}
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 37fc6ef10f12447aaa7e8a3a5c9d7d8a
+      internalID: 21300026
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cool
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 699
+        width: 256
+        height: 102.7261
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -128, y: -40.5}
+        - {x: -128, y: 31.5}
+        - {x: -119, y: -51.5}
+      - - {x: -127, y: 36.5}
+        - {x: -119, y: -51.5}
+        - {x: -128, y: 31.5}
+      - - {x: -103, y: 51.5}
+        - {x: -119, y: -51.5}
+        - {x: -127, y: 36.5}
+      - - {x: 126, y: -51.5}
+        - {x: -119, y: -51.5}
+        - {x: -103, y: 51.5}
+      - - {x: 128, y: 51.5}
+        - {x: 126, y: -51.5}
+        - {x: -103, y: 51.5}
+      - - {x: 128, y: -44.50001}
+        - {x: 126, y: -51.5}
+        - {x: 128, y: 51.5}
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2e6b51a8b4738499cbe8e20dedb9e089
+      internalID: 21300010
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PuzzleWood_Homescene_0005_Rectangle-2-copy-4
+      rect:
+        serializedVersion: 2
+        x: 516
+        y: 588
+        width: 116
+        height: 116
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -58, y: -58}
+        - {x: -58, y: 58}
+        - {x: 58, y: -58}
+      - - {x: 57, y: 58}
+        - {x: 58, y: -58}
+        - {x: -58, y: 58}
+      - - {x: 58, y: 57}
+        - {x: 58, y: -58}
+        - {x: 57, y: 58}
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d560743a7cb324d12993af9ff56ec8a3
+      internalID: 21300004
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PuzzleWood_Homescene2_0003_box1-copy
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 1024
+        height: 347.7736
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -497.9998, y: -152}
+        - {x: -497.9998, y: -151}
+        - {x: -489.9999, y: -159.9999}
+      - - {x: -511.9999, y: -123.9999}
+        - {x: -511.9999, y: 123}
+        - {x: -510.9999, y: -125}
+      - - {x: -510.9999, y: 123.9999}
+        - {x: -510.9999, y: -125}
+        - {x: -511.9999, y: 123}
+      - - {x: 510.9999, y: -123}
+        - {x: 510.9999, y: 123}
+        - {x: 511.9999, y: -122}
+      - - {x: 511.9999, y: 122}
+        - {x: 511.9999, y: -122}
+        - {x: 510.9999, y: 123}
+      - - {x: -510.9999, y: -128}
+        - {x: -510.9999, y: -125}
+        - {x: -509.9999, y: -129}
+      - - {x: -510.9999, y: 123.9999}
+        - {x: -509.9999, y: -129}
+        - {x: -510.9999, y: -125}
+      - - {x: -510.9999, y: 126.9999}
+        - {x: -509.9999, y: -129}
+        - {x: -510.9999, y: 123.9999}
+      - - {x: -508.9999, y: 131}
+        - {x: -509.9999, y: -129}
+        - {x: -510.9999, y: 126.9999}
+      - - {x: -508.9999, y: -133.9999}
+        - {x: -509.9999, y: -129}
+        - {x: -508.9999, y: 131}
+      - - {x: -506.9998, y: -136.9999}
+        - {x: -508.9999, y: -133.9999}
+        - {x: -508.9999, y: 131}
+      - - {x: -508.9999, y: 133}
+        - {x: -506.9998, y: -136.9999}
+        - {x: -508.9999, y: 131}
+      - - {x: -504.9999, y: 142}
+        - {x: -506.9998, y: -136.9999}
+        - {x: -508.9999, y: 133}
+      - - {x: -500.9998, y: -149}
+        - {x: -506.9998, y: -136.9999}
+        - {x: -504.9999, y: 142}
+      - - {x: -500.9998, y: 146}
+        - {x: -500.9998, y: -149}
+        - {x: -504.9999, y: 142}
+      - - {x: -497.9998, y: -151}
+        - {x: -500.9998, y: -149}
+        - {x: -500.9998, y: 146}
+      - - {x: -499.9999, y: 149.9999}
+        - {x: -497.9998, y: -151}
+        - {x: -500.9998, y: 146}
+      - - {x: -488.9999, y: 161}
+        - {x: -497.9998, y: -151}
+        - {x: -499.9999, y: 149.9999}
+      - - {x: -489.9999, y: -159.9999}
+        - {x: -497.9998, y: -151}
+        - {x: -488.9999, y: 161}
+      - - {x: -488.9999, y: -159.9999}
+        - {x: -489.9999, y: -159.9999}
+        - {x: -488.9999, y: 161}
+      - - {x: -482.9999, y: -165}
+        - {x: -488.9999, y: -159.9999}
+        - {x: -488.9999, y: 161}
+      - - {x: -484.9998, y: 162.9999}
+        - {x: -482.9999, y: -165}
+        - {x: -488.9999, y: 161}
+      - - {x: -482.9999, y: 165}
+        - {x: -482.9999, y: -165}
+        - {x: -484.9998, y: 162.9999}
+      - - {x: -480.9998, y: -165.9999}
+        - {x: -482.9999, y: -165}
+        - {x: -482.9999, y: 165}
+      - - {x: -477.9999, y: 166.9999}
+        - {x: -480.9998, y: -165.9999}
+        - {x: -482.9999, y: 165}
+      - - {x: -478.9999, y: -168}
+        - {x: -480.9998, y: -165.9999}
+        - {x: -477.9999, y: 166.9999}
+      - - {x: -471.9999, y: -171}
+        - {x: -478.9999, y: -168}
+        - {x: -477.9999, y: 166.9999}
+      - - {x: -474.9999, y: 169}
+        - {x: -471.9999, y: -171}
+        - {x: -477.9999, y: 166.9999}
+      - - {x: -470.9998, y: 169.9999}
+        - {x: -471.9999, y: -171}
+        - {x: -474.9999, y: 169}
+      - - {x: -469.9999, y: -171}
+        - {x: -471.9999, y: -171}
+        - {x: -470.9998, y: 169.9999}
+      - - {x: -469.9999, y: 171}
+        - {x: -469.9999, y: -171}
+        - {x: -470.9998, y: 169.9999}
+      - - {x: -465.9999, y: -172.9999}
+        - {x: -469.9999, y: -171}
+        - {x: -469.9999, y: 171}
+      - - {x: -466.9999, y: 172}
+        - {x: -465.9999, y: -172.9999}
+        - {x: -469.9999, y: 171}
+      - - {x: -459.9999, y: 172.9999}
+        - {x: -465.9999, y: -172.9999}
+        - {x: -466.9999, y: 172}
+      - - {x: -462.9999, y: -172.9999}
+        - {x: -465.9999, y: -172.9999}
+        - {x: -459.9999, y: 172.9999}
+      - - {x: -461.9999, y: -174}
+        - {x: -462.9999, y: -172.9999}
+        - {x: -459.9999, y: 172.9999}
+      - - {x: 461.9999, y: -174}
+        - {x: -461.9999, y: -174}
+        - {x: -459.9999, y: 172.9999}
+      - - {x: -458.9999, y: 174}
+        - {x: 461.9999, y: -174}
+        - {x: -459.9999, y: 172.9999}
+      - - {x: 457.9998, y: 174}
+        - {x: 461.9999, y: -174}
+        - {x: -458.9999, y: 174}
+      - - {x: 458.9999, y: 172.9999}
+        - {x: 461.9999, y: -174}
+        - {x: 457.9998, y: 174}
+      - - {x: 462.9999, y: 172.9999}
+        - {x: 461.9999, y: -174}
+        - {x: 458.9999, y: 172.9999}
+      - - {x: 462.9999, y: -172.9999}
+        - {x: 461.9999, y: -174}
+        - {x: 462.9999, y: 172.9999}
+      - - {x: 465.9999, y: -172.9999}
+        - {x: 462.9999, y: -172.9999}
+        - {x: 462.9999, y: 172.9999}
+      - - {x: 463.9999, y: 172}
+        - {x: 465.9999, y: -172.9999}
+        - {x: 462.9999, y: 172.9999}
+      - - {x: 469.9999, y: 171}
+        - {x: 465.9999, y: -172.9999}
+        - {x: 463.9999, y: 172}
+      - - {x: 466.9999, y: -172}
+        - {x: 465.9999, y: -172.9999}
+        - {x: 469.9999, y: 171}
+      - - {x: 471.9999, y: -171}
+        - {x: 466.9999, y: -172}
+        - {x: 469.9999, y: 171}
+      - - {x: 472.9999, y: 169}
+        - {x: 471.9999, y: -171}
+        - {x: 469.9999, y: 171}
+      - - {x: 475.9999, y: -168}
+        - {x: 471.9999, y: -171}
+        - {x: 472.9999, y: 169}
+      - - {x: 474.9999, y: 169}
+        - {x: 475.9999, y: -168}
+        - {x: 472.9999, y: 169}
+      - - {x: 477.9999, y: 166.9999}
+        - {x: 475.9999, y: -168}
+        - {x: 474.9999, y: 169}
+      - - {x: 481.9998, y: -165.9999}
+        - {x: 475.9999, y: -168}
+        - {x: 477.9999, y: 166.9999}
+      - - {x: 479.9999, y: 165.9999}
+        - {x: 481.9998, y: -165.9999}
+        - {x: 477.9999, y: 166.9999}
+      - - {x: 487.9998, y: 159.9999}
+        - {x: 481.9998, y: -165.9999}
+        - {x: 479.9999, y: 165.9999}
+      - - {x: 483.9998, y: -164}
+        - {x: 481.9998, y: -165.9999}
+        - {x: 487.9998, y: 159.9999}
+      - - {x: 487.9998, y: -162}
+        - {x: 483.9998, y: -164}
+        - {x: 487.9998, y: 159.9999}
+      - - {x: 499.9999, y: -149}
+        - {x: 487.9998, y: -162}
+        - {x: 487.9998, y: 159.9999}
+      - - {x: 488.9999, y: 159.9999}
+        - {x: 499.9999, y: -149}
+        - {x: 487.9998, y: 159.9999}
+      - - {x: 497.9998, y: 149.9999}
+        - {x: 499.9999, y: -149}
+        - {x: 488.9999, y: 159.9999}
+      - - {x: 499.9999, y: -148}
+        - {x: 499.9999, y: -149}
+        - {x: 497.9998, y: 149.9999}
+      - - {x: 500.9998, y: 148}
+        - {x: 499.9999, y: -148}
+        - {x: 497.9998, y: 149.9999}
+      - - {x: 503.9998, y: -144}
+        - {x: 499.9999, y: -148}
+        - {x: 500.9998, y: 148}
+      - - {x: 505.9999, y: 138}
+        - {x: 503.9998, y: -144}
+        - {x: 500.9998, y: 148}
+      - - {x: 508.9999, y: -133}
+        - {x: 503.9998, y: -144}
+        - {x: 505.9999, y: 138}
+      - - {x: 507.9999, y: 135}
+        - {x: 508.9999, y: -133}
+        - {x: 505.9999, y: 138}
+      - - {x: 508.9999, y: -131}
+        - {x: 508.9999, y: -133}
+        - {x: 507.9999, y: 135}
+      - - {x: 509.9999, y: 126.9999}
+        - {x: 508.9999, y: -131}
+        - {x: 507.9999, y: 135}
+      - - {x: 510.9999, y: -126.9999}
+        - {x: 508.9999, y: -131}
+        - {x: 509.9999, y: 126.9999}
+      - - {x: 510.9999, y: 126}
+        - {x: 510.9999, y: -126.9999}
+        - {x: 509.9999, y: 126.9999}
+      - - {x: 510.9999, y: -123}
+        - {x: 510.9999, y: -126.9999}
+        - {x: 510.9999, y: 126}
+      - - {x: 510.9999, y: 123}
+        - {x: 510.9999, y: -123}
+        - {x: 510.9999, y: 126}
+      - - {x: 497.9998, y: 149.9999}
+        - {x: 488.9999, y: 159.9999}
+        - {x: 497.9998, y: 151}
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4d0ca4a6872a8429d851a260c11c5839
+      internalID: 21300002
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PuzzleWood_Homescene2_0000_score
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 873
+        width: 255.0455
+        height: 62
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -128, y: -27}
+        - {x: -128, y: 24}
+        - {x: -119, y: -31}
+      - - {x: -125, y: 31}
+        - {x: -119, y: -31}
+        - {x: -128, y: 24}
+      - - {x: 120, y: 31}
+        - {x: -119, y: -31}
+        - {x: -125, y: 31}
+      - - {x: 117, y: -31}
+        - {x: -119, y: -31}
+        - {x: 120, y: 31}
+      - - {x: 128, y: -18}
+        - {x: 117, y: -31}
+        - {x: 120, y: 31}
+      - - {x: 128, y: 17}
+        - {x: 128, y: -18}
+        - {x: 120, y: 31}
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 102a49c2213f64c58bb0d47cc7f66cb1
+      internalID: 21300000
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: index-finger-cursor
+      rect:
+        serializedVersion: 2
+        x: 713
+        y: 588
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -24, y: -10}
+        - {x: -24, y: 7}
+        - {x: -12, y: -32}
+      - - {x: -18, y: 32}
+        - {x: -12, y: -32}
+        - {x: -24, y: 7}
+      - - {x: 2, y: 32}
+        - {x: -12, y: -32}
+        - {x: -18, y: 32}
+      - - {x: 23, y: -32}
+        - {x: -12, y: -32}
+        - {x: 2, y: 32}
+      - - {x: 24, y: 18}
+        - {x: 23, y: -32}
+        - {x: 2, y: 32}
+      - - {x: 24, y: -29}
+        - {x: 23, y: -32}
+        - {x: 24, y: 18}
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7d05e7ef68f0145beae9b88565b76e6e
+      internalID: 21300024
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PuzzleWood_Homescene2_0004_Vector-Smart-Object-copy-3
+      rect:
+        serializedVersion: 2
+        x: 509
+        y: 706
+        width: 33
+        height: 227
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -16.5, y: -113.5}
+        - {x: -16.5, y: 113.5}
+        - {x: 16.5, y: -113.5}
+      - - {x: 16.5, y: 113.5}
+        - {x: 16.5, y: -113.5}
+        - {x: -16.5, y: 113.5}
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d05690e12ef474c4c871443acf335717
+      internalID: 21300020
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PuzzleWood_Pause2_0000_replay
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 588
+        width: 256
+        height: 108.9123
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -128, y: -49.5}
+        - {x: -128, y: 43.5}
+        - {x: -103, y: -54.5}
+      - - {x: -107, y: 54.5}
+        - {x: -103, y: -54.5}
+        - {x: -128, y: 43.5}
+      - - {x: 100, y: 54.5}
+        - {x: -103, y: -54.5}
+        - {x: -107, y: 54.5}
+      - - {x: 94, y: -54.5}
+        - {x: -103, y: -54.5}
+        - {x: 100, y: 54.5}
+      - - {x: 108, y: -49.5}
+        - {x: 94, y: -54.5}
+        - {x: 100, y: 54.5}
+      - - {x: 128, y: 40.5}
+        - {x: 108, y: -49.5}
+        - {x: 100, y: 54.5}
+      - - {x: 128, y: -37.5}
+        - {x: 108, y: -49.5}
+        - {x: 128, y: 40.5}
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 149e9be708b6d4b3cb2f26393e8b2803
+      internalID: 21300016
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PuzzleWood_GameOver2_0001_music-on
+      rect:
+        serializedVersion: 2
+        x: 258
+        y: 666
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -64, y: -40}
+        - {x: -64, y: 32}
+        - {x: -40, y: -64}
+      - - {x: -49.99999, y: 64}
+        - {x: -40, y: -64}
+        - {x: -64, y: 32}
+      - - {x: 59, y: 64}
+        - {x: -40, y: -64}
+        - {x: -49.99999, y: 64}
+      - - {x: 38, y: -64}
+        - {x: -40, y: -64}
+        - {x: 59, y: 64}
+      - - {x: 64, y: -55}
+        - {x: 38, y: -64}
+        - {x: 59, y: 64}
+      - - {x: 64, y: 45}
+        - {x: 64, y: -55}
+        - {x: 59, y: 64}
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dd017ff2cf60b40c085879eb364ebbe4
+      internalID: 21300014
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PuzzleWood_Homescene2_0000_pause
+      rect:
+        serializedVersion: 2
+        x: 388
+        y: 666
+        width: 119
+        height: 119
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -59.5, y: -42.5}
+        - {x: -59.5, y: 48.5}
+        - {x: -57.5, y: -59.5}
+      - - {x: -45.5, y: 59.5}
+        - {x: -57.5, y: -59.5}
+        - {x: -59.5, y: 48.5}
+      - - {x: 44.5, y: -59.5}
+        - {x: -57.5, y: -59.5}
+        - {x: -45.5, y: 59.5}
+      - - {x: 43.5, y: 59.5}
+        - {x: 44.5, y: -59.5}
+        - {x: -45.5, y: 59.5}
+      - - {x: 59.5, y: 46.5}
+        - {x: 44.5, y: -59.5}
+        - {x: 43.5, y: 59.5}
+      - - {x: 59.5, y: -39.5}
+        - {x: 44.5, y: -59.5}
+        - {x: 59.5, y: 46.5}
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bfd90275b7c4a4c549f886a3857ff542
+      internalID: 21300028
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PuzzleWood_Homescene2_0001_BG
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 350
+        width: 1023.614
+        height: 236
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -512, y: -113}
+        - {x: -512, y: 118}
+        - {x: -508.9999, y: -113}
+      - - {x: 512, y: 118}
+        - {x: -508.9999, y: -113}
+        - {x: -512, y: 118}
+      - - {x: -506, y: -114.9999}
+        - {x: -508.9999, y: -113}
+        - {x: 512, y: 118}
+      - - {x: -502.9999, y: -114.9999}
+        - {x: -506, y: -114.9999}
+        - {x: 512, y: 118}
+      - - {x: -501.9999, y: -116}
+        - {x: -502.9999, y: -114.9999}
+        - {x: 512, y: 118}
+      - - {x: -498, y: -116}
+        - {x: -501.9999, y: -116}
+        - {x: 512, y: 118}
+      - - {x: -497, y: -117}
+        - {x: -498, y: -116}
+        - {x: 512, y: 118}
+      - - {x: -493, y: -117}
+        - {x: -497, y: -117}
+        - {x: 512, y: 118}
+      - - {x: -492, y: -118}
+        - {x: -493, y: -117}
+        - {x: 512, y: 118}
+      - - {x: 489.9999, y: -118}
+        - {x: -492, y: -118}
+        - {x: 512, y: 118}
+      - - {x: 491, y: -117}
+        - {x: 489.9999, y: -118}
+        - {x: 512, y: 118}
+      - - {x: 500, y: -116}
+        - {x: 491, y: -117}
+        - {x: 512, y: 118}
+      - - {x: 501, y: -114.9999}
+        - {x: 500, y: -116}
+        - {x: 512, y: 118}
+      - - {x: 504, y: -114.9999}
+        - {x: 501, y: -114.9999}
+        - {x: 512, y: 118}
+      - - {x: 507, y: -114}
+        - {x: 504, y: -114.9999}
+        - {x: 512, y: 118}
+      - - {x: 508, y: -113}
+        - {x: 507, y: -114}
+        - {x: 512, y: 118}
+      - - {x: 512, y: -112}
+        - {x: 508, y: -113}
+        - {x: 512, y: 118}
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b0a2688d09fd84d94a65f3ba616917d4
+      internalID: 21300008
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: perfect
+      rect:
+        serializedVersion: 2
+        x: 258
+        y: 588
+        width: 255.4894
+        height: 76
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -128, y: -38}
+        - {x: -128, y: 38}
+        - {x: 128, y: -38}
+      - - {x: 128, y: 38}
+        - {x: 128, y: -38}
+        - {x: -128, y: 38}
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 211de0f070aa64654b853bc53261540f
+      internalID: 21300006
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      PuzzleWood_GameOver2_0001_music-on: 21300014
+      PuzzleWood_Homescene2_0000_pause: 21300028
+      PuzzleWood_Homescene2_0000_score: 21300000
+      PuzzleWood_Homescene2_0001_BG: 21300008
+      PuzzleWood_Homescene2_0003_box1-copy: 21300002
+      PuzzleWood_Homescene2_0004_Vector-Smart-Object-copy-3: 21300020
+      PuzzleWood_Homescene_0000_Vector-Smart-Object: 21300026
+      PuzzleWood_Homescene_0005_Rectangle-2-copy-4: 21300004
+      PuzzleWood_Pause2_0000_replay: 21300016
+      WhiteBackGround: 21300012
+      cool: 21300010
+      excellent: 21300022
+      index-finger-cursor: 21300024
+      perfect: 21300006
+      redblock: 21300018
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

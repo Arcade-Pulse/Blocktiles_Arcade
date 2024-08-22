@@ -1,0 +1,20 @@
+fileFormatVersion: 2
+guid: f710871b82d04c00a2071e6c3a2d02cd
+timeCreated: 1563446197
+licenseType: Free
+TrueTypeFontImporter:
+  serializedVersion: 4
+  fontSize: 0
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: "BlockFont"
+  fontNames: []
+  fallbackFontReferences: []
+  customCharacters:
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  userData:
+  assetBundleName: 
+  assetBundleVariant: 

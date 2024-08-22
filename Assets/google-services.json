@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "136668185678",
+    "project_id": "oval-turbine-409120",
+    "storage_bucket": "oval-turbine-409120.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:136668185678:android:5f3394f883edaeaa0faf1f",
+        "android_client_info": {
+          "package_name": "com.GameSocStudios.BlockTilesCrypto"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "136668185678-9lq6olrridamjujbdjk338v40quqe90s.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAfWrUIVxqtLBncSYZZVi9L8LRGNjaaQmM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "136668185678-9lq6olrridamjujbdjk338v40quqe90s.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
