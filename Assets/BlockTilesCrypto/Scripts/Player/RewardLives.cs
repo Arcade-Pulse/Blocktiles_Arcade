@@ -11,7 +11,7 @@ public class RewardLives : MonoBehaviour
     
     public void RewardLife()
     {
-        Debug.Log("reward life button pressed"+RewardedAdController.Instance.inGameRequest);
+       // Debug.Log("reward life button pressed"+RewardedAdController.Instance.inGameRequest);
 // #if UNITY_EDITOR
 //         if (PlayfabDataManager.Instance.GetLives() >= PlayfabDataManager.Instance.GetTotalPlayerLives())
 //         {

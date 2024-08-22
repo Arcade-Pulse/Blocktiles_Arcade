@@ -1,5 +1,4 @@
 using System;
-using GoogleMobileAds.Api;
 using UnityEditor.Minesweeper.Scripts.UnityAds;
 using UnityEngine;
 using UnityEngine.Advertisements;

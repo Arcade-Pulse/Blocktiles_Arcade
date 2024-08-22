@@ -91,7 +91,7 @@ namespace PlayFabPersonal.Authentications
 
         private void OnErrorLoginWithEmailAddress(PlayFabError error)
         {
-                GoogleAuthentication.Instance.GPGSLoginButton();
+                //GoogleAuthentication.Instance.GPGSLoginButton();
    //         Debug.Log(error.ErrorMessage);
         }
 

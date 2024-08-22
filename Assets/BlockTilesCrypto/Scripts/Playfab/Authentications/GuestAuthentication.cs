@@ -15,15 +15,16 @@ namespace PlayFabPersonal.Authentications
 
         private void Start()
         {
-            guestLoginButton.onClick.AddListener(LoginWithDeviceButton);
-
-            if (
-                ObscuredPrefs.HasKey(PlayerPrefNameString.LAST_LOGIN) &&
-                ObscuredPrefs.Get(PlayerPrefNameString.LAST_LOGIN, null) == PlayerPrefNameString.GUEST
-            )
-            {
-                LoginWithDeviceButton();
-            }
+            LoginWithDeviceButton();
+            // guestLoginButton.onClick.AddListener(LoginWithDeviceButton);
+            //
+            // if (
+            //     ObscuredPrefs.HasKey(PlayerPrefNameString.LAST_LOGIN) &&
+            //     ObscuredPrefs.Get(PlayerPrefNameString.LAST_LOGIN, null) == PlayerPrefNameString.GUEST
+            // )
+            // {
+            //     LoginWithDeviceButton();
+            // }
         }
 
         public void LoginWithDeviceButton()

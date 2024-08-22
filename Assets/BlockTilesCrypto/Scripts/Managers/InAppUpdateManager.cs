@@ -48,7 +48,7 @@ public class InAppUpdateManager : MonoBehaviour
 #if UNITY_EDITOR
         {
             SceneManager.LoadScene("AuthenticationScene");
-           GoogleMobileAdsController.Instance.AdsConfiguration();
+      //     GoogleMobileAdsController.Instance.AdsConfiguration();
 
           //  OnUpdateAvailable?.Invoke(this, new OnUpdateAvailableEventArgs { isUpdateAvailable = false });
         }

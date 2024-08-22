@@ -505,9 +505,9 @@ namespace PlayFabPersonal.Managers
 
         public void ShowBannerAd()
         {
-            BannerViewController.Instance.collapsible = true;
-            BannerViewController.Instance.LoadAd();
-            
+            // BannerViewController.Instance.collapsible = true;
+            // BannerViewController.Instance.LoadAd();
+            //
         }
 
         private void OnSuccessStartTransaction(ExecuteCloudScriptResult result)
@@ -536,7 +536,7 @@ namespace PlayFabPersonal.Managers
                 SetTransactionData();
                // Debug.Log("Data is " + transactionError.message);
             }
-            BannerViewController.Instance.collapsible = false;
+            //BannerViewController.Instance.collapsible = false;
         }
 
         private void SetTransactionData()

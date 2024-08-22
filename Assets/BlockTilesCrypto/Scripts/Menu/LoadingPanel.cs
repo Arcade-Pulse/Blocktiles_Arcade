@@ -2,9 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using CodeStage.AntiCheat.Storage;
-using Facebook.Unity;
 using Global;
-using GooglePlayGames;
 using PlayFab;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -65,15 +63,15 @@ public class LoadingPanel : MonoBehaviour
     public void LogOut(){
       //  Debug.Log("ForgetAllCredentials calls");
 
-        if (PlayGamesPlatform.Instance != null)
-        {
-            
-        }
-
-        if (FB.IsLoggedIn)
-        {
-            FB.LogOut();
-        }
+        // if (PlayGamesPlatform.Instance != null)
+        // {
+        //     
+        // }
+        //
+        // if (FB.IsLoggedIn)
+        // {
+        //     FB.LogOut();
+        // }
         PlayFabClientAPI.ForgetAllCredentials();
         // GoogleSignIn.DefaultInstance.Disconnect();
         // GoogleSignIn.DefaultInstance.SignOut();

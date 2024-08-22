@@ -109,7 +109,7 @@ public class Loading : MonoBehaviour
 
     private void Awake()
     {
-        GoogleMobileAdsController.OnAdReadyToServe += LoadGame_OnAdReadyToServe;
+        //GoogleMobileAdsController.OnAdReadyToServe += LoadGame_OnAdReadyToServe;
     }
 
     private void LoadGame_OnAdReadyToServe(object sender, EventArgs e)
@@ -128,6 +128,6 @@ public class Loading : MonoBehaviour
 
     private void OnDisable()
     {
-        GoogleMobileAdsController.OnAdReadyToServe -= LoadGame_OnAdReadyToServe;
+       // GoogleMobileAdsController.OnAdReadyToServe -= LoadGame_OnAdReadyToServe;
     }
 }

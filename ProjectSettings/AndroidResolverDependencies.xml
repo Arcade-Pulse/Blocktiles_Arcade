@@ -1,27 +1,48 @@
 <dependencies>
   <packages>
-    <package>androidx.constraintlayout:constraintlayout:2.1.4</package>
-    <package>com.android.support:appcompat-v7:25.3.1</package>
-    <package>com.android.support:cardview-v7:25.3.1</package>
-    <package>com.android.support:customtabs:25.3.1</package>
-    <package>com.android.support:support-v4:25.3.1</package>
-    <package>com.facebook.android:facebook-applinks:[16.0,17)</package>
-    <package>com.facebook.android:facebook-core:[16.0,17)</package>
-    <package>com.facebook.android:facebook-gamingservices:[16.0,17)</package>
-    <package>com.facebook.android:facebook-login:[16.0,17)</package>
-    <package>com.facebook.android:facebook-share:[16.0,17)</package>
-    <package>com.google.ads.mediation:inmobi:10.7.4.0</package>
-    <package>com.google.ads.mediation:mintegral:16.7.61.0</package>
-    <package>com.google.ads.mediation:pangle:6.0.0.5.0</package>
-    <package>com.google.ads.mediation:unity:4.10.0.0</package>
-    <package>com.google.ads.mediation:vungle:7.3.2.0</package>
-    <package>com.google.android.gms:play-services-ads:23.0.0</package>
+    <package>com.applovin.mediation:amazon-tam-adapter:9.9.3.2</package>
+    <package>com.applovin.mediation:bidmachine-adapter:2.7.0.0</package>
+    <package>com.applovin.mediation:bytedance-adapter:5.8.1.0.0</package>
+    <package>com.applovin.mediation:facebook-adapter:6.17.0.0</package>
+    <package>com.applovin.mediation:fyber-adapter:8.2.7.1</package>
+    <package>com.applovin.mediation:google-adapter:23.0.0.1</package>
+    <package>com.applovin.mediation:google-ad-manager-adapter:23.0.0.1</package>
+    <package>com.applovin.mediation:inmobi-adapter:10.7.4.0</package>
+    <package>com.applovin.mediation:ironsource-adapter:8.0.0.0.0</package>
+    <package>com.applovin.mediation:mintegral-adapter:16.7.71.0</package>
+    <package>com.applovin.mediation:mytarget-adapter:5.20.1.0</package>
+    <package>com.applovin.mediation:unityads-adapter:4.12.1.0</package>
+    <package>com.applovin.mediation:vungle-adapter:7.4.0.0</package>
+    <package>com.applovin.mediation:yandex-adapter:7.0.1.0</package>
+    <package>com.appodeal.ads.sdk.networks:admob:3.3.2.0</package>
+    <package>com.appodeal.ads.sdk.networks:amazon:3.3.2.0</package>
+    <package>com.appodeal.ads.sdk.networks:applovin:3.3.2.0</package>
+    <package>com.appodeal.ads.sdk.networks:applovin_max:3.3.2.0</package>
+    <package>com.appodeal.ads.sdk.networks:bidmachine:3.3.2.0</package>
+    <package>com.appodeal.ads.sdk.networks:bidon:3.3.2.0</package>
+    <package>com.appodeal.ads.sdk.networks:bigo_ads:3.3.2.0</package>
+    <package>com.appodeal.ads.sdk.networks:dt_exchange:3.3.2.0</package>
+    <package>com.appodeal.ads.sdk.networks:iab:3.3.2.0</package>
+    <package>com.appodeal.ads.sdk.networks:inmobi:3.3.2.0</package>
+    <package>com.appodeal.ads.sdk.networks:ironsource:3.3.2.0</package>
+    <package>com.appodeal.ads.sdk.networks:meta:3.3.2.0</package>
+    <package>com.appodeal.ads.sdk.networks:mintegral:3.3.2.0</package>
+    <package>com.appodeal.ads.sdk.networks:my_target:3.3.2.0</package>
+    <package>com.appodeal.ads.sdk.networks:pangle:3.3.2.0</package>
+    <package>com.appodeal.ads.sdk.networks:unity_ads:3.3.2.0</package>
+    <package>com.appodeal.ads.sdk.networks:vungle:3.3.2.0</package>
+    <package>com.appodeal.ads.sdk.networks:yandex:3.3.2.0</package>
+    <package>com.appodeal.ads.sdk.services:adjust:3.3.2.0</package>
+    <package>com.appodeal.ads.sdk.services:appsflyer:3.3.2.0</package>
+    <package>com.appodeal.ads.sdk.services:facebook_analytics:3.3.2.0</package>
+    <package>com.appodeal.ads.sdk.services:firebase:3.3.2.0</package>
+    <package>com.appodeal.ads.sdk.services:sentry_analytics:3.3.2.0</package>
+    <package>com.appodeal.ads.sdk:core:3.3.2</package>
     <package>com.google.android.gms:play-services-base:18.5.0</package>
     <package>com.google.android.play:app-update:2.1.0</package>
     <package>com.google.android.play:core-common:2.0.4</package>
     <package>com.google.android.play:integrity:1.3.0</package>
     <package>com.google.android.play:review:2.0.0</package>
-    <package>com.google.android.ump:user-messaging-platform:2.2.0</package>
     <package>com.google.firebase:firebase-analytics:22.0.2</package>
     <package>com.google.firebase:firebase-analytics-unity:12.1.0</package>
     <package>com.google.firebase:firebase-app-unity:12.1.0</package>
@@ -34,10 +55,25 @@
     <package>com.google.firebase:firebase-messaging:24.0.0</package>
     <package>com.google.firebase:firebase-messaging-unity:12.1.0</package>
     <package>com.google.flatbuffers:flatbuffers-java:1.12.0</package>
-    <package>com.google.games:gpgs-plugin-support:0.11.01</package>
-    <package>com.parse.bolts:bolts-android:1.4.0</package>
     <package>com.unity3d.ads:unity-ads:[4.12.0,4.13[</package>
-    <package>com.unity3d.ads:unity-ads:4.10.0</package>
+    <package>io.bidmachine:ads.networks.amazon:2.7.0.13</package>
+    <package>io.bidmachine:ads.networks.meta_audience:2.7.0.15</package>
+    <package>io.bidmachine:ads.networks.mintegral:2.7.0.7</package>
+    <package>io.bidmachine:ads.networks.my_target:2.7.0.15</package>
+    <package>io.bidmachine:ads.networks.pangle:2.7.0.7</package>
+    <package>io.bidmachine:ads.networks.vungle:2.7.0.5</package>
+    <package>org.bidon:admob-adapter:0.6.0.0</package>
+    <package>org.bidon:amazon-adapter:0.6.0.0</package>
+    <package>org.bidon:applovin-adapter:0.6.0.0</package>
+    <package>org.bidon:bidmachine-adapter:0.6.0.0</package>
+    <package>org.bidon:bigoads-adapter:0.6.0.0</package>
+    <package>org.bidon:dtexchange-adapter:0.6.0.0</package>
+    <package>org.bidon:gam-adapter:0.6.0.0</package>
+    <package>org.bidon:inmobi-adapter:0.6.0.0</package>
+    <package>org.bidon:meta-adapter:0.6.0.0</package>
+    <package>org.bidon:mintegral-adapter:0.6.0.0</package>
+    <package>org.bidon:unityads-adapter:0.6.0.0</package>
+    <package>org.bidon:vungle-adapter:0.6.0.0</package>
   </packages>
   <files>
     <file>Assets/GeneratedLocalRepo/Firebase/m2repository/com/google/firebase/firebase-analytics-unity/12.1.0/firebase-analytics-unity-12.1.0.aar</file>
@@ -50,12 +86,10 @@
     <file>Assets/GeneratedLocalRepo/Firebase/m2repository/com/google/firebase/firebase-crashlytics-unity/12.1.0/firebase-crashlytics-unity-12.1.0.pom</file>
     <file>Assets/GeneratedLocalRepo/Firebase/m2repository/com/google/firebase/firebase-messaging-unity/12.1.0/firebase-messaging-unity-12.1.0.aar</file>
     <file>Assets/GeneratedLocalRepo/Firebase/m2repository/com/google/firebase/firebase-messaging-unity/12.1.0/firebase-messaging-unity-12.1.0.pom</file>
-    <file>Assets/GeneratedLocalRepo/GooglePlayGames/com.google.play.games/Editor/m2repository/com/google/games/gpgs-plugin-support/0.11.01/gpgs-plugin-support-0.11.01.aar</file>
-    <file>Assets/GeneratedLocalRepo/GooglePlayGames/com.google.play.games/Editor/m2repository/com/google/games/gpgs-plugin-support/0.11.01/gpgs-plugin-support-0.11.01.pom</file>
   </files>
   <settings>
     <setting name="androidAbis" value="arm64-v8a,armeabi-v7a" />
-    <setting name="bundleId" value="com.GameSocStudios.BlockTilesCrypto" />
+    <setting name="bundleId" value="com.arcadePulse.blocktiles" />
     <setting name="explodeAars" value="True" />
     <setting name="gradleBuildEnabled" value="True" />
     <setting name="gradlePropertiesTemplateEnabled" value="True" />

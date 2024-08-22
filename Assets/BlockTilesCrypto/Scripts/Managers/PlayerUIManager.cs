@@ -28,14 +28,14 @@ public class PlayerUIManager : MonoBehaviour
 
     private void checkIfRewardedIntIsLoaded()
     {
-        if (RewardedInterstitialAdController.Instance != null && RewardedInterstitialAdController.Instance.isAdLoaded)
-        {
-            cashoutButton.interactable = true;
-        }
-        else
-        {
-            cashoutButton.interactable = false;
-        }
+        // if (RewardedInterstitialAdController.Instance != null && RewardedInterstitialAdController.Instance.isAdLoaded)
+        // {
+        //     cashoutButton.interactable = true;
+        // }
+        // else
+        // {
+        //     cashoutButton.interactable = false;
+        // }
     }
 
     private void Awake()

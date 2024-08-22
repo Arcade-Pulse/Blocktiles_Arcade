@@ -41,13 +41,13 @@ public class CashoutPanel : MonoBehaviour
 
     public void ShowRewInterAd()
     {
-        if (RewardedInterstitialAdController.Instance.isAdLoaded)
-        {
-            InterstitialAds.Instance.ShowAd();
-        }
-        else
-        {
-            InterstitialAds.Instance.LoadAd();
-        }
+        // if (RewardedInterstitialAdController.Instance.isAdLoaded)
+        // {
+        //     InterstitialAds.Instance.ShowAd();
+        // }
+        // else
+        // {
+        //     InterstitialAds.Instance.LoadAd();
+        // }
     }
 }

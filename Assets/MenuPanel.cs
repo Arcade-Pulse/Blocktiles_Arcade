@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using CodeStage.AntiCheat.Storage;
 using Global;
-using GoogleMobileAds.Api;
+//using GoogleMobileAds.Api;
 using PlayFabPersonal.Managers;
 using UnityEditor.Minesweeper.Scripts.UnityAds;
 using UnityEngine;
@@ -28,7 +28,7 @@ public class MenuPanel : MonoBehaviour
         {
             InterstitialAds.Instance.LoadAd();
         }
-        RewardedInterstitialAdController.Instance.adRewarded = false;
+      //  RewardedInterstitialAdController.Instance.adRewarded = false;
         // if (InterstitialAdController.Instance.isAdLoaded)
         // {
         //     InterstitialAdController.Instance.ShowAd();
