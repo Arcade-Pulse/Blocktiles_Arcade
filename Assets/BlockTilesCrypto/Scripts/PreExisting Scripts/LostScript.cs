@@ -609,7 +609,7 @@ public class LostScript : MonoBehaviour
         // timesLost++;
         // if (timesLost>2)
         // {
-        InterstitialAds.Instance.ShowAd();
+        Interstitial.Instance.ShowAd();
         //}
     }
 

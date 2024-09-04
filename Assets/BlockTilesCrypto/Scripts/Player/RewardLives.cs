@@ -37,17 +37,17 @@ public class RewardLives : MonoBehaviour
             return;
         }
 
-        if (RewardedAds.Instance.isAdLoaded)
+        if (Rewarded.Instance.isAdLoaded)
         {
             Debug.Log("rewarded is loaded");
            // RewardedAdController.Instance.ShowAd();
-           RewardedAds.Instance.ShowAd();
+           Rewarded.Instance.ShowAd();
            
         }
         else
         {            Debug.Log("rewarded is not loaded");
 
-            RewardedAds.Instance.LoadAd();
+            Rewarded.Instance.LoadRewardedAd();
         }
         
         rewardButton.interactable = true;

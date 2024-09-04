@@ -31,18 +31,18 @@ namespace UnityEditor.Minesweeper.Scripts.UnityAds
         }
 
         // Call this method to load and show the banner ad
-        public void LoadBanner()
-        {
-            // Set the banner position:
-            Advertisement.Banner.SetPosition(BannerPosition.BOTTOM_CENTER);
-
-            // Load and then show the banner ad:
-            Advertisement.Banner.Load(_adUnitId, new BannerLoadOptions
-            {
-                loadCallback = OnBannerLoaded,
-                errorCallback = OnBannerError
-            });
-        }
+        // public void LoadBanner()
+        // {
+        //     // Set the banner position:
+        //     Advertisement.Banner.SetPosition(BannerPosition.BOTTOM_CENTER);
+        //
+        //     // Load and then show the banner ad:
+        //     Advertisement.Banner.Load(_adUnitId, new BannerLoadOptions
+        //     {
+        //         loadCallback = OnBannerLoaded,
+        //         errorCallback = OnBannerError
+        //     });
+        // }
 
         // Callback for when the banner is loaded:
         void OnBannerLoaded()

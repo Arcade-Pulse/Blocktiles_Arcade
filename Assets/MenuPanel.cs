@@ -19,14 +19,14 @@ public class MenuPanel : MonoBehaviour
      //   Debug.Log("menu panel enabled");
         ChangeStateCashout();
         UpdatePlayerStatus();
-        if (!RewardedAds.Instance.isAdLoaded)
+        if (!Rewarded.Instance.isAdLoaded)
         {
-            RewardedAds.Instance.LoadAd();
+            Rewarded.Instance.LoadRewardedAd();
         }
 
-        if (!InterstitialAds.Instance.isAdLoaded)
+        if (!Interstitial.Instance.isAdLoaded)
         {
-            InterstitialAds.Instance.LoadAd();
+            Interstitial.Instance.LoadInterstitialAd();
         }
       //  RewardedInterstitialAdController.Instance.adRewarded = false;
         // if (InterstitialAdController.Instance.isAdLoaded)

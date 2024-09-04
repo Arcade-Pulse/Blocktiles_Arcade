@@ -38,12 +38,12 @@ namespace UnityEditor.Minesweeper.Scripts.UnityAds
     }
  
     // Call this public method when you want to get an ad ready to show.
-    public void LoadAd()
-    {
-        // IMPORTANT! Only load content AFTER initialization (in this example, initialization is handled in a different script).
-        Debug.Log("Loading Ad: " + _adUnitId);
-        Advertisement.Load(_adUnitId, this);
-    }
+    // public void LoadAd()
+    // {
+    //     // IMPORTANT! Only load content AFTER initialization (in this example, initialization is handled in a different script).
+    //     Debug.Log("Loading Ad: " + _adUnitId);
+    //     Advertisement.Load(_adUnitId, this);
+    // }
  
     // If the ad successfully loads, add a listener to the button and enable it:
     public void OnUnityAdsAdLoaded(string adUnitId)
@@ -62,13 +62,13 @@ namespace UnityEditor.Minesweeper.Scripts.UnityAds
     }
  
     // Implement a method to execute when the user clicks the button:
-    public void ShowAd()
-    {
-        // Disable the button:
-        //_showAdButton.interactable = false;
-        // Then show the ad:
-        Advertisement.Show(_adUnitId, this);
-    }
+    // public void ShowAd()
+    // {
+    //     // Disable the button:
+    //     //_showAdButton.interactable = false;
+    //     // Then show the ad:
+    //     Advertisement.Show(_adUnitId, this);
+    // }
  
     // Implement the Show Listener's OnUnityAdsShowComplete callback method to determine if the user gets a reward:
     public void OnUnityAdsShowComplete(string adUnitId, UnityAdsShowCompletionState showCompletionState)

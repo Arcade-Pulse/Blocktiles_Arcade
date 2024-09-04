@@ -34,12 +34,12 @@ namespace UnityEditor.Minesweeper.Scripts.UnityAds
         }
 
         // Call this public method when you want to get an ad ready to show.
-        public void LoadAd()
-        {
-            // IMPORTANT! Only load content AFTER initialization (in this example, initialization is handled in a different script).
-            Debug.Log("Loading Interstitial Ad: " + _adUnitId);
-            Advertisement.Load(_adUnitId, this);
-        }
+        // public void LoadAd()
+        // {
+        //     // IMPORTANT! Only load content AFTER initialization (in this example, initialization is handled in a different script).
+        //     Debug.Log("Loading Interstitial Ad: " + _adUnitId);
+        //     Advertisement.Load(_adUnitId, this);
+        // }
 
         // If the ad successfully loads, show it immediately:
         public void OnUnityAdsAdLoaded(string adUnitId)
@@ -59,11 +59,11 @@ namespace UnityEditor.Minesweeper.Scripts.UnityAds
         // }
 
         // Implement a method to show the interstitial ad:
-        public void ShowAd()
-        {
-            Debug.Log("Showing Interstitial Ad: " + _adUnitId);
-            Advertisement.Show(_adUnitId, this);
-        }
+        // public void ShowAd()
+        // {
+        //     Debug.Log("Showing Interstitial Ad: " + _adUnitId);
+        //     Advertisement.Show(_adUnitId, this);
+        // }
 
         // Implement the Show Listener's OnUnityAdsShowComplete callback method if you need to take action after the ad is shown:
         public void OnUnityAdsShowComplete(string adUnitId, UnityAdsShowCompletionState showCompletionState)

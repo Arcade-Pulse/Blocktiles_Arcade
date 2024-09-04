@@ -512,7 +512,7 @@ namespace PlayFabPersonal.Managers
 
         private void OnSuccessStartTransaction(ExecuteCloudScriptResult result)
         {
-            InterstitialAds.Instance.ShowAd();
+            Interstitial.Instance.ShowAd();
          //   ShowBannerAd();
             //Debug.Log("Transaction Started");
             if (result.FunctionResult == null)
