@@ -10,7 +10,7 @@ public class Banner : MonoBehaviour,IBannerAdListener
 
     private void OnEnable()
     {
-        Appodeal.setBannerCallbacks(this);
+      //  Appodeal.setBannerCallbacks(this);
 
     }
 // Called when a banner is loaded (height arg shows banner's height, precache arg shows if the loaded ad is precache
@@ -22,8 +22,13 @@ public class Banner : MonoBehaviour,IBannerAdListener
 // Called when banner failed to load
     public void onBannerFailedToLoad()
     {
-        Debug.Log("Banner failed to load");
+        Debug.Log("Banner failed to load"); 
+
+       // Appodeal.cache(Appodeal.BANNER_BOTTOM);
+
     }
+    
+
 
 // Called when banner is shown
     public void onBannerShown()

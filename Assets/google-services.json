@@ -1,36 +1,26 @@
 {
   "project_info": {
-    "project_number": "136668185678",
-    "project_id": "oval-turbine-409120",
-    "storage_bucket": "oval-turbine-409120.appspot.com"
+    "project_number": "41443477780",
+    "project_id": "blocktiles-arcade",
+    "storage_bucket": "blocktiles-arcade.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:136668185678:android:5f3394f883edaeaa0faf1f",
+        "mobilesdk_app_id": "1:41443477780:android:0c98bc5b3847616c8a1a01",
         "android_client_info": {
-          "package_name": "com.GameSocStudios.BlockTilesCrypto"
+          "package_name": "com.arcadePulse.BlockTilesArcade"
         }
       },
-      "oauth_client": [
-        {
-          "client_id": "136668185678-9lq6olrridamjujbdjk338v40quqe90s.apps.googleusercontent.com",
-          "client_type": 3
-        }
-      ],
+      "oauth_client": [],
       "api_key": [
         {
-          "current_key": "AIzaSyAfWrUIVxqtLBncSYZZVi9L8LRGNjaaQmM"
+          "current_key": "AIzaSyBUjaBo8aQz77IS6zX9vgV2PUUvkFZuCFo"
         }
       ],
       "services": {
         "appinvite_service": {
-          "other_platform_oauth_client": [
-            {
-              "client_id": "136668185678-9lq6olrridamjujbdjk338v40quqe90s.apps.googleusercontent.com",
-              "client_type": 3
-            }
-          ]
+          "other_platform_oauth_client": []
         }
       }
     }

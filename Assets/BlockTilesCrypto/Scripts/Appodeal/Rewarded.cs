@@ -2,8 +2,10 @@ using AppodealAds.Unity.Common;
 
 using UnityEngine;
 using AppodealAds.Unity.Api;
+using PlayFabPersonal.Economy;
+using PlayFabPersonal.Managers;
 
-    public class Rewarded:MonoBehaviour,IRewardedVideoAdListener
+public class Rewarded:MonoBehaviour,IRewardedVideoAdListener
     {
         public static Rewarded Instance { get; private set; }
         public bool isAdLoaded;
@@ -26,12 +28,13 @@ using AppodealAds.Unity.Api;
             {
                 // Ad is not loaded, so we need to load it
                 AppodealAds.Unity.Api.Appodeal.cache(Appodeal.REWARDED_VIDEO);
-                Debug.Log("Interstitial Ad is being loaded.");
+                Debug.Log("rewarded Ad is being loaded.");
             }
             else
             {
                 // Ad is already loaded
-                Debug.Log("Interstitial Ad is already loaded.");
+                Debug.Log("rewarded Ad is already loaded.");
+                isAdLoaded = true;
             }
         }
         private void Awake()
@@ -55,11 +58,14 @@ using AppodealAds.Unity.Api;
         {
             Debug.Log("rewarded video loaded");
 
+            isAdLoaded = true;
         }
 
         public void onRewardedVideoFailedToLoad()
         {
             Debug.Log("rewarded video failed to load");
+            isAdLoaded = false;
+
         }
 
         public void onRewardedVideoShowFailed()
@@ -70,16 +76,22 @@ using AppodealAds.Unity.Api;
         public void onRewardedVideoShown()
         {
             Debug.Log("rewarded video shown ");
+           // VirtualCurrency.Instance.AddLife(PlayfabDataManager.Instance.GetLifeRewardPerAd());
+            LoadRewardedAd();
         }
 
         public void onRewardedVideoFinished(double amount, string name)
         {
             Debug.Log("rewarded video show finished");
+            LoadRewardedAd();
+
         }
 
         public void onRewardedVideoClosed(bool finished)
         {
             Debug.Log("rewarded video show closed");
+            LoadRewardedAd();
+
         }
 
         public void onRewardedVideoExpired()

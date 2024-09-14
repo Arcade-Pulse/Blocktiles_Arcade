@@ -42,7 +42,8 @@ public class RewardLives : MonoBehaviour
             Debug.Log("rewarded is loaded");
            // RewardedAdController.Instance.ShowAd();
            Rewarded.Instance.ShowAd();
-           
+           VirtualCurrency.Instance.AddLife(PlayfabDataManager.Instance.GetLifeRewardPerAd());
+
         }
         else
         {            Debug.Log("rewarded is not loaded");

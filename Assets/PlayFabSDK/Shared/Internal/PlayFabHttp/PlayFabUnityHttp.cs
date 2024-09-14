@@ -202,93 +202,60 @@ namespace PlayFab.Internal
         }
 
         public void OnResponse(string response, CallRequestContainer reqContainer)
-{
-    try
-    {
+        {
+            try
+            {
 #if PLAYFAB_REQUEST_TIMING
-        var startTime = DateTime.UtcNow;
+                var startTime = DateTime.UtcNow;
 #endif
-        var serializer = PluginManager.GetPlugin<ISerializerPlugin>(PluginContract.PlayFab_Serializer);
-        if (serializer == null)
-        {
-            Debug.LogError("Serializer plugin is null.");
-            return;
-        }
+                var serializer = PluginManager.GetPlugin<ISerializerPlugin>(PluginContract.PlayFab_Serializer);
+                var httpResult = serializer.DeserializeObject<HttpResponseObject>(response);
 
-        var httpResult = serializer.DeserializeObject<HttpResponseObject>(response);
-        if (httpResult == null)
-        {
-            Debug.LogError("Failed to deserialize the HTTP response.");
-            return;
-        }
+                if (httpResult.code == 200)
+                {
+                    // We have a good response from the server
+                    reqContainer.JsonResponse = serializer.SerializeObject(httpResult.data);
+                    reqContainer.DeserializeResultJson();
+                    reqContainer.ApiResult.Request = reqContainer.ApiRequest;
+                    reqContainer.ApiResult.CustomData = reqContainer.CustomData;
 
-        if (httpResult.code == 200)
-        {
-            // We have a good response from the server
-            reqContainer.JsonResponse = serializer.SerializeObject(httpResult.data);
-            reqContainer.DeserializeResultJson();
-
-            if (reqContainer.ApiResult != null)
-            {
-                reqContainer.ApiResult.Request = reqContainer.ApiRequest;
-                reqContainer.ApiResult.CustomData = reqContainer.CustomData;
-
-                PlayFabHttp.instance.OnPlayFabApiResult(reqContainer);
-
+                    PlayFabHttp.instance.OnPlayFabApiResult(reqContainer);
 #if !DISABLE_PLAYFABCLIENT_API
-                PlayFabDeviceUtil.OnPlayFabLogin(reqContainer.ApiResult, reqContainer.settings, reqContainer.instanceApi);
+                    PlayFabDeviceUtil.OnPlayFabLogin(reqContainer.ApiResult, reqContainer.settings, reqContainer.instanceApi);
 #endif
+                    try
+                    {
+                        PlayFabHttp.SendEvent(reqContainer.ApiEndpoint, reqContainer.ApiRequest, reqContainer.ApiResult, ApiProcessingEventType.Post);
+                    }
+                    catch (Exception e)
+                    {
+                        Debug.LogException(e);
+                    }
 
-                try
-                {
-                    PlayFabHttp.SendEvent(reqContainer.ApiEndpoint, reqContainer.ApiRequest, reqContainer.ApiResult, ApiProcessingEventType.Post);
-                }
-                catch (Exception e)
-                {
-                    Debug.LogException(e);
-                }
-
-                try
-                {
-                    reqContainer.InvokeSuccessCallback();
-                }
-                catch (Exception e)
-                {
-                    Debug.LogException(e);
-                }
-            }
-            else
-            {
-                Debug.LogError("ApiResult is null after deserialization.");
-            }
-        }
-        else
-        {
-            if (reqContainer.ErrorCallback != null)
-            {
-                reqContainer.Error = PlayFabHttp.GeneratePlayFabError(reqContainer.ApiEndpoint, response, reqContainer.CustomData);
-                if (reqContainer.Error != null)
-                {
-                    PlayFabHttp.SendErrorEvent(reqContainer.ApiRequest, reqContainer.Error);
-                    reqContainer.ErrorCallback(reqContainer.Error);
+                    try
+                    {
+                        reqContainer.InvokeSuccessCallback();
+                    }
+                    catch (Exception e)
+                    {
+                        Debug.LogException(e);
+                    }
                 }
                 else
                 {
-                    Debug.LogError("Failed to generate PlayFab error.");
+                    if (reqContainer.ErrorCallback != null)
+                    {
+                        reqContainer.Error = PlayFabHttp.GeneratePlayFabError(reqContainer.ApiEndpoint, response, reqContainer.CustomData);
+                        PlayFabHttp.SendErrorEvent(reqContainer.ApiRequest, reqContainer.Error);
+                        reqContainer.ErrorCallback(reqContainer.Error);
+                    }
                 }
             }
-            else
+            catch (Exception e)
             {
-                Debug.LogWarning("ErrorCallback is null.");
+                Debug.LogException(e);
             }
         }
-    }
-    catch (Exception e)
-    {
-        Debug.LogException(e);
-    }
-}
-
 
         public void OnError(string error, CallRequestContainer reqContainer)
         {

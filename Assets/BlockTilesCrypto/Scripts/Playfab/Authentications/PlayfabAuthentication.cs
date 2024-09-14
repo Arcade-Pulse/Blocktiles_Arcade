@@ -21,28 +21,28 @@ namespace PlayFabPersonal.Authentications
 
         private void Start()
         {
-            playfabLoginFields.registerPanelButton.onClick.AddListener(() =>
-            {
-                playfabRegisterPanel.SetActive(true);
-                loginPanel.SetActive(false);
-            });
+            // playfabLoginFields.registerPanelButton.onClick.AddListener(() =>
+            // {
+            //     playfabRegisterPanel.SetActive(true);
+            //     loginPanel.SetActive(false);
+            // });
+            //
+            // playfabRegistrationFields.backButton.onClick.AddListener(() =>
+            // {
+            //     playfabRegisterPanel.SetActive(false);
+            //     loginPanel.SetActive(true);
+            // });
+            //
+            // playfabLoginFields.loginButton.onClick.AddListener(LoginWithEmailButton);
+            // playfabRegistrationFields.registerAccountButton.onClick.AddListener(RegisterPlayfabAccount);
 
-            playfabRegistrationFields.backButton.onClick.AddListener(() =>
-            {
-                playfabRegisterPanel.SetActive(false);
-                loginPanel.SetActive(true);
-            });
-
-            playfabLoginFields.loginButton.onClick.AddListener(LoginWithEmailButton);
-            playfabRegistrationFields.registerAccountButton.onClick.AddListener(RegisterPlayfabAccount);
-
-            if (
-               ObscuredPrefs.HasKey(PlayerPrefNameString.LAST_LOGIN) &&
-               ObscuredPrefs.Get(PlayerPrefNameString.LAST_LOGIN, null) == PlayerPrefNameString.PLAYFAB
-            )
-            {
-                AutoLoginWithEmailButton();
-            }
+            // if (
+            //    ObscuredPrefs.HasKey(PlayerPrefNameString.LAST_LOGIN) &&
+            //    ObscuredPrefs.Get(PlayerPrefNameString.LAST_LOGIN, null) == PlayerPrefNameString.PLAYFAB
+            // )
+            // {
+            //     AutoLoginWithEmailButton();
+            // }
         }
 
         private void AutoLoginWithEmailButton()

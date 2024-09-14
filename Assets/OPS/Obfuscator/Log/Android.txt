@@ -38,39 +38,13 @@
 
 [Info][OPS.OBF][OnProcess_Assets] Process component Analyse Unity Animation Methods
 [Debug][OPS.OBF][OnAnalyse_Component_Scenes] Iterate components in loaded build scene Assets/BlockTilesCrypto/Scenes/Loading.unity.
-[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Found 13 Root GameObjects in Scene Assets/BlockTilesCrypto/Scenes/Loading.unity
-[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Found 229 Components in Scene Assets/BlockTilesCrypto/Scenes/Loading.unity
+[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Found 11 Root GameObjects in Scene Assets/BlockTilesCrypto/Scenes/Loading.unity
+[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Found 219 Components in Scene Assets/BlockTilesCrypto/Scenes/Loading.unity
 [Info][OPS.OBF][OnAnalyse_Component_Scenes] Process component Analyse Unity Event Component
 [Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in DebugManager of type UnityEngine.Transform
 [Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in DebugManager of type DebugManager
 [Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in DevelopmentManager of type UnityEngine.Transform
 [Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in GoogleMobileAdsController of type UnityEngine.Transform
-[Warning][OPS.OBF][OnAnalyse_Component_Scenes] Failed to process current iterated Component at index 4 with Exception: System.NullReferenceException: Object reference not set to an instance of an object
-  at OPS.Obfuscator.Editor.Project.PreBuild.Pipeline.Component.AnalyseUnityEventComponent.OnAnalyse_Component (UnityEngine.Component _Component) [0x00005] in <d2099cc406b14a2a8cf27045e002969e>:0 
-  at OPS.Obfuscator.Editor.Project.PreBuild.Pipeline.PreBuildPipeline.Process_Component_Analyse_And_Manipulate (System.Collections.Generic.List`1[T] _ComponentList) [0x00086] in <d2099cc406b14a2a8cf27045e002969e>:0 
-[Warning][OPS.OBF][OnAnalyse_Component_Scenes] Failed to process current iterated Component at index 5 with Exception: System.NullReferenceException: Object reference not set to an instance of an object
-  at OPS.Obfuscator.Editor.Project.PreBuild.Pipeline.Component.AnalyseUnityEventComponent.OnAnalyse_Component (UnityEngine.Component _Component) [0x00005] in <d2099cc406b14a2a8cf27045e002969e>:0 
-  at OPS.Obfuscator.Editor.Project.PreBuild.Pipeline.PreBuildPipeline.Process_Component_Analyse_And_Manipulate (System.Collections.Generic.List`1[T] _ComponentList) [0x00086] in <d2099cc406b14a2a8cf27045e002969e>:0 
-[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in AdFormats of type UnityEngine.Transform
-[Warning][OPS.OBF][OnAnalyse_Component_Scenes] Failed to process current iterated Component at index 7 with Exception: System.NullReferenceException: Object reference not set to an instance of an object
-  at OPS.Obfuscator.Editor.Project.PreBuild.Pipeline.Component.AnalyseUnityEventComponent.OnAnalyse_Component (UnityEngine.Component _Component) [0x00005] in <d2099cc406b14a2a8cf27045e002969e>:0 
-  at OPS.Obfuscator.Editor.Project.PreBuild.Pipeline.PreBuildPipeline.Process_Component_Analyse_And_Manipulate (System.Collections.Generic.List`1[T] _ComponentList) [0x00086] in <d2099cc406b14a2a8cf27045e002969e>:0 
-[Warning][OPS.OBF][OnAnalyse_Component_Scenes] Failed to process current iterated Component at index 8 with Exception: System.NullReferenceException: Object reference not set to an instance of an object
-  at OPS.Obfuscator.Editor.Project.PreBuild.Pipeline.Component.AnalyseUnityEventComponent.OnAnalyse_Component (UnityEngine.Component _Component) [0x00005] in <d2099cc406b14a2a8cf27045e002969e>:0 
-  at OPS.Obfuscator.Editor.Project.PreBuild.Pipeline.PreBuildPipeline.Process_Component_Analyse_And_Manipulate (System.Collections.Generic.List`1[T] _ComponentList) [0x00086] in <d2099cc406b14a2a8cf27045e002969e>:0 
-[Warning][OPS.OBF][OnAnalyse_Component_Scenes] Failed to process current iterated Component at index 9 with Exception: System.NullReferenceException: Object reference not set to an instance of an object
-  at OPS.Obfuscator.Editor.Project.PreBuild.Pipeline.Component.AnalyseUnityEventComponent.OnAnalyse_Component (UnityEngine.Component _Component) [0x00005] in <d2099cc406b14a2a8cf27045e002969e>:0 
-  at OPS.Obfuscator.Editor.Project.PreBuild.Pipeline.PreBuildPipeline.Process_Component_Analyse_And_Manipulate (System.Collections.Generic.List`1[T] _ComponentList) [0x00086] in <d2099cc406b14a2a8cf27045e002969e>:0 
-[Warning][OPS.OBF][OnAnalyse_Component_Scenes] Failed to process current iterated Component at index 10 with Exception: System.NullReferenceException: Object reference not set to an instance of an object
-  at OPS.Obfuscator.Editor.Project.PreBuild.Pipeline.Component.AnalyseUnityEventComponent.OnAnalyse_Component (UnityEngine.Component _Component) [0x00005] in <d2099cc406b14a2a8cf27045e002969e>:0 
-  at OPS.Obfuscator.Editor.Project.PreBuild.Pipeline.PreBuildPipeline.Process_Component_Analyse_And_Manipulate (System.Collections.Generic.List`1[T] _ComponentList) [0x00086] in <d2099cc406b14a2a8cf27045e002969e>:0 
-[Warning][OPS.OBF][OnAnalyse_Component_Scenes] Failed to process current iterated Component at index 11 with Exception: System.NullReferenceException: Object reference not set to an instance of an object
-  at OPS.Obfuscator.Editor.Project.PreBuild.Pipeline.Component.AnalyseUnityEventComponent.OnAnalyse_Component (UnityEngine.Component _Component) [0x00005] in <d2099cc406b14a2a8cf27045e002969e>:0 
-  at OPS.Obfuscator.Editor.Project.PreBuild.Pipeline.PreBuildPipeline.Process_Component_Analyse_And_Manipulate (System.Collections.Generic.List`1[T] _ComponentList) [0x00086] in <d2099cc406b14a2a8cf27045e002969e>:0 
-[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in InitialAdLoader of type UnityEngine.Transform
-[Warning][OPS.OBF][OnAnalyse_Component_Scenes] Failed to process current iterated Component at index 13 with Exception: System.NullReferenceException: Object reference not set to an instance of an object
-  at OPS.Obfuscator.Editor.Project.PreBuild.Pipeline.Component.AnalyseUnityEventComponent.OnAnalyse_Component (UnityEngine.Component _Component) [0x00005] in <d2099cc406b14a2a8cf27045e002969e>:0 
-  at OPS.Obfuscator.Editor.Project.PreBuild.Pipeline.PreBuildPipeline.Process_Component_Analyse_And_Manipulate (System.Collections.Generic.List`1[T] _ComponentList) [0x00086] in <d2099cc406b14a2a8cf27045e002969e>:0 
 [Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in SceneManager of type UnityEngine.Transform
 [Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in AppUpdateManager of type UnityEngine.Transform
 [Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in AppUpdateManager of type InAppUpdateManager
@@ -287,48 +261,16 @@
 [Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in BackTrace of type UnityEngine.Transform
 [Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in BackTrace of type Backtrace.Unity.BacktraceClient
 [Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in BackTrace of type BackTraceTest
-[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in Unity Ads of type UnityEngine.Transform
-[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in Unity Ads of type AdsInitializer
-[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in Unity Ads of type UnityEditor.Minesweeper.Scripts.UnityAds.RewardedAds
-[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in Unity Ads of type UnityEditor.Minesweeper.Scripts.UnityAds.BannerAds
-[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in Unity Ads of type UnityEditor.Minesweeper.Scripts.UnityAds.InterstitialAds
+[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in APPODEAL of type UnityEngine.Transform
+[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in APPODEAL of type AppoDeal
+[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in APPODEAL of type Banner
+[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in APPODEAL of type Interstitial
+[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in APPODEAL of type Rewarded
 [Info][OPS.OBF][OnAnalyse_Component_Scenes] Process component Analyse MonoScript
 [Debug][OPS.OBF][OnAnalyse_Component_Scenes] Found mono script reference DebugManager for DebugManager
 [Debug][OPS.OBF][OnAnalyse_Component_Scenes] Found mono script reference in serialized properties for DebugManager (1):
   - DebugManager
 
-[Debug][OPS.OBF][OnAnalyse_Component_Scenes] System.ArgumentException: Object at index 0 is null
-  at (wrapper managed-to-native) UnityEditor.SerializedObject.InternalCreate(UnityEngine.Object[],UnityEngine.Object)
-  at UnityEditor.SerializedObject..ctor (UnityEngine.Object obj) [0x00008] in <2201ab87e660427c974282df3bb3cf36>:0 
-  at OPS.Obfuscator.Editor.Serialization.Unity.Helper.SerializedPropertyHelper.SearchVariablesWithSerializedObject (UnityEngine.Object _Object) [0x00006] in <d2099cc406b14a2a8cf27045e002969e>:0 
-[Debug][OPS.OBF][OnAnalyse_Component_Scenes] System.ArgumentException: Object at index 0 is null
-  at (wrapper managed-to-native) UnityEditor.SerializedObject.InternalCreate(UnityEngine.Object[],UnityEngine.Object)
-  at UnityEditor.SerializedObject..ctor (UnityEngine.Object obj) [0x00008] in <2201ab87e660427c974282df3bb3cf36>:0 
-  at OPS.Obfuscator.Editor.Serialization.Unity.Helper.SerializedPropertyHelper.SearchVariablesWithSerializedObject (UnityEngine.Object _Object) [0x00006] in <d2099cc406b14a2a8cf27045e002969e>:0 
-[Debug][OPS.OBF][OnAnalyse_Component_Scenes] System.ArgumentException: Object at index 0 is null
-  at (wrapper managed-to-native) UnityEditor.SerializedObject.InternalCreate(UnityEngine.Object[],UnityEngine.Object)
-  at UnityEditor.SerializedObject..ctor (UnityEngine.Object obj) [0x00008] in <2201ab87e660427c974282df3bb3cf36>:0 
-  at OPS.Obfuscator.Editor.Serialization.Unity.Helper.SerializedPropertyHelper.SearchVariablesWithSerializedObject (UnityEngine.Object _Object) [0x00006] in <d2099cc406b14a2a8cf27045e002969e>:0 
-[Debug][OPS.OBF][OnAnalyse_Component_Scenes] System.ArgumentException: Object at index 0 is null
-  at (wrapper managed-to-native) UnityEditor.SerializedObject.InternalCreate(UnityEngine.Object[],UnityEngine.Object)
-  at UnityEditor.SerializedObject..ctor (UnityEngine.Object obj) [0x00008] in <2201ab87e660427c974282df3bb3cf36>:0 
-  at OPS.Obfuscator.Editor.Serialization.Unity.Helper.SerializedPropertyHelper.SearchVariablesWithSerializedObject (UnityEngine.Object _Object) [0x00006] in <d2099cc406b14a2a8cf27045e002969e>:0 
-[Debug][OPS.OBF][OnAnalyse_Component_Scenes] System.ArgumentException: Object at index 0 is null
-  at (wrapper managed-to-native) UnityEditor.SerializedObject.InternalCreate(UnityEngine.Object[],UnityEngine.Object)
-  at UnityEditor.SerializedObject..ctor (UnityEngine.Object obj) [0x00008] in <2201ab87e660427c974282df3bb3cf36>:0 
-  at OPS.Obfuscator.Editor.Serialization.Unity.Helper.SerializedPropertyHelper.SearchVariablesWithSerializedObject (UnityEngine.Object _Object) [0x00006] in <d2099cc406b14a2a8cf27045e002969e>:0 
-[Debug][OPS.OBF][OnAnalyse_Component_Scenes] System.ArgumentException: Object at index 0 is null
-  at (wrapper managed-to-native) UnityEditor.SerializedObject.InternalCreate(UnityEngine.Object[],UnityEngine.Object)
-  at UnityEditor.SerializedObject..ctor (UnityEngine.Object obj) [0x00008] in <2201ab87e660427c974282df3bb3cf36>:0 
-  at OPS.Obfuscator.Editor.Serialization.Unity.Helper.SerializedPropertyHelper.SearchVariablesWithSerializedObject (UnityEngine.Object _Object) [0x00006] in <d2099cc406b14a2a8cf27045e002969e>:0 
-[Debug][OPS.OBF][OnAnalyse_Component_Scenes] System.ArgumentException: Object at index 0 is null
-  at (wrapper managed-to-native) UnityEditor.SerializedObject.InternalCreate(UnityEngine.Object[],UnityEngine.Object)
-  at UnityEditor.SerializedObject..ctor (UnityEngine.Object obj) [0x00008] in <2201ab87e660427c974282df3bb3cf36>:0 
-  at OPS.Obfuscator.Editor.Serialization.Unity.Helper.SerializedPropertyHelper.SearchVariablesWithSerializedObject (UnityEngine.Object _Object) [0x00006] in <d2099cc406b14a2a8cf27045e002969e>:0 
-[Debug][OPS.OBF][OnAnalyse_Component_Scenes] System.ArgumentException: Object at index 0 is null
-  at (wrapper managed-to-native) UnityEditor.SerializedObject.InternalCreate(UnityEngine.Object[],UnityEngine.Object)
-  at UnityEditor.SerializedObject..ctor (UnityEngine.Object obj) [0x00008] in <2201ab87e660427c974282df3bb3cf36>:0 
-  at OPS.Obfuscator.Editor.Serialization.Unity.Helper.SerializedPropertyHelper.SearchVariablesWithSerializedObject (UnityEngine.Object _Object) [0x00006] in <d2099cc406b14a2a8cf27045e002969e>:0 
 [Debug][OPS.OBF][OnAnalyse_Component_Scenes] Found mono script reference InAppUpdateManager for AppUpdateManager
 [Debug][OPS.OBF][OnAnalyse_Component_Scenes] Found mono script reference in serialized properties for AppUpdateManager (1):
   - InAppUpdateManager
@@ -693,39 +635,30 @@
 [Debug][OPS.OBF][OnAnalyse_Component_Scenes] Found mono script reference in serialized properties for BackTrace (1):
   - BackTraceTest
 
-[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Found mono script reference AdsInitializer for Unity Ads
-[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Found mono script reference in serialized properties for Unity Ads (1):
-  - AdsInitializer
+[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Found mono script reference AppoDeal for APPODEAL
+[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Found mono script reference in serialized properties for APPODEAL (1):
+  - AppoDeal
 
-[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Found mono script reference UnityEditor.Minesweeper.Scripts.UnityAds.RewardedAds for Unity Ads
-[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Found mono script reference in serialized properties for Unity Ads (1):
-  - UnityEditor.Minesweeper.Scripts.UnityAds.RewardedAds
+[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Found mono script reference Banner for APPODEAL
+[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Found mono script reference in serialized properties for APPODEAL (1):
+  - Banner
 
-[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Found mono script reference UnityEditor.Minesweeper.Scripts.UnityAds.BannerAds for Unity Ads
-[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Found mono script reference in serialized properties for Unity Ads (1):
-  - UnityEditor.Minesweeper.Scripts.UnityAds.BannerAds
+[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Found mono script reference Interstitial for APPODEAL
+[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Found mono script reference in serialized properties for APPODEAL (1):
+  - Interstitial
 
-[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Found mono script reference UnityEditor.Minesweeper.Scripts.UnityAds.InterstitialAds for Unity Ads
-[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Found mono script reference in serialized properties for Unity Ads (1):
-  - UnityEditor.Minesweeper.Scripts.UnityAds.InterstitialAds
+[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Found mono script reference Rewarded for APPODEAL
+[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Found mono script reference in serialized properties for APPODEAL (1):
+  - Rewarded
 
 [Debug][OPS.OBF][OnAnalyse_Component_Scenes] Iterate components in not loaded build scene Assets/BlockTilesCrypto/Scenes/AuthenticationScene.unity.
 [Debug][OPS.OBF][OnAnalyse_Component_Scenes] Found 7 Root GameObjects in Scene Assets/BlockTilesCrypto/Scenes/AuthenticationScene.unity
-[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Found 260 Components in Scene Assets/BlockTilesCrypto/Scenes/AuthenticationScene.unity
+[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Found 257 Components in Scene Assets/BlockTilesCrypto/Scenes/AuthenticationScene.unity
 [Info][OPS.OBF][OnAnalyse_Component_Scenes] Process component Analyse Unity Event Component
 [Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in AuthenticationManager of type UnityEngine.Transform
 [Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in AuthenticationManager of type PlayFabPersonal.Authentications.PlayfabAuthentication
 [Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in AuthenticationManager of type AccountRecovery
 [Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in AuthenticationManager of type PlayFabPersonal.Authentications.GuestAuthentication
-[Warning][OPS.OBF][OnAnalyse_Component_Scenes] Failed to process current iterated Component at index 4 with Exception: System.NullReferenceException: Object reference not set to an instance of an object
-  at OPS.Obfuscator.Editor.Project.PreBuild.Pipeline.Component.AnalyseUnityEventComponent.OnAnalyse_Component (UnityEngine.Component _Component) [0x00005] in <d2099cc406b14a2a8cf27045e002969e>:0 
-  at OPS.Obfuscator.Editor.Project.PreBuild.Pipeline.PreBuildPipeline.Process_Component_Analyse_And_Manipulate (System.Collections.Generic.List`1[T] _ComponentList) [0x00086] in <d2099cc406b14a2a8cf27045e002969e>:0 
-[Warning][OPS.OBF][OnAnalyse_Component_Scenes] Failed to process current iterated Component at index 5 with Exception: System.NullReferenceException: Object reference not set to an instance of an object
-  at OPS.Obfuscator.Editor.Project.PreBuild.Pipeline.Component.AnalyseUnityEventComponent.OnAnalyse_Component (UnityEngine.Component _Component) [0x00005] in <d2099cc406b14a2a8cf27045e002969e>:0 
-  at OPS.Obfuscator.Editor.Project.PreBuild.Pipeline.PreBuildPipeline.Process_Component_Analyse_And_Manipulate (System.Collections.Generic.List`1[T] _ComponentList) [0x00086] in <d2099cc406b14a2a8cf27045e002969e>:0 
-[Warning][OPS.OBF][OnAnalyse_Component_Scenes] Failed to process current iterated Component at index 6 with Exception: System.NullReferenceException: Object reference not set to an instance of an object
-  at OPS.Obfuscator.Editor.Project.PreBuild.Pipeline.Component.AnalyseUnityEventComponent.OnAnalyse_Component (UnityEngine.Component _Component) [0x00005] in <d2099cc406b14a2a8cf27045e002969e>:0 
-  at OPS.Obfuscator.Editor.Project.PreBuild.Pipeline.PreBuildPipeline.Process_Component_Analyse_And_Manipulate (System.Collections.Generic.List`1[T] _ComponentList) [0x00086] in <d2099cc406b14a2a8cf27045e002969e>:0 
 [Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in UserManager of type UnityEngine.Transform
 [Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in UserManager of type PlayFabPersonal.Users.UserAccount
 [Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in PlayfabDataManager of type UnityEngine.Transform
@@ -992,18 +925,6 @@
 [Debug][OPS.OBF][OnAnalyse_Component_Scenes] Found mono script reference in serialized properties for AuthenticationManager (1):
   - PlayFabPersonal.Authentications.GuestAuthentication
 
-[Debug][OPS.OBF][OnAnalyse_Component_Scenes] System.ArgumentException: Object at index 0 is null
-  at (wrapper managed-to-native) UnityEditor.SerializedObject.InternalCreate(UnityEngine.Object[],UnityEngine.Object)
-  at UnityEditor.SerializedObject..ctor (UnityEngine.Object obj) [0x00008] in <2201ab87e660427c974282df3bb3cf36>:0 
-  at OPS.Obfuscator.Editor.Serialization.Unity.Helper.SerializedPropertyHelper.SearchVariablesWithSerializedObject (UnityEngine.Object _Object) [0x00006] in <d2099cc406b14a2a8cf27045e002969e>:0 
-[Debug][OPS.OBF][OnAnalyse_Component_Scenes] System.ArgumentException: Object at index 0 is null
-  at (wrapper managed-to-native) UnityEditor.SerializedObject.InternalCreate(UnityEngine.Object[],UnityEngine.Object)
-  at UnityEditor.SerializedObject..ctor (UnityEngine.Object obj) [0x00008] in <2201ab87e660427c974282df3bb3cf36>:0 
-  at OPS.Obfuscator.Editor.Serialization.Unity.Helper.SerializedPropertyHelper.SearchVariablesWithSerializedObject (UnityEngine.Object _Object) [0x00006] in <d2099cc406b14a2a8cf27045e002969e>:0 
-[Debug][OPS.OBF][OnAnalyse_Component_Scenes] System.ArgumentException: Object at index 0 is null
-  at (wrapper managed-to-native) UnityEditor.SerializedObject.InternalCreate(UnityEngine.Object[],UnityEngine.Object)
-  at UnityEditor.SerializedObject..ctor (UnityEngine.Object obj) [0x00008] in <2201ab87e660427c974282df3bb3cf36>:0 
-  at OPS.Obfuscator.Editor.Serialization.Unity.Helper.SerializedPropertyHelper.SearchVariablesWithSerializedObject (UnityEngine.Object _Object) [0x00006] in <d2099cc406b14a2a8cf27045e002969e>:0 
 [Debug][OPS.OBF][OnAnalyse_Component_Scenes] Found mono script reference PlayFabPersonal.Users.UserAccount for UserManager
 [Debug][OPS.OBF][OnAnalyse_Component_Scenes] Found mono script reference in serialized properties for UserManager (1):
   - PlayFabPersonal.Users.UserAccount
@@ -7172,7 +7093,7 @@
   - C:\Program Files\Unity\Hub\Editor\2022.3.36f1\Editor\Data\PlaybackEngines\WindowsStandaloneSupport
   - C:\Blocktiles_Arcade\Library\ScriptAssemblies
   - C:\Blocktiles_Arcade\Assets\Firebase\Plugins
-  - C:\Blocktiles_Arcade\Assets\ExternalDependencyManager\Editor\1.2.182
+  - C:\Blocktiles_Arcade\Assets\ExternalDependencyManager\Editor
   - C:\Blocktiles_Arcade\Library\PackageCache\com.unity.visualscripting@1.9.4\Editor\VisualScripting.Core\Dependencies\YamlDotNet
   - C:\Blocktiles_Arcade\Library\PackageCache\com.unity.burst@1.8.16\Unity.Burst.CodeGen
   - C:\Blocktiles_Arcade\Assets\PlayFabEditorExtensions\Editor\Resources
@@ -7180,6 +7101,7 @@
   - C:\Blocktiles_Arcade\Library\PackageCache\com.unity.ext.nunit@1.0.6\net35\unity-custom
   - C:\Blocktiles_Arcade\Assets\OPS\Editor\Plugins\Mono.Cecil
   - C:\Blocktiles_Arcade\Library\PackageCache\com.unity.testtools.codecoverage@1.2.5\lib\ReportGenerator
+  - C:\Blocktiles_Arcade\Assets\ExternalDependencyManager\Editor\1.2.176
   - C:\Blocktiles_Arcade\Library\PackageCache\com.unity.collab-proxy@2.4.3\Lib\Editor\PlasticSCM
   - C:\Blocktiles_Arcade\Assets\Plugins\Demigiant\DOTween\Editor
   - C:\Blocktiles_Arcade\Assets\Firebase\Editor
@@ -7187,7 +7109,6 @@
   - C:\Blocktiles_Arcade\Library\PackageCache\com.unity.visualscripting@1.9.4\Editor\VisualScripting.Core\Dependencies\DotNetZip
   - C:\Blocktiles_Arcade\Assets\OPS\Editor\Plugins\OPS.Assets.Editor
   - C:\Blocktiles_Arcade\Assets\Plugins\Demigiant\DOTween
-  - C:\Blocktiles_Arcade\Assets\ExternalDependencyManager\Editor
   - C:\Blocktiles_Arcade\Library\PackageCache\com.unity.visualscripting@1.9.4\Runtime\VisualScripting.Flow\Dependencies\NCalc
   - C:\Blocktiles_Arcade\Library\PackageCache\com.unity.burst@1.8.16
   - C:\Blocktiles_Arcade\Library\PackageCache\com.unity.ide.rider@3.0.28\Rider\Editor

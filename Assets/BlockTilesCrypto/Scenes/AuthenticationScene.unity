@@ -1689,7 +1689,10 @@ PrefabInstance:
       propertyPath: recoveryPanelButton
       value: 
       objectReference: {fileID: 118678904}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 7092432242074448970, guid: 51282783d57561f4ab723a6e193fcafd, type: 3}
+    - {fileID: 7092432242074448971, guid: 51282783d57561f4ab723a6e193fcafd, type: 3}
+    - {fileID: 7092432242074448964, guid: 51282783d57561f4ab723a6e193fcafd, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
