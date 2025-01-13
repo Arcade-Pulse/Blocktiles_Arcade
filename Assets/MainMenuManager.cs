@@ -67,6 +67,27 @@ public class MainMenuManager : MonoBehaviour
             // Optionally, show an ad when the player has no lives left (commented out in your original code)
             // ShowAdIfLoaded();
 
+            if (InterstitialAdController.Instance.isAdLoaded)
+            {
+                InterstitialAdController.Instance.ShowAd();
+            }
+            else
+            {
+                InterstitialAdController.Instance.LoadAd();
+                if (RewardedInterstitialAdController.Instance.isAdLoaded)
+                {
+                    RewardedInterstitialAdController.Instance.ShowAd();
+                }
+            }
+
+  
+
+            if (!BannerViewController.Instance.isBannerLoaded)
+            {
+                BannerViewController.Instance.LoadAd();
+            }
+
+     
             // Load the game scene even if the player has no lives left
             SceneManager.LoadSceneAsync("GameScene");
 
@@ -76,6 +97,17 @@ public class MainMenuManager : MonoBehaviour
 
         // If the player has lives, subtract one life
         VirtualCurrency.Instance.SubtractLife(1);
+
+        if (InterstitialAdController.Instance.isAdLoaded)
+        {
+            InterstitialAdController.Instance.ShowAd();
+
+        }
+        else
+        {
+            RewardedInterstitialAdController.Instance.ShowAd();
+            InterstitialAdController.Instance.LoadAd();
+        }
 
         // Load the game scene
         SceneManager.LoadSceneAsync("GameScene");

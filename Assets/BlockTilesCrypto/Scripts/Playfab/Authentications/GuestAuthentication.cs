@@ -1,6 +1,5 @@
 using System;
 using System.Collections.Generic;
-using System.Linq;
 using UnityEngine;
 using PlayFab;
 using PlayFab.ClientModels;
@@ -9,26 +8,20 @@ using CommonScripts;
 using PlayFabPersonal.Users;
 using Global;
 using CodeStage.AntiCheat.Storage;
-using Random = UnityEngine.Random;
 
 namespace PlayFabPersonal.Authentications
 {
     public class GuestAuthentication : MonoBehaviour
     {
         [SerializeField] private Button guestLoginButton;
+        private int retryCount = 0;
+        private const int maxRetryAttempts = 3;
 
         private void Start()
         {
             LoginWithDeviceButton();
+            // Optionally, you can enable the button to allow manual triggering of login
             // guestLoginButton.onClick.AddListener(LoginWithDeviceButton);
-            //
-            // if (
-            //     ObscuredPrefs.HasKey(PlayerPrefNameString.LAST_LOGIN) &&
-            //     ObscuredPrefs.Get(PlayerPrefNameString.LAST_LOGIN, null) == PlayerPrefNameString.GUEST
-            // )
-            // {
-            //     LoginWithDeviceButton();
-            // }
         }
 
         public void LoginWithDeviceButton()
@@ -38,82 +31,38 @@ namespace PlayFabPersonal.Authentications
             {
                 if (connected)
                 {
-                    Debug.Log("starting guest login");
+                    Debug.Log("Starting guest login");
                     LoginWithDevice();
                 }
                 else
                 {
                     GameSceneManager.Instance.HideLoadingPanel();
-                    Debug.LogFormat("No internet connection", 2, Color.white);
+                    //Debug.LogWarning("No internet connection available.");
                 }
             }));
         }
 
-
-        
         private void LoginWithDevice()
         {
             GeneralFunctions.GetDeviceID(out string android_id, out string ios_id, out string custom_id);
-            // Debug.Log("Logging in with Android Device ID " + android_id);
-            PlayFabClientAPI.LoginWithAndroidDeviceID(new LoginWithAndroidDeviceIDRequest()
-            {
-                CreateAccount = true,
-                AndroidDevice = SystemInfo.deviceModel,
-                OS = SystemInfo.operatingSystem,
-                TitleId = PlayFabSettings.TitleId,
-                AndroidDeviceId = android_id
-            }, response =>
-            {
-                Debug.Log("Successful login with Android Device ID");
-                UserAccount.OnLoginSuccess?.Invoke(PlayerPrefNameString.GUEST);
-            }, error =>
-            {
-                Debug.Log("Unsuccessful login with Android Device ID");
-                Debug.Log("Unsuccessful login with Android ID: " + error.ErrorMessage);
-              //  Debug.Log("Unsuccessful login with iOS Device ID");
-                if (string.IsNullOrEmpty(custom_id))
-                {
-                    custom_id = UnityEngine.Random.Range(100000, 999999).ToString(); // Unity's Random class
-                }
 
-                PlayFabClientAPI.LoginWithCustomID(new LoginWithCustomIDRequest()
-                {
-                    CustomId = custom_id,
-                    TitleId = PlayFabSettings.TitleId,
-                    CreateAccount = true
-                }, response =>
-                {
-                    Debug.Log("Successful login with Custom ID");
-                    UserAccount.OnLoginSuccess?.Invoke(PlayerPrefNameString.GUEST);
-                }, error =>
-                {
-                    Debug.Log("login title id "+PlayFabSettings.TitleId);
-                     Debug.Log("Unsuccessful login with Custom ID: " + error.CustomData);
-                     Debug.Log("Unsuccessful login with Custom ID code: " + error.Error);
-                     var errordetails = error.ErrorDetails;
-                     foreach (KeyValuePair<string, List<string>> entry in errordetails)
-                     {
-                         Debug.Log($"Category: {entry.Key}");
-                     
-                         foreach (string item in entry.Value)
-                         {
-                             Debug.Log($" Item - {item}");
-                         }
-                     }
-
-                     Debug.Log("Unsuccessful login with Custom ID code: " + error.ErrorMessage);
-
-                    UserAccount.OnLoginFailed?.Invoke(error.ErrorMessage);
-                });
-              //  UserAccount.OnLoginFailed?.Invoke(error.ErrorMessage);
-            });
             if (!string.IsNullOrEmpty(android_id))
             {
-
+                // Attempt login with Android Device ID
+                Debug.Log("Attempting login with Android Device ID: " + android_id);
+                PlayFabClientAPI.LoginWithAndroidDeviceID(new LoginWithAndroidDeviceIDRequest()
+                {
+                    CreateAccount = true,
+                    AndroidDeviceId = android_id,
+                    AndroidDevice = SystemInfo.deviceModel,
+                    OS = SystemInfo.operatingSystem,
+                    TitleId = PlayFabSettings.TitleId,
+                }, OnLoginSuccess, OnLoginFailure);
             }
             else if (!string.IsNullOrEmpty(ios_id))
             {
-             //   Debug.Log("Logging in with iOS Device ID " + ios_id);
+                // Attempt login with iOS Device ID
+                Debug.Log("Attempting login with iOS Device ID: " + ios_id);
                 PlayFabClientAPI.LoginWithIOSDeviceID(new LoginWithIOSDeviceIDRequest()
                 {
                     CreateAccount = true,
@@ -121,24 +70,65 @@ namespace PlayFabPersonal.Authentications
                     DeviceModel = SystemInfo.deviceModel,
                     OS = SystemInfo.operatingSystem,
                     TitleId = PlayFabSettings.TitleId,
-                }, response =>
-                {
-                    Debug.Log("Successful login with iOS Device ID");
-                    UserAccount.OnLoginSuccess?.Invoke(PlayerPrefNameString.GUEST);
-                }, error =>
-                {
-                  
-                });
-
-            }
-            else if (!string.IsNullOrEmpty(custom_id))
-            {
-             //   Debug.Log("Logging in with Custom ID " + custom_id);
-
+                }, OnLoginSuccess, OnLoginFailure);
             }
             else
             {
-                Debug.Log("No DeviceID is found!");
+                // Fallback to Custom ID if no Android/iOS ID is found
+                if (string.IsNullOrEmpty(custom_id))
+                {
+                    custom_id = UnityEngine.Random.Range(100000, 999999).ToString();
+                   // Debug.LogWarning("No valid Android or iOS ID found. Using fallback Custom ID: " + custom_id);
+                }
+
+                PlayFabClientAPI.LoginWithCustomID(new LoginWithCustomIDRequest()
+                {
+                    CustomId = custom_id,
+                    TitleId = PlayFabSettings.TitleId,
+                    CreateAccount = true
+                }, OnLoginSuccess, OnLoginFailure);
+            }
+        }
+
+        private void OnLoginSuccess(LoginResult result)
+        {
+            Debug.Log("Login successful.");
+            retryCount = 0; // Reset the retry count on success
+            GameSceneManager.Instance.HideLoadingPanel();
+            UserAccount.OnLoginSuccess?.Invoke(PlayerPrefNameString.GUEST);
+        }
+
+        private void OnLoginFailure(PlayFabError error)
+        {
+           // Debug.LogError("Login failed: " + error.GenerateErrorReport());
+            GameSceneManager.Instance.HideLoadingPanel();
+
+            // Handle detailed logging of error
+            if (error.ErrorDetails != null)
+            {
+                foreach (KeyValuePair<string, List<string>> entry in error.ErrorDetails)
+                {
+                   // Debug.LogError($"Error Category: {entry.Key}");
+                    foreach (string item in entry.Value)
+                    {
+                       // Debug.LogError($" - {item}");
+                    }
+                }
+            }
+
+            // Retry logic
+            retryCount++;
+            if (retryCount < maxRetryAttempts)
+            {
+            //    Debug.LogWarning($"Retrying login, attempt {retryCount}/{maxRetryAttempts}");
+                LoginWithDevice(); // Retry login
+            }
+            else
+            {
+              //  Debug.LogError("Max retry attempts reached. Login failed.");
+                retryCount = 0; // Reset retry count after max attempts
+                UserAccount.OnLoginFailed?.Invoke(error.ErrorMessage);
+                // Optionally notify the user about the failure
             }
         }
     }

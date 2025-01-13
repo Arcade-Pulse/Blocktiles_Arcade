@@ -1,13 +1,13 @@
 {
   "project_info": {
-    "project_number": "41443477780",
-    "project_id": "blocktiles-arcade",
-    "storage_bucket": "blocktiles-arcade.appspot.com"
+    "project_number": "849604356290",
+    "project_id": "blocktiles-arcade-c80b0",
+    "storage_bucket": "blocktiles-arcade-c80b0.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:41443477780:android:0c98bc5b3847616c8a1a01",
+        "mobilesdk_app_id": "1:849604356290:android:0e81ae6aeba2494752b35b",
         "android_client_info": {
           "package_name": "com.arcadePulse.BlockTilesArcade"
         }
@@ -15,14 +15,15 @@
       "oauth_client": [],
       "api_key": [
         {
-          "current_key": "AIzaSyBUjaBo8aQz77IS6zX9vgV2PUUvkFZuCFo"
+          "current_key": "AIzaSyBZP1QQbRG2DNZ21UHdOOPdDFbVnmUmmTo"
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": []
         }
-      }
+      },
+      "admob_app_id": "ca-app-pub-1983393293579241~7418142475"
     }
   ],
   "configuration_version": "1"

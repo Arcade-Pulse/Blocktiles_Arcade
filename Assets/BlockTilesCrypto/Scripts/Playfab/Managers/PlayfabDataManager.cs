@@ -14,7 +14,6 @@ using System.Collections.Generic;
 using System.Linq;
 using Global;
 using PlayFabPersonal.Economy;
-using UnityEditor.Minesweeper.Scripts.UnityAds;
 using UnityEngine.Serialization;
 
 namespace PlayFabPersonal.Managers
@@ -23,8 +22,8 @@ namespace PlayFabPersonal.Managers
     {
         public static PlayfabDataManager Instance { get; private set; }
 
-        [SerializeField] private ObscuredInt gameSocCoins;
-        [SerializeField] private int lives;
+        [SerializeField] public ObscuredInt gameSocCoins;
+        [SerializeField] public int lives;
         [SerializeField] public string currentPlayerID;
         [SerializeField] public bool isGuestAccountLinked;
 
@@ -71,6 +70,7 @@ namespace PlayFabPersonal.Managers
         public static event Action<string> OnSuccessStartTransactionException;
         public static event Action<string> OnSuccessStartingTransaction;
         public static event Action<string> OnErrorStartingTransaction;
+        public static event EventHandler<VirtualCurrency.OnAddSubstractAmountEventArgs> OnChangeVirtualCurrencyAmount;
 
         public class OnConverstionSuccessEventArgs : EventArgs
         {
@@ -379,6 +379,7 @@ namespace PlayFabPersonal.Managers
                 if (result.VirtualCurrency.TryGetValue("CN", out var cn))
                 {
                     gameSocCoins = cn;
+
                 }
 
                 if (result.VirtualCurrency.TryGetValue("LF", out var lf))
@@ -442,7 +443,7 @@ namespace PlayFabPersonal.Managers
 
         private void OnErrorGetUserInventory(PlayFabError error)
         {
-            Debug.Log(error.ErrorMessage);
+          //  Debug.Log(error.ErrorMessage);
         }
 
         private void OnDetectedCheat()
@@ -479,29 +480,29 @@ namespace PlayFabPersonal.Managers
             return currentPlayerID;
         }
 
-        public void StartTransaction(string selectedCashoutMethod, decimal amount, string email)
-        {
-            
-            ObscuredString functionName = "startTransaction1B";
-            var request = new ExecuteCloudScriptRequest()
-            {
-                FunctionName = functionName,
-                FunctionParameter = new
-                {
-                    email = email,
-                    method = selectedCashoutMethod,
-                    amountInUSD = amount.ToString(CultureInfo.InvariantCulture)
-                },
-                GeneratePlayStreamEvent = true,
-                RevisionSelection = cloudScriptRevision
-            };
-
-            lastTransactionEmail = email;
-            lastTransactionAmountInUSD = (double)amount;
-
-            if (PlayFabClientAPI.IsClientLoggedIn())
-                PlayFabClientAPI.ExecuteCloudScript(request, OnSuccessStartTransaction, OnErrorStartTransaction);
-        }
+        // public void StartTransaction(string selectedCashoutMethod, decimal amount, string email)
+        // {
+        //     
+        //     ObscuredString functionName = "startTransaction1B";
+        //     var request = new ExecuteCloudScriptRequest()
+        //     {
+        //         FunctionName = functionName,
+        //         FunctionParameter = new
+        //         {
+        //             email = email,
+        //             method = selectedCashoutMethod,
+        //             amountInUSD = amount.ToString(CultureInfo.InvariantCulture)
+        //         },
+        //         GeneratePlayStreamEvent = true,
+        //         RevisionSelection = cloudScriptRevision
+        //     };
+        //
+        //     lastTransactionEmail = email;
+        //     lastTransactionAmountInUSD = (double)amount;
+        //
+        //     if (PlayFabClientAPI.IsClientLoggedIn())
+        //         PlayFabClientAPI.ExecuteCloudScript(request, OnSuccessStartTransaction, OnErrorStartTransaction);
+        // }
 
         public void ShowBannerAd()
         {
@@ -512,7 +513,7 @@ namespace PlayFabPersonal.Managers
 
         private void OnSuccessStartTransaction(ExecuteCloudScriptResult result)
         {
-            Interstitial.Instance.ShowAd();
+          //  InterstitialAdController.Instance.ShowAd();
          //   ShowBannerAd();
             //Debug.Log("Transaction Started");
             if (result.FunctionResult == null)
@@ -912,6 +913,7 @@ namespace PlayFabPersonal.Managers
 
         public int GetLifeRewardPerAd()
         {
+            Debug.Log("life reward per ad"+lifeRewardPerAd);
             return lifeRewardPerAd;
         }
 

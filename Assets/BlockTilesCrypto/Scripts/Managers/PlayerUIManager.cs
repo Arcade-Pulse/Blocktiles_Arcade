@@ -77,7 +77,7 @@ public class PlayerUIManager : MonoBehaviour
         {
             if (playfabDataManager == null)
             {
-                Debug.LogError("playfabDataManager is null in ShowPlayerStats");
+             //   Debug.LogError("playfabDataManager is null in ShowPlayerStats");
                 return;
             }
 

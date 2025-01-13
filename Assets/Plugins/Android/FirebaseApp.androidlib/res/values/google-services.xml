@@ -1,9 +1,9 @@
 <?xml version='1.0' encoding='utf-8'?>
 <resources xmlns:tools="http://schemas.android.com/tools" tools:keep="@string/gcm_defaultSenderId,@string/google_storage_bucket,@string/project_id,@string/google_api_key,@string/google_crash_reporting_api_key,@string/google_app_id">
-  <string name="gcm_defaultSenderId" translatable="false">41443477780</string>
-  <string name="google_storage_bucket" translatable="false">blocktiles-arcade.appspot.com</string>
-  <string name="project_id" translatable="false">blocktiles-arcade</string>
-  <string name="google_api_key" translatable="false">AIzaSyBUjaBo8aQz77IS6zX9vgV2PUUvkFZuCFo</string>
-  <string name="google_crash_reporting_api_key" translatable="false">AIzaSyBUjaBo8aQz77IS6zX9vgV2PUUvkFZuCFo</string>
-  <string name="google_app_id" translatable="false">1:41443477780:android:0c98bc5b3847616c8a1a01</string>
+  <string name="gcm_defaultSenderId" translatable="false">849604356290</string>
+  <string name="google_storage_bucket" translatable="false">blocktiles-arcade-c80b0.appspot.com</string>
+  <string name="project_id" translatable="false">blocktiles-arcade-c80b0</string>
+  <string name="google_api_key" translatable="false">AIzaSyBZP1QQbRG2DNZ21UHdOOPdDFbVnmUmmTo</string>
+  <string name="google_crash_reporting_api_key" translatable="false">AIzaSyBZP1QQbRG2DNZ21UHdOOPdDFbVnmUmmTo</string>
+  <string name="google_app_id" translatable="false">1:849604356290:android:0e81ae6aeba2494752b35b</string>
 </resources>

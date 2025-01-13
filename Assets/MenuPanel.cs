@@ -5,7 +5,6 @@ using CodeStage.AntiCheat.Storage;
 using Global;
 //using GoogleMobileAds.Api;
 using PlayFabPersonal.Managers;
-using UnityEditor.Minesweeper.Scripts.UnityAds;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -19,15 +18,15 @@ public class MenuPanel : MonoBehaviour
      //   Debug.Log("menu panel enabled");
         ChangeStateCashout();
         UpdatePlayerStatus();
-        if (!Rewarded.Instance.isAdLoaded)
-        {
-            Rewarded.Instance.LoadRewardedAd();
-        }
-
-        if (!Interstitial.Instance.isAdLoaded)
-        {
-            Interstitial.Instance.LoadInterstitialAd();
-        }
+        // if (!RewardedAdController.Instance.isAdLoaded)
+        // {
+        //     RewardedAdController.Instance.LoadAd();
+        // }
+        //
+        // if (!InterstitialAdController.Instance.isAdLoaded)
+        // {
+        //     InterstitialAdController.Instance.LoadAd();
+        // }
       //  RewardedInterstitialAdController.Instance.adRewarded = false;
         // if (InterstitialAdController.Instance.isAdLoaded)
         // {

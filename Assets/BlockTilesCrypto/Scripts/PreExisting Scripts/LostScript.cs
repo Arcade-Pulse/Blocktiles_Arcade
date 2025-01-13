@@ -1,12 +1,10 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
-using CodeStage.AntiCheat.Storage;
 using Global;
 using PlayFabPersonal.Economy;
 using PlayFabPersonal.Managers;
 using TMPro;
-using UnityEditor.Minesweeper.Scripts.UnityAds;
 using UnityEngine;
 
 public class LostScript : MonoBehaviour
@@ -609,7 +607,7 @@ public class LostScript : MonoBehaviour
         // timesLost++;
         // if (timesLost>2)
         // {
-        Interstitial.Instance.ShowAd();
+        InterstitialAdController.Instance.ShowAd();
         //}
     }
 
@@ -647,6 +645,8 @@ public class LostScript : MonoBehaviour
         if (MainState.state == MainState.State.GameOver && !this.pressed)
         {
             this.pressed = true;
+            GameUIManager.Instance.ShowPlayerStats();
+
             base.StartCoroutine(this.AnimOut());
         }
     }

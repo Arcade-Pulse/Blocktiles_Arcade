@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using PlayFabPersonal.Economy;
 using PlayFabPersonal.Managers;
 using TMPro;
 using UnityEngine;
@@ -31,15 +32,25 @@ public class GameUIManager : MonoBehaviour
                 }
     }
 
+    // private void OnEnable()
+    // {
+    //     VirtualCurrency.OnCoinBalanceUpdated += ShowPlayerStats;  // Update the UI when the coin balance changes
+    // }
+    //
+    // private void OnDisable()
+    // {
+    //     VirtualCurrency.OnCoinBalanceUpdated -= ShowPlayerStats;  // Clean up the listener
+    // }
+
 
     public void ShowPlayerStats()
     {
-        Debug.LogWarning("executing Show player stats");
+        Debug.Log("executing Show player stats");
         try
         {
             if (playfabDataManager == null)
             {
-                //Debug.Log("playfabDataManager is null in ShowPlayerStats");
+                Debug.Log("playfabDataManager is null in ShowPlayerStats");
                 return;
             }
 
@@ -51,18 +62,18 @@ public class GameUIManager : MonoBehaviour
             }
             else
             {
-             //   Debug.LogError("lifeText is null in ShowPlayerStats");
+                Debug.LogError("lifeText is null in ShowPlayerStats");
             }
 
             if (gameSocCoinText != null)
             {
                 gameSocCoinText.text = playfabDataManager.GetGameSocCoins().ToString();
-              //  Debug.Log("updated coins");
+                Debug.Log("updated coins"+playfabDataManager.GetGameSocCoins().ToString());
 
             }
             else
             {
-               // Debug.LogError("gameSocCoinText is null in ShowPlayerStats");
+                Debug.Log("gameSocCoinText is null in ShowPlayerStats");
             }
         }
         catch (ArgumentOutOfRangeException ex)

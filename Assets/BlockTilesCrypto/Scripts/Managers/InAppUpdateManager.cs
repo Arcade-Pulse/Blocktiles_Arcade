@@ -82,16 +82,16 @@ public class InAppUpdateManager : MonoBehaviour
             else
             {
                 appUpdateContainer.SetActive(false);
-               // OnUpdateAvailable?.Invoke(this, new OnUpdateAvailableEventArgs { isUpdateAvailable = false });
-                SceneManager.LoadScene("AuthenticationScene");
+                OnUpdateAvailable?.Invoke(this, new OnUpdateAvailableEventArgs { isUpdateAvailable = false });
+                //SceneManager.LoadScene("AuthenticationScene");
             }
         }
         else
         {
             // Handle the error if AppUpdateInfo retrieval fails.
             Debug.Log("Error getting AppUpdateInfo: " + appUpdateInfoOperation.Error);
-          //  OnUpdateAvailable?.Invoke(this, new OnUpdateAvailableEventArgs { isUpdateAvailable = false });
-                   SceneManager.LoadScene("AuthenticationScene");
+            OnUpdateAvailable?.Invoke(this, new OnUpdateAvailableEventArgs { isUpdateAvailable = false });
+                //   SceneManager.LoadScene("AuthenticationScene");
                    // SceneManager.LoadScene("AuthenticationScene");
         }
     }

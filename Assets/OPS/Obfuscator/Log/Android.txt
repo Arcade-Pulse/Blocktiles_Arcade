@@ -38,13 +38,21 @@
 
 [Info][OPS.OBF][OnProcess_Assets] Process component Analyse Unity Animation Methods
 [Debug][OPS.OBF][OnAnalyse_Component_Scenes] Iterate components in loaded build scene Assets/BlockTilesCrypto/Scenes/Loading.unity.
-[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Found 11 Root GameObjects in Scene Assets/BlockTilesCrypto/Scenes/Loading.unity
-[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Found 219 Components in Scene Assets/BlockTilesCrypto/Scenes/Loading.unity
+[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Found 12 Root GameObjects in Scene Assets/BlockTilesCrypto/Scenes/Loading.unity
+[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Found 229 Components in Scene Assets/BlockTilesCrypto/Scenes/Loading.unity
 [Info][OPS.OBF][OnAnalyse_Component_Scenes] Process component Analyse Unity Event Component
 [Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in DebugManager of type UnityEngine.Transform
 [Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in DebugManager of type DebugManager
 [Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in DevelopmentManager of type UnityEngine.Transform
 [Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in GoogleMobileAdsController of type UnityEngine.Transform
+[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in GoogleMobileAdsController of type GoogleMobileAdsController
+[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in GoogleMobileAdsController of type GoogleMobileAdsConsentController
+[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in GoogleMobileAdsController of type AppOpenAdController
+[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in GoogleMobileAdsController of type BannerViewController
+[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in GoogleMobileAdsController of type InterstitialAdController
+[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in GoogleMobileAdsController of type RewardedAdController
+[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in GoogleMobileAdsController of type RewardedInterstitialAdController
+[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in GoogleMobileAdsController of type InitialAdLoader
 [Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in SceneManager of type UnityEngine.Transform
 [Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in AppUpdateManager of type UnityEngine.Transform
 [Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in AppUpdateManager of type InAppUpdateManager
@@ -262,14 +270,58 @@
 [Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in BackTrace of type Backtrace.Unity.BacktraceClient
 [Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in BackTrace of type BackTraceTest
 [Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in APPODEAL of type UnityEngine.Transform
-[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in APPODEAL of type AppoDeal
-[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in APPODEAL of type Banner
-[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in APPODEAL of type Interstitial
-[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in APPODEAL of type Rewarded
+[Warning][OPS.OBF][OnAnalyse_Component_Scenes] Failed to process current iterated Component at index 223 with Exception: System.NullReferenceException: Object reference not set to an instance of an object
+  at OPS.Obfuscator.Editor.Project.PreBuild.Pipeline.Component.AnalyseUnityEventComponent.OnAnalyse_Component (UnityEngine.Component _Component) [0x00005] in <d2099cc406b14a2a8cf27045e002969e>:0 
+  at OPS.Obfuscator.Editor.Project.PreBuild.Pipeline.PreBuildPipeline.Process_Component_Analyse_And_Manipulate (System.Collections.Generic.List`1[T] _ComponentList) [0x00086] in <d2099cc406b14a2a8cf27045e002969e>:0 
+[Warning][OPS.OBF][OnAnalyse_Component_Scenes] Failed to process current iterated Component at index 224 with Exception: System.NullReferenceException: Object reference not set to an instance of an object
+  at OPS.Obfuscator.Editor.Project.PreBuild.Pipeline.Component.AnalyseUnityEventComponent.OnAnalyse_Component (UnityEngine.Component _Component) [0x00005] in <d2099cc406b14a2a8cf27045e002969e>:0 
+  at OPS.Obfuscator.Editor.Project.PreBuild.Pipeline.PreBuildPipeline.Process_Component_Analyse_And_Manipulate (System.Collections.Generic.List`1[T] _ComponentList) [0x00086] in <d2099cc406b14a2a8cf27045e002969e>:0 
+[Warning][OPS.OBF][OnAnalyse_Component_Scenes] Failed to process current iterated Component at index 225 with Exception: System.NullReferenceException: Object reference not set to an instance of an object
+  at OPS.Obfuscator.Editor.Project.PreBuild.Pipeline.Component.AnalyseUnityEventComponent.OnAnalyse_Component (UnityEngine.Component _Component) [0x00005] in <d2099cc406b14a2a8cf27045e002969e>:0 
+  at OPS.Obfuscator.Editor.Project.PreBuild.Pipeline.PreBuildPipeline.Process_Component_Analyse_And_Manipulate (System.Collections.Generic.List`1[T] _ComponentList) [0x00086] in <d2099cc406b14a2a8cf27045e002969e>:0 
+[Warning][OPS.OBF][OnAnalyse_Component_Scenes] Failed to process current iterated Component at index 226 with Exception: System.NullReferenceException: Object reference not set to an instance of an object
+  at OPS.Obfuscator.Editor.Project.PreBuild.Pipeline.Component.AnalyseUnityEventComponent.OnAnalyse_Component (UnityEngine.Component _Component) [0x00005] in <d2099cc406b14a2a8cf27045e002969e>:0 
+  at OPS.Obfuscator.Editor.Project.PreBuild.Pipeline.PreBuildPipeline.Process_Component_Analyse_And_Manipulate (System.Collections.Generic.List`1[T] _ComponentList) [0x00086] in <d2099cc406b14a2a8cf27045e002969e>:0 
+[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in LevelPlay of type UnityEngine.Transform
+[Warning][OPS.OBF][OnAnalyse_Component_Scenes] Failed to process current iterated Component at index 228 with Exception: System.NullReferenceException: Object reference not set to an instance of an object
+  at OPS.Obfuscator.Editor.Project.PreBuild.Pipeline.Component.AnalyseUnityEventComponent.OnAnalyse_Component (UnityEngine.Component _Component) [0x00005] in <d2099cc406b14a2a8cf27045e002969e>:0 
+  at OPS.Obfuscator.Editor.Project.PreBuild.Pipeline.PreBuildPipeline.Process_Component_Analyse_And_Manipulate (System.Collections.Generic.List`1[T] _ComponentList) [0x00086] in <d2099cc406b14a2a8cf27045e002969e>:0 
 [Info][OPS.OBF][OnAnalyse_Component_Scenes] Process component Analyse MonoScript
 [Debug][OPS.OBF][OnAnalyse_Component_Scenes] Found mono script reference DebugManager for DebugManager
 [Debug][OPS.OBF][OnAnalyse_Component_Scenes] Found mono script reference in serialized properties for DebugManager (1):
   - DebugManager
+
+[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Found mono script reference GoogleMobileAdsController for GoogleMobileAdsController
+[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Found mono script reference in serialized properties for GoogleMobileAdsController (1):
+  - GoogleMobileAdsController
+
+[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Found mono script reference GoogleMobileAdsConsentController for GoogleMobileAdsController
+[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Found mono script reference in serialized properties for GoogleMobileAdsController (1):
+  - GoogleMobileAdsConsentController
+
+[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Found mono script reference AppOpenAdController for GoogleMobileAdsController
+[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Found mono script reference in serialized properties for GoogleMobileAdsController (1):
+  - AppOpenAdController
+
+[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Found mono script reference BannerViewController for GoogleMobileAdsController
+[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Found mono script reference in serialized properties for GoogleMobileAdsController (1):
+  - BannerViewController
+
+[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Found mono script reference InterstitialAdController for GoogleMobileAdsController
+[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Found mono script reference in serialized properties for GoogleMobileAdsController (1):
+  - InterstitialAdController
+
+[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Found mono script reference RewardedAdController for GoogleMobileAdsController
+[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Found mono script reference in serialized properties for GoogleMobileAdsController (1):
+  - RewardedAdController
+
+[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Found mono script reference RewardedInterstitialAdController for GoogleMobileAdsController
+[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Found mono script reference in serialized properties for GoogleMobileAdsController (1):
+  - RewardedInterstitialAdController
+
+[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Found mono script reference InitialAdLoader for GoogleMobileAdsController
+[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Found mono script reference in serialized properties for GoogleMobileAdsController (1):
+  - InitialAdLoader
 
 [Debug][OPS.OBF][OnAnalyse_Component_Scenes] Found mono script reference InAppUpdateManager for AppUpdateManager
 [Debug][OPS.OBF][OnAnalyse_Component_Scenes] Found mono script reference in serialized properties for AppUpdateManager (1):
@@ -635,25 +687,29 @@
 [Debug][OPS.OBF][OnAnalyse_Component_Scenes] Found mono script reference in serialized properties for BackTrace (1):
   - BackTraceTest
 
-[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Found mono script reference AppoDeal for APPODEAL
-[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Found mono script reference in serialized properties for APPODEAL (1):
-  - AppoDeal
-
-[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Found mono script reference Banner for APPODEAL
-[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Found mono script reference in serialized properties for APPODEAL (1):
-  - Banner
-
-[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Found mono script reference Interstitial for APPODEAL
-[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Found mono script reference in serialized properties for APPODEAL (1):
-  - Interstitial
-
-[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Found mono script reference Rewarded for APPODEAL
-[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Found mono script reference in serialized properties for APPODEAL (1):
-  - Rewarded
-
+[Debug][OPS.OBF][OnAnalyse_Component_Scenes] System.ArgumentException: Object at index 0 is null
+  at (wrapper managed-to-native) UnityEditor.SerializedObject.InternalCreate(UnityEngine.Object[],UnityEngine.Object)
+  at UnityEditor.SerializedObject..ctor (UnityEngine.Object obj) [0x00008] in <2201ab87e660427c974282df3bb3cf36>:0 
+  at OPS.Obfuscator.Editor.Serialization.Unity.Helper.SerializedPropertyHelper.SearchVariablesWithSerializedObject (UnityEngine.Object _Object) [0x00006] in <d2099cc406b14a2a8cf27045e002969e>:0 
+[Debug][OPS.OBF][OnAnalyse_Component_Scenes] System.ArgumentException: Object at index 0 is null
+  at (wrapper managed-to-native) UnityEditor.SerializedObject.InternalCreate(UnityEngine.Object[],UnityEngine.Object)
+  at UnityEditor.SerializedObject..ctor (UnityEngine.Object obj) [0x00008] in <2201ab87e660427c974282df3bb3cf36>:0 
+  at OPS.Obfuscator.Editor.Serialization.Unity.Helper.SerializedPropertyHelper.SearchVariablesWithSerializedObject (UnityEngine.Object _Object) [0x00006] in <d2099cc406b14a2a8cf27045e002969e>:0 
+[Debug][OPS.OBF][OnAnalyse_Component_Scenes] System.ArgumentException: Object at index 0 is null
+  at (wrapper managed-to-native) UnityEditor.SerializedObject.InternalCreate(UnityEngine.Object[],UnityEngine.Object)
+  at UnityEditor.SerializedObject..ctor (UnityEngine.Object obj) [0x00008] in <2201ab87e660427c974282df3bb3cf36>:0 
+  at OPS.Obfuscator.Editor.Serialization.Unity.Helper.SerializedPropertyHelper.SearchVariablesWithSerializedObject (UnityEngine.Object _Object) [0x00006] in <d2099cc406b14a2a8cf27045e002969e>:0 
+[Debug][OPS.OBF][OnAnalyse_Component_Scenes] System.ArgumentException: Object at index 0 is null
+  at (wrapper managed-to-native) UnityEditor.SerializedObject.InternalCreate(UnityEngine.Object[],UnityEngine.Object)
+  at UnityEditor.SerializedObject..ctor (UnityEngine.Object obj) [0x00008] in <2201ab87e660427c974282df3bb3cf36>:0 
+  at OPS.Obfuscator.Editor.Serialization.Unity.Helper.SerializedPropertyHelper.SearchVariablesWithSerializedObject (UnityEngine.Object _Object) [0x00006] in <d2099cc406b14a2a8cf27045e002969e>:0 
+[Debug][OPS.OBF][OnAnalyse_Component_Scenes] System.ArgumentException: Object at index 0 is null
+  at (wrapper managed-to-native) UnityEditor.SerializedObject.InternalCreate(UnityEngine.Object[],UnityEngine.Object)
+  at UnityEditor.SerializedObject..ctor (UnityEngine.Object obj) [0x00008] in <2201ab87e660427c974282df3bb3cf36>:0 
+  at OPS.Obfuscator.Editor.Serialization.Unity.Helper.SerializedPropertyHelper.SearchVariablesWithSerializedObject (UnityEngine.Object _Object) [0x00006] in <d2099cc406b14a2a8cf27045e002969e>:0 
 [Debug][OPS.OBF][OnAnalyse_Component_Scenes] Iterate components in not loaded build scene Assets/BlockTilesCrypto/Scenes/AuthenticationScene.unity.
 [Debug][OPS.OBF][OnAnalyse_Component_Scenes] Found 7 Root GameObjects in Scene Assets/BlockTilesCrypto/Scenes/AuthenticationScene.unity
-[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Found 257 Components in Scene Assets/BlockTilesCrypto/Scenes/AuthenticationScene.unity
+[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Found 277 Components in Scene Assets/BlockTilesCrypto/Scenes/AuthenticationScene.unity
 [Info][OPS.OBF][OnAnalyse_Component_Scenes] Process component Analyse Unity Event Component
 [Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in AuthenticationManager of type UnityEngine.Transform
 [Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in AuthenticationManager of type PlayFabPersonal.Authentications.PlayfabAuthentication
@@ -891,6 +947,26 @@
 [Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in LoadingPanel of type UnityEngine.UI.Image
 [Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in LoadingPanel of type UnityEngine.Animator
 [Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in LoadingPanel of type LoadingPanel
+[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in Container of type UnityEngine.RectTransform
+[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in TitleImage of type UnityEngine.RectTransform
+[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in TitleImage of type UnityEngine.CanvasRenderer
+[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in TitleImage of type UnityEngine.UI.Image
+[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in BlueRingImage of type UnityEngine.RectTransform
+[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in BlueRingImage of type UnityEngine.CanvasRenderer
+[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in BlueRingImage of type UnityEngine.UI.Image
+[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in GoldenRingImage of type UnityEngine.RectTransform
+[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in GoldenRingImage of type UnityEngine.CanvasRenderer
+[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in GoldenRingImage of type UnityEngine.UI.Image
+[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in LoadingText of type UnityEngine.RectTransform
+[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in LoadingText of type UnityEngine.CanvasRenderer
+[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in LoadingText of type TMPro.TextMeshProUGUI
+[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in PercentageText of type UnityEngine.RectTransform
+[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in PercentageText of type UnityEngine.CanvasRenderer
+[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in PercentageText of type TMPro.TextMeshProUGUI
+[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in Loading of type UnityEngine.RectTransform
+[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in Loading of type UnityEngine.CanvasRenderer
+[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in Loading of type UnityEngine.UI.Image
+[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in Loading of type UnityEngine.Animator
 [Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in Container of type UnityEngine.RectTransform
 [Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in TitleImage of type UnityEngine.RectTransform
 [Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in TitleImage of type UnityEngine.CanvasRenderer
@@ -1357,12 +1433,38 @@
 [Debug][OPS.OBF][OnAnalyse_Component_Scenes] Found mono script reference in serialized properties for PercentageText (1):
   - TMPro.TextMeshProUGUI
 
+[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Found mono script reference UnityEngine.UI.Image for Loading
+[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Found mono script reference in serialized properties for Loading (1):
+  - UnityEngine.UI.Image
+
+[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Found mono script reference UnityEngine.UI.Image for TitleImage
+[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Found mono script reference in serialized properties for TitleImage (1):
+  - UnityEngine.UI.Image
+
+[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Found mono script reference UnityEngine.UI.Image for BlueRingImage
+[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Found mono script reference in serialized properties for BlueRingImage (1):
+  - UnityEngine.UI.Image
+
+[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Found mono script reference UnityEngine.UI.Image for GoldenRingImage
+[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Found mono script reference in serialized properties for GoldenRingImage (1):
+  - UnityEngine.UI.Image
+
+[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Found mono script reference TMPro.TextMeshProUGUI for LoadingText
+[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Found mono script reference in serialized properties for LoadingText (1):
+  - TMPro.TextMeshProUGUI
+
+[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Found mono script reference TMPro.TextMeshProUGUI for PercentageText
+[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Found mono script reference in serialized properties for PercentageText (1):
+  - TMPro.TextMeshProUGUI
+
 [Debug][OPS.OBF][OnAnalyse_Component_Scenes] Iterate components in not loaded build scene Assets/BlockTilesCrypto/Scenes/MainMenuScene.unity.
 [Debug][OPS.OBF][OnAnalyse_Component_Scenes] Found 11 Root GameObjects in Scene Assets/BlockTilesCrypto/Scenes/MainMenuScene.unity
-[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Found 665 Components in Scene Assets/BlockTilesCrypto/Scenes/MainMenuScene.unity
+[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Found 697 Components in Scene Assets/BlockTilesCrypto/Scenes/MainMenuScene.unity
 [Info][OPS.OBF][OnAnalyse_Component_Scenes] Process component Analyse Unity Event Component
 [Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in BannerLoader of type UnityEngine.Transform
-[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in BannerLoader of type LoadBanner
+[Warning][OPS.OBF][OnAnalyse_Component_Scenes] Failed to process current iterated Component at index 1 with Exception: System.NullReferenceException: Object reference not set to an instance of an object
+  at OPS.Obfuscator.Editor.Project.PreBuild.Pipeline.Component.AnalyseUnityEventComponent.OnAnalyse_Component (UnityEngine.Component _Component) [0x00005] in <d2099cc406b14a2a8cf27045e002969e>:0 
+  at OPS.Obfuscator.Editor.Project.PreBuild.Pipeline.PreBuildPipeline.Process_Component_Analyse_And_Manipulate (System.Collections.Generic.List`1[T] _ComponentList) [0x00086] in <d2099cc406b14a2a8cf27045e002969e>:0 
 [Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in Managers of type UnityEngine.Transform
 [Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in Managers of type PlayerManager
 [Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in Managers of type RewardLives
@@ -1520,6 +1622,14 @@
 [Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in GameSocCoin of type UnityEngine.RectTransform
 [Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in GameSocCoin of type UnityEngine.CanvasRenderer
 [Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in GameSocCoin of type UnityEngine.UI.Image
+[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in GameSocCoin of type UnityEngine.UI.HorizontalLayoutGroup
+[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in GameSocCoin of type UnityEngine.UI.Button
+[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Found unity event methods in GameSocCoin (1):
+  - SetActive
+
+[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in bitcoin of type UnityEngine.RectTransform
+[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in bitcoin of type UnityEngine.CanvasRenderer
+[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in bitcoin of type UnityEngine.UI.Image
 [Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in GameSocCoinText of type UnityEngine.RectTransform
 [Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in GameSocCoinText of type UnityEngine.CanvasRenderer
 [Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in GameSocCoinText of type TMPro.TextMeshProUGUI
@@ -1971,10 +2081,43 @@
 [Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in Text (TMP) of type UnityEngine.RectTransform
 [Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in Text (TMP) of type UnityEngine.CanvasRenderer
 [Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in Text (TMP) of type TMPro.TextMeshProUGUI
+[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in CashoutPointsLimit of type UnityEngine.RectTransform
+[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in CashoutPointsLimit of type UnityEngine.CanvasRenderer
+[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in CashoutPointsLimit of type UnityEngine.UI.Image
+[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in CashoutPointsLimit of type CoinsChecker
+[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Found unity event methods in CashoutPointsLimit (1):
+  - ClaimButtonPressed
+
+[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in Container of type UnityEngine.RectTransform
+[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in Container of type UnityEngine.CanvasRenderer
+[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in Container of type UnityEngine.UI.Image
+[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in Container of type UnityEngine.UI.VerticalLayoutGroup
+[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in MessageText of type UnityEngine.RectTransform
+[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in MessageText of type UnityEngine.CanvasRenderer
+[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in MessageText of type TMPro.TextMeshProUGUI
+[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in ButtonsContainer of type UnityEngine.RectTransform
+[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in ButtonsContainer of type UnityEngine.UI.VerticalLayoutGroup
+[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in ClaimButton of type UnityEngine.RectTransform
+[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in ClaimButton of type UnityEngine.CanvasRenderer
+[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in ClaimButton of type UnityEngine.UI.Image
+[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in ClaimButton of type UnityEngine.UI.Button
+[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in Text (TMP) of type UnityEngine.RectTransform
+[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in Text (TMP) of type UnityEngine.CanvasRenderer
+[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in Text (TMP) of type TMPro.TextMeshProUGUI
+[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in CloseButton of type UnityEngine.RectTransform
+[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in CloseButton of type UnityEngine.CanvasRenderer
+[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in CloseButton of type UnityEngine.UI.Image
+[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in CloseButton of type UnityEngine.UI.Button
+[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Found unity event methods in CloseButton (1):
+  - SetActive
+
+[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in Text (TMP) of type UnityEngine.RectTransform
+[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in Text (TMP) of type UnityEngine.CanvasRenderer
+[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in Text (TMP) of type TMPro.TextMeshProUGUI
 [Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in AccountLinkerPanel of type UnityEngine.RectTransform
 [Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in AccountLinkerPanel of type UnityEngine.CanvasRenderer
 [Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in AccountLinkerPanel of type UnityEngine.UI.Image
-[Warning][OPS.OBF][OnAnalyse_Component_Scenes] Failed to process current iterated Component at index 544 with Exception: System.NullReferenceException: Object reference not set to an instance of an object
+[Warning][OPS.OBF][OnAnalyse_Component_Scenes] Failed to process current iterated Component at index 576 with Exception: System.NullReferenceException: Object reference not set to an instance of an object
   at OPS.Obfuscator.Editor.Project.PreBuild.Pipeline.Component.AnalyseUnityEventComponent.OnAnalyse_Component (UnityEngine.Component _Component) [0x00005] in <d2099cc406b14a2a8cf27045e002969e>:0 
   at OPS.Obfuscator.Editor.Project.PreBuild.Pipeline.PreBuildPipeline.Process_Component_Analyse_And_Manipulate (System.Collections.Generic.List`1[T] _ComponentList) [0x00086] in <d2099cc406b14a2a8cf27045e002969e>:0 
 [Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in Container of type UnityEngine.RectTransform
@@ -2101,10 +2244,10 @@
 [Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in Text of type UnityEngine.CanvasRenderer
 [Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in Text of type TMPro.TextMeshProUGUI
 [Info][OPS.OBF][OnAnalyse_Component_Scenes] Process component Analyse MonoScript
-[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Found mono script reference LoadBanner for BannerLoader
-[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Found mono script reference in serialized properties for BannerLoader (1):
-  - LoadBanner
-
+[Debug][OPS.OBF][OnAnalyse_Component_Scenes] System.ArgumentException: Object at index 0 is null
+  at (wrapper managed-to-native) UnityEditor.SerializedObject.InternalCreate(UnityEngine.Object[],UnityEngine.Object)
+  at UnityEditor.SerializedObject..ctor (UnityEngine.Object obj) [0x00008] in <2201ab87e660427c974282df3bb3cf36>:0 
+  at OPS.Obfuscator.Editor.Serialization.Unity.Helper.SerializedPropertyHelper.SearchVariablesWithSerializedObject (UnityEngine.Object _Object) [0x00006] in <d2099cc406b14a2a8cf27045e002969e>:0 
 [Debug][OPS.OBF][OnAnalyse_Component_Scenes] Found mono script reference PlayerManager for Managers
 [Debug][OPS.OBF][OnAnalyse_Component_Scenes] Found mono script reference in serialized properties for Managers (1):
   - PlayerManager
@@ -2315,6 +2458,18 @@
 
 [Debug][OPS.OBF][OnAnalyse_Component_Scenes] Found mono script reference UnityEngine.UI.Image for GameSocCoin
 [Debug][OPS.OBF][OnAnalyse_Component_Scenes] Found mono script reference in serialized properties for GameSocCoin (1):
+  - UnityEngine.UI.Image
+
+[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Found mono script reference UnityEngine.UI.HorizontalLayoutGroup for GameSocCoin
+[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Found mono script reference in serialized properties for GameSocCoin (1):
+  - UnityEngine.UI.HorizontalLayoutGroup
+
+[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Found mono script reference UnityEngine.UI.Button for GameSocCoin
+[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Found mono script reference in serialized properties for GameSocCoin (1):
+  - UnityEngine.UI.Button
+
+[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Found mono script reference UnityEngine.UI.Image for bitcoin
+[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Found mono script reference in serialized properties for bitcoin (1):
   - UnityEngine.UI.Image
 
 [Debug][OPS.OBF][OnAnalyse_Component_Scenes] Found mono script reference TMPro.TextMeshProUGUI for GameSocCoinText
@@ -2949,6 +3104,54 @@
 [Debug][OPS.OBF][OnAnalyse_Component_Scenes] Found mono script reference in serialized properties for Text (TMP) (1):
   - TMPro.TextMeshProUGUI
 
+[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Found mono script reference UnityEngine.UI.Image for CashoutPointsLimit
+[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Found mono script reference in serialized properties for CashoutPointsLimit (1):
+  - UnityEngine.UI.Image
+
+[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Found mono script reference CoinsChecker for CashoutPointsLimit
+[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Found mono script reference in serialized properties for CashoutPointsLimit (1):
+  - CoinsChecker
+
+[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Found mono script reference UnityEngine.UI.Image for Container
+[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Found mono script reference in serialized properties for Container (1):
+  - UnityEngine.UI.Image
+
+[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Found mono script reference UnityEngine.UI.VerticalLayoutGroup for Container
+[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Found mono script reference in serialized properties for Container (1):
+  - UnityEngine.UI.VerticalLayoutGroup
+
+[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Found mono script reference TMPro.TextMeshProUGUI for MessageText
+[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Found mono script reference in serialized properties for MessageText (1):
+  - TMPro.TextMeshProUGUI
+
+[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Found mono script reference UnityEngine.UI.VerticalLayoutGroup for ButtonsContainer
+[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Found mono script reference in serialized properties for ButtonsContainer (1):
+  - UnityEngine.UI.VerticalLayoutGroup
+
+[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Found mono script reference UnityEngine.UI.Image for ClaimButton
+[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Found mono script reference in serialized properties for ClaimButton (1):
+  - UnityEngine.UI.Image
+
+[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Found mono script reference UnityEngine.UI.Button for ClaimButton
+[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Found mono script reference in serialized properties for ClaimButton (1):
+  - UnityEngine.UI.Button
+
+[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Found mono script reference TMPro.TextMeshProUGUI for Text (TMP)
+[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Found mono script reference in serialized properties for Text (TMP) (1):
+  - TMPro.TextMeshProUGUI
+
+[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Found mono script reference UnityEngine.UI.Image for CloseButton
+[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Found mono script reference in serialized properties for CloseButton (1):
+  - UnityEngine.UI.Image
+
+[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Found mono script reference UnityEngine.UI.Button for CloseButton
+[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Found mono script reference in serialized properties for CloseButton (1):
+  - UnityEngine.UI.Button
+
+[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Found mono script reference TMPro.TextMeshProUGUI for Text (TMP)
+[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Found mono script reference in serialized properties for Text (TMP) (1):
+  - TMPro.TextMeshProUGUI
+
 [Debug][OPS.OBF][OnAnalyse_Component_Scenes] Found mono script reference UnityEngine.UI.Image for AccountLinkerPanel
 [Debug][OPS.OBF][OnAnalyse_Component_Scenes] Found mono script reference in serialized properties for AccountLinkerPanel (1):
   - UnityEngine.UI.Image
@@ -3151,7 +3354,7 @@
 
 [Debug][OPS.OBF][OnAnalyse_Component_Scenes] Iterate components in not loaded build scene Assets/BlockTilesCrypto/Scenes/GameScene.unity.
 [Debug][OPS.OBF][OnAnalyse_Component_Scenes] Found 9 Root GameObjects in Scene Assets/BlockTilesCrypto/Scenes/GameScene.unity
-[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Found 532 Components in Scene Assets/BlockTilesCrypto/Scenes/GameScene.unity
+[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Found 534 Components in Scene Assets/BlockTilesCrypto/Scenes/GameScene.unity
 [Info][OPS.OBF][OnAnalyse_Component_Scenes] Process component Analyse Unity Event Component
 [Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in Managers of type UnityEngine.Transform
 [Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in Managers of type MainObjControl
@@ -3337,8 +3540,12 @@
 [Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in MessageManager of type UnityEngine.Transform
 [Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in MessageManager of type MessageManager
 [Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in ScriptLoader of type UnityEngine.Transform
-[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in ScriptLoader of type ShowInterstitialAd
-[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in ScriptLoader of type LoadBanner
+[Warning][OPS.OBF][OnAnalyse_Component_Scenes] Failed to process current iterated Component at index 184 with Exception: System.NullReferenceException: Object reference not set to an instance of an object
+  at OPS.Obfuscator.Editor.Project.PreBuild.Pipeline.Component.AnalyseUnityEventComponent.OnAnalyse_Component (UnityEngine.Component _Component) [0x00005] in <d2099cc406b14a2a8cf27045e002969e>:0 
+  at OPS.Obfuscator.Editor.Project.PreBuild.Pipeline.PreBuildPipeline.Process_Component_Analyse_And_Manipulate (System.Collections.Generic.List`1[T] _ComponentList) [0x00086] in <d2099cc406b14a2a8cf27045e002969e>:0 
+[Warning][OPS.OBF][OnAnalyse_Component_Scenes] Failed to process current iterated Component at index 185 with Exception: System.NullReferenceException: Object reference not set to an instance of an object
+  at OPS.Obfuscator.Editor.Project.PreBuild.Pipeline.Component.AnalyseUnityEventComponent.OnAnalyse_Component (UnityEngine.Component _Component) [0x00005] in <d2099cc406b14a2a8cf27045e002969e>:0 
+  at OPS.Obfuscator.Editor.Project.PreBuild.Pipeline.PreBuildPipeline.Process_Component_Analyse_And_Manipulate (System.Collections.Generic.List`1[T] _ComponentList) [0x00086] in <d2099cc406b14a2a8cf27045e002969e>:0 
 [Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in ScriptLoader of type AnalyticEvent
 [Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in Canvas of type UnityEngine.RectTransform
 [Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in Canvas of type UnityEngine.Canvas
@@ -3721,6 +3928,8 @@
 [Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in CoinImageBackground of type UnityEngine.CanvasRenderer
 [Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in CoinImageBackground of type UnityEngine.UI.Image
 [Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in Target of type UnityEngine.RectTransform
+[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in Target of type UnityEngine.CanvasRenderer
+[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in Target of type UnityEngine.UI.Image
 [Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in GameSocCoinText of type UnityEngine.RectTransform
 [Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in GameSocCoinText of type UnityEngine.CanvasRenderer
 [Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in GameSocCoinText of type TMPro.TextMeshProUGUI
@@ -3811,14 +4020,14 @@
 [Debug][OPS.OBF][OnAnalyse_Component_Scenes] Found mono script reference in serialized properties for MessageManager (1):
   - MessageManager
 
-[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Found mono script reference ShowInterstitialAd for ScriptLoader
-[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Found mono script reference in serialized properties for ScriptLoader (1):
-  - ShowInterstitialAd
-
-[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Found mono script reference LoadBanner for ScriptLoader
-[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Found mono script reference in serialized properties for ScriptLoader (1):
-  - LoadBanner
-
+[Debug][OPS.OBF][OnAnalyse_Component_Scenes] System.ArgumentException: Object at index 0 is null
+  at (wrapper managed-to-native) UnityEditor.SerializedObject.InternalCreate(UnityEngine.Object[],UnityEngine.Object)
+  at UnityEditor.SerializedObject..ctor (UnityEngine.Object obj) [0x00008] in <2201ab87e660427c974282df3bb3cf36>:0 
+  at OPS.Obfuscator.Editor.Serialization.Unity.Helper.SerializedPropertyHelper.SearchVariablesWithSerializedObject (UnityEngine.Object _Object) [0x00006] in <d2099cc406b14a2a8cf27045e002969e>:0 
+[Debug][OPS.OBF][OnAnalyse_Component_Scenes] System.ArgumentException: Object at index 0 is null
+  at (wrapper managed-to-native) UnityEditor.SerializedObject.InternalCreate(UnityEngine.Object[],UnityEngine.Object)
+  at UnityEditor.SerializedObject..ctor (UnityEngine.Object obj) [0x00008] in <2201ab87e660427c974282df3bb3cf36>:0 
+  at OPS.Obfuscator.Editor.Serialization.Unity.Helper.SerializedPropertyHelper.SearchVariablesWithSerializedObject (UnityEngine.Object _Object) [0x00006] in <d2099cc406b14a2a8cf27045e002969e>:0 
 [Debug][OPS.OBF][OnAnalyse_Component_Scenes] Found mono script reference AnalyticEvent for ScriptLoader
 [Debug][OPS.OBF][OnAnalyse_Component_Scenes] Found mono script reference in serialized properties for ScriptLoader (1):
   - AnalyticEvent
@@ -4355,6 +4564,10 @@
 [Debug][OPS.OBF][OnAnalyse_Component_Scenes] Found mono script reference in serialized properties for CoinImageBackground (1):
   - UnityEngine.UI.Image
 
+[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Found mono script reference UnityEngine.UI.Image for Target
+[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Found mono script reference in serialized properties for Target (1):
+  - UnityEngine.UI.Image
+
 [Debug][OPS.OBF][OnAnalyse_Component_Scenes] Found mono script reference TMPro.TextMeshProUGUI for GameSocCoinText
 [Debug][OPS.OBF][OnAnalyse_Component_Scenes] Found mono script reference in serialized properties for GameSocCoinText (1):
   - TMPro.TextMeshProUGUI
@@ -4363,9 +4576,27 @@
 [Debug][OPS.OBF][OnAnalyse_Component_Scenes] Found mono script reference in serialized properties for Main Camera (1):
   - CameraScript
 
-[Debug][OPS.OBF][OnAnalyse_Component_Prefabs] Found 34 Prefabs.
-[Debug][OPS.OBF][OnAnalyse_Component_Prefabs] Found 909 Components in the prefabs.
+[Debug][OPS.OBF][OnAnalyse_Component_Prefabs] Found 50 Prefabs.
+[Debug][OPS.OBF][OnAnalyse_Component_Prefabs] Found 1133 Components in the prefabs.
 [Info][OPS.OBF][OnAnalyse_Component_Prefabs] Process component Analyse Unity Event Component
+[Debug][OPS.OBF][OnAnalyse_Component_Prefabs] Find unity event methods in 1024x768 of type UnityEngine.RectTransform
+[Debug][OPS.OBF][OnAnalyse_Component_Prefabs] Find unity event methods in 1024x768 of type UnityEngine.Canvas
+[Debug][OPS.OBF][OnAnalyse_Component_Prefabs] Find unity event methods in 1024x768 of type UnityEngine.UI.CanvasScaler
+[Debug][OPS.OBF][OnAnalyse_Component_Prefabs] Find unity event methods in 1024x768 of type UnityEngine.UI.GraphicRaycaster
+[Debug][OPS.OBF][OnAnalyse_Component_Prefabs] Find unity event methods in Background of type UnityEngine.RectTransform
+[Debug][OPS.OBF][OnAnalyse_Component_Prefabs] Find unity event methods in Background of type UnityEngine.CanvasRenderer
+[Debug][OPS.OBF][OnAnalyse_Component_Prefabs] Find unity event methods in Background of type UnityEngine.UI.Image
+[Debug][OPS.OBF][OnAnalyse_Component_Prefabs] Find unity event methods in Ad of type UnityEngine.RectTransform
+[Debug][OPS.OBF][OnAnalyse_Component_Prefabs] Find unity event methods in Ad of type UnityEngine.CanvasRenderer
+[Debug][OPS.OBF][OnAnalyse_Component_Prefabs] Find unity event methods in Ad of type UnityEngine.UI.Image
+[Debug][OPS.OBF][OnAnalyse_Component_Prefabs] Find unity event methods in Ad of type UnityEngine.UI.Button
+[Debug][OPS.OBF][OnAnalyse_Component_Prefabs] Find unity event methods in Button of type UnityEngine.RectTransform
+[Debug][OPS.OBF][OnAnalyse_Component_Prefabs] Find unity event methods in Button of type UnityEngine.CanvasRenderer
+[Debug][OPS.OBF][OnAnalyse_Component_Prefabs] Find unity event methods in Button of type UnityEngine.UI.Image
+[Debug][OPS.OBF][OnAnalyse_Component_Prefabs] Find unity event methods in Button of type UnityEngine.UI.Button
+[Debug][OPS.OBF][OnAnalyse_Component_Prefabs] Find unity event methods in Text of type UnityEngine.RectTransform
+[Debug][OPS.OBF][OnAnalyse_Component_Prefabs] Find unity event methods in Text of type UnityEngine.CanvasRenderer
+[Debug][OPS.OBF][OnAnalyse_Component_Prefabs] Find unity event methods in Text of type UnityEngine.UI.Text
 [Debug][OPS.OBF][OnAnalyse_Component_Prefabs] Find unity event methods in UserManager of type UnityEngine.Transform
 [Debug][OPS.OBF][OnAnalyse_Component_Prefabs] Find unity event methods in UserManager of type PlayFabPersonal.Users.UserAccount
 [Debug][OPS.OBF][OnAnalyse_Component_Prefabs] Find unity event methods in ACTk Detectors Flat of type UnityEngine.Transform
@@ -4374,22 +4605,56 @@
 [Debug][OPS.OBF][OnAnalyse_Component_Prefabs] Find unity event methods in ACTk Detectors Flat of type CodeStage.AntiCheat.Detectors.SpeedHackDetector
 [Debug][OPS.OBF][OnAnalyse_Component_Prefabs] Find unity event methods in ACTk Detectors Flat of type CodeStage.AntiCheat.Detectors.TimeCheatingDetector
 [Debug][OPS.OBF][OnAnalyse_Component_Prefabs] Find unity event methods in ACTk Detectors Flat of type CodeStage.AntiCheat.Detectors.WallHackDetector
+[Debug][OPS.OBF][OnAnalyse_Component_Prefabs] Find unity event methods in LEADERBOARD of type UnityEngine.RectTransform
+[Debug][OPS.OBF][OnAnalyse_Component_Prefabs] Find unity event methods in LEADERBOARD of type UnityEngine.Canvas
+[Debug][OPS.OBF][OnAnalyse_Component_Prefabs] Find unity event methods in LEADERBOARD of type UnityEngine.UI.GraphicRaycaster
+[Debug][OPS.OBF][OnAnalyse_Component_Prefabs] Find unity event methods in LEADERBOARD of type UnityEngine.UI.CanvasScaler
+[Debug][OPS.OBF][OnAnalyse_Component_Prefabs] Find unity event methods in Image of type UnityEngine.RectTransform
+[Debug][OPS.OBF][OnAnalyse_Component_Prefabs] Find unity event methods in Image of type UnityEngine.CanvasRenderer
+[Debug][OPS.OBF][OnAnalyse_Component_Prefabs] Find unity event methods in Image of type UnityEngine.UI.Image
+[Debug][OPS.OBF][OnAnalyse_Component_Prefabs] Find unity event methods in Image of type UnityEngine.UI.Button
 [Debug][OPS.OBF][OnAnalyse_Component_Prefabs] Find unity event methods in BgUnit of type UnityEngine.Transform
 [Debug][OPS.OBF][OnAnalyse_Component_Prefabs] Find unity event methods in BgUnit of type UnityEngine.SpriteRenderer
+[Debug][OPS.OBF][OnAnalyse_Component_Prefabs] Find unity event methods in FULL_BANNER of type UnityEngine.RectTransform
+[Debug][OPS.OBF][OnAnalyse_Component_Prefabs] Find unity event methods in FULL_BANNER of type UnityEngine.Canvas
+[Debug][OPS.OBF][OnAnalyse_Component_Prefabs] Find unity event methods in FULL_BANNER of type UnityEngine.UI.GraphicRaycaster
+[Debug][OPS.OBF][OnAnalyse_Component_Prefabs] Find unity event methods in FULL_BANNER of type UnityEngine.UI.CanvasScaler
+[Debug][OPS.OBF][OnAnalyse_Component_Prefabs] Find unity event methods in Image of type UnityEngine.RectTransform
+[Debug][OPS.OBF][OnAnalyse_Component_Prefabs] Find unity event methods in Image of type UnityEngine.CanvasRenderer
+[Debug][OPS.OBF][OnAnalyse_Component_Prefabs] Find unity event methods in Image of type UnityEngine.UI.Image
+[Debug][OPS.OBF][OnAnalyse_Component_Prefabs] Find unity event methods in Image of type UnityEngine.UI.Button
 [Debug][OPS.OBF][OnAnalyse_Component_Prefabs] Find unity event methods in Closed Sprite Shape of type UnityEngine.Transform
 [Debug][OPS.OBF][OnAnalyse_Component_Prefabs] Find unity event methods in Closed Sprite Shape of type UnityEngine.U2D.SpriteShapeRenderer
 [Debug][OPS.OBF][OnAnalyse_Component_Prefabs] Find unity event methods in Closed Sprite Shape of type UnityEngine.U2D.SpriteShapeController
+[Debug][OPS.OBF][OnAnalyse_Component_Prefabs] Find unity event methods in 768x1024 of type UnityEngine.RectTransform
+[Debug][OPS.OBF][OnAnalyse_Component_Prefabs] Find unity event methods in 768x1024 of type UnityEngine.Canvas
+[Debug][OPS.OBF][OnAnalyse_Component_Prefabs] Find unity event methods in 768x1024 of type UnityEngine.UI.CanvasScaler
+[Debug][OPS.OBF][OnAnalyse_Component_Prefabs] Find unity event methods in 768x1024 of type UnityEngine.UI.GraphicRaycaster
+[Debug][OPS.OBF][OnAnalyse_Component_Prefabs] Find unity event methods in Background of type UnityEngine.RectTransform
+[Debug][OPS.OBF][OnAnalyse_Component_Prefabs] Find unity event methods in Background of type UnityEngine.CanvasRenderer
+[Debug][OPS.OBF][OnAnalyse_Component_Prefabs] Find unity event methods in Background of type UnityEngine.UI.Image
+[Debug][OPS.OBF][OnAnalyse_Component_Prefabs] Find unity event methods in Ad of type UnityEngine.RectTransform
+[Debug][OPS.OBF][OnAnalyse_Component_Prefabs] Find unity event methods in Ad of type UnityEngine.CanvasRenderer
+[Debug][OPS.OBF][OnAnalyse_Component_Prefabs] Find unity event methods in Ad of type UnityEngine.UI.Image
+[Debug][OPS.OBF][OnAnalyse_Component_Prefabs] Find unity event methods in Ad of type UnityEngine.UI.Button
+[Debug][OPS.OBF][OnAnalyse_Component_Prefabs] Find unity event methods in Button of type UnityEngine.RectTransform
+[Debug][OPS.OBF][OnAnalyse_Component_Prefabs] Find unity event methods in Button of type UnityEngine.CanvasRenderer
+[Debug][OPS.OBF][OnAnalyse_Component_Prefabs] Find unity event methods in Button of type UnityEngine.UI.Image
+[Debug][OPS.OBF][OnAnalyse_Component_Prefabs] Find unity event methods in Button of type UnityEngine.UI.Button
+[Debug][OPS.OBF][OnAnalyse_Component_Prefabs] Find unity event methods in Text of type UnityEngine.RectTransform
+[Debug][OPS.OBF][OnAnalyse_Component_Prefabs] Find unity event methods in Text of type UnityEngine.CanvasRenderer
+[Debug][OPS.OBF][OnAnalyse_Component_Prefabs] Find unity event methods in Text of type UnityEngine.UI.Text
 [Debug][OPS.OBF][OnAnalyse_Component_Prefabs] Find unity event methods in AuthenticationManager of type UnityEngine.Transform
 [Debug][OPS.OBF][OnAnalyse_Component_Prefabs] Find unity event methods in AuthenticationManager of type PlayFabPersonal.Authentications.PlayfabAuthentication
 [Debug][OPS.OBF][OnAnalyse_Component_Prefabs] Find unity event methods in AuthenticationManager of type AccountRecovery
 [Debug][OPS.OBF][OnAnalyse_Component_Prefabs] Find unity event methods in AuthenticationManager of type PlayFabPersonal.Authentications.GuestAuthentication
-[Warning][OPS.OBF][OnAnalyse_Component_Prefabs] Failed to process current iterated Component at index 17 with Exception: System.NullReferenceException: Object reference not set to an instance of an object
+[Warning][OPS.OBF][OnAnalyse_Component_Prefabs] Failed to process current iterated Component at index 69 with Exception: System.NullReferenceException: Object reference not set to an instance of an object
   at OPS.Obfuscator.Editor.Project.PreBuild.Pipeline.Component.AnalyseUnityEventComponent.OnAnalyse_Component (UnityEngine.Component _Component) [0x00005] in <d2099cc406b14a2a8cf27045e002969e>:0 
   at OPS.Obfuscator.Editor.Project.PreBuild.Pipeline.PreBuildPipeline.Process_Component_Analyse_And_Manipulate (System.Collections.Generic.List`1[T] _ComponentList) [0x00086] in <d2099cc406b14a2a8cf27045e002969e>:0 
-[Warning][OPS.OBF][OnAnalyse_Component_Prefabs] Failed to process current iterated Component at index 18 with Exception: System.NullReferenceException: Object reference not set to an instance of an object
+[Warning][OPS.OBF][OnAnalyse_Component_Prefabs] Failed to process current iterated Component at index 70 with Exception: System.NullReferenceException: Object reference not set to an instance of an object
   at OPS.Obfuscator.Editor.Project.PreBuild.Pipeline.Component.AnalyseUnityEventComponent.OnAnalyse_Component (UnityEngine.Component _Component) [0x00005] in <d2099cc406b14a2a8cf27045e002969e>:0 
   at OPS.Obfuscator.Editor.Project.PreBuild.Pipeline.PreBuildPipeline.Process_Component_Analyse_And_Manipulate (System.Collections.Generic.List`1[T] _ComponentList) [0x00086] in <d2099cc406b14a2a8cf27045e002969e>:0 
-[Warning][OPS.OBF][OnAnalyse_Component_Prefabs] Failed to process current iterated Component at index 19 with Exception: System.NullReferenceException: Object reference not set to an instance of an object
+[Warning][OPS.OBF][OnAnalyse_Component_Prefabs] Failed to process current iterated Component at index 71 with Exception: System.NullReferenceException: Object reference not set to an instance of an object
   at OPS.Obfuscator.Editor.Project.PreBuild.Pipeline.Component.AnalyseUnityEventComponent.OnAnalyse_Component (UnityEngine.Component _Component) [0x00005] in <d2099cc406b14a2a8cf27045e002969e>:0 
   at OPS.Obfuscator.Editor.Project.PreBuild.Pipeline.PreBuildPipeline.Process_Component_Analyse_And_Manipulate (System.Collections.Generic.List`1[T] _ComponentList) [0x00086] in <d2099cc406b14a2a8cf27045e002969e>:0 
 [Debug][OPS.OBF][OnAnalyse_Component_Prefabs] Find unity event methods in MainScore of type UnityEngine.Transform
@@ -4408,6 +4673,62 @@
 [Debug][OPS.OBF][OnAnalyse_Component_Prefabs] Find unity event methods in Icon of type UnityEngine.RectTransform
 [Debug][OPS.OBF][OnAnalyse_Component_Prefabs] Find unity event methods in Icon of type UnityEngine.CanvasRenderer
 [Debug][OPS.OBF][OnAnalyse_Component_Prefabs] Find unity event methods in Icon of type UnityEngine.UI.Image
+[Debug][OPS.OBF][OnAnalyse_Component_Prefabs] Find unity event methods in ConsentForm of type UnityEngine.RectTransform
+[Debug][OPS.OBF][OnAnalyse_Component_Prefabs] Find unity event methods in ConsentForm of type UnityEngine.Canvas
+[Debug][OPS.OBF][OnAnalyse_Component_Prefabs] Find unity event methods in ConsentForm of type UnityEngine.UI.CanvasScaler
+[Debug][OPS.OBF][OnAnalyse_Component_Prefabs] Find unity event methods in ConsentForm of type UnityEngine.UI.GraphicRaycaster
+[Debug][OPS.OBF][OnAnalyse_Component_Prefabs] Find unity event methods in Background of type UnityEngine.RectTransform
+[Debug][OPS.OBF][OnAnalyse_Component_Prefabs] Find unity event methods in Background of type UnityEngine.CanvasRenderer
+[Debug][OPS.OBF][OnAnalyse_Component_Prefabs] Find unity event methods in Background of type UnityEngine.UI.Image
+[Debug][OPS.OBF][OnAnalyse_Component_Prefabs] Find unity event methods in Ad of type UnityEngine.RectTransform
+[Debug][OPS.OBF][OnAnalyse_Component_Prefabs] Find unity event methods in Ad of type UnityEngine.CanvasRenderer
+[Debug][OPS.OBF][OnAnalyse_Component_Prefabs] Find unity event methods in Ad of type UnityEngine.UI.Image
+[Debug][OPS.OBF][OnAnalyse_Component_Prefabs] Find unity event methods in Ad of type UnityEngine.UI.Button
+[Debug][OPS.OBF][OnAnalyse_Component_Prefabs] Find unity event methods in Button of type UnityEngine.RectTransform
+[Debug][OPS.OBF][OnAnalyse_Component_Prefabs] Find unity event methods in Button of type UnityEngine.CanvasRenderer
+[Debug][OPS.OBF][OnAnalyse_Component_Prefabs] Find unity event methods in Button of type UnityEngine.UI.Image
+[Debug][OPS.OBF][OnAnalyse_Component_Prefabs] Find unity event methods in Button of type UnityEngine.UI.Button
+[Debug][OPS.OBF][OnAnalyse_Component_Prefabs] Find unity event methods in Button of type UnityEngine.UI.LayoutElement
+[Debug][OPS.OBF][OnAnalyse_Component_Prefabs] Find unity event methods in Text of type UnityEngine.RectTransform
+[Debug][OPS.OBF][OnAnalyse_Component_Prefabs] Find unity event methods in Text of type UnityEngine.CanvasRenderer
+[Debug][OPS.OBF][OnAnalyse_Component_Prefabs] Find unity event methods in Text of type UnityEngine.UI.Text
+[Debug][OPS.OBF][OnAnalyse_Component_Prefabs] Find unity event methods in ADAPTIVE of type UnityEngine.RectTransform
+[Debug][OPS.OBF][OnAnalyse_Component_Prefabs] Find unity event methods in ADAPTIVE of type UnityEngine.Canvas
+[Debug][OPS.OBF][OnAnalyse_Component_Prefabs] Find unity event methods in ADAPTIVE of type UnityEngine.UI.GraphicRaycaster
+[Debug][OPS.OBF][OnAnalyse_Component_Prefabs] Find unity event methods in ADAPTIVE of type UnityEngine.UI.CanvasScaler
+[Debug][OPS.OBF][OnAnalyse_Component_Prefabs] Find unity event methods in Image of type UnityEngine.RectTransform
+[Debug][OPS.OBF][OnAnalyse_Component_Prefabs] Find unity event methods in Image of type UnityEngine.CanvasRenderer
+[Debug][OPS.OBF][OnAnalyse_Component_Prefabs] Find unity event methods in Image of type UnityEngine.UI.Image
+[Debug][OPS.OBF][OnAnalyse_Component_Prefabs] Find unity event methods in Image of type UnityEngine.UI.Button
+[Debug][OPS.OBF][OnAnalyse_Component_Prefabs] Find unity event methods in Text of type UnityEngine.RectTransform
+[Debug][OPS.OBF][OnAnalyse_Component_Prefabs] Find unity event methods in Text of type UnityEngine.CanvasRenderer
+[Debug][OPS.OBF][OnAnalyse_Component_Prefabs] Find unity event methods in Text of type UnityEngine.UI.Text
+[Debug][OPS.OBF][OnAnalyse_Component_Prefabs] Find unity event methods in BANNER of type UnityEngine.RectTransform
+[Debug][OPS.OBF][OnAnalyse_Component_Prefabs] Find unity event methods in BANNER of type UnityEngine.Canvas
+[Debug][OPS.OBF][OnAnalyse_Component_Prefabs] Find unity event methods in BANNER of type UnityEngine.UI.GraphicRaycaster
+[Debug][OPS.OBF][OnAnalyse_Component_Prefabs] Find unity event methods in BANNER of type UnityEngine.UI.CanvasScaler
+[Debug][OPS.OBF][OnAnalyse_Component_Prefabs] Find unity event methods in Image of type UnityEngine.RectTransform
+[Debug][OPS.OBF][OnAnalyse_Component_Prefabs] Find unity event methods in Image of type UnityEngine.CanvasRenderer
+[Debug][OPS.OBF][OnAnalyse_Component_Prefabs] Find unity event methods in Image of type UnityEngine.UI.Image
+[Debug][OPS.OBF][OnAnalyse_Component_Prefabs] Find unity event methods in Image of type UnityEngine.UI.Button
+[Debug][OPS.OBF][OnAnalyse_Component_Prefabs] Find unity event methods in 1024x768 of type UnityEngine.RectTransform
+[Debug][OPS.OBF][OnAnalyse_Component_Prefabs] Find unity event methods in 1024x768 of type UnityEngine.Canvas
+[Debug][OPS.OBF][OnAnalyse_Component_Prefabs] Find unity event methods in 1024x768 of type UnityEngine.UI.CanvasScaler
+[Debug][OPS.OBF][OnAnalyse_Component_Prefabs] Find unity event methods in 1024x768 of type UnityEngine.UI.GraphicRaycaster
+[Debug][OPS.OBF][OnAnalyse_Component_Prefabs] Find unity event methods in Background of type UnityEngine.RectTransform
+[Debug][OPS.OBF][OnAnalyse_Component_Prefabs] Find unity event methods in Background of type UnityEngine.CanvasRenderer
+[Debug][OPS.OBF][OnAnalyse_Component_Prefabs] Find unity event methods in Background of type UnityEngine.UI.Image
+[Debug][OPS.OBF][OnAnalyse_Component_Prefabs] Find unity event methods in Ad of type UnityEngine.RectTransform
+[Debug][OPS.OBF][OnAnalyse_Component_Prefabs] Find unity event methods in Ad of type UnityEngine.CanvasRenderer
+[Debug][OPS.OBF][OnAnalyse_Component_Prefabs] Find unity event methods in Ad of type UnityEngine.UI.Image
+[Debug][OPS.OBF][OnAnalyse_Component_Prefabs] Find unity event methods in Ad of type UnityEngine.UI.Button
+[Debug][OPS.OBF][OnAnalyse_Component_Prefabs] Find unity event methods in Button of type UnityEngine.RectTransform
+[Debug][OPS.OBF][OnAnalyse_Component_Prefabs] Find unity event methods in Button of type UnityEngine.CanvasRenderer
+[Debug][OPS.OBF][OnAnalyse_Component_Prefabs] Find unity event methods in Button of type UnityEngine.UI.Image
+[Debug][OPS.OBF][OnAnalyse_Component_Prefabs] Find unity event methods in Button of type UnityEngine.UI.Button
+[Debug][OPS.OBF][OnAnalyse_Component_Prefabs] Find unity event methods in Text of type UnityEngine.RectTransform
+[Debug][OPS.OBF][OnAnalyse_Component_Prefabs] Find unity event methods in Text of type UnityEngine.CanvasRenderer
+[Debug][OPS.OBF][OnAnalyse_Component_Prefabs] Find unity event methods in Text of type UnityEngine.UI.Text
 [Debug][OPS.OBF][OnAnalyse_Component_Prefabs] Find unity event methods in Puzzle Simple Math of type UnityEngine.RectTransform
 [Debug][OPS.OBF][OnAnalyse_Component_Prefabs] Find unity event methods in Puzzle Simple Math of type UnityEngine.CanvasRenderer
 [Debug][OPS.OBF][OnAnalyse_Component_Prefabs] Find unity event methods in Puzzle Simple Math of type UnityEngine.UI.Image
@@ -4473,6 +4794,17 @@
 [Debug][OPS.OBF][OnAnalyse_Component_Prefabs] Find unity event methods in Error of type VinforlabTeam.VCaptcha.DialogAnimation
 [Debug][OPS.OBF][OnAnalyse_Component_Prefabs] Find unity event methods in MessageManager of type UnityEngine.Transform
 [Debug][OPS.OBF][OnAnalyse_Component_Prefabs] Find unity event methods in MessageManager of type MessageManager
+[Debug][OPS.OBF][OnAnalyse_Component_Prefabs] Find unity event methods in SMART_BANNER of type UnityEngine.RectTransform
+[Debug][OPS.OBF][OnAnalyse_Component_Prefabs] Find unity event methods in SMART_BANNER of type UnityEngine.Canvas
+[Debug][OPS.OBF][OnAnalyse_Component_Prefabs] Find unity event methods in SMART_BANNER of type UnityEngine.UI.GraphicRaycaster
+[Debug][OPS.OBF][OnAnalyse_Component_Prefabs] Find unity event methods in SMART_BANNER of type UnityEngine.UI.CanvasScaler
+[Debug][OPS.OBF][OnAnalyse_Component_Prefabs] Find unity event methods in Image of type UnityEngine.RectTransform
+[Debug][OPS.OBF][OnAnalyse_Component_Prefabs] Find unity event methods in Image of type UnityEngine.CanvasRenderer
+[Debug][OPS.OBF][OnAnalyse_Component_Prefabs] Find unity event methods in Image of type UnityEngine.UI.Image
+[Debug][OPS.OBF][OnAnalyse_Component_Prefabs] Find unity event methods in Image of type UnityEngine.UI.Button
+[Debug][OPS.OBF][OnAnalyse_Component_Prefabs] Find unity event methods in Text of type UnityEngine.RectTransform
+[Debug][OPS.OBF][OnAnalyse_Component_Prefabs] Find unity event methods in Text of type UnityEngine.CanvasRenderer
+[Debug][OPS.OBF][OnAnalyse_Component_Prefabs] Find unity event methods in Text of type UnityEngine.UI.Text
 [Debug][OPS.OBF][OnAnalyse_Component_Prefabs] Find unity event methods in Canvas of type UnityEngine.RectTransform
 [Debug][OPS.OBF][OnAnalyse_Component_Prefabs] Find unity event methods in Canvas of type UnityEngine.Canvas
 [Debug][OPS.OBF][OnAnalyse_Component_Prefabs] Find unity event methods in Canvas of type UnityEngine.UI.CanvasScaler
@@ -4713,6 +5045,17 @@
 [Debug][OPS.OBF][OnAnalyse_Component_Prefabs] Find unity event methods in PercentageText of type UnityEngine.RectTransform
 [Debug][OPS.OBF][OnAnalyse_Component_Prefabs] Find unity event methods in PercentageText of type UnityEngine.CanvasRenderer
 [Debug][OPS.OBF][OnAnalyse_Component_Prefabs] Find unity event methods in PercentageText of type TMPro.TextMeshProUGUI
+[Debug][OPS.OBF][OnAnalyse_Component_Prefabs] Find unity event methods in CENTER of type UnityEngine.RectTransform
+[Debug][OPS.OBF][OnAnalyse_Component_Prefabs] Find unity event methods in CENTER of type UnityEngine.Canvas
+[Debug][OPS.OBF][OnAnalyse_Component_Prefabs] Find unity event methods in CENTER of type UnityEngine.UI.GraphicRaycaster
+[Debug][OPS.OBF][OnAnalyse_Component_Prefabs] Find unity event methods in CENTER of type UnityEngine.UI.CanvasScaler
+[Debug][OPS.OBF][OnAnalyse_Component_Prefabs] Find unity event methods in Image of type UnityEngine.RectTransform
+[Debug][OPS.OBF][OnAnalyse_Component_Prefabs] Find unity event methods in Image of type UnityEngine.CanvasRenderer
+[Debug][OPS.OBF][OnAnalyse_Component_Prefabs] Find unity event methods in Image of type UnityEngine.UI.Image
+[Debug][OPS.OBF][OnAnalyse_Component_Prefabs] Find unity event methods in Image of type UnityEngine.UI.Button
+[Debug][OPS.OBF][OnAnalyse_Component_Prefabs] Find unity event methods in Text of type UnityEngine.RectTransform
+[Debug][OPS.OBF][OnAnalyse_Component_Prefabs] Find unity event methods in Text of type UnityEngine.CanvasRenderer
+[Debug][OPS.OBF][OnAnalyse_Component_Prefabs] Find unity event methods in Text of type UnityEngine.UI.Text
 [Debug][OPS.OBF][OnAnalyse_Component_Prefabs] Find unity event methods in ACTk Detectors of type UnityEngine.Transform
 [Debug][OPS.OBF][OnAnalyse_Component_Prefabs] Find unity event methods in InjectionDetector of type UnityEngine.Transform
 [Debug][OPS.OBF][OnAnalyse_Component_Prefabs] Find unity event methods in InjectionDetector of type CodeStage.AntiCheat.Detectors.InjectionDetector
@@ -4753,6 +5096,14 @@
 [Debug][OPS.OBF][OnAnalyse_Component_Prefabs] Find unity event methods in PercentageText of type TMPro.TextMeshProUGUI
 [Debug][OPS.OBF][OnAnalyse_Component_Prefabs] Find unity event methods in CashoutLoader of type UnityEngine.Transform
 [Debug][OPS.OBF][OnAnalyse_Component_Prefabs] Find unity event methods in CashoutLoader of type CashoutLoader
+[Debug][OPS.OBF][OnAnalyse_Component_Prefabs] Find unity event methods in LARGE_BANNER of type UnityEngine.RectTransform
+[Debug][OPS.OBF][OnAnalyse_Component_Prefabs] Find unity event methods in LARGE_BANNER of type UnityEngine.Canvas
+[Debug][OPS.OBF][OnAnalyse_Component_Prefabs] Find unity event methods in LARGE_BANNER of type UnityEngine.UI.GraphicRaycaster
+[Debug][OPS.OBF][OnAnalyse_Component_Prefabs] Find unity event methods in LARGE_BANNER of type UnityEngine.UI.CanvasScaler
+[Debug][OPS.OBF][OnAnalyse_Component_Prefabs] Find unity event methods in Image of type UnityEngine.RectTransform
+[Debug][OPS.OBF][OnAnalyse_Component_Prefabs] Find unity event methods in Image of type UnityEngine.CanvasRenderer
+[Debug][OPS.OBF][OnAnalyse_Component_Prefabs] Find unity event methods in Image of type UnityEngine.UI.Image
+[Debug][OPS.OBF][OnAnalyse_Component_Prefabs] Find unity event methods in Image of type UnityEngine.UI.Button
 [Debug][OPS.OBF][OnAnalyse_Component_Prefabs] Find unity event methods in Puzzle Slider of type UnityEngine.RectTransform
 [Debug][OPS.OBF][OnAnalyse_Component_Prefabs] Find unity event methods in Puzzle Slider of type UnityEngine.CanvasRenderer
 [Debug][OPS.OBF][OnAnalyse_Component_Prefabs] Find unity event methods in Puzzle Slider of type UnityEngine.UI.Image
@@ -5287,11 +5638,58 @@
 [Debug][OPS.OBF][OnAnalyse_Component_Prefabs] Find unity event methods in Text (TMP) of type UnityEngine.RectTransform
 [Debug][OPS.OBF][OnAnalyse_Component_Prefabs] Find unity event methods in Text (TMP) of type UnityEngine.CanvasRenderer
 [Debug][OPS.OBF][OnAnalyse_Component_Prefabs] Find unity event methods in Text (TMP) of type TMPro.TextMeshProUGUI
+[Debug][OPS.OBF][OnAnalyse_Component_Prefabs] Find unity event methods in MEDIUM_RECTANGLE of type UnityEngine.RectTransform
+[Debug][OPS.OBF][OnAnalyse_Component_Prefabs] Find unity event methods in MEDIUM_RECTANGLE of type UnityEngine.Canvas
+[Debug][OPS.OBF][OnAnalyse_Component_Prefabs] Find unity event methods in MEDIUM_RECTANGLE of type UnityEngine.UI.GraphicRaycaster
+[Debug][OPS.OBF][OnAnalyse_Component_Prefabs] Find unity event methods in MEDIUM_RECTANGLE of type UnityEngine.UI.CanvasScaler
+[Debug][OPS.OBF][OnAnalyse_Component_Prefabs] Find unity event methods in Image of type UnityEngine.RectTransform
+[Debug][OPS.OBF][OnAnalyse_Component_Prefabs] Find unity event methods in Image of type UnityEngine.CanvasRenderer
+[Debug][OPS.OBF][OnAnalyse_Component_Prefabs] Find unity event methods in Image of type UnityEngine.UI.Image
+[Debug][OPS.OBF][OnAnalyse_Component_Prefabs] Find unity event methods in Image of type UnityEngine.UI.Button
 [Debug][OPS.OBF][OnAnalyse_Component_Prefabs] Find unity event methods in PlayfabDataManager of type UnityEngine.Transform
 [Debug][OPS.OBF][OnAnalyse_Component_Prefabs] Find unity event methods in PlayfabDataManager of type PlayFabPersonal.Managers.PlayfabDataManager
 [Debug][OPS.OBF][OnAnalyse_Component_Prefabs] Find unity event methods in PlayfabDataManager of type PlayFabPersonal.Economy.VirtualCurrency
+[Debug][OPS.OBF][OnAnalyse_Component_Prefabs] Find unity event methods in 1024x768 of type UnityEngine.RectTransform
+[Debug][OPS.OBF][OnAnalyse_Component_Prefabs] Find unity event methods in 1024x768 of type UnityEngine.Canvas
+[Debug][OPS.OBF][OnAnalyse_Component_Prefabs] Find unity event methods in 1024x768 of type UnityEngine.UI.CanvasScaler
+[Debug][OPS.OBF][OnAnalyse_Component_Prefabs] Find unity event methods in 1024x768 of type UnityEngine.UI.GraphicRaycaster
+[Debug][OPS.OBF][OnAnalyse_Component_Prefabs] Find unity event methods in Background of type UnityEngine.RectTransform
+[Debug][OPS.OBF][OnAnalyse_Component_Prefabs] Find unity event methods in Background of type UnityEngine.CanvasRenderer
+[Debug][OPS.OBF][OnAnalyse_Component_Prefabs] Find unity event methods in Background of type UnityEngine.UI.Image
+[Debug][OPS.OBF][OnAnalyse_Component_Prefabs] Find unity event methods in Ad of type UnityEngine.RectTransform
+[Debug][OPS.OBF][OnAnalyse_Component_Prefabs] Find unity event methods in Ad of type UnityEngine.CanvasRenderer
+[Debug][OPS.OBF][OnAnalyse_Component_Prefabs] Find unity event methods in Ad of type UnityEngine.UI.Image
+[Debug][OPS.OBF][OnAnalyse_Component_Prefabs] Find unity event methods in Ad of type UnityEngine.UI.Button
+[Debug][OPS.OBF][OnAnalyse_Component_Prefabs] Find unity event methods in Button of type UnityEngine.RectTransform
+[Debug][OPS.OBF][OnAnalyse_Component_Prefabs] Find unity event methods in Button of type UnityEngine.CanvasRenderer
+[Debug][OPS.OBF][OnAnalyse_Component_Prefabs] Find unity event methods in Button of type UnityEngine.UI.Image
+[Debug][OPS.OBF][OnAnalyse_Component_Prefabs] Find unity event methods in Button of type UnityEngine.UI.Button
+[Debug][OPS.OBF][OnAnalyse_Component_Prefabs] Find unity event methods in Text of type UnityEngine.RectTransform
+[Debug][OPS.OBF][OnAnalyse_Component_Prefabs] Find unity event methods in Text of type UnityEngine.CanvasRenderer
+[Debug][OPS.OBF][OnAnalyse_Component_Prefabs] Find unity event methods in Text of type UnityEngine.UI.Text
+[Debug][OPS.OBF][OnAnalyse_Component_Prefabs] Find unity event methods in Text of type UnityEngine.RectTransform
+[Debug][OPS.OBF][OnAnalyse_Component_Prefabs] Find unity event methods in Text of type UnityEngine.CanvasRenderer
+[Debug][OPS.OBF][OnAnalyse_Component_Prefabs] Find unity event methods in Text of type UnityEngine.UI.Text
 [Debug][OPS.OBF][OnAnalyse_Component_Prefabs] Find unity event methods in EconomyManager of type UnityEngine.Transform
 [Debug][OPS.OBF][OnAnalyse_Component_Prefabs] Find unity event methods in EconomyManager of type PlayFabPersonal.Economy.VirtualCurrency
+[Debug][OPS.OBF][OnAnalyse_Component_Prefabs] Find unity event methods in 768x1024 of type UnityEngine.RectTransform
+[Debug][OPS.OBF][OnAnalyse_Component_Prefabs] Find unity event methods in 768x1024 of type UnityEngine.Canvas
+[Debug][OPS.OBF][OnAnalyse_Component_Prefabs] Find unity event methods in 768x1024 of type UnityEngine.UI.CanvasScaler
+[Debug][OPS.OBF][OnAnalyse_Component_Prefabs] Find unity event methods in 768x1024 of type UnityEngine.UI.GraphicRaycaster
+[Debug][OPS.OBF][OnAnalyse_Component_Prefabs] Find unity event methods in Background of type UnityEngine.RectTransform
+[Debug][OPS.OBF][OnAnalyse_Component_Prefabs] Find unity event methods in Background of type UnityEngine.CanvasRenderer
+[Debug][OPS.OBF][OnAnalyse_Component_Prefabs] Find unity event methods in Background of type UnityEngine.UI.Image
+[Debug][OPS.OBF][OnAnalyse_Component_Prefabs] Find unity event methods in Ad of type UnityEngine.RectTransform
+[Debug][OPS.OBF][OnAnalyse_Component_Prefabs] Find unity event methods in Ad of type UnityEngine.CanvasRenderer
+[Debug][OPS.OBF][OnAnalyse_Component_Prefabs] Find unity event methods in Ad of type UnityEngine.UI.Image
+[Debug][OPS.OBF][OnAnalyse_Component_Prefabs] Find unity event methods in Ad of type UnityEngine.UI.Button
+[Debug][OPS.OBF][OnAnalyse_Component_Prefabs] Find unity event methods in Button of type UnityEngine.RectTransform
+[Debug][OPS.OBF][OnAnalyse_Component_Prefabs] Find unity event methods in Button of type UnityEngine.CanvasRenderer
+[Debug][OPS.OBF][OnAnalyse_Component_Prefabs] Find unity event methods in Button of type UnityEngine.UI.Image
+[Debug][OPS.OBF][OnAnalyse_Component_Prefabs] Find unity event methods in Button of type UnityEngine.UI.Button
+[Debug][OPS.OBF][OnAnalyse_Component_Prefabs] Find unity event methods in Text of type UnityEngine.RectTransform
+[Debug][OPS.OBF][OnAnalyse_Component_Prefabs] Find unity event methods in Text of type UnityEngine.CanvasRenderer
+[Debug][OPS.OBF][OnAnalyse_Component_Prefabs] Find unity event methods in Text of type UnityEngine.UI.Text
 [Debug][OPS.OBF][OnAnalyse_Component_Prefabs] Find unity event methods in UIManager of type UnityEngine.Transform
 [Debug][OPS.OBF][OnAnalyse_Component_Prefabs] Find unity event methods in UIManager of type PlayerUIManager
 [Debug][OPS.OBF][OnAnalyse_Component_Prefabs] Find unity event methods in Puzzle Rotate of type UnityEngine.RectTransform
@@ -5365,9 +5763,48 @@
 [Debug][OPS.OBF][OnAnalyse_Component_Prefabs] Find unity event methods in Image of type UnityEngine.RectTransform
 [Debug][OPS.OBF][OnAnalyse_Component_Prefabs] Find unity event methods in Image of type UnityEngine.CanvasRenderer
 [Debug][OPS.OBF][OnAnalyse_Component_Prefabs] Find unity event methods in Image of type UnityEngine.UI.Image
+[Debug][OPS.OBF][OnAnalyse_Component_Prefabs] Find unity event methods in 768x1024 of type UnityEngine.RectTransform
+[Debug][OPS.OBF][OnAnalyse_Component_Prefabs] Find unity event methods in 768x1024 of type UnityEngine.Canvas
+[Debug][OPS.OBF][OnAnalyse_Component_Prefabs] Find unity event methods in 768x1024 of type UnityEngine.UI.CanvasScaler
+[Debug][OPS.OBF][OnAnalyse_Component_Prefabs] Find unity event methods in 768x1024 of type UnityEngine.UI.GraphicRaycaster
+[Debug][OPS.OBF][OnAnalyse_Component_Prefabs] Find unity event methods in Background of type UnityEngine.RectTransform
+[Debug][OPS.OBF][OnAnalyse_Component_Prefabs] Find unity event methods in Background of type UnityEngine.CanvasRenderer
+[Debug][OPS.OBF][OnAnalyse_Component_Prefabs] Find unity event methods in Background of type UnityEngine.UI.Image
+[Debug][OPS.OBF][OnAnalyse_Component_Prefabs] Find unity event methods in Ad of type UnityEngine.RectTransform
+[Debug][OPS.OBF][OnAnalyse_Component_Prefabs] Find unity event methods in Ad of type UnityEngine.CanvasRenderer
+[Debug][OPS.OBF][OnAnalyse_Component_Prefabs] Find unity event methods in Ad of type UnityEngine.UI.Image
+[Debug][OPS.OBF][OnAnalyse_Component_Prefabs] Find unity event methods in Ad of type UnityEngine.UI.Button
+[Debug][OPS.OBF][OnAnalyse_Component_Prefabs] Find unity event methods in Button of type UnityEngine.RectTransform
+[Debug][OPS.OBF][OnAnalyse_Component_Prefabs] Find unity event methods in Button of type UnityEngine.CanvasRenderer
+[Debug][OPS.OBF][OnAnalyse_Component_Prefabs] Find unity event methods in Button of type UnityEngine.UI.Image
+[Debug][OPS.OBF][OnAnalyse_Component_Prefabs] Find unity event methods in Button of type UnityEngine.UI.Button
+[Debug][OPS.OBF][OnAnalyse_Component_Prefabs] Find unity event methods in Text of type UnityEngine.RectTransform
+[Debug][OPS.OBF][OnAnalyse_Component_Prefabs] Find unity event methods in Text of type UnityEngine.CanvasRenderer
+[Debug][OPS.OBF][OnAnalyse_Component_Prefabs] Find unity event methods in Text of type UnityEngine.UI.Text
+[Debug][OPS.OBF][OnAnalyse_Component_Prefabs] Find unity event methods in Text of type UnityEngine.RectTransform
+[Debug][OPS.OBF][OnAnalyse_Component_Prefabs] Find unity event methods in Text of type UnityEngine.CanvasRenderer
+[Debug][OPS.OBF][OnAnalyse_Component_Prefabs] Find unity event methods in Text of type UnityEngine.UI.Text
 [Debug][OPS.OBF][OnAnalyse_Component_Prefabs] Find unity event methods in CommandSuggestion of type UnityEngine.RectTransform
 [Debug][OPS.OBF][OnAnalyse_Component_Prefabs] Find unity event methods in CommandSuggestion of type UnityEngine.CanvasRenderer
 [Debug][OPS.OBF][OnAnalyse_Component_Prefabs] Find unity event methods in CommandSuggestion of type UnityEngine.UI.Text
+[Debug][OPS.OBF][OnAnalyse_Component_Prefabs] Find unity event methods in 768x1024 of type UnityEngine.RectTransform
+[Debug][OPS.OBF][OnAnalyse_Component_Prefabs] Find unity event methods in 768x1024 of type UnityEngine.Canvas
+[Debug][OPS.OBF][OnAnalyse_Component_Prefabs] Find unity event methods in 768x1024 of type UnityEngine.UI.CanvasScaler
+[Debug][OPS.OBF][OnAnalyse_Component_Prefabs] Find unity event methods in 768x1024 of type UnityEngine.UI.GraphicRaycaster
+[Debug][OPS.OBF][OnAnalyse_Component_Prefabs] Find unity event methods in Background of type UnityEngine.RectTransform
+[Debug][OPS.OBF][OnAnalyse_Component_Prefabs] Find unity event methods in Background of type UnityEngine.CanvasRenderer
+[Debug][OPS.OBF][OnAnalyse_Component_Prefabs] Find unity event methods in Background of type UnityEngine.UI.Image
+[Debug][OPS.OBF][OnAnalyse_Component_Prefabs] Find unity event methods in Ad of type UnityEngine.RectTransform
+[Debug][OPS.OBF][OnAnalyse_Component_Prefabs] Find unity event methods in Ad of type UnityEngine.CanvasRenderer
+[Debug][OPS.OBF][OnAnalyse_Component_Prefabs] Find unity event methods in Ad of type UnityEngine.UI.Image
+[Debug][OPS.OBF][OnAnalyse_Component_Prefabs] Find unity event methods in Ad of type UnityEngine.UI.Button
+[Debug][OPS.OBF][OnAnalyse_Component_Prefabs] Find unity event methods in Button of type UnityEngine.RectTransform
+[Debug][OPS.OBF][OnAnalyse_Component_Prefabs] Find unity event methods in Button of type UnityEngine.CanvasRenderer
+[Debug][OPS.OBF][OnAnalyse_Component_Prefabs] Find unity event methods in Button of type UnityEngine.UI.Image
+[Debug][OPS.OBF][OnAnalyse_Component_Prefabs] Find unity event methods in Button of type UnityEngine.UI.Button
+[Debug][OPS.OBF][OnAnalyse_Component_Prefabs] Find unity event methods in Text of type UnityEngine.RectTransform
+[Debug][OPS.OBF][OnAnalyse_Component_Prefabs] Find unity event methods in Text of type UnityEngine.CanvasRenderer
+[Debug][OPS.OBF][OnAnalyse_Component_Prefabs] Find unity event methods in Text of type UnityEngine.UI.Text
 [Debug][OPS.OBF][OnAnalyse_Component_Prefabs] Find unity event methods in ImageEffect of type UnityEngine.Transform
 [Debug][OPS.OBF][OnAnalyse_Component_Prefabs] Find unity event methods in ImageEffect of type UnityEngine.SpriteRenderer
 [Debug][OPS.OBF][OnAnalyse_Component_Prefabs] Find unity event methods in ImageEffect of type UnityEngine.Animator
@@ -5431,6 +5868,38 @@
 [Debug][OPS.OBF][OnAnalyse_Component_Prefabs] Find unity event methods in ShadowBlock of type UnityEngine.Transform
 [Debug][OPS.OBF][OnAnalyse_Component_Prefabs] Find unity event methods in ShadowBlock of type UnityEngine.SpriteRenderer
 [Info][OPS.OBF][OnAnalyse_Component_Prefabs] Process component Analyse MonoScript
+[Debug][OPS.OBF][OnAnalyse_Component_Prefabs] Found mono script reference UnityEngine.UI.CanvasScaler for 1024x768
+[Debug][OPS.OBF][OnAnalyse_Component_Prefabs] Found mono script reference in serialized properties for 1024x768 (1):
+  - UnityEngine.UI.CanvasScaler
+
+[Debug][OPS.OBF][OnAnalyse_Component_Prefabs] Found mono script reference UnityEngine.UI.GraphicRaycaster for 1024x768
+[Debug][OPS.OBF][OnAnalyse_Component_Prefabs] Found mono script reference in serialized properties for 1024x768 (1):
+  - UnityEngine.UI.GraphicRaycaster
+
+[Debug][OPS.OBF][OnAnalyse_Component_Prefabs] Found mono script reference UnityEngine.UI.Image for Background
+[Debug][OPS.OBF][OnAnalyse_Component_Prefabs] Found mono script reference in serialized properties for Background (1):
+  - UnityEngine.UI.Image
+
+[Debug][OPS.OBF][OnAnalyse_Component_Prefabs] Found mono script reference UnityEngine.UI.Image for Ad
+[Debug][OPS.OBF][OnAnalyse_Component_Prefabs] Found mono script reference in serialized properties for Ad (1):
+  - UnityEngine.UI.Image
+
+[Debug][OPS.OBF][OnAnalyse_Component_Prefabs] Found mono script reference UnityEngine.UI.Button for Ad
+[Debug][OPS.OBF][OnAnalyse_Component_Prefabs] Found mono script reference in serialized properties for Ad (1):
+  - UnityEngine.UI.Button
+
+[Debug][OPS.OBF][OnAnalyse_Component_Prefabs] Found mono script reference UnityEngine.UI.Image for Button
+[Debug][OPS.OBF][OnAnalyse_Component_Prefabs] Found mono script reference in serialized properties for Button (1):
+  - UnityEngine.UI.Image
+
+[Debug][OPS.OBF][OnAnalyse_Component_Prefabs] Found mono script reference UnityEngine.UI.Button for Button
+[Debug][OPS.OBF][OnAnalyse_Component_Prefabs] Found mono script reference in serialized properties for Button (1):
+  - UnityEngine.UI.Button
+
+[Debug][OPS.OBF][OnAnalyse_Component_Prefabs] Found mono script reference UnityEngine.UI.Text for Text
+[Debug][OPS.OBF][OnAnalyse_Component_Prefabs] Found mono script reference in serialized properties for Text (1):
+  - UnityEngine.UI.Text
+
 [Debug][OPS.OBF][OnAnalyse_Component_Prefabs] Found mono script reference PlayFabPersonal.Users.UserAccount for UserManager
 [Debug][OPS.OBF][OnAnalyse_Component_Prefabs] Found mono script reference in serialized properties for UserManager (1):
   - PlayFabPersonal.Users.UserAccount
@@ -5455,9 +5924,73 @@
 [Debug][OPS.OBF][OnAnalyse_Component_Prefabs] Found mono script reference in serialized properties for ACTk Detectors Flat (1):
   - CodeStage.AntiCheat.Detectors.WallHackDetector
 
+[Debug][OPS.OBF][OnAnalyse_Component_Prefabs] Found mono script reference UnityEngine.UI.GraphicRaycaster for LEADERBOARD
+[Debug][OPS.OBF][OnAnalyse_Component_Prefabs] Found mono script reference in serialized properties for LEADERBOARD (1):
+  - UnityEngine.UI.GraphicRaycaster
+
+[Debug][OPS.OBF][OnAnalyse_Component_Prefabs] Found mono script reference UnityEngine.UI.CanvasScaler for LEADERBOARD
+[Debug][OPS.OBF][OnAnalyse_Component_Prefabs] Found mono script reference in serialized properties for LEADERBOARD (1):
+  - UnityEngine.UI.CanvasScaler
+
+[Debug][OPS.OBF][OnAnalyse_Component_Prefabs] Found mono script reference UnityEngine.UI.Image for Image
+[Debug][OPS.OBF][OnAnalyse_Component_Prefabs] Found mono script reference in serialized properties for Image (1):
+  - UnityEngine.UI.Image
+
+[Debug][OPS.OBF][OnAnalyse_Component_Prefabs] Found mono script reference UnityEngine.UI.Button for Image
+[Debug][OPS.OBF][OnAnalyse_Component_Prefabs] Found mono script reference in serialized properties for Image (1):
+  - UnityEngine.UI.Button
+
+[Debug][OPS.OBF][OnAnalyse_Component_Prefabs] Found mono script reference UnityEngine.UI.GraphicRaycaster for FULL_BANNER
+[Debug][OPS.OBF][OnAnalyse_Component_Prefabs] Found mono script reference in serialized properties for FULL_BANNER (1):
+  - UnityEngine.UI.GraphicRaycaster
+
+[Debug][OPS.OBF][OnAnalyse_Component_Prefabs] Found mono script reference UnityEngine.UI.CanvasScaler for FULL_BANNER
+[Debug][OPS.OBF][OnAnalyse_Component_Prefabs] Found mono script reference in serialized properties for FULL_BANNER (1):
+  - UnityEngine.UI.CanvasScaler
+
+[Debug][OPS.OBF][OnAnalyse_Component_Prefabs] Found mono script reference UnityEngine.UI.Image for Image
+[Debug][OPS.OBF][OnAnalyse_Component_Prefabs] Found mono script reference in serialized properties for Image (1):
+  - UnityEngine.UI.Image
+
+[Debug][OPS.OBF][OnAnalyse_Component_Prefabs] Found mono script reference UnityEngine.UI.Button for Image
+[Debug][OPS.OBF][OnAnalyse_Component_Prefabs] Found mono script reference in serialized properties for Image (1):
+  - UnityEngine.UI.Button
+
 [Debug][OPS.OBF][OnAnalyse_Component_Prefabs] Found mono script reference UnityEngine.U2D.SpriteShapeController for Closed Sprite Shape
 [Debug][OPS.OBF][OnAnalyse_Component_Prefabs] Found mono script reference in serialized properties for Closed Sprite Shape (1):
   - UnityEngine.U2D.SpriteShapeController
+
+[Debug][OPS.OBF][OnAnalyse_Component_Prefabs] Found mono script reference UnityEngine.UI.CanvasScaler for 768x1024
+[Debug][OPS.OBF][OnAnalyse_Component_Prefabs] Found mono script reference in serialized properties for 768x1024 (1):
+  - UnityEngine.UI.CanvasScaler
+
+[Debug][OPS.OBF][OnAnalyse_Component_Prefabs] Found mono script reference UnityEngine.UI.GraphicRaycaster for 768x1024
+[Debug][OPS.OBF][OnAnalyse_Component_Prefabs] Found mono script reference in serialized properties for 768x1024 (1):
+  - UnityEngine.UI.GraphicRaycaster
+
+[Debug][OPS.OBF][OnAnalyse_Component_Prefabs] Found mono script reference UnityEngine.UI.Image for Background
+[Debug][OPS.OBF][OnAnalyse_Component_Prefabs] Found mono script reference in serialized properties for Background (1):
+  - UnityEngine.UI.Image
+
+[Debug][OPS.OBF][OnAnalyse_Component_Prefabs] Found mono script reference UnityEngine.UI.Image for Ad
+[Debug][OPS.OBF][OnAnalyse_Component_Prefabs] Found mono script reference in serialized properties for Ad (1):
+  - UnityEngine.UI.Image
+
+[Debug][OPS.OBF][OnAnalyse_Component_Prefabs] Found mono script reference UnityEngine.UI.Button for Ad
+[Debug][OPS.OBF][OnAnalyse_Component_Prefabs] Found mono script reference in serialized properties for Ad (1):
+  - UnityEngine.UI.Button
+
+[Debug][OPS.OBF][OnAnalyse_Component_Prefabs] Found mono script reference UnityEngine.UI.Image for Button
+[Debug][OPS.OBF][OnAnalyse_Component_Prefabs] Found mono script reference in serialized properties for Button (1):
+  - UnityEngine.UI.Image
+
+[Debug][OPS.OBF][OnAnalyse_Component_Prefabs] Found mono script reference UnityEngine.UI.Button for Button
+[Debug][OPS.OBF][OnAnalyse_Component_Prefabs] Found mono script reference in serialized properties for Button (1):
+  - UnityEngine.UI.Button
+
+[Debug][OPS.OBF][OnAnalyse_Component_Prefabs] Found mono script reference UnityEngine.UI.Text for Text
+[Debug][OPS.OBF][OnAnalyse_Component_Prefabs] Found mono script reference in serialized properties for Text (1):
+  - UnityEngine.UI.Text
 
 [Debug][OPS.OBF][OnAnalyse_Component_Prefabs] Found mono script reference PlayFabPersonal.Authentications.PlayfabAuthentication for AuthenticationManager
 [Debug][OPS.OBF][OnAnalyse_Component_Prefabs] Found mono script reference in serialized properties for AuthenticationManager (1):
@@ -5498,6 +6031,110 @@
 [Debug][OPS.OBF][OnAnalyse_Component_Prefabs] Found mono script reference UnityEngine.UI.Image for Icon
 [Debug][OPS.OBF][OnAnalyse_Component_Prefabs] Found mono script reference in serialized properties for Icon (1):
   - UnityEngine.UI.Image
+
+[Debug][OPS.OBF][OnAnalyse_Component_Prefabs] Found mono script reference UnityEngine.UI.CanvasScaler for ConsentForm
+[Debug][OPS.OBF][OnAnalyse_Component_Prefabs] Found mono script reference in serialized properties for ConsentForm (1):
+  - UnityEngine.UI.CanvasScaler
+
+[Debug][OPS.OBF][OnAnalyse_Component_Prefabs] Found mono script reference UnityEngine.UI.GraphicRaycaster for ConsentForm
+[Debug][OPS.OBF][OnAnalyse_Component_Prefabs] Found mono script reference in serialized properties for ConsentForm (1):
+  - UnityEngine.UI.GraphicRaycaster
+
+[Debug][OPS.OBF][OnAnalyse_Component_Prefabs] Found mono script reference UnityEngine.UI.Image for Background
+[Debug][OPS.OBF][OnAnalyse_Component_Prefabs] Found mono script reference in serialized properties for Background (1):
+  - UnityEngine.UI.Image
+
+[Debug][OPS.OBF][OnAnalyse_Component_Prefabs] Found mono script reference UnityEngine.UI.Image for Ad
+[Debug][OPS.OBF][OnAnalyse_Component_Prefabs] Found mono script reference in serialized properties for Ad (1):
+  - UnityEngine.UI.Image
+
+[Debug][OPS.OBF][OnAnalyse_Component_Prefabs] Found mono script reference UnityEngine.UI.Button for Ad
+[Debug][OPS.OBF][OnAnalyse_Component_Prefabs] Found mono script reference in serialized properties for Ad (1):
+  - UnityEngine.UI.Button
+
+[Debug][OPS.OBF][OnAnalyse_Component_Prefabs] Found mono script reference UnityEngine.UI.Image for Button
+[Debug][OPS.OBF][OnAnalyse_Component_Prefabs] Found mono script reference in serialized properties for Button (1):
+  - UnityEngine.UI.Image
+
+[Debug][OPS.OBF][OnAnalyse_Component_Prefabs] Found mono script reference UnityEngine.UI.Button for Button
+[Debug][OPS.OBF][OnAnalyse_Component_Prefabs] Found mono script reference in serialized properties for Button (1):
+  - UnityEngine.UI.Button
+
+[Debug][OPS.OBF][OnAnalyse_Component_Prefabs] Found mono script reference UnityEngine.UI.LayoutElement for Button
+[Debug][OPS.OBF][OnAnalyse_Component_Prefabs] Found mono script reference in serialized properties for Button (1):
+  - UnityEngine.UI.LayoutElement
+
+[Debug][OPS.OBF][OnAnalyse_Component_Prefabs] Found mono script reference UnityEngine.UI.Text for Text
+[Debug][OPS.OBF][OnAnalyse_Component_Prefabs] Found mono script reference in serialized properties for Text (1):
+  - UnityEngine.UI.Text
+
+[Debug][OPS.OBF][OnAnalyse_Component_Prefabs] Found mono script reference UnityEngine.UI.GraphicRaycaster for ADAPTIVE
+[Debug][OPS.OBF][OnAnalyse_Component_Prefabs] Found mono script reference in serialized properties for ADAPTIVE (1):
+  - UnityEngine.UI.GraphicRaycaster
+
+[Debug][OPS.OBF][OnAnalyse_Component_Prefabs] Found mono script reference UnityEngine.UI.CanvasScaler for ADAPTIVE
+[Debug][OPS.OBF][OnAnalyse_Component_Prefabs] Found mono script reference in serialized properties for ADAPTIVE (1):
+  - UnityEngine.UI.CanvasScaler
+
+[Debug][OPS.OBF][OnAnalyse_Component_Prefabs] Found mono script reference UnityEngine.UI.Image for Image
+[Debug][OPS.OBF][OnAnalyse_Component_Prefabs] Found mono script reference in serialized properties for Image (1):
+  - UnityEngine.UI.Image
+
+[Debug][OPS.OBF][OnAnalyse_Component_Prefabs] Found mono script reference UnityEngine.UI.Button for Image
+[Debug][OPS.OBF][OnAnalyse_Component_Prefabs] Found mono script reference in serialized properties for Image (1):
+  - UnityEngine.UI.Button
+
+[Debug][OPS.OBF][OnAnalyse_Component_Prefabs] Found mono script reference UnityEngine.UI.Text for Text
+[Debug][OPS.OBF][OnAnalyse_Component_Prefabs] Found mono script reference in serialized properties for Text (1):
+  - UnityEngine.UI.Text
+
+[Debug][OPS.OBF][OnAnalyse_Component_Prefabs] Found mono script reference UnityEngine.UI.GraphicRaycaster for BANNER
+[Debug][OPS.OBF][OnAnalyse_Component_Prefabs] Found mono script reference in serialized properties for BANNER (1):
+  - UnityEngine.UI.GraphicRaycaster
+
+[Debug][OPS.OBF][OnAnalyse_Component_Prefabs] Found mono script reference UnityEngine.UI.CanvasScaler for BANNER
+[Debug][OPS.OBF][OnAnalyse_Component_Prefabs] Found mono script reference in serialized properties for BANNER (1):
+  - UnityEngine.UI.CanvasScaler
+
+[Debug][OPS.OBF][OnAnalyse_Component_Prefabs] Found mono script reference UnityEngine.UI.Image for Image
+[Debug][OPS.OBF][OnAnalyse_Component_Prefabs] Found mono script reference in serialized properties for Image (1):
+  - UnityEngine.UI.Image
+
+[Debug][OPS.OBF][OnAnalyse_Component_Prefabs] Found mono script reference UnityEngine.UI.Button for Image
+[Debug][OPS.OBF][OnAnalyse_Component_Prefabs] Found mono script reference in serialized properties for Image (1):
+  - UnityEngine.UI.Button
+
+[Debug][OPS.OBF][OnAnalyse_Component_Prefabs] Found mono script reference UnityEngine.UI.CanvasScaler for 1024x768
+[Debug][OPS.OBF][OnAnalyse_Component_Prefabs] Found mono script reference in serialized properties for 1024x768 (1):
+  - UnityEngine.UI.CanvasScaler
+
+[Debug][OPS.OBF][OnAnalyse_Component_Prefabs] Found mono script reference UnityEngine.UI.GraphicRaycaster for 1024x768
+[Debug][OPS.OBF][OnAnalyse_Component_Prefabs] Found mono script reference in serialized properties for 1024x768 (1):
+  - UnityEngine.UI.GraphicRaycaster
+
+[Debug][OPS.OBF][OnAnalyse_Component_Prefabs] Found mono script reference UnityEngine.UI.Image for Background
+[Debug][OPS.OBF][OnAnalyse_Component_Prefabs] Found mono script reference in serialized properties for Background (1):
+  - UnityEngine.UI.Image
+
+[Debug][OPS.OBF][OnAnalyse_Component_Prefabs] Found mono script reference UnityEngine.UI.Image for Ad
+[Debug][OPS.OBF][OnAnalyse_Component_Prefabs] Found mono script reference in serialized properties for Ad (1):
+  - UnityEngine.UI.Image
+
+[Debug][OPS.OBF][OnAnalyse_Component_Prefabs] Found mono script reference UnityEngine.UI.Button for Ad
+[Debug][OPS.OBF][OnAnalyse_Component_Prefabs] Found mono script reference in serialized properties for Ad (1):
+  - UnityEngine.UI.Button
+
+[Debug][OPS.OBF][OnAnalyse_Component_Prefabs] Found mono script reference UnityEngine.UI.Image for Button
+[Debug][OPS.OBF][OnAnalyse_Component_Prefabs] Found mono script reference in serialized properties for Button (1):
+  - UnityEngine.UI.Image
+
+[Debug][OPS.OBF][OnAnalyse_Component_Prefabs] Found mono script reference UnityEngine.UI.Button for Button
+[Debug][OPS.OBF][OnAnalyse_Component_Prefabs] Found mono script reference in serialized properties for Button (1):
+  - UnityEngine.UI.Button
+
+[Debug][OPS.OBF][OnAnalyse_Component_Prefabs] Found mono script reference UnityEngine.UI.Text for Text
+[Debug][OPS.OBF][OnAnalyse_Component_Prefabs] Found mono script reference in serialized properties for Text (1):
+  - UnityEngine.UI.Text
 
 [Debug][OPS.OBF][OnAnalyse_Component_Prefabs] Found mono script reference UnityEngine.UI.Image for Puzzle Simple Math
 [Debug][OPS.OBF][OnAnalyse_Component_Prefabs] Found mono script reference in serialized properties for Puzzle Simple Math (1):
@@ -5582,6 +6219,26 @@
 [Debug][OPS.OBF][OnAnalyse_Component_Prefabs] Found mono script reference MessageManager for MessageManager
 [Debug][OPS.OBF][OnAnalyse_Component_Prefabs] Found mono script reference in serialized properties for MessageManager (1):
   - MessageManager
+
+[Debug][OPS.OBF][OnAnalyse_Component_Prefabs] Found mono script reference UnityEngine.UI.GraphicRaycaster for SMART_BANNER
+[Debug][OPS.OBF][OnAnalyse_Component_Prefabs] Found mono script reference in serialized properties for SMART_BANNER (1):
+  - UnityEngine.UI.GraphicRaycaster
+
+[Debug][OPS.OBF][OnAnalyse_Component_Prefabs] Found mono script reference UnityEngine.UI.CanvasScaler for SMART_BANNER
+[Debug][OPS.OBF][OnAnalyse_Component_Prefabs] Found mono script reference in serialized properties for SMART_BANNER (1):
+  - UnityEngine.UI.CanvasScaler
+
+[Debug][OPS.OBF][OnAnalyse_Component_Prefabs] Found mono script reference UnityEngine.UI.Image for Image
+[Debug][OPS.OBF][OnAnalyse_Component_Prefabs] Found mono script reference in serialized properties for Image (1):
+  - UnityEngine.UI.Image
+
+[Debug][OPS.OBF][OnAnalyse_Component_Prefabs] Found mono script reference UnityEngine.UI.Button for Image
+[Debug][OPS.OBF][OnAnalyse_Component_Prefabs] Found mono script reference in serialized properties for Image (1):
+  - UnityEngine.UI.Button
+
+[Debug][OPS.OBF][OnAnalyse_Component_Prefabs] Found mono script reference UnityEngine.UI.Text for Text
+[Debug][OPS.OBF][OnAnalyse_Component_Prefabs] Found mono script reference in serialized properties for Text (1):
+  - UnityEngine.UI.Text
 
 [Debug][OPS.OBF][OnAnalyse_Component_Prefabs] Found mono script reference UnityEngine.UI.CanvasScaler for Canvas
 [Debug][OPS.OBF][OnAnalyse_Component_Prefabs] Found mono script reference in serialized properties for Canvas (1):
@@ -5995,6 +6652,26 @@
 [Debug][OPS.OBF][OnAnalyse_Component_Prefabs] Found mono script reference in serialized properties for PercentageText (1):
   - TMPro.TextMeshProUGUI
 
+[Debug][OPS.OBF][OnAnalyse_Component_Prefabs] Found mono script reference UnityEngine.UI.GraphicRaycaster for CENTER
+[Debug][OPS.OBF][OnAnalyse_Component_Prefabs] Found mono script reference in serialized properties for CENTER (1):
+  - UnityEngine.UI.GraphicRaycaster
+
+[Debug][OPS.OBF][OnAnalyse_Component_Prefabs] Found mono script reference UnityEngine.UI.CanvasScaler for CENTER
+[Debug][OPS.OBF][OnAnalyse_Component_Prefabs] Found mono script reference in serialized properties for CENTER (1):
+  - UnityEngine.UI.CanvasScaler
+
+[Debug][OPS.OBF][OnAnalyse_Component_Prefabs] Found mono script reference UnityEngine.UI.Image for Image
+[Debug][OPS.OBF][OnAnalyse_Component_Prefabs] Found mono script reference in serialized properties for Image (1):
+  - UnityEngine.UI.Image
+
+[Debug][OPS.OBF][OnAnalyse_Component_Prefabs] Found mono script reference UnityEngine.UI.Button for Image
+[Debug][OPS.OBF][OnAnalyse_Component_Prefabs] Found mono script reference in serialized properties for Image (1):
+  - UnityEngine.UI.Button
+
+[Debug][OPS.OBF][OnAnalyse_Component_Prefabs] Found mono script reference UnityEngine.UI.Text for Text
+[Debug][OPS.OBF][OnAnalyse_Component_Prefabs] Found mono script reference in serialized properties for Text (1):
+  - UnityEngine.UI.Text
+
 [Debug][OPS.OBF][OnAnalyse_Component_Prefabs] Found mono script reference CodeStage.AntiCheat.Detectors.InjectionDetector for InjectionDetector
 [Debug][OPS.OBF][OnAnalyse_Component_Prefabs] Found mono script reference in serialized properties for InjectionDetector (1):
   - CodeStage.AntiCheat.Detectors.InjectionDetector
@@ -6054,6 +6731,22 @@
 [Debug][OPS.OBF][OnAnalyse_Component_Prefabs] Found mono script reference CashoutLoader for CashoutLoader
 [Debug][OPS.OBF][OnAnalyse_Component_Prefabs] Found mono script reference in serialized properties for CashoutLoader (1):
   - CashoutLoader
+
+[Debug][OPS.OBF][OnAnalyse_Component_Prefabs] Found mono script reference UnityEngine.UI.GraphicRaycaster for LARGE_BANNER
+[Debug][OPS.OBF][OnAnalyse_Component_Prefabs] Found mono script reference in serialized properties for LARGE_BANNER (1):
+  - UnityEngine.UI.GraphicRaycaster
+
+[Debug][OPS.OBF][OnAnalyse_Component_Prefabs] Found mono script reference UnityEngine.UI.CanvasScaler for LARGE_BANNER
+[Debug][OPS.OBF][OnAnalyse_Component_Prefabs] Found mono script reference in serialized properties for LARGE_BANNER (1):
+  - UnityEngine.UI.CanvasScaler
+
+[Debug][OPS.OBF][OnAnalyse_Component_Prefabs] Found mono script reference UnityEngine.UI.Image for Image
+[Debug][OPS.OBF][OnAnalyse_Component_Prefabs] Found mono script reference in serialized properties for Image (1):
+  - UnityEngine.UI.Image
+
+[Debug][OPS.OBF][OnAnalyse_Component_Prefabs] Found mono script reference UnityEngine.UI.Button for Image
+[Debug][OPS.OBF][OnAnalyse_Component_Prefabs] Found mono script reference in serialized properties for Image (1):
+  - UnityEngine.UI.Button
 
 [Debug][OPS.OBF][OnAnalyse_Component_Prefabs] Found mono script reference UnityEngine.UI.Image for Puzzle Slider
 [Debug][OPS.OBF][OnAnalyse_Component_Prefabs] Found mono script reference in serialized properties for Puzzle Slider (1):
@@ -6847,6 +7540,22 @@
 [Debug][OPS.OBF][OnAnalyse_Component_Prefabs] Found mono script reference in serialized properties for Text (TMP) (1):
   - TMPro.TextMeshProUGUI
 
+[Debug][OPS.OBF][OnAnalyse_Component_Prefabs] Found mono script reference UnityEngine.UI.GraphicRaycaster for MEDIUM_RECTANGLE
+[Debug][OPS.OBF][OnAnalyse_Component_Prefabs] Found mono script reference in serialized properties for MEDIUM_RECTANGLE (1):
+  - UnityEngine.UI.GraphicRaycaster
+
+[Debug][OPS.OBF][OnAnalyse_Component_Prefabs] Found mono script reference UnityEngine.UI.CanvasScaler for MEDIUM_RECTANGLE
+[Debug][OPS.OBF][OnAnalyse_Component_Prefabs] Found mono script reference in serialized properties for MEDIUM_RECTANGLE (1):
+  - UnityEngine.UI.CanvasScaler
+
+[Debug][OPS.OBF][OnAnalyse_Component_Prefabs] Found mono script reference UnityEngine.UI.Image for Image
+[Debug][OPS.OBF][OnAnalyse_Component_Prefabs] Found mono script reference in serialized properties for Image (1):
+  - UnityEngine.UI.Image
+
+[Debug][OPS.OBF][OnAnalyse_Component_Prefabs] Found mono script reference UnityEngine.UI.Button for Image
+[Debug][OPS.OBF][OnAnalyse_Component_Prefabs] Found mono script reference in serialized properties for Image (1):
+  - UnityEngine.UI.Button
+
 [Debug][OPS.OBF][OnAnalyse_Component_Prefabs] Found mono script reference PlayFabPersonal.Managers.PlayfabDataManager for PlayfabDataManager
 [Debug][OPS.OBF][OnAnalyse_Component_Prefabs] Found mono script reference in serialized properties for PlayfabDataManager (1):
   - PlayFabPersonal.Managers.PlayfabDataManager
@@ -6855,9 +7564,77 @@
 [Debug][OPS.OBF][OnAnalyse_Component_Prefabs] Found mono script reference in serialized properties for PlayfabDataManager (1):
   - PlayFabPersonal.Economy.VirtualCurrency
 
+[Debug][OPS.OBF][OnAnalyse_Component_Prefabs] Found mono script reference UnityEngine.UI.CanvasScaler for 1024x768
+[Debug][OPS.OBF][OnAnalyse_Component_Prefabs] Found mono script reference in serialized properties for 1024x768 (1):
+  - UnityEngine.UI.CanvasScaler
+
+[Debug][OPS.OBF][OnAnalyse_Component_Prefabs] Found mono script reference UnityEngine.UI.GraphicRaycaster for 1024x768
+[Debug][OPS.OBF][OnAnalyse_Component_Prefabs] Found mono script reference in serialized properties for 1024x768 (1):
+  - UnityEngine.UI.GraphicRaycaster
+
+[Debug][OPS.OBF][OnAnalyse_Component_Prefabs] Found mono script reference UnityEngine.UI.Image for Background
+[Debug][OPS.OBF][OnAnalyse_Component_Prefabs] Found mono script reference in serialized properties for Background (1):
+  - UnityEngine.UI.Image
+
+[Debug][OPS.OBF][OnAnalyse_Component_Prefabs] Found mono script reference UnityEngine.UI.Image for Ad
+[Debug][OPS.OBF][OnAnalyse_Component_Prefabs] Found mono script reference in serialized properties for Ad (1):
+  - UnityEngine.UI.Image
+
+[Debug][OPS.OBF][OnAnalyse_Component_Prefabs] Found mono script reference UnityEngine.UI.Button for Ad
+[Debug][OPS.OBF][OnAnalyse_Component_Prefabs] Found mono script reference in serialized properties for Ad (1):
+  - UnityEngine.UI.Button
+
+[Debug][OPS.OBF][OnAnalyse_Component_Prefabs] Found mono script reference UnityEngine.UI.Image for Button
+[Debug][OPS.OBF][OnAnalyse_Component_Prefabs] Found mono script reference in serialized properties for Button (1):
+  - UnityEngine.UI.Image
+
+[Debug][OPS.OBF][OnAnalyse_Component_Prefabs] Found mono script reference UnityEngine.UI.Button for Button
+[Debug][OPS.OBF][OnAnalyse_Component_Prefabs] Found mono script reference in serialized properties for Button (1):
+  - UnityEngine.UI.Button
+
+[Debug][OPS.OBF][OnAnalyse_Component_Prefabs] Found mono script reference UnityEngine.UI.Text for Text
+[Debug][OPS.OBF][OnAnalyse_Component_Prefabs] Found mono script reference in serialized properties for Text (1):
+  - UnityEngine.UI.Text
+
+[Debug][OPS.OBF][OnAnalyse_Component_Prefabs] Found mono script reference UnityEngine.UI.Text for Text
+[Debug][OPS.OBF][OnAnalyse_Component_Prefabs] Found mono script reference in serialized properties for Text (1):
+  - UnityEngine.UI.Text
+
 [Debug][OPS.OBF][OnAnalyse_Component_Prefabs] Found mono script reference PlayFabPersonal.Economy.VirtualCurrency for EconomyManager
 [Debug][OPS.OBF][OnAnalyse_Component_Prefabs] Found mono script reference in serialized properties for EconomyManager (1):
   - PlayFabPersonal.Economy.VirtualCurrency
+
+[Debug][OPS.OBF][OnAnalyse_Component_Prefabs] Found mono script reference UnityEngine.UI.CanvasScaler for 768x1024
+[Debug][OPS.OBF][OnAnalyse_Component_Prefabs] Found mono script reference in serialized properties for 768x1024 (1):
+  - UnityEngine.UI.CanvasScaler
+
+[Debug][OPS.OBF][OnAnalyse_Component_Prefabs] Found mono script reference UnityEngine.UI.GraphicRaycaster for 768x1024
+[Debug][OPS.OBF][OnAnalyse_Component_Prefabs] Found mono script reference in serialized properties for 768x1024 (1):
+  - UnityEngine.UI.GraphicRaycaster
+
+[Debug][OPS.OBF][OnAnalyse_Component_Prefabs] Found mono script reference UnityEngine.UI.Image for Background
+[Debug][OPS.OBF][OnAnalyse_Component_Prefabs] Found mono script reference in serialized properties for Background (1):
+  - UnityEngine.UI.Image
+
+[Debug][OPS.OBF][OnAnalyse_Component_Prefabs] Found mono script reference UnityEngine.UI.Image for Ad
+[Debug][OPS.OBF][OnAnalyse_Component_Prefabs] Found mono script reference in serialized properties for Ad (1):
+  - UnityEngine.UI.Image
+
+[Debug][OPS.OBF][OnAnalyse_Component_Prefabs] Found mono script reference UnityEngine.UI.Button for Ad
+[Debug][OPS.OBF][OnAnalyse_Component_Prefabs] Found mono script reference in serialized properties for Ad (1):
+  - UnityEngine.UI.Button
+
+[Debug][OPS.OBF][OnAnalyse_Component_Prefabs] Found mono script reference UnityEngine.UI.Image for Button
+[Debug][OPS.OBF][OnAnalyse_Component_Prefabs] Found mono script reference in serialized properties for Button (1):
+  - UnityEngine.UI.Image
+
+[Debug][OPS.OBF][OnAnalyse_Component_Prefabs] Found mono script reference UnityEngine.UI.Button for Button
+[Debug][OPS.OBF][OnAnalyse_Component_Prefabs] Found mono script reference in serialized properties for Button (1):
+  - UnityEngine.UI.Button
+
+[Debug][OPS.OBF][OnAnalyse_Component_Prefabs] Found mono script reference UnityEngine.UI.Text for Text
+[Debug][OPS.OBF][OnAnalyse_Component_Prefabs] Found mono script reference in serialized properties for Text (1):
+  - UnityEngine.UI.Text
 
 [Debug][OPS.OBF][OnAnalyse_Component_Prefabs] Found mono script reference PlayerUIManager for UIManager
 [Debug][OPS.OBF][OnAnalyse_Component_Prefabs] Found mono script reference in serialized properties for UIManager (1):
@@ -6951,8 +7728,76 @@
 [Debug][OPS.OBF][OnAnalyse_Component_Prefabs] Found mono script reference in serialized properties for Image (1):
   - UnityEngine.UI.Image
 
+[Debug][OPS.OBF][OnAnalyse_Component_Prefabs] Found mono script reference UnityEngine.UI.CanvasScaler for 768x1024
+[Debug][OPS.OBF][OnAnalyse_Component_Prefabs] Found mono script reference in serialized properties for 768x1024 (1):
+  - UnityEngine.UI.CanvasScaler
+
+[Debug][OPS.OBF][OnAnalyse_Component_Prefabs] Found mono script reference UnityEngine.UI.GraphicRaycaster for 768x1024
+[Debug][OPS.OBF][OnAnalyse_Component_Prefabs] Found mono script reference in serialized properties for 768x1024 (1):
+  - UnityEngine.UI.GraphicRaycaster
+
+[Debug][OPS.OBF][OnAnalyse_Component_Prefabs] Found mono script reference UnityEngine.UI.Image for Background
+[Debug][OPS.OBF][OnAnalyse_Component_Prefabs] Found mono script reference in serialized properties for Background (1):
+  - UnityEngine.UI.Image
+
+[Debug][OPS.OBF][OnAnalyse_Component_Prefabs] Found mono script reference UnityEngine.UI.Image for Ad
+[Debug][OPS.OBF][OnAnalyse_Component_Prefabs] Found mono script reference in serialized properties for Ad (1):
+  - UnityEngine.UI.Image
+
+[Debug][OPS.OBF][OnAnalyse_Component_Prefabs] Found mono script reference UnityEngine.UI.Button for Ad
+[Debug][OPS.OBF][OnAnalyse_Component_Prefabs] Found mono script reference in serialized properties for Ad (1):
+  - UnityEngine.UI.Button
+
+[Debug][OPS.OBF][OnAnalyse_Component_Prefabs] Found mono script reference UnityEngine.UI.Image for Button
+[Debug][OPS.OBF][OnAnalyse_Component_Prefabs] Found mono script reference in serialized properties for Button (1):
+  - UnityEngine.UI.Image
+
+[Debug][OPS.OBF][OnAnalyse_Component_Prefabs] Found mono script reference UnityEngine.UI.Button for Button
+[Debug][OPS.OBF][OnAnalyse_Component_Prefabs] Found mono script reference in serialized properties for Button (1):
+  - UnityEngine.UI.Button
+
+[Debug][OPS.OBF][OnAnalyse_Component_Prefabs] Found mono script reference UnityEngine.UI.Text for Text
+[Debug][OPS.OBF][OnAnalyse_Component_Prefabs] Found mono script reference in serialized properties for Text (1):
+  - UnityEngine.UI.Text
+
+[Debug][OPS.OBF][OnAnalyse_Component_Prefabs] Found mono script reference UnityEngine.UI.Text for Text
+[Debug][OPS.OBF][OnAnalyse_Component_Prefabs] Found mono script reference in serialized properties for Text (1):
+  - UnityEngine.UI.Text
+
 [Debug][OPS.OBF][OnAnalyse_Component_Prefabs] Found mono script reference UnityEngine.UI.Text for CommandSuggestion
 [Debug][OPS.OBF][OnAnalyse_Component_Prefabs] Found mono script reference in serialized properties for CommandSuggestion (1):
+  - UnityEngine.UI.Text
+
+[Debug][OPS.OBF][OnAnalyse_Component_Prefabs] Found mono script reference UnityEngine.UI.CanvasScaler for 768x1024
+[Debug][OPS.OBF][OnAnalyse_Component_Prefabs] Found mono script reference in serialized properties for 768x1024 (1):
+  - UnityEngine.UI.CanvasScaler
+
+[Debug][OPS.OBF][OnAnalyse_Component_Prefabs] Found mono script reference UnityEngine.UI.GraphicRaycaster for 768x1024
+[Debug][OPS.OBF][OnAnalyse_Component_Prefabs] Found mono script reference in serialized properties for 768x1024 (1):
+  - UnityEngine.UI.GraphicRaycaster
+
+[Debug][OPS.OBF][OnAnalyse_Component_Prefabs] Found mono script reference UnityEngine.UI.Image for Background
+[Debug][OPS.OBF][OnAnalyse_Component_Prefabs] Found mono script reference in serialized properties for Background (1):
+  - UnityEngine.UI.Image
+
+[Debug][OPS.OBF][OnAnalyse_Component_Prefabs] Found mono script reference UnityEngine.UI.Image for Ad
+[Debug][OPS.OBF][OnAnalyse_Component_Prefabs] Found mono script reference in serialized properties for Ad (1):
+  - UnityEngine.UI.Image
+
+[Debug][OPS.OBF][OnAnalyse_Component_Prefabs] Found mono script reference UnityEngine.UI.Button for Ad
+[Debug][OPS.OBF][OnAnalyse_Component_Prefabs] Found mono script reference in serialized properties for Ad (1):
+  - UnityEngine.UI.Button
+
+[Debug][OPS.OBF][OnAnalyse_Component_Prefabs] Found mono script reference UnityEngine.UI.Image for Button
+[Debug][OPS.OBF][OnAnalyse_Component_Prefabs] Found mono script reference in serialized properties for Button (1):
+  - UnityEngine.UI.Image
+
+[Debug][OPS.OBF][OnAnalyse_Component_Prefabs] Found mono script reference UnityEngine.UI.Button for Button
+[Debug][OPS.OBF][OnAnalyse_Component_Prefabs] Found mono script reference in serialized properties for Button (1):
+  - UnityEngine.UI.Button
+
+[Debug][OPS.OBF][OnAnalyse_Component_Prefabs] Found mono script reference UnityEngine.UI.Text for Text
+[Debug][OPS.OBF][OnAnalyse_Component_Prefabs] Found mono script reference in serialized properties for Text (1):
   - UnityEngine.UI.Text
 
 [Debug][OPS.OBF][OnAnalyse_Component_Prefabs] Found mono script reference UnityEngine.UI.Image for Puzzle Simple Code
@@ -7083,7 +7928,7 @@
 
 [Debug][OPS.OBF][Setup] Found helper assemblies (0):
 
-[Debug][OPS.OBF][Setup] Found dependency directories (42):
+[Debug][OPS.OBF][Setup] Found dependency directories (44):
   - C:\Program Files\Unity\Hub\Editor\2022.3.36f1\Editor\Data\MonoBleedingEdge\lib\mono\unityjit-win32
   - C:\Program Files\Unity\Hub\Editor\2022.3.36f1\Editor\Data\Managed\UnityEngine
   - C:\Program Files\Unity\Hub\Editor\2022.3.36f1\Editor\Data\MonoBleedingEdge\lib\mono\unityjit-win32\Facades
@@ -7093,15 +7938,15 @@
   - C:\Program Files\Unity\Hub\Editor\2022.3.36f1\Editor\Data\PlaybackEngines\WindowsStandaloneSupport
   - C:\Blocktiles_Arcade\Library\ScriptAssemblies
   - C:\Blocktiles_Arcade\Assets\Firebase\Plugins
-  - C:\Blocktiles_Arcade\Assets\ExternalDependencyManager\Editor
   - C:\Blocktiles_Arcade\Library\PackageCache\com.unity.visualscripting@1.9.4\Editor\VisualScripting.Core\Dependencies\YamlDotNet
   - C:\Blocktiles_Arcade\Library\PackageCache\com.unity.burst@1.8.16\Unity.Burst.CodeGen
+  - C:\Blocktiles_Arcade\Assets\GoogleMobileAds
   - C:\Blocktiles_Arcade\Assets\PlayFabEditorExtensions\Editor\Resources
   - C:\Blocktiles_Arcade\Library\PackageCache\com.unity.collections@1.2.4\Unity.Collections.LowLevel.ILSupport
   - C:\Blocktiles_Arcade\Library\PackageCache\com.unity.ext.nunit@1.0.6\net35\unity-custom
   - C:\Blocktiles_Arcade\Assets\OPS\Editor\Plugins\Mono.Cecil
   - C:\Blocktiles_Arcade\Library\PackageCache\com.unity.testtools.codecoverage@1.2.5\lib\ReportGenerator
-  - C:\Blocktiles_Arcade\Assets\ExternalDependencyManager\Editor\1.2.176
+  - C:\Blocktiles_Arcade\Assets\ExternalDependencyManager\Editor\1.2.181
   - C:\Blocktiles_Arcade\Library\PackageCache\com.unity.collab-proxy@2.4.3\Lib\Editor\PlasticSCM
   - C:\Blocktiles_Arcade\Assets\Plugins\Demigiant\DOTween\Editor
   - C:\Blocktiles_Arcade\Assets\Firebase\Editor
@@ -7109,6 +7954,7 @@
   - C:\Blocktiles_Arcade\Library\PackageCache\com.unity.visualscripting@1.9.4\Editor\VisualScripting.Core\Dependencies\DotNetZip
   - C:\Blocktiles_Arcade\Assets\OPS\Editor\Plugins\OPS.Assets.Editor
   - C:\Blocktiles_Arcade\Assets\Plugins\Demigiant\DOTween
+  - C:\Blocktiles_Arcade\Assets\ExternalDependencyManager\Editor
   - C:\Blocktiles_Arcade\Library\PackageCache\com.unity.visualscripting@1.9.4\Runtime\VisualScripting.Flow\Dependencies\NCalc
   - C:\Blocktiles_Arcade\Library\PackageCache\com.unity.burst@1.8.16
   - C:\Blocktiles_Arcade\Library\PackageCache\com.unity.ide.rider@3.0.28\Rider\Editor
@@ -7118,6 +7964,7 @@
   - C:\Blocktiles_Arcade\Library\PackageCache\com.unity.visualscripting@1.9.4\Editor\VisualScripting.Core\EditorAssetResources
   - C:\Program Files\Unity\Hub\Editor\2022.3.36f1\Editor\Data\PlaybackEngines\AndroidPlayer\Variations\il2cpp\Managed
   - Assets\Firebase\Plugins
+  - Assets\GoogleMobileAds
   - Assets\Plugins\Demigiant\DOTween
   - Assets\OPS\Plugins\Json
   - C:\Blocktiles_Arcade\Library\PackageCache\com.unity.nuget.newtonsoft-json@3.2.1\Runtime\AOT

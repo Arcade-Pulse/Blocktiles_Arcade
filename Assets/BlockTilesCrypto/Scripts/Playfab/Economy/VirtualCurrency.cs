@@ -66,6 +66,7 @@ namespace PlayFabPersonal.Economy
         {
             addedLife = life;
             // this.currentLives = life;
+            Debug.Log("add life"+addedLife);
             var request = new ExecuteCloudScriptRequest
             {
                 FunctionName = "addLife1A",
@@ -131,16 +132,13 @@ namespace PlayFabPersonal.Economy
         {
             // GetCoin()
             OnChangeVirtualCurrencyAmount?.Invoke(this, new OnAddSubstractAmountEventArgs { currencyValue = currentGameSocCoin });
+            PlayfabDataManager.Instance.LoadPlayerInventory2(); // Refresh the local balance from the server
+
         }
 
         private void OnErrorAddCurrency(PlayFabError error)
         {
             Debug.Log(error.ErrorMessage);
-        }
-
-        public ObscuredInt GetCurrentGameSocCoin()
-        {
-            return currentGameSocCoin;
         }
 
     }

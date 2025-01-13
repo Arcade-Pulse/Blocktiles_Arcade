@@ -13,7 +13,7 @@ public class VerificationManager : MonoBehaviour
 
     private void OnEnable()
     {
-        GetPlayerChallengeStatus();
+      //  GetPlayerChallengeStatus();
        // Debug.Log("ver manager enabled");
     }
 

@@ -1,10 +1,10 @@
 public static class AdsID
 {
-    public static string adAppOpenID = "ca-app-pub-1932984074141788/7365798515";
-    public static string adBannerID = "ca-app-pub-1932984074141788/7174226825";
-    public static string adInterstitialID = "ca-app-pub-1932984074141788/7082280374";
-    public static string adRewardedID = "ca-app-pub-1932984074141788/5769198705";
-    public static string adRewardedInterstitialID = "ca-app-pub-1932984074141788/8973112394";
+    public static string adAppOpenID = "ca-app-pub-1983393293579241/2043408743";
+    public static string adBannerID = "ca-app-pub-1983393293579241/1157832365";
+    public static string adInterstitialID = "ca-app-pub-1983393293579241/7841055552";
+    public static string adRewardedID = "ca-app-pub-1983393293579241/5214892219";
+    public static string adRewardedInterstitialID = "ca-app-pub-1983393293579241/4231008212";
 // #if UNITY_ANDROID && !UNITY_EDITOR
 //     public const string adAppOpenID = "ca-app-pub-1932984074141788/6003777353"; // Live
 //     // public const string adAppOpenID = "ca-app-pub-3940256099942544/3419835294";

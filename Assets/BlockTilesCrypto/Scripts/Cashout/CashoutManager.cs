@@ -111,8 +111,8 @@ namespace Cashout
 
             PlayfabDataManager.Instance.lastTransactionEmail = mainContainer.cashoutEmailField.text;
             var coinsInUSDC = coinInBTC / currencyConversionRate;
-            PlayfabDataManager.Instance.StartTransaction(selectedCashoutMethod, coinsInUSDC,
-                mainContainer.cashoutEmailField.text);
+            // PlayfabDataManager.Instance.StartTransaction(selectedCashoutMethod, coinsInUSDC,
+            //     mainContainer.cashoutEmailField.text);
         }
 
         private void Proceed()

@@ -164,6 +164,7 @@ public class GameSceneManager : MonoBehaviour
             return;
         }
         VirtualCurrency.Instance.SubtractLife(1);
+        GameUIManager.Instance.ShowPlayerStats();
         SceneManager.LoadSceneAsync("GameScene");
     }
 

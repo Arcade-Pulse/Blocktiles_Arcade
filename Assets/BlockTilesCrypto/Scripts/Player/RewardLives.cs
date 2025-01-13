@@ -1,6 +1,5 @@
 using PlayFabPersonal.Economy;
 using PlayFabPersonal.Managers;
-using UnityEditor.Minesweeper.Scripts.UnityAds;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -37,18 +36,19 @@ public class RewardLives : MonoBehaviour
             return;
         }
 
-        if (Rewarded.Instance.isAdLoaded)
+        if (RewardedAdController.Instance.isAdLoaded)
         {
             Debug.Log("rewarded is loaded");
            // RewardedAdController.Instance.ShowAd();
-           Rewarded.Instance.ShowAd();
-           VirtualCurrency.Instance.AddLife(PlayfabDataManager.Instance.GetLifeRewardPerAd());
+           RewardedAdController.Instance.ShowAd();
+           Debug.Log("added lives "+PlayfabDataManager.Instance.GetLifeRewardPerAd());
 
         }
         else
         {            Debug.Log("rewarded is not loaded");
 
-            Rewarded.Instance.LoadRewardedAd();
+            RewardedAdController.Instance.LoadAd();
+            RewardedInterstitialAdController.Instance.ShowAd();
         }
         
         rewardButton.interactable = true;

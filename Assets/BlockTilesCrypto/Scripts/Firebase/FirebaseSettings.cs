@@ -87,10 +87,10 @@ public class FirebaseSettings : MonoBehaviour
 
     private void ApplyRemoteConfig()
     {
-        ShowInterstitialAds = FirebaseRemoteConfig.DefaultInstance.GetValue("show_interstitial_ads").BooleanValue;
-        ShowRewardedAds = FirebaseRemoteConfig.DefaultInstance.GetValue("show_rewarded_ads").BooleanValue;
-        ShowRewardedInterstitialAds = FirebaseRemoteConfig.DefaultInstance.GetValue("show_rewarded_interstitial_ads").BooleanValue;
-        numberItCanEnterWithNoLives = (int)FirebaseRemoteConfig.DefaultInstance.GetValue("times_it_can_enter_with_no_lives").LongValue;
+        // ShowInterstitialAds = FirebaseRemoteConfig.DefaultInstance.GetValue("show_interstitial_ads").BooleanValue;
+        // ShowRewardedAds = FirebaseRemoteConfig.DefaultInstance.GetValue("show_rewarded_ads").BooleanValue;
+        // ShowRewardedInterstitialAds = FirebaseRemoteConfig.DefaultInstance.GetValue("show_rewarded_interstitial_ads").BooleanValue;
+        // numberItCanEnterWithNoLives = (int)FirebaseRemoteConfig.DefaultInstance.GetValue("times_it_can_enter_with_no_lives").LongValue;
 
         Debug.Log($"Show Interstitial Ads: {ShowInterstitialAds}");
         Debug.Log($"Show Rewarded Ads: {ShowRewardedAds}");
