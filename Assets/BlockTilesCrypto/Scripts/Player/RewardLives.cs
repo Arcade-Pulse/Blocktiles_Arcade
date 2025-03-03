@@ -36,19 +36,22 @@ public class RewardLives : MonoBehaviour
             return;
         }
 
-        if (RewardedAdController.Instance.isAdLoaded)
+        if (AdLevelPlay.Instance.isRewardedLoaded)
         {
-            Debug.Log("rewarded is loaded");
+           // Debug.Log("rewarded is loaded");
            // RewardedAdController.Instance.ShowAd();
-           RewardedAdController.Instance.ShowAd();
+           AdLevelPlay.Instance.ShowRewarded();
+           //Rewarded.Instance.ShowAd();
            Debug.Log("added lives "+PlayfabDataManager.Instance.GetLifeRewardPerAd());
+           VirtualCurrency.Instance.AddLife(PlayfabDataManager.Instance.GetLifeRewardPerAd());
 
         }
         else
         {            Debug.Log("rewarded is not loaded");
 
-            RewardedAdController.Instance.LoadAd();
-            RewardedInterstitialAdController.Instance.ShowAd();
+            
+           // Rewarded.Instance.LoadRewardedAd();            
+            //AdLevelPlay.Instance.ShowRewarded();
         }
         
         rewardButton.interactable = true;

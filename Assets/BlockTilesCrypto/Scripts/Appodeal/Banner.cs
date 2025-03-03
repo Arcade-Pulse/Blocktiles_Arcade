@@ -8,6 +8,7 @@
 // {
 //     #region Banner callback handlers
 //
+//     public bool isAdLoaded;
 //     private void OnEnable()
 //     {
 //       //  Appodeal.setBannerCallbacks(this);
@@ -17,6 +18,7 @@
 //     public void onBannerLoaded(int height, bool precache)
 //     {
 //         Debug.Log("Banner loaded");
+//         isAdLoaded = true;
 //     }
 //
 // // Called when banner failed to load

@@ -4,29 +4,48 @@ apply plugin: 'com.android.library'
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
 // Android Resolver Dependencies Start
-    implementation 'androidx.constraintlayout:constraintlayout:2.1.4' // Assets/GoogleMobileAds/Editor/GoogleMobileAdsDependencies.xml:12
-    implementation 'com.google.ads.mediation:pangle:6.2.0.7.0' // Assets/GoogleMobileAds/Mediation/Pangle/Editor/PangleMediationDependencies.xml:25
-    implementation 'com.google.ads.mediation:vungle:7.4.0.1' // Assets/GoogleMobileAds/Mediation/LiftoffMonetize/Editor/LiftoffMonetizeMediationDependencies.xml:24
-    implementation 'com.google.android.gms:play-services-ads:23.2.0' // Assets/GoogleMobileAds/Editor/GoogleMobileAdsDependencies.xml:7
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0' // Assets/LevelPlay/Editor/ISInMobiAdapterDependencies.xml:19
+    implementation 'androidx.recyclerview:recyclerview:1.2.1' // Assets/LevelPlay/Editor/ISMintegralAdapterDependencies.xml:15
+    implementation 'com.applovin:applovin-sdk:13.1.0' // Assets/LevelPlay/Editor/ISAppLovinAdapterDependencies.xml:12
+    implementation 'com.facebook.android:audience-network-sdk:6.19.0' // Assets/LevelPlay/Editor/ISFacebookAdapterDependencies.xml:8
+    implementation 'com.google.android.gms:play-services-ads:23.6.0' // Assets/LevelPlay/Editor/ISAdMobAdapterDependencies.xml:8
+    implementation 'com.google.android.gms:play-services-ads-identifier:18.1.0' // Assets/LevelPlay/Editor/IronSourceSDKDependencies.xml:12
     implementation 'com.google.android.gms:play-services-base:18.5.0' // Assets/Firebase/Editor/AppDependencies.xml:17
     implementation 'com.google.android.play:app-update:2.1.0' // Assets/GooglePlayPlugins/com.google.play.appupdate/Editor/Dependencies.xml:3
     implementation 'com.google.android.play:core-common:2.0.4' // Assets/GooglePlayPlugins/com.google.play.core/Editor/Dependencies.xml:3
-    implementation 'com.google.android.play:integrity:1.3.0' // Assets/GooglePlayPlugins/com.google.play.integrity/Editor/Dependencies.xml:3
+    implementation 'com.google.android.play:integrity:1.4.0' // Assets/GooglePlayPlugins/com.google.play.integrity/Editor/Dependencies.xml:3
     implementation 'com.google.android.play:review:2.0.0' // Assets/GooglePlayPlugins/com.google.play.review/Editor/Dependencies.xml:3
-    implementation 'com.google.android.ump:user-messaging-platform:2.2.0' // Assets/GoogleMobileAds/Editor/GoogleUmpDependencies.xml:7
-    implementation 'com.google.firebase:firebase-analytics:22.0.2' // Assets/Firebase/Editor/RemoteConfigDependencies.xml:15
-    implementation 'com.google.firebase:firebase-analytics-unity:12.1.0' // Assets/Firebase/Editor/AnalyticsDependencies.xml:18
-    implementation 'com.google.firebase:firebase-app-unity:12.1.0' // Assets/Firebase/Editor/AppDependencies.xml:22
+    implementation 'com.google.firebase:firebase-analytics:22.1.2' // Assets/Firebase/Editor/RemoteConfigDependencies.xml:15
+    implementation 'com.google.firebase:firebase-analytics-unity:12.5.0' // Assets/Firebase/Editor/AnalyticsDependencies.xml:18
+    implementation 'com.google.firebase:firebase-app-unity:12.5.0' // Assets/Firebase/Editor/AppDependencies.xml:22
     implementation 'com.google.firebase:firebase-common:21.0.0' // Assets/Firebase/Editor/AppDependencies.xml:13
-    implementation 'com.google.firebase:firebase-config:22.0.0' // Assets/Firebase/Editor/RemoteConfigDependencies.xml:13
-    implementation 'com.google.firebase:firebase-config-unity:12.1.0' // Assets/Firebase/Editor/RemoteConfigDependencies.xml:20
-    implementation 'com.google.firebase:firebase-crashlytics-ndk:19.0.2' // Assets/Firebase/Editor/CrashlyticsDependencies.xml:13
-    implementation 'com.google.firebase:firebase-crashlytics-unity:12.1.0' // Assets/Firebase/Editor/CrashlyticsDependencies.xml:20
+    implementation 'com.google.firebase:firebase-config:22.0.1' // Assets/Firebase/Editor/RemoteConfigDependencies.xml:13
+    implementation 'com.google.firebase:firebase-config-unity:12.5.0' // Assets/Firebase/Editor/RemoteConfigDependencies.xml:20
+    implementation 'com.google.firebase:firebase-crashlytics-ndk:19.3.0' // Assets/Firebase/Editor/CrashlyticsDependencies.xml:13
+    implementation 'com.google.firebase:firebase-crashlytics-unity:12.5.0' // Assets/Firebase/Editor/CrashlyticsDependencies.xml:20
     implementation 'com.google.firebase:firebase-iid:21.1.0' // Assets/Firebase/Editor/MessagingDependencies.xml:17
-    implementation 'com.google.firebase:firebase-messaging:24.0.0' // Assets/Firebase/Editor/MessagingDependencies.xml:13
-    implementation 'com.google.firebase:firebase-messaging-unity:12.1.0' // Assets/Firebase/Editor/MessagingDependencies.xml:24
+    implementation 'com.google.firebase:firebase-messaging:24.1.0' // Assets/Firebase/Editor/MessagingDependencies.xml:13
+    implementation 'com.google.firebase:firebase-messaging-unity:12.5.0' // Assets/Firebase/Editor/MessagingDependencies.xml:24
     implementation 'com.google.flatbuffers:flatbuffers-java:1.12.0' // Assets/Firebase/Editor/MessagingDependencies.xml:19
-    implementation 'com.unity3d.ads:unity-ads:[4.12.0,4.13[' // Packages/com.unity.ads/Editor/Source/Dependencies.xml:7
+    implementation 'com.inmobi.monetization:inmobi-ads-kotlin:10.8.0' // Assets/LevelPlay/Editor/ISInMobiAdapterDependencies.xml:12
+    implementation 'com.mbridge.msdk.oversea:mbridge_android_sdk:16.9.41' // Assets/LevelPlay/Editor/ISMintegralAdapterDependencies.xml:8
+    implementation 'com.pangle.global:ads-sdk:6.5.0.4' // Assets/LevelPlay/Editor/ISPangleAdapterDependencies.xml:12
+    // implementation 'com.unity3d.ads:unity-ads:[4.12.0,4.13[' // Packages/com.unity.ads/Editor/Source/Dependencies.xml:7
+    implementation 'com.unity3d.ads:unity-ads:4.13.2' // Assets/LevelPlay/Editor/ISUnityAdsAdapterDependencies.xml:9
+    implementation 'com.unity3d.ads-mediation:admob-adapter:4.3.49' // Assets/LevelPlay/Editor/ISAdMobAdapterDependencies.xml:12
+    implementation 'com.unity3d.ads-mediation:adquality-sdk:7.23.1' // Assets/IronSourceAdQuality/Editor/IronSourceAdQualityDependencies.xml:5
+    implementation 'com.unity3d.ads-mediation:adquality-unity-sdk-bridge:7.23.1' // Assets/IronSourceAdQuality/Editor/IronSourceAdQualityDependencies.xml:10
+    implementation 'com.unity3d.ads-mediation:applovin-adapter:4.3.50' // Assets/LevelPlay/Editor/ISAppLovinAdapterDependencies.xml:5
+    implementation 'com.unity3d.ads-mediation:facebook-adapter:4.3.49' // Assets/LevelPlay/Editor/ISFacebookAdapterDependencies.xml:12
+    implementation 'com.unity3d.ads-mediation:inmobi-adapter:4.3.28' // Assets/LevelPlay/Editor/ISInMobiAdapterDependencies.xml:5
+    implementation 'com.unity3d.ads-mediation:mediation-sdk:8.7.0' // Assets/LevelPlay/Editor/IronSourceSDKDependencies.xml:5
+    implementation 'com.unity3d.ads-mediation:mintegral-adapter:4.3.36' // Assets/LevelPlay/Editor/ISMintegralAdapterDependencies.xml:19
+    implementation 'com.unity3d.ads-mediation:pangle-adapter:4.3.36' // Assets/LevelPlay/Editor/ISPangleAdapterDependencies.xml:5
+    implementation 'com.unity3d.ads-mediation:unityads-adapter:4.3.50' // Assets/LevelPlay/Editor/ISUnityAdsAdapterDependencies.xml:5
+    implementation 'com.unity3d.ads-mediation:vungle-adapter:4.3.29' // Assets/LevelPlay/Editor/ISVungleAdapterDependencies.xml:12
+    implementation 'com.unity3d.ads-mediation:yandex-adapter:4.3.8' // Assets/LevelPlay/Editor/ISYandexAdapterDependencies.xml:9
+    implementation 'com.vungle:vungle-ads:7.4.3' // Assets/LevelPlay/Editor/ISVungleAdapterDependencies.xml:8
+    implementation 'com.yandex.android:mobileads:7.8.1' // Assets/LevelPlay/Editor/ISYandexAdapterDependencies.xml:5
 // Android Resolver Dependencies End
 **DEPS**}
 

@@ -6,20 +6,27 @@
 //
 // public class AppoDeal : MonoBehaviour, IAppodealInitializationListener, IBannerAdListener
 // {
-//     public int retryCount;
+//     public int retryCount = 0;
+//     private const int MAX_RETRIES = 3;
+//     private bool bannerLoaded = false;  
+//     private bool bannerShown = false;   // ✅ NEW: Tracks if banner is currently displayed
 //
-//     void Awake() {
-//         DontDestroyOnLoad(this.gameObject);  // Called only once when object is created
+//     void Awake()
+//     {
+//         DontDestroyOnLoad(this.gameObject);
 //     }
 //
 //     private void Start()
 //     {
 //         Debug.Log("Starting Appodeal");
 //         int adTypes = Appodeal.INTERSTITIAL | Appodeal.BANNER | Appodeal.REWARDED_VIDEO;
-//         string appKey = "a13a870393ce2ce161df6d08bf61c13d8de9b2d0525947ce";
-//         //Appodeal.setTesting(true); // Enable test ads for all formats
+//         string appKey = "6d583d1437e6507603b18553f90495857e50c9748a7f1d74";
+//
+//         Appodeal.setSmartBanners(true);
 //         Appodeal.initialize(appKey, adTypes, this);
-//         Appodeal.cache(Appodeal.BANNER);  // Force caching of the banner ad
+//
+//         Debug.Log("Caching banner...");
+//         Appodeal.cache(Appodeal.BANNER);
 //     }
 //
 //     public void onInitializationFinished(List<string> errors)
@@ -34,26 +41,43 @@
 //         }
 //         else
 //         {
-//             // Check if banner is already loaded
+//             Appodeal.setBannerCallbacks(this); 
+//
 //             if (Appodeal.isLoaded(Appodeal.BANNER))
 //             {
 //                 ShowBanner();
 //             }
 //             else
 //             {
-//                 Debug.Log("Banner ad is not loaded yet.");
-//                 
-//                 StartCoroutine(RetryBanner()); // Retry loading if not loaded
+//                 Debug.Log("Banner ad is not loaded yet, waiting for callback.");
 //             }
-//
-//             Appodeal.setSmartBanners(true);  // Enable smart banners
-//             Appodeal.setBannerCallbacks(this); // Register banner callbacks
 //         }
 //     }
-//     
+//
+//     void ShowBanner()
+//     {
+//         if (!bannerLoaded || bannerShown)  // ✅ Prevents multiple calls to show the banner
+//         {
+//             Debug.Log("Banner is not loaded yet or already displayed.");
+//             return;
+//         }
+//
+//         Debug.Log("Showing banner...");
+//         Appodeal.show(Appodeal.BANNER_BOTTOM);
+//         bannerShown = true;  // ✅ Mark banner as displayed
+//     }
+//
 //     IEnumerator RetryBanner()
 //     {
-//         // Wait for a few seconds before retrying to show banner
+//         if (retryCount >= MAX_RETRIES)
+//         {
+//             Debug.Log("Max retry attempts reached. Stopping banner retries.");
+//             yield break;
+//         }
+//
+//         retryCount++;
+//         Debug.Log($"Retrying to load banner... Attempt {retryCount}");
+//
 //         yield return new WaitForSeconds(10);
 //
 //         if (Appodeal.isLoaded(Appodeal.BANNER))
@@ -62,54 +86,61 @@
 //         }
 //         else
 //         {
-//             Debug.Log("Banner still not loaded. Retrying...");
-//             if (retryCount < 5) // Limit retries
-//             {
-//                 ShowBanner();
-//                 retryCount++;
-//                 StartCoroutine(RetryBanner());
-//             }
-//             else
-//             {
-//                 Debug.Log("Max retry attempts reached.");
-//                 yield break;
-//             }
-//         }
-//     }
-//     
-//     void ShowBanner()
-//     {
-//         Appodeal.show(Appodeal.BANNER_BOTTOM);  // Show banner ad at the bottom
-//     }
-//
-//     // IBannerAdListener implementation
-//     public void onBannerLoaded(int height, bool isPrecache) {
-//         Debug.Log("Banner ad loaded successfully");
-//       //  ShowBanner(); // Show banner when loaded
-//     }
-//
-//     public void onBannerFailedToLoad() {
-//         Debug.Log("Banner ad failed to load");
-//         if (retryCount < 5)  // Retry up to 5 times
-//         {
+//             Appodeal.cache(Appodeal.BANNER);
 //             StartCoroutine(RetryBanner());
 //         }
 //     }
 //
-//     public void onBannerShown() {
-//         Debug.Log("Banner ad is shown");
+//     // IBannerAdListener implementation
+//     public void onBannerLoaded(int height, bool isPrecache)
+//     {
+//         Debug.Log($"✅ Banner Loaded - Height: {height}, Precache: {isPrecache}");
+//         bannerLoaded = true;
+//         retryCount = 0;
+//
+//         if (!bannerShown)  // ✅ Only show if it's not already displayed
+//         {
+//             ShowBanner();
+//         }
+//     }
+//
+//     public void onBannerFailedToLoad()
+//     {
+//         Debug.Log("❌ Banner ad failed to load");
+//         bannerLoaded = false;
+//
+//         if (retryCount < MAX_RETRIES)
+//         {
+//             StartCoroutine(RetryBanner());
+//         }
+//         else
+//         {
+//             Debug.Log("Giving up on banner retry after multiple failures.");
+//         }
+//     }
+//
+//     public void onBannerShown()
+//     {
+//         Debug.Log("✅ Banner ad is shown");
+//         bannerShown = true;  // ✅ Mark that the banner is currently visible
 //     }
 //
 //     public void onBannerShowFailed()
 //     {
-//         Debug.Log("Banner failed to show");
+//         Debug.Log("❌ Banner failed to show");
+//         bannerShown = false;
 //     }
 //
-//     public void onBannerClicked() {
-//         Debug.Log("Banner ad clicked");
+//     public void onBannerClicked()
+//     {
+//         Debug.Log("🖱️ Banner ad clicked");
 //     }
 //
-//     public void onBannerExpired() {
-//         Debug.Log("Banner ad expired");
+//     public void onBannerExpired()
+//     {
+//         Debug.Log("🔄 Banner ad expired, reloading...");
+//         bannerLoaded = false;
+//         bannerShown = false;  // ✅ Reset the shown state so a new banner can be displayed
+//         Appodeal.cache(Appodeal.BANNER);
 //     }
 // }

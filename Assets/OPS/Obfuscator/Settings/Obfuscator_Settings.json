@@ -18,6 +18,12 @@
     {
       "Settings_Name" : "Default_Compatibility_Component_Chartboost",
       "SettingElement_Array" : [
+        {
+          "Type" : "Bool",
+          "Key" : "Skip_Chartboost",
+          "Value" : "True",
+          "Values" : null
+        }
       ]
     },
     {
@@ -28,21 +34,45 @@
     {
       "Settings_Name" : "Default_Compatibility_Component_Google_Sdk",
       "SettingElement_Array" : [
+        {
+          "Type" : "Bool",
+          "Key" : "Skip_Google",
+          "Value" : "True",
+          "Values" : null
+        }
       ]
     },
     {
       "Settings_Name" : "Default_Compatibility_Component_Json_Sdk",
       "SettingElement_Array" : [
+        {
+          "Type" : "Bool",
+          "Key" : "Skip_Json",
+          "Value" : "True",
+          "Values" : null
+        }
       ]
     },
     {
       "Settings_Name" : "Default_Compatibility_Component_Photon_Sdk",
       "SettingElement_Array" : [
+        {
+          "Type" : "Bool",
+          "Key" : "Skip_Photon",
+          "Value" : "True",
+          "Values" : null
+        }
       ]
     },
     {
       "Settings_Name" : "Default_Compatibility_Component_PlayMaker_Sdk",
       "SettingElement_Array" : [
+        {
+          "Type" : "Bool",
+          "Key" : "Skip_PlayMaker",
+          "Value" : "True",
+          "Values" : null
+        }
       ]
     },
     {
@@ -74,6 +104,24 @@
         {
           "Type" : "Bool",
           "Key" : "Enable_Try_Find_Inspector_Animation_Methods",
+          "Value" : "True",
+          "Values" : null
+        },
+        {
+          "Type" : "Bool",
+          "Key" : "Enable_Try_Find_Inspector_Animation_Methods_In_Models",
+          "Value" : "True",
+          "Values" : null
+        },
+        {
+          "Type" : "Bool",
+          "Key" : "Enable_Try_Find_Inspector_Animation_Methods_In_AnimationClips",
+          "Value" : "True",
+          "Values" : null
+        },
+        {
+          "Type" : "Bool",
+          "Key" : "Enable_Try_Find_Inspector_Animation_Methods_In_AnimatorControllers",
           "Value" : "True",
           "Values" : null
         }
@@ -114,6 +162,19 @@
           "Key" : "Obfuscate_Namespaces",
           "Value" : "True",
           "Values" : null
+        },
+        {
+          "Type" : "Bool",
+          "Key" : "Skip_Namespace_ViceVersa",
+          "Value" : "False",
+          "Values" : null
+        },
+        {
+          "Type" : "Array_String",
+          "Key" : "Skip_Namespace_Array",
+          "Value" : null,
+          "Values" : [
+          ]
         }
       ]
     },
@@ -123,7 +184,7 @@
         {
           "Type" : "Bool",
           "Key" : "Obfuscate_Classes",
-          "Value" : "True",
+          "Value" : "False",
           "Values" : null
         },
         {
@@ -153,13 +214,13 @@
         {
           "Type" : "Bool",
           "Key" : "Obfuscate_Class_Abstract",
-          "Value" : "True",
+          "Value" : "False",
           "Values" : null
         },
         {
           "Type" : "Bool",
           "Key" : "Obfuscate_Class_Generic",
-          "Value" : "True",
+          "Value" : "False",
           "Values" : null
         },
         {
@@ -189,19 +250,25 @@
         {
           "Type" : "Bool",
           "Key" : "Obfuscate_Class_ScriptableObject",
-          "Value" : "True",
+          "Value" : "False",
           "Values" : null
         },
         {
           "Type" : "Bool",
           "Key" : "Obfuscate_Class_Playable",
-          "Value" : "True",
+          "Value" : "False",
           "Values" : null
         },
         {
           "Type" : "Bool",
-          "Key" : "Obfuscate_Class_Serializable",
-          "Value" : "True",
+          "Key" : "Obfuscate_Class_Struct",
+          "Value" : "False",
+          "Values" : null
+        },
+        {
+          "Type" : "Bool",
+          "Key" : "Obfuscate_Class_Enum",
+          "Value" : "False",
           "Values" : null
         }
       ]
@@ -293,14 +360,14 @@
         },
         {
           "Type" : "Bool",
-          "Key" : "Obfuscate_Field_Serializable",
-          "Value" : "True",
+          "Key" : "Obfuscate_Field_Enums",
+          "Value" : "False",
           "Values" : null
         },
         {
           "Type" : "Bool",
-          "Key" : "Obfuscate_Field_Public_Unity",
-          "Value" : "True",
+          "Key" : "Obfuscate_Field_Struct",
+          "Value" : "False",
           "Values" : null
         }
       ]
@@ -383,6 +450,18 @@
     {
       "Settings_Name" : "Default_Obfuscation_Component_Renaming",
       "SettingElement_Array" : [
+        {
+          "Type" : "Bool",
+          "Key" : "Enable_Load_Mapping",
+          "Value" : "False",
+          "Values" : null
+        },
+        {
+          "Type" : "Bool",
+          "Key" : "Enable_Save_Mapping",
+          "Value" : "False",
+          "Values" : null
+        }
       ]
     },
     {
@@ -399,6 +478,12 @@
     {
       "Settings_Name" : "Default_Obfuscation_Component_Method_ControlFlow",
       "SettingElement_Array" : [
+        {
+          "Type" : "Bool",
+          "Key" : "Enable_Method_ControlFlow",
+          "Value" : "False",
+          "Values" : null
+        }
       ]
     },
     {
@@ -418,7 +503,7 @@
         {
           "Type" : "Bool",
           "Key" : "Enable_Assembly_Suppress_ILDasm",
-          "Value" : "True",
+          "Value" : "False",
           "Values" : null
         }
       ]
@@ -442,12 +527,30 @@
           "Key" : "Enable_Try_Find_Inspector_Unity_Event_Methods",
           "Value" : "True",
           "Values" : null
+        },
+        {
+          "Type" : "Bool",
+          "Key" : "Enable_Try_Find_Inspector_Unity_Event_Methods_In_Scenes",
+          "Value" : "True",
+          "Values" : null
+        },
+        {
+          "Type" : "Bool",
+          "Key" : "Enable_Try_Find_Inspector_Unity_Event_Methods_In_Prefabs",
+          "Value" : "True",
+          "Values" : null
         }
       ]
     },
     {
       "Settings_Name" : "Default_Compatibility_Component_PlayFab_Sdk",
       "SettingElement_Array" : [
+        {
+          "Type" : "Bool",
+          "Key" : "Skip_PlayFab",
+          "Value" : "True",
+          "Values" : null
+        }
       ]
     },
     {
@@ -476,10 +579,27 @@
     {
       "Settings_Name" : "Default_Compatibility_Component_Realms_Sdk",
       "SettingElement_Array" : [
+        {
+          "Type" : "Bool",
+          "Key" : "Skip_Realms",
+          "Value" : "True",
+          "Values" : null
+        }
+      ]
+    },
+    {
+      "Settings_Name" : "Default_Addressable_Component_Class",
+      "SettingElement_Array" : [
+        {
+          "Type" : "Bool",
+          "Key" : "Enable_Try_Obfuscate_Addressables",
+          "Value" : "False",
+          "Values" : null
+        }
       ]
     }
   ],
-  "Version" : "5.1.7",
+  "Version" : "5.5.0",
   "SettingElement_Array" : [
     {
       "Type" : "Bool",

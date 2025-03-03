@@ -1197,14 +1197,49 @@
             Building to il2cpp.
             </summary>
         </member>
-        <member name="P:OPS.Editor.Settings.Unity.Build.ABuildSettings.IsCompressed">
+        <member name="P:OPS.Editor.Settings.Unity.Build.ABuildSettings.IsMonoBuild">
             <summary>
-            Build is compressed.
+            Building to mono.
+            </summary>
+        </member>
+        <member name="P:OPS.Editor.Settings.Unity.Build.ABuildSettings.Compression">
+            <summary>
+            The compression type.
             </summary>
         </member>
         <member name="P:OPS.Editor.Settings.Unity.Build.ABuildSettings.BuildIntoProject">
             <summary>
-            Build into a project.
+            Build into a project. True if target is MacOS and build to XCode or Windows/Linux and build to Visual Studio solution.
+            </summary>
+        </member>
+        <member name="T:OPS.Editor.Settings.Unity.Build.CompressionType">
+            <summary>
+            The supported compression types of unity.
+            </summary>
+        </member>
+        <member name="F:OPS.Editor.Settings.Unity.Build.CompressionType.None">
+            <summary>
+            None.
+            </summary>
+        </member>
+        <member name="F:OPS.Editor.Settings.Unity.Build.CompressionType.Lzma">
+            <summary>
+            The Lzma compression.
+            </summary>
+        </member>
+        <member name="F:OPS.Editor.Settings.Unity.Build.CompressionType.Lz4">
+            <summary>
+            The Lz4 compression.
+            </summary>
+        </member>
+        <member name="F:OPS.Editor.Settings.Unity.Build.CompressionType.Lz4HC">
+            <summary>
+            The Lz4HC compression.
+            </summary>
+        </member>
+        <member name="F:OPS.Editor.Settings.Unity.Build.CompressionType.Lzham">
+            <summary>
+            The Lzham compression.
             </summary>
         </member>
         <member name="T:OPS.Editor.Settings.Unity.Editor.AEditorSettings">
@@ -3335,8 +3370,14 @@
         </member>
         <member name="T:OPS.Obfuscator.Editor.Assets.Unity.Cache.UnityAssetCache">
             <summary>
-            Setup a cache about unity assets.
+            A cache for Unity Assets.
             </summary>
+        </member>
+        <member name="M:OPS.Obfuscator.Editor.Assets.Unity.Cache.UnityAssetCache.#ctor(System.String[])">
+            <summary>
+            Instantiate a new <see cref="T:OPS.Obfuscator.Editor.Assets.Unity.Cache.UnityAssetCache"/> with the given extensions.
+            </summary>
+            <param name="_ExtensionToIterateArray">The extensions to include in the cache.</param>
         </member>
         <member name="F:OPS.Obfuscator.Editor.Assets.Unity.Cache.UnityAssetCache.extensionToIterateArray">
             <summary>
@@ -3347,6 +3388,12 @@
             <summary>
             Extension (containing the dot '.prefab' for example), Array of Relative File Paths.
             </summary>
+        </member>
+        <member name="M:OPS.Obfuscator.Editor.Assets.Unity.Cache.UnityAssetCache.CreateCache">
+            <summary>
+            Create the asset cache based on the given extensions.
+            </summary>
+            <returns>True if the cache was created successfully; otherwise, false.</returns>
         </member>
         <member name="M:OPS.Obfuscator.Editor.Assets.Unity.Cache.UnityAssetCache.GetUnityAssetReferences(System.String)">
             <summary>
@@ -3375,7 +3422,7 @@
         </member>
         <member name="T:OPS.Obfuscator.Editor.Assets.Unity.UnityAssetHelper">
             <summary>
-            Helper for Unity Assets and Assets Files.
+            Helper for Unity Assets, Serialized and Bundle Files.
             </summary>
         </member>
         <member name="M:OPS.Obfuscator.Editor.Assets.Unity.UnityAssetHelper.TryToRefreshAssetDatabase">
@@ -3387,23 +3434,72 @@
             <summary>
             Reads and returns an unity assets file at _FilePath.
             </summary>
-            <param name="_FilePath"></param>
-            <returns></returns>
+            <param name="_FilePath">The path to the unity assets file.</param>
+            <returns>The read assets file.</returns>
+            <exception cref="T:System.ArgumentNullException">Thrown if _FilePath is null or empty.</exception>
+            <exception cref="T:System.IO.FileNotFoundException">Thrown if there is no file at _FilePath.</exception>
         </member>
-        <member name="M:OPS.Obfuscator.Editor.Assets.Unity.UnityAssetHelper.UpdateMonoScriptsInAssetsFile(OPS.Assets.Editor.Files.AssetsFiles.AssetsFile,System.Collections.Generic.Dictionary{OPS.Obfuscator.Editor.Assembly.Mono.Member.Key.TypeKey,OPS.Obfuscator.Editor.Assembly.Mono.Member.Key.TypeKey})">
+        <member name="M:OPS.Obfuscator.Editor.Assets.Unity.UnityAssetHelper.LoadAssetsFile(System.String,System.Byte[])">
+            <summary>
+            Loads an unity assets file with the passed _Name and _Binary.
+            </summary>
+            <param name="_Name">The name of the assets file.</param>
+            <param name="_Binary">The binary data of the assets file.</param>
+            <returns>The read assets file.</returns>
+        </member>
+        <member name="M:OPS.Obfuscator.Editor.Assets.Unity.UnityAssetHelper.UpdateMonoScriptsInAssetsFile(GUPS.Assets.Editor.Files.Serialized.AssetsFile,System.Collections.Generic.Dictionary{OPS.Obfuscator.Editor.Assembly.Mono.Member.Key.TypeKey,OPS.Obfuscator.Editor.Assembly.Mono.Member.Key.TypeKey})">
             <summary>
             Updates all the MonoScripts in _AssetsFile with the passed one in _OldToNewDictionary.
             </summary>
-            <param name="_AssetsFile"></param>
-            <param name="_OldToNewDictionary"></param>
+            <param name="_AssetsFile">The assets file to update.</param>
+            <param name="_OldToNewDictionary">The dictionary to update the MonoScripts.</param>
+            <returns>The count of updated MonoScripts.</returns>
         </member>
-        <member name="M:OPS.Obfuscator.Editor.Assets.Unity.UnityAssetHelper.SaveAssetsFile(OPS.Assets.Editor.Files.AssetsFiles.AssetsFile,System.String,System.Boolean)">
+        <member name="M:OPS.Obfuscator.Editor.Assets.Unity.UnityAssetHelper.SaveAssetsFile(GUPS.Assets.Editor.Files.Serialized.AssetsFile,System.String,System.Boolean)">
             <summary>
             Saves the _AssetsFile at _FilePath and _Override it if, there is already a file.
             </summary>
-            <param name="_AssetsFile"></param>
-            <param name="_FilePath"></param>
-            <param name="_Override"></param>
+            <param name="_AssetsFile">The assets file to save.</param>
+            <param name="_FilePath">The path to save the assets file.</param>
+            <param name="_Override">True if the file should be overridden, false otherwise.</param>
+            <exception cref="T:System.ArgumentNullException">Thrown if _AssetsFile is null or _FilePath is null or empty.</exception>
+            <exception cref="T:System.IO.FileNotFoundException">Thrown if there is already a file at _FilePath and _Override is false.</exception>
+        </member>
+        <member name="M:OPS.Obfuscator.Editor.Assets.Unity.UnityAssetHelper.SaveAssetsFile(GUPS.Assets.Editor.Files.Serialized.AssetsFile)">
+            <summary>
+            Saves the _AssetsFile and returns the written data.
+            </summary>
+            <param name="_AssetsFile">The assets file to save.</param>
+            <returns>The written data.</returns>
+            <exception cref="T:System.ArgumentNullException">Thrown if _AssetsFile is null.</exception>
+        </member>
+        <member name="M:OPS.Obfuscator.Editor.Assets.Unity.UnityAssetHelper.LoadBundleFile(System.String)">
+            <summary>
+            Reads and returns an unity bundle file at _FilePath.
+            </summary>
+            <param name="_FilePath">The path to the unity bundle file.</param>
+            <returns>The read bundle file.</returns>
+            <exception cref="T:System.ArgumentNullException">Thrown if _FilePath is null or empty.</exception>
+            <exception cref="T:System.IO.FileNotFoundException">Thrown if there is no file at _FilePath.</exception>
+        </member>
+        <member name="M:OPS.Obfuscator.Editor.Assets.Unity.UnityAssetHelper.UpdateMonoScriptsInBundleFile(GUPS.Assets.Editor.Files.Bundle.BundleFile,System.Collections.Generic.Dictionary{OPS.Obfuscator.Editor.Assembly.Mono.Member.Key.TypeKey,OPS.Obfuscator.Editor.Assembly.Mono.Member.Key.TypeKey})">
+            <summary>
+            Update the mono scripts in all serialized files inside the _BundleFile with the passed _OldToNewDictionary.
+            </summary>
+            <param name="_BundleFile">The bundle file to update.</param>
+            <param name="_OldToNewDictionary">The dictionary to update the MonoScripts.</param>
+            <returns>Returns the count of updated MonoScripts.</returns>
+            <exception cref="T:System.ArgumentNullException">Thrown if _BundleFile is null or _OldToNewDictionary is null.</exception>
+        </member>
+        <member name="M:OPS.Obfuscator.Editor.Assets.Unity.UnityAssetHelper.SaveBundleFile(GUPS.Assets.Editor.Files.Bundle.BundleFile,System.String,System.Boolean)">
+            <summary>
+            Saves the _BundleFile at _FilePath and _Override it if, there is already a file.
+            </summary>
+            <param name="_BundleFile">The bundle file to save.</param>
+            <param name="_FilePath">The path to save the bundle file.</param>
+            <param name="_Override">True if the file should be overridden, false otherwise.</param>
+            <exception cref="T:System.ArgumentNullException">Thrown if _BundleFile is null or _FilePath is null or empty.</exception>
+            <exception cref="T:System.IO.FileNotFoundException">Thrown if there is already a file at _FilePath and _Override is false.</exception>
         </member>
         <member name="T:OPS.Obfuscator.Editor.Assets.Unity.UnityAssetReference">
             <summary>
@@ -3624,14 +3720,6 @@
             Helper class for obfuscator components.
             </summary>
         </member>
-        <member name="M:OPS.Obfuscator.Editor.Project.Component.Helper.ComponentHelper.CanOverrideMonoBehaviourAssets(OPS.Obfuscator.Editor.Settings.Unity.Editor.EditorSettings,OPS.Obfuscator.Editor.Settings.Unity.Build.BuildSettings)">
-            <summary>
-            Returns if MonoBehaviour Assets can be overriden.
-            </summary>
-            <param name="_EditorSettings"></param>
-            <param name="_BuildSettings"></param>
-            <returns></returns>
-        </member>
         <member name="P:OPS.Obfuscator.Editor.Project.PostAssemblyBuild.Compatibility.AObfuscationCompatibilityComponent.Name">
             <summary>
             Name of the component.
@@ -3682,6 +3770,11 @@
             The settings key for this component in the obfuscator settings.
             </summary>
         </member>
+        <member name="T:OPS.Obfuscator.Editor.Project.PostAssemblyBuild.Compatibility.Component.ChartboostCompatibilityComponent">
+            <summary>
+            The compatibility component for Chartboost.
+            </summary>
+        </member>
         <member name="P:OPS.Obfuscator.Editor.Project.PostAssemblyBuild.Compatibility.Component.ChartboostCompatibilityComponent.Name">
             <summary>
             Name of the component.
@@ -3697,9 +3790,56 @@
             Short description, descriping short what this component does.
             </summary>
         </member>
+        <member name="F:OPS.Obfuscator.Editor.Project.PostAssemblyBuild.Compatibility.Component.ChartboostCompatibilityComponent.namespaceToSkip">
+            <summary>
+            The list of namespaces to skip.
+            </summary>
+        </member>
+        <member name="M:OPS.Obfuscator.Editor.Project.PostAssemblyBuild.Compatibility.Component.ChartboostCompatibilityComponent.SkipWholeNamespace(OPS.Obfuscator.Editor.Project.PostAssemblyBuild.PostAssemblyBuildStep,OPS.Obfuscator.Editor.Assembly.AssemblyInfo,OPS.Mono.Cecil.TypeDefinition,System.String@)">
+            <summary>
+            Returns true if the whole namespace should be skipped.
+            </summary>
+        </member>
+        <member name="M:OPS.Obfuscator.Editor.Project.PostAssemblyBuild.Compatibility.Component.ChartboostCompatibilityComponent.IsNamespaceRenamingAllowed(OPS.Obfuscator.Editor.Project.PostAssemblyBuild.PostAssemblyBuildStep,OPS.Obfuscator.Editor.Assembly.AssemblyInfo,OPS.Mono.Cecil.TypeDefinition,System.String@)">
+            <summary>
+            Does nothing.
+            </summary>
+        </member>
+        <member name="M:OPS.Obfuscator.Editor.Project.PostAssemblyBuild.Compatibility.Component.ChartboostCompatibilityComponent.ApplyNamespaceRenamingFilter(OPS.Obfuscator.Editor.Project.PostAssemblyBuild.PostAssemblyBuildStep,OPS.Obfuscator.Editor.Assembly.AssemblyInfo,OPS.Mono.Cecil.TypeDefinition,System.String,System.String)">
+            <summary>
+            Does nothing.
+            </summary>
+        </member>
+        <member name="F:OPS.Obfuscator.Editor.Project.PostAssemblyBuild.Compatibility.Component.ChartboostCompatibilityComponent.CSettingsKey">
+            <summary>
+            The settings key for this component in the obfuscator settings.
+            </summary>
+        </member>
         <member name="P:OPS.Obfuscator.Editor.Project.PostAssemblyBuild.Compatibility.Component.ChartboostCompatibilityComponent.SettingsKey">
             <summary>
             The settings key for this component in the obfuscator settings.
+            </summary>
+        </member>
+        <member name="F:OPS.Obfuscator.Editor.Project.PostAssemblyBuild.Compatibility.Component.ChartboostCompatibilityComponent.CSkip_Chartboost">
+            <summary>
+            The settings key for the skip Chartboost setting.
+            </summary>
+        </member>
+        <member name="M:OPS.Obfuscator.Editor.Project.PostAssemblyBuild.Compatibility.Component.ChartboostCompatibilityComponent.Helper_Has_SkipChartboostActivated(OPS.Obfuscator.Editor.Project.PostAssemblyBuild.PostAssemblyBuildStep)">
+            <summary>
+            Helper method to check if the user has activated the skip Chartboost setting.
+            </summary>
+        </member>
+        <member name="M:OPS.Obfuscator.Editor.Project.PostAssemblyBuild.Compatibility.Component.ChartboostCompatibilityComponent.GetGuiContainer(OPS.Editor.Settings.File.ComponentSettings)">
+            <summary>
+            Get the GUI container for this component.
+            </summary>
+            <param name="_ComponentSettings">The settings for this component.</param>
+            <returns>The GUI container for this component.</returns>
+        </member>
+        <member name="T:OPS.Obfuscator.Editor.Project.PostAssemblyBuild.Compatibility.Component.GoogleSdkCompatibilityComponent">
+            <summary>
+            The compatibility component for Google Sdks.
             </summary>
         </member>
         <member name="P:OPS.Obfuscator.Editor.Project.PostAssemblyBuild.Compatibility.Component.GoogleSdkCompatibilityComponent.Name">
@@ -3717,9 +3857,56 @@
             Short description, descriping short what this component does.
             </summary>
         </member>
+        <member name="F:OPS.Obfuscator.Editor.Project.PostAssemblyBuild.Compatibility.Component.GoogleSdkCompatibilityComponent.namespaceToSkip">
+            <summary>
+            The list of namespaces to skip.
+            </summary>
+        </member>
+        <member name="M:OPS.Obfuscator.Editor.Project.PostAssemblyBuild.Compatibility.Component.GoogleSdkCompatibilityComponent.SkipWholeNamespace(OPS.Obfuscator.Editor.Project.PostAssemblyBuild.PostAssemblyBuildStep,OPS.Obfuscator.Editor.Assembly.AssemblyInfo,OPS.Mono.Cecil.TypeDefinition,System.String@)">
+            <summary>
+            Returns true if the whole namespace should be skipped.
+            </summary>
+        </member>
+        <member name="M:OPS.Obfuscator.Editor.Project.PostAssemblyBuild.Compatibility.Component.GoogleSdkCompatibilityComponent.IsNamespaceRenamingAllowed(OPS.Obfuscator.Editor.Project.PostAssemblyBuild.PostAssemblyBuildStep,OPS.Obfuscator.Editor.Assembly.AssemblyInfo,OPS.Mono.Cecil.TypeDefinition,System.String@)">
+            <summary>
+            Does nothing.
+            </summary>
+        </member>
+        <member name="M:OPS.Obfuscator.Editor.Project.PostAssemblyBuild.Compatibility.Component.GoogleSdkCompatibilityComponent.ApplyNamespaceRenamingFilter(OPS.Obfuscator.Editor.Project.PostAssemblyBuild.PostAssemblyBuildStep,OPS.Obfuscator.Editor.Assembly.AssemblyInfo,OPS.Mono.Cecil.TypeDefinition,System.String,System.String)">
+            <summary>
+            Does nothing.
+            </summary>
+        </member>
+        <member name="F:OPS.Obfuscator.Editor.Project.PostAssemblyBuild.Compatibility.Component.GoogleSdkCompatibilityComponent.CSettingsKey">
+            <summary>
+            The settings key for this component in the obfuscator settings.
+            </summary>
+        </member>
         <member name="P:OPS.Obfuscator.Editor.Project.PostAssemblyBuild.Compatibility.Component.GoogleSdkCompatibilityComponent.SettingsKey">
             <summary>
             The settings key for this component in the obfuscator settings.
+            </summary>
+        </member>
+        <member name="F:OPS.Obfuscator.Editor.Project.PostAssemblyBuild.Compatibility.Component.GoogleSdkCompatibilityComponent.CSkip_Google">
+            <summary>
+            The settings key for the skip Google setting.
+            </summary>
+        </member>
+        <member name="M:OPS.Obfuscator.Editor.Project.PostAssemblyBuild.Compatibility.Component.GoogleSdkCompatibilityComponent.Helper_Has_SkipGoogleActivated(OPS.Obfuscator.Editor.Project.PostAssemblyBuild.PostAssemblyBuildStep)">
+            <summary>
+            Helper method to check if the user has activated the skip Google setting.
+            </summary>
+        </member>
+        <member name="M:OPS.Obfuscator.Editor.Project.PostAssemblyBuild.Compatibility.Component.GoogleSdkCompatibilityComponent.GetGuiContainer(OPS.Editor.Settings.File.ComponentSettings)">
+            <summary>
+            Get the GUI container for this component.
+            </summary>
+            <param name="_ComponentSettings">The settings for this component.</param>
+            <returns>The GUI container for this component.</returns>
+        </member>
+        <member name="T:OPS.Obfuscator.Editor.Project.PostAssemblyBuild.Compatibility.Component.JsonSdkCompatibilityComponent">
+            <summary>
+            The compatibility component for Json Sdks.
             </summary>
         </member>
         <member name="P:OPS.Obfuscator.Editor.Project.PostAssemblyBuild.Compatibility.Component.JsonSdkCompatibilityComponent.Name">
@@ -3737,9 +3924,81 @@
             Short description, descriping short what this component does.
             </summary>
         </member>
+        <member name="F:OPS.Obfuscator.Editor.Project.PostAssemblyBuild.Compatibility.Component.JsonSdkCompatibilityComponent.namespaceToSkip">
+            <summary>
+            The list of namespaces to skip.
+            </summary>
+        </member>
+        <member name="M:OPS.Obfuscator.Editor.Project.PostAssemblyBuild.Compatibility.Component.JsonSdkCompatibilityComponent.SkipWholeNamespace(OPS.Obfuscator.Editor.Project.PostAssemblyBuild.PostAssemblyBuildStep,OPS.Obfuscator.Editor.Assembly.AssemblyInfo,OPS.Mono.Cecil.TypeDefinition,System.String@)">
+            <summary>
+            Returns true if the whole namespace should be skipped.
+            </summary>
+        </member>
+        <member name="M:OPS.Obfuscator.Editor.Project.PostAssemblyBuild.Compatibility.Component.JsonSdkCompatibilityComponent.IsNamespaceRenamingAllowed(OPS.Obfuscator.Editor.Project.PostAssemblyBuild.PostAssemblyBuildStep,OPS.Obfuscator.Editor.Assembly.AssemblyInfo,OPS.Mono.Cecil.TypeDefinition,System.String@)">
+            <summary>
+            Does nothing.
+            </summary>
+        </member>
+        <member name="M:OPS.Obfuscator.Editor.Project.PostAssemblyBuild.Compatibility.Component.JsonSdkCompatibilityComponent.ApplyNamespaceRenamingFilter(OPS.Obfuscator.Editor.Project.PostAssemblyBuild.PostAssemblyBuildStep,OPS.Obfuscator.Editor.Assembly.AssemblyInfo,OPS.Mono.Cecil.TypeDefinition,System.String,System.String)">
+            <summary>
+            Does nothing.
+            </summary>
+        </member>
+        <member name="F:OPS.Obfuscator.Editor.Project.PostAssemblyBuild.Compatibility.Component.JsonSdkCompatibilityComponent.attributeToSkip">
+            <summary>
+            The list of attributes to skip.
+            </summary>
+        </member>
+        <member name="M:OPS.Obfuscator.Editor.Project.PostAssemblyBuild.Compatibility.Component.JsonSdkCompatibilityComponent.IsFieldRenamingAllowed(OPS.Obfuscator.Editor.Project.PostAssemblyBuild.PostAssemblyBuildStep,OPS.Obfuscator.Editor.Assembly.AssemblyInfo,OPS.Mono.Cecil.FieldDefinition,System.String@)">
+            <summary>
+            Returns true if the field renaming is allowed.
+            </summary>
+        </member>
+        <member name="M:OPS.Obfuscator.Editor.Project.PostAssemblyBuild.Compatibility.Component.JsonSdkCompatibilityComponent.ApplyFieldRenamingFilter(OPS.Obfuscator.Editor.Project.PostAssemblyBuild.PostAssemblyBuildStep,OPS.Obfuscator.Editor.Assembly.AssemblyInfo,OPS.Mono.Cecil.FieldDefinition,System.String,System.String)">
+            <summary>
+            Does nothing.
+            </summary>
+        </member>
+        <member name="M:OPS.Obfuscator.Editor.Project.PostAssemblyBuild.Compatibility.Component.JsonSdkCompatibilityComponent.IsPropertyRenamingAllowed(OPS.Obfuscator.Editor.Project.PostAssemblyBuild.PostAssemblyBuildStep,OPS.Obfuscator.Editor.Assembly.AssemblyInfo,OPS.Mono.Cecil.PropertyDefinition,System.String@)">
+            <summary>
+            Returns true if the property renaming is allowed.
+            </summary>
+        </member>
+        <member name="M:OPS.Obfuscator.Editor.Project.PostAssemblyBuild.Compatibility.Component.JsonSdkCompatibilityComponent.ApplyPropertyRenamingFilter(OPS.Obfuscator.Editor.Project.PostAssemblyBuild.PostAssemblyBuildStep,OPS.Obfuscator.Editor.Assembly.AssemblyInfo,OPS.Mono.Cecil.PropertyDefinition,System.String,System.String)">
+            <summary>
+            Does nothing.
+            </summary>
+        </member>
+        <member name="F:OPS.Obfuscator.Editor.Project.PostAssemblyBuild.Compatibility.Component.JsonSdkCompatibilityComponent.CSettingsKey">
+            <summary>
+            The settings key for this component in the obfuscator settings.
+            </summary>
+        </member>
         <member name="P:OPS.Obfuscator.Editor.Project.PostAssemblyBuild.Compatibility.Component.JsonSdkCompatibilityComponent.SettingsKey">
             <summary>
             The settings key for this component in the obfuscator settings.
+            </summary>
+        </member>
+        <member name="F:OPS.Obfuscator.Editor.Project.PostAssemblyBuild.Compatibility.Component.JsonSdkCompatibilityComponent.CSkip_Json">
+            <summary>
+            The settings key for the skip Json setting.
+            </summary>
+        </member>
+        <member name="M:OPS.Obfuscator.Editor.Project.PostAssemblyBuild.Compatibility.Component.JsonSdkCompatibilityComponent.Helper_Has_SkipJsonActivated(OPS.Obfuscator.Editor.Project.PostAssemblyBuild.PostAssemblyBuildStep)">
+            <summary>
+            Helper method to check if the user has activated the skip Json setting.
+            </summary>
+        </member>
+        <member name="M:OPS.Obfuscator.Editor.Project.PostAssemblyBuild.Compatibility.Component.JsonSdkCompatibilityComponent.GetGuiContainer(OPS.Editor.Settings.File.ComponentSettings)">
+            <summary>
+            Get the GUI container for this component.
+            </summary>
+            <param name="_ComponentSettings">The settings for this component.</param>
+            <returns>The GUI container for this component.</returns>
+        </member>
+        <member name="T:OPS.Obfuscator.Editor.Project.PostAssemblyBuild.Compatibility.Component.MetaCompatibilityComponent">
+            <summary>
+            The compatibility component for Meta Sdks.
             </summary>
         </member>
         <member name="P:OPS.Obfuscator.Editor.Project.PostAssemblyBuild.Compatibility.Component.MetaCompatibilityComponent.Name">
@@ -3757,9 +4016,64 @@
             Short description, descriping short what this component does.
             </summary>
         </member>
+        <member name="F:OPS.Obfuscator.Editor.Project.PostAssemblyBuild.Compatibility.Component.MetaCompatibilityComponent.metaAssemblyToSkip">
+            <summary>
+            The meta assemblies to skip.
+            </summary>
+        </member>
+        <member name="F:OPS.Obfuscator.Editor.Project.PostAssemblyBuild.Compatibility.Component.MetaCompatibilityComponent.facebookAssemblyToSkip">
+            <summary>
+            The facebook assemblies to skip.
+            </summary>
+        </member>
+        <member name="F:OPS.Obfuscator.Editor.Project.PostAssemblyBuild.Compatibility.Component.MetaCompatibilityComponent.oculusAssemblyToSkip">
+            <summary>
+            The oculus assemblies to skip.
+            </summary>
+        </member>
+        <member name="F:OPS.Obfuscator.Editor.Project.PostAssemblyBuild.Compatibility.Component.MetaCompatibilityComponent.namespaceToSkip">
+            <summary>
+            The namespaces to skip.
+            </summary>
+        </member>
+        <member name="M:OPS.Obfuscator.Editor.Project.PostAssemblyBuild.Compatibility.Component.MetaCompatibilityComponent.SkipWholeNamespace(OPS.Obfuscator.Editor.Project.PostAssemblyBuild.PostAssemblyBuildStep,OPS.Obfuscator.Editor.Assembly.AssemblyInfo,OPS.Mono.Cecil.TypeDefinition,System.String@)">
+            <summary>
+            Returns true if the whole namespace should be skipped.
+            </summary>
+        </member>
+        <member name="M:OPS.Obfuscator.Editor.Project.PostAssemblyBuild.Compatibility.Component.MetaCompatibilityComponent.IsNamespaceRenamingAllowed(OPS.Obfuscator.Editor.Project.PostAssemblyBuild.PostAssemblyBuildStep,OPS.Obfuscator.Editor.Assembly.AssemblyInfo,OPS.Mono.Cecil.TypeDefinition,System.String@)">
+            <summary>
+            Does nothing.
+            </summary>
+        </member>
+        <member name="M:OPS.Obfuscator.Editor.Project.PostAssemblyBuild.Compatibility.Component.MetaCompatibilityComponent.ApplyNamespaceRenamingFilter(OPS.Obfuscator.Editor.Project.PostAssemblyBuild.PostAssemblyBuildStep,OPS.Obfuscator.Editor.Assembly.AssemblyInfo,OPS.Mono.Cecil.TypeDefinition,System.String,System.String)">
+            <summary>
+            Does nothing.
+            </summary>
+        </member>
+        <member name="F:OPS.Obfuscator.Editor.Project.PostAssemblyBuild.Compatibility.Component.MetaCompatibilityComponent.CSettingsKey">
+            <summary>
+            The settings key for this component in the obfuscator settings.
+            </summary>
+        </member>
         <member name="P:OPS.Obfuscator.Editor.Project.PostAssemblyBuild.Compatibility.Component.MetaCompatibilityComponent.SettingsKey">
             <summary>
             The settings key for this component in the obfuscator settings.
+            </summary>
+        </member>
+        <member name="F:OPS.Obfuscator.Editor.Project.PostAssemblyBuild.Compatibility.Component.MetaCompatibilityComponent.CSkip_Meta_Assemblies">
+            <summary>
+            The settings key for the skip Meta assembly setting.
+            </summary>
+        </member>
+        <member name="F:OPS.Obfuscator.Editor.Project.PostAssemblyBuild.Compatibility.Component.MetaCompatibilityComponent.CSkip_Facebook_Assemblies">
+            <summary>
+            The settings key for the skip Facebook assembly setting.
+            </summary>
+        </member>
+        <member name="F:OPS.Obfuscator.Editor.Project.PostAssemblyBuild.Compatibility.Component.MetaCompatibilityComponent.CSkip_Oculus_Assemblies">
+            <summary>
+            The settings key for the skip Oculus assembly setting.
             </summary>
         </member>
         <member name="M:OPS.Obfuscator.Editor.Project.PostAssemblyBuild.Compatibility.Component.MetaCompatibilityComponent.Helper_Has_SkipMetaAssembliesActivated(OPS.Obfuscator.Editor.Project.PostAssemblyBuild.PostAssemblyBuildStep)">
@@ -3783,6 +4097,18 @@
             <param name="_Step"></param>
             <returns></returns>
         </member>
+        <member name="M:OPS.Obfuscator.Editor.Project.PostAssemblyBuild.Compatibility.Component.MetaCompatibilityComponent.GetGuiContainer(OPS.Editor.Settings.File.ComponentSettings)">
+            <summary>
+            Get the GUI container for this component.
+            </summary>
+            <param name="_ComponentSettings">The settings for this component.</param>
+            <returns>The GUI container for this component.</returns>
+        </member>
+        <member name="T:OPS.Obfuscator.Editor.Project.PostAssemblyBuild.Compatibility.Component.MicrosoftPlayFabSdkCompatibilityComponent">
+            <summary>
+            The compatibility component for the PlayFab Sdk.
+            </summary>
+        </member>
         <member name="P:OPS.Obfuscator.Editor.Project.PostAssemblyBuild.Compatibility.Component.MicrosoftPlayFabSdkCompatibilityComponent.Name">
             <summary>
             Name of the component.
@@ -3798,9 +4124,78 @@
             Short description, descriping short what this component does.
             </summary>
         </member>
+        <member name="F:OPS.Obfuscator.Editor.Project.PostAssemblyBuild.Compatibility.Component.MicrosoftPlayFabSdkCompatibilityComponent.namespaceToSkip">
+            <summary>
+            The list of namespaces to skip.
+            </summary>
+        </member>
+        <member name="M:OPS.Obfuscator.Editor.Project.PostAssemblyBuild.Compatibility.Component.MicrosoftPlayFabSdkCompatibilityComponent.SkipWholeNamespace(OPS.Obfuscator.Editor.Project.PostAssemblyBuild.PostAssemblyBuildStep,OPS.Obfuscator.Editor.Assembly.AssemblyInfo,OPS.Mono.Cecil.TypeDefinition,System.String@)">
+            <summary>
+            Skip the whole 'PlayFab' namespaces.
+            </summary>
+            <returns>True if the whole namespace should be skipped; otherwise false.</returns>
+        </member>
+        <member name="M:OPS.Obfuscator.Editor.Project.PostAssemblyBuild.Compatibility.Component.MicrosoftPlayFabSdkCompatibilityComponent.IsNamespaceRenamingAllowed(OPS.Obfuscator.Editor.Project.PostAssemblyBuild.PostAssemblyBuildStep,OPS.Obfuscator.Editor.Assembly.AssemblyInfo,OPS.Mono.Cecil.TypeDefinition,System.String@)">
+            <summary>
+            Does nothing.
+            </summary>
+        </member>
+        <member name="M:OPS.Obfuscator.Editor.Project.PostAssemblyBuild.Compatibility.Component.MicrosoftPlayFabSdkCompatibilityComponent.ApplyNamespaceRenamingFilter(OPS.Obfuscator.Editor.Project.PostAssemblyBuild.PostAssemblyBuildStep,OPS.Obfuscator.Editor.Assembly.AssemblyInfo,OPS.Mono.Cecil.TypeDefinition,System.String,System.String)">
+            <summary>
+            Does nothing.
+            </summary>
+        </member>
+        <member name="F:OPS.Obfuscator.Editor.Project.PostAssemblyBuild.Compatibility.Component.MicrosoftPlayFabSdkCompatibilityComponent.inheritanceTypeToSkip">
+            <summary>
+            The list of types, if inheriting from, should be skipped.
+            </summary>
+        </member>
+        <member name="M:OPS.Obfuscator.Editor.Project.PostAssemblyBuild.Compatibility.Component.MicrosoftPlayFabSdkCompatibilityComponent.SkipWholeType(OPS.Obfuscator.Editor.Project.PostAssemblyBuild.PostAssemblyBuildStep,OPS.Obfuscator.Editor.Assembly.AssemblyInfo,OPS.Mono.Cecil.TypeDefinition,System.String@)">
+            <summary>
+            Skip the whole types that inherite from the 'PlayFab' request or response classes.
+            </summary>
+            <returns>True if the whole type should be skipped; otherwise false.</returns>
+        </member>
+        <member name="M:OPS.Obfuscator.Editor.Project.PostAssemblyBuild.Compatibility.Component.MicrosoftPlayFabSdkCompatibilityComponent.IsTypeRenamingAllowed(OPS.Obfuscator.Editor.Project.PostAssemblyBuild.PostAssemblyBuildStep,OPS.Obfuscator.Editor.Assembly.AssemblyInfo,OPS.Mono.Cecil.TypeDefinition,System.String@)">
+            <summary>
+            Does nothing.
+            </summary>
+        </member>
+        <member name="M:OPS.Obfuscator.Editor.Project.PostAssemblyBuild.Compatibility.Component.MicrosoftPlayFabSdkCompatibilityComponent.ApplyTypeRenamingFilter(OPS.Obfuscator.Editor.Project.PostAssemblyBuild.PostAssemblyBuildStep,OPS.Obfuscator.Editor.Assembly.AssemblyInfo,OPS.Mono.Cecil.TypeDefinition,System.String,System.String)">
+            <summary>
+            Does nothing.
+            </summary>
+        </member>
+        <member name="F:OPS.Obfuscator.Editor.Project.PostAssemblyBuild.Compatibility.Component.MicrosoftPlayFabSdkCompatibilityComponent.CSettingsKey">
+            <summary>
+            The settings key for this component in the obfuscator settings.
+            </summary>
+        </member>
         <member name="P:OPS.Obfuscator.Editor.Project.PostAssemblyBuild.Compatibility.Component.MicrosoftPlayFabSdkCompatibilityComponent.SettingsKey">
             <summary>
             The settings key for this component in the obfuscator settings.
+            </summary>
+        </member>
+        <member name="F:OPS.Obfuscator.Editor.Project.PostAssemblyBuild.Compatibility.Component.MicrosoftPlayFabSdkCompatibilityComponent.CSkip_PlayFab">
+            <summary>
+            The settings key for the skip PlayFab setting.
+            </summary>
+        </member>
+        <member name="M:OPS.Obfuscator.Editor.Project.PostAssemblyBuild.Compatibility.Component.MicrosoftPlayFabSdkCompatibilityComponent.Helper_Has_SkipPlayFabActivated(OPS.Obfuscator.Editor.Project.PostAssemblyBuild.PostAssemblyBuildStep)">
+            <summary>
+            Helper method to check if the user has activated the skip PlayFab setting.
+            </summary>
+        </member>
+        <member name="M:OPS.Obfuscator.Editor.Project.PostAssemblyBuild.Compatibility.Component.MicrosoftPlayFabSdkCompatibilityComponent.GetGuiContainer(OPS.Editor.Settings.File.ComponentSettings)">
+            <summary>
+            Get the GUI container for this component.
+            </summary>
+            <param name="_ComponentSettings">The settings for this component.</param>
+            <returns>The GUI container for this component.</returns>
+        </member>
+        <member name="T:OPS.Obfuscator.Editor.Project.PostAssemblyBuild.Compatibility.Component.PhotonSdkCompatibilityComponent">
+            <summary>
+            The compatibility component for Photon Sdks.
             </summary>
         </member>
         <member name="P:OPS.Obfuscator.Editor.Project.PostAssemblyBuild.Compatibility.Component.PhotonSdkCompatibilityComponent.Name">
@@ -3818,9 +4213,91 @@
             Short description, descriping short what this component does.
             </summary>
         </member>
+        <member name="F:OPS.Obfuscator.Editor.Project.PostAssemblyBuild.Compatibility.Component.PhotonSdkCompatibilityComponent.namespaceToSkip">
+            <summary>
+            The namespaces to skip.
+            </summary>
+        </member>
+        <member name="M:OPS.Obfuscator.Editor.Project.PostAssemblyBuild.Compatibility.Component.PhotonSdkCompatibilityComponent.SkipWholeNamespace(OPS.Obfuscator.Editor.Project.PostAssemblyBuild.PostAssemblyBuildStep,OPS.Obfuscator.Editor.Assembly.AssemblyInfo,OPS.Mono.Cecil.TypeDefinition,System.String@)">
+            <summary>
+            Returns if the whole namespace should be skipped.
+            </summary>
+        </member>
+        <member name="M:OPS.Obfuscator.Editor.Project.PostAssemblyBuild.Compatibility.Component.PhotonSdkCompatibilityComponent.IsNamespaceRenamingAllowed(OPS.Obfuscator.Editor.Project.PostAssemblyBuild.PostAssemblyBuildStep,OPS.Obfuscator.Editor.Assembly.AssemblyInfo,OPS.Mono.Cecil.TypeDefinition,System.String@)">
+            <summary>
+            Does nothing.
+            </summary>
+        </member>
+        <member name="M:OPS.Obfuscator.Editor.Project.PostAssemblyBuild.Compatibility.Component.PhotonSdkCompatibilityComponent.ApplyNamespaceRenamingFilter(OPS.Obfuscator.Editor.Project.PostAssemblyBuild.PostAssemblyBuildStep,OPS.Obfuscator.Editor.Assembly.AssemblyInfo,OPS.Mono.Cecil.TypeDefinition,System.String,System.String)">
+            <summary>
+            Does nothing.
+            </summary>
+        </member>
+        <member name="F:OPS.Obfuscator.Editor.Project.PostAssemblyBuild.Compatibility.Component.PhotonSdkCompatibilityComponent.typesToSkip">
+            <summary>
+            The types to skip.
+            </summary>
+        </member>
+        <member name="M:OPS.Obfuscator.Editor.Project.PostAssemblyBuild.Compatibility.Component.PhotonSdkCompatibilityComponent.SkipWholeType(OPS.Obfuscator.Editor.Project.PostAssemblyBuild.PostAssemblyBuildStep,OPS.Obfuscator.Editor.Assembly.AssemblyInfo,OPS.Mono.Cecil.TypeDefinition,System.String@)">
+            <summary>
+            Does nothing.
+            </summary>
+        </member>
+        <member name="M:OPS.Obfuscator.Editor.Project.PostAssemblyBuild.Compatibility.Component.PhotonSdkCompatibilityComponent.IsTypeRenamingAllowed(OPS.Obfuscator.Editor.Project.PostAssemblyBuild.PostAssemblyBuildStep,OPS.Obfuscator.Editor.Assembly.AssemblyInfo,OPS.Mono.Cecil.TypeDefinition,System.String@)">
+            <summary>
+            Returns true if the type should be renamed.
+            </summary>
+        </member>
+        <member name="M:OPS.Obfuscator.Editor.Project.PostAssemblyBuild.Compatibility.Component.PhotonSdkCompatibilityComponent.ApplyTypeRenamingFilter(OPS.Obfuscator.Editor.Project.PostAssemblyBuild.PostAssemblyBuildStep,OPS.Obfuscator.Editor.Assembly.AssemblyInfo,OPS.Mono.Cecil.TypeDefinition,System.String,System.String)">
+            <summary>
+            Does nothing.
+            </summary>
+        </member>
+        <member name="F:OPS.Obfuscator.Editor.Project.PostAssemblyBuild.Compatibility.Component.PhotonSdkCompatibilityComponent.methodsToSkip">
+            <summary>
+            The methods to skip.
+            </summary>
+        </member>
+        <member name="M:OPS.Obfuscator.Editor.Project.PostAssemblyBuild.Compatibility.Component.PhotonSdkCompatibilityComponent.IsMethodRenamingAllowed(OPS.Obfuscator.Editor.Project.PostAssemblyBuild.PostAssemblyBuildStep,OPS.Obfuscator.Editor.Assembly.AssemblyInfo,OPS.Mono.Cecil.MethodDefinition,System.String@)">
+            <summary>
+            Returns true if the method should be renamed.
+            </summary>
+        </member>
+        <member name="M:OPS.Obfuscator.Editor.Project.PostAssemblyBuild.Compatibility.Component.PhotonSdkCompatibilityComponent.ApplyMethodRenamingFilter(OPS.Obfuscator.Editor.Project.PostAssemblyBuild.PostAssemblyBuildStep,OPS.Obfuscator.Editor.Assembly.AssemblyInfo,OPS.Mono.Cecil.MethodDefinition,System.String,System.String)">
+            <summary>
+            Does nothing.
+            </summary>
+        </member>
+        <member name="F:OPS.Obfuscator.Editor.Project.PostAssemblyBuild.Compatibility.Component.PhotonSdkCompatibilityComponent.CSettingsKey">
+            <summary>
+            The settings key for this component in the obfuscator settings.
+            </summary>
+        </member>
         <member name="P:OPS.Obfuscator.Editor.Project.PostAssemblyBuild.Compatibility.Component.PhotonSdkCompatibilityComponent.SettingsKey">
             <summary>
             The settings key for this component in the obfuscator settings.
+            </summary>
+        </member>
+        <member name="F:OPS.Obfuscator.Editor.Project.PostAssemblyBuild.Compatibility.Component.PhotonSdkCompatibilityComponent.CSkip_Photon">
+            <summary>
+            The settings key for the skip Photon setting.
+            </summary>
+        </member>
+        <member name="M:OPS.Obfuscator.Editor.Project.PostAssemblyBuild.Compatibility.Component.PhotonSdkCompatibilityComponent.Helper_Has_SkipPhotonActivated(OPS.Obfuscator.Editor.Project.PostAssemblyBuild.PostAssemblyBuildStep)">
+            <summary>
+            Helper method to check if the user has activated the skip Photon setting.
+            </summary>
+        </member>
+        <member name="M:OPS.Obfuscator.Editor.Project.PostAssemblyBuild.Compatibility.Component.PhotonSdkCompatibilityComponent.GetGuiContainer(OPS.Editor.Settings.File.ComponentSettings)">
+            <summary>
+            Get the GUI container for this component.
+            </summary>
+            <param name="_ComponentSettings">The settings for this component.</param>
+            <returns>The GUI container for this component.</returns>
+        </member>
+        <member name="T:OPS.Obfuscator.Editor.Project.PostAssemblyBuild.Compatibility.Component.PlayMakerCompatibilityComponent">
+            <summary>
+            The compatibility component for the PlayMaker Sdk.
             </summary>
         </member>
         <member name="P:OPS.Obfuscator.Editor.Project.PostAssemblyBuild.Compatibility.Component.PlayMakerCompatibilityComponent.Name">
@@ -3838,10 +4315,72 @@
             Short description, descriping short what this component does.
             </summary>
         </member>
+        <member name="F:OPS.Obfuscator.Editor.Project.PostAssemblyBuild.Compatibility.Component.PlayMakerCompatibilityComponent.namespaceToSkip">
+            <summary>
+            The namespaces to skip.
+            </summary>
+        </member>
+        <member name="M:OPS.Obfuscator.Editor.Project.PostAssemblyBuild.Compatibility.Component.PlayMakerCompatibilityComponent.SkipWholeNamespace(OPS.Obfuscator.Editor.Project.PostAssemblyBuild.PostAssemblyBuildStep,OPS.Obfuscator.Editor.Assembly.AssemblyInfo,OPS.Mono.Cecil.TypeDefinition,System.String@)">
+            <summary>
+            Returns true if the whole namespace should be skipped.
+            </summary>
+        </member>
+        <member name="M:OPS.Obfuscator.Editor.Project.PostAssemblyBuild.Compatibility.Component.PlayMakerCompatibilityComponent.IsNamespaceRenamingAllowed(OPS.Obfuscator.Editor.Project.PostAssemblyBuild.PostAssemblyBuildStep,OPS.Obfuscator.Editor.Assembly.AssemblyInfo,OPS.Mono.Cecil.TypeDefinition,System.String@)">
+            <summary>
+            Does nothing.
+            </summary>
+        </member>
+        <member name="M:OPS.Obfuscator.Editor.Project.PostAssemblyBuild.Compatibility.Component.PlayMakerCompatibilityComponent.ApplyNamespaceRenamingFilter(OPS.Obfuscator.Editor.Project.PostAssemblyBuild.PostAssemblyBuildStep,OPS.Obfuscator.Editor.Assembly.AssemblyInfo,OPS.Mono.Cecil.TypeDefinition,System.String,System.String)">
+            <summary>
+            Does nothing.
+            </summary>
+        </member>
+        <member name="F:OPS.Obfuscator.Editor.Project.PostAssemblyBuild.Compatibility.Component.PlayMakerCompatibilityComponent.typesToSkip">
+            <summary>
+            The types to skip.
+            </summary>
+        </member>
+        <member name="M:OPS.Obfuscator.Editor.Project.PostAssemblyBuild.Compatibility.Component.PlayMakerCompatibilityComponent.SkipWholeType(OPS.Obfuscator.Editor.Project.PostAssemblyBuild.PostAssemblyBuildStep,OPS.Obfuscator.Editor.Assembly.AssemblyInfo,OPS.Mono.Cecil.TypeDefinition,System.String@)">
+            <summary>
+            Returns true if the whole type should be skipped.
+            </summary>
+        </member>
+        <member name="M:OPS.Obfuscator.Editor.Project.PostAssemblyBuild.Compatibility.Component.PlayMakerCompatibilityComponent.IsTypeRenamingAllowed(OPS.Obfuscator.Editor.Project.PostAssemblyBuild.PostAssemblyBuildStep,OPS.Obfuscator.Editor.Assembly.AssemblyInfo,OPS.Mono.Cecil.TypeDefinition,System.String@)">
+            <summary>
+            Does nothing.
+            </summary>
+        </member>
+        <member name="M:OPS.Obfuscator.Editor.Project.PostAssemblyBuild.Compatibility.Component.PlayMakerCompatibilityComponent.ApplyTypeRenamingFilter(OPS.Obfuscator.Editor.Project.PostAssemblyBuild.PostAssemblyBuildStep,OPS.Obfuscator.Editor.Assembly.AssemblyInfo,OPS.Mono.Cecil.TypeDefinition,System.String,System.String)">
+            <summary>
+            Does nothing.
+            </summary>
+        </member>
+        <member name="F:OPS.Obfuscator.Editor.Project.PostAssemblyBuild.Compatibility.Component.PlayMakerCompatibilityComponent.CSettingsKey">
+            <summary>
+            The settings key for this component in the obfuscator settings.
+            </summary>
+        </member>
         <member name="P:OPS.Obfuscator.Editor.Project.PostAssemblyBuild.Compatibility.Component.PlayMakerCompatibilityComponent.SettingsKey">
             <summary>
             The settings key for this component in the obfuscator settings.
             </summary>
+        </member>
+        <member name="F:OPS.Obfuscator.Editor.Project.PostAssemblyBuild.Compatibility.Component.PlayMakerCompatibilityComponent.CSkip_PlayMaker">
+            <summary>
+            The settings key for the skip PlayMaker setting.
+            </summary>
+        </member>
+        <member name="M:OPS.Obfuscator.Editor.Project.PostAssemblyBuild.Compatibility.Component.PlayMakerCompatibilityComponent.Helper_Has_SkipPlayMakerActivated(OPS.Obfuscator.Editor.Project.PostAssemblyBuild.PostAssemblyBuildStep)">
+            <summary>
+            Helper method to check if the user has activated the skip PlayMaker setting.
+            </summary>
+        </member>
+        <member name="M:OPS.Obfuscator.Editor.Project.PostAssemblyBuild.Compatibility.Component.PlayMakerCompatibilityComponent.GetGuiContainer(OPS.Editor.Settings.File.ComponentSettings)">
+            <summary>
+            Get the GUI container for this component.
+            </summary>
+            <param name="_ComponentSettings">The settings for this component.</param>
+            <returns>The GUI container for this component.</returns>
         </member>
         <member name="T:OPS.Obfuscator.Editor.Project.PostAssemblyBuild.Compatibility.Component.RealmsCompatibilityComponent">
             <summary>
@@ -3914,22 +4453,11 @@
             <summary>
             Check if the namespace renaming is allowed. Does nothing for this component.
             </summary>
-            <param name="_Step"></param>
-            <param name="_AssemblyInfo"></param>
-            <param name="_TypeDefinition"></param>
-            <param name="_Cause"></param>
-            <returns></returns>
         </member>
         <member name="M:OPS.Obfuscator.Editor.Project.PostAssemblyBuild.Compatibility.Component.RealmsCompatibilityComponent.ApplyNamespaceRenamingFilter(OPS.Obfuscator.Editor.Project.PostAssemblyBuild.PostAssemblyBuildStep,OPS.Obfuscator.Editor.Assembly.AssemblyInfo,OPS.Mono.Cecil.TypeDefinition,System.String,System.String)">
             <summary>
             Apply a custom namespace renaming filter. Return a custom name for the namespace if needed. Does nothing for this component.
             </summary>
-            <param name="_Step"></param>
-            <param name="_AssemblyInfo"></param>
-            <param name="_TypeDefinition"></param>
-            <param name="_OriginalName"></param>
-            <param name="_CurrentName"></param>
-            <returns></returns>
         </member>
         <member name="M:OPS.Obfuscator.Editor.Project.PostAssemblyBuild.Compatibility.Component.RealmsCompatibilityComponent.SkipWholeType(OPS.Obfuscator.Editor.Project.PostAssemblyBuild.PostAssemblyBuildStep,OPS.Obfuscator.Editor.Assembly.AssemblyInfo,OPS.Mono.Cecil.TypeDefinition,System.String@)">
             <summary>
@@ -3945,22 +4473,11 @@
             <summary>
             Check if the type renaming is allowed. Does nothing for this component.
             </summary>
-            <param name="_Step"></param>
-            <param name="_AssemblyInfo"></param>
-            <param name="_TypeDefinition"></param>
-            <param name="_Cause"></param>
-            <returns></returns>
         </member>
         <member name="M:OPS.Obfuscator.Editor.Project.PostAssemblyBuild.Compatibility.Component.RealmsCompatibilityComponent.ApplyTypeRenamingFilter(OPS.Obfuscator.Editor.Project.PostAssemblyBuild.PostAssemblyBuildStep,OPS.Obfuscator.Editor.Assembly.AssemblyInfo,OPS.Mono.Cecil.TypeDefinition,System.String,System.String)">
             <summary>
             Apply a custom type renaming filter. Return a custom name for the type if needed. Does nothing for this component.
             </summary>
-            <param name="_Step"></param>
-            <param name="_AssemblyInfo"></param>
-            <param name="_TypeDefinition"></param>
-            <param name="_OriginalName"></param>
-            <param name="_CurrentName"></param>
-            <returns></returns>
         </member>
         <member name="F:OPS.Obfuscator.Editor.Project.PostAssemblyBuild.Compatibility.Component.RealmsCompatibilityComponent.CSettingsKey">
             <summary>
@@ -3970,6 +4487,16 @@
         <member name="P:OPS.Obfuscator.Editor.Project.PostAssemblyBuild.Compatibility.Component.RealmsCompatibilityComponent.SettingsKey">
             <summary>
             The settings key for this component in the obfuscator settings.
+            </summary>
+        </member>
+        <member name="F:OPS.Obfuscator.Editor.Project.PostAssemblyBuild.Compatibility.Component.RealmsCompatibilityComponent.CSkip_Realms">
+            <summary>
+            The settings key for the skip Realms setting.
+            </summary>
+        </member>
+        <member name="M:OPS.Obfuscator.Editor.Project.PostAssemblyBuild.Compatibility.Component.RealmsCompatibilityComponent.Helper_Has_SkipRealmsActivated(OPS.Obfuscator.Editor.Project.PostAssemblyBuild.PostAssemblyBuildStep)">
+            <summary>
+            Helper method to check if the user has activated the skip Realms setting.
             </summary>
         </member>
         <member name="M:OPS.Obfuscator.Editor.Project.PostAssemblyBuild.Compatibility.Component.RealmsCompatibilityComponent.GetGuiContainer(OPS.Editor.Settings.File.ComponentSettings)">
@@ -4336,6 +4863,7 @@
             <summary>
             Prepare / preprocess the assembly before it will be loaded.
             Is a special hook called independently from the pipeline process itself.
+            Called before the assemblies itself are loaded.
             </summary>
             <param name="_AssemblyLoadInfo"></param>
             <returns></returns>
@@ -4373,6 +4901,147 @@
             Category this Component belongs too.
             </summary>
         </member>
+        <member name="T:OPS.Obfuscator.Editor.Project.PostAssemblyBuild.Pipeline.Component.Compatibility.AddressableComponent">
+            <summary>
+            Obfuscates the addressable bundles after the assembly build process.
+            </summary>
+        </member>
+        <member name="P:OPS.Obfuscator.Editor.Project.PostAssemblyBuild.Pipeline.Component.Compatibility.AddressableComponent.Name">
+            <summary>
+            Name of the component.
+            </summary>
+        </member>
+        <member name="P:OPS.Obfuscator.Editor.Project.PostAssemblyBuild.Pipeline.Component.Compatibility.AddressableComponent.Description">
+            <summary>
+            Description, descriping what this component does.
+            </summary>
+        </member>
+        <member name="P:OPS.Obfuscator.Editor.Project.PostAssemblyBuild.Pipeline.Component.Compatibility.AddressableComponent.ShortDescription">
+            <summary>
+            Short description, descriping short what this component does.
+            </summary>
+        </member>
+        <member name="F:OPS.Obfuscator.Editor.Project.PostAssemblyBuild.Pipeline.Component.Compatibility.AddressableComponent.CSettingsKey">
+            <summary>
+            The settings key for this component in the obfuscator settings.
+            </summary>
+        </member>
+        <member name="P:OPS.Obfuscator.Editor.Project.PostAssemblyBuild.Pipeline.Component.Compatibility.AddressableComponent.SettingsKey">
+            <summary>
+            The settings key for this component in the obfuscator settings.
+            </summary>
+        </member>
+        <member name="F:OPS.Obfuscator.Editor.Project.PostAssemblyBuild.Pipeline.Component.Compatibility.AddressableComponent.CEnable_Try_Obfuscate_Addressables">
+            <summary>
+            The settings key to obfuscate addressables.
+            </summary>
+        </member>
+        <member name="F:OPS.Obfuscator.Editor.Project.PostAssemblyBuild.Pipeline.Component.Compatibility.AddressableComponent.CCustom_Addressable_Paths">
+            <summary>
+            The settings key for custom addressable paths.
+            </summary>
+        </member>
+        <member name="P:OPS.Obfuscator.Editor.Project.PostAssemblyBuild.Pipeline.Component.Compatibility.AddressableComponent.ObfuscatorCategory">
+            <summary>
+            Category this Component belongs too.
+            </summary>
+        </member>
+        <member name="M:OPS.Obfuscator.Editor.Project.PostAssemblyBuild.Pipeline.Component.Compatibility.AddressableComponent.GetGuiContainer(OPS.Editor.Settings.File.ComponentSettings)">
+            <summary>
+            Get the gui container for this component.
+            </summary>
+            <param name="_ComponentSettings">The settings for this component.</param>
+            <returns>The gui container.</returns>
+        </member>
+        <member name="P:OPS.Obfuscator.Editor.Project.PostAssemblyBuild.Pipeline.Component.Compatibility.AddressableComponent.IsActive">
+            <summary>
+            Return whether the component is activated or deactivated for the pipeline processing.
+            </summary>
+        </member>
+        <member name="F:OPS.Obfuscator.Editor.Project.PostAssemblyBuild.Pipeline.Component.Compatibility.AddressableComponent.BUILD_TARGET_PLACEHOLDER">
+            <summary>
+            The placeholder for the build target in the custom addressable paths.
+            </summary>
+        </member>
+        <member name="F:OPS.Obfuscator.Editor.Project.PostAssemblyBuild.Pipeline.Component.Compatibility.AddressableComponent.buildTargetMapping">
+            <summary>
+            Maps the build target to the Addressables platform subfolder.
+            </summary>
+        </member>
+        <member name="M:OPS.Obfuscator.Editor.Project.PostAssemblyBuild.Pipeline.Component.Compatibility.AddressableComponent.GetAddressablesPlatformPathInternal(UnityEditor.BuildTarget)">
+            <summary>
+            Maps the build target to the Addressables platform subfolder. If the build target is not found in the mapping, it will return the build target as a string.
+            </summary>
+            <param name="_Target">The build target to get the Addressables platform subfolder for.</param>
+            <returns>The Addressables platform subfolder for the build target.</returns>
+        </member>
+        <member name="M:OPS.Obfuscator.Editor.Project.PostAssemblyBuild.Pipeline.Component.Compatibility.AddressableComponent.GetPlatformPathSubFolder">
+            <summary>
+            Retrieves the Addressables platform subfolder of the build platform that is targeted.
+            </summary>
+            <remarks>
+            For example: 
+            - StandaloneWindows, StandaloneWindows64 > Windows <br />
+            - StandaloneOSX > OSX <br />
+            - StandaloneLinux64 > Linux <br />
+            ...
+            </remarks>
+            <returns>Returns the Addressables platform subfolder of the build platform that is targeted.</returns>
+        </member>
+        <member name="P:OPS.Obfuscator.Editor.Project.PostAssemblyBuild.Pipeline.Component.Compatibility.AddressableComponent.CatalogBuildPath">
+            <summary>
+            The catalog while always be build inside the default build path.
+            </summary>
+            <remarks>
+            If older 2021.2: Assets/StreamingAssets/aa/[SubPlatform].<br />
+            If newer 2021.2: Library/com.unity.addressables/aa/[SubPlatform].<br />
+            ...
+            </remarks>
+            <returns>Returns the default build path for the catalog file build.</returns>
+        </member>
+        <member name="P:OPS.Obfuscator.Editor.Project.PostAssemblyBuild.Pipeline.Component.Compatibility.AddressableComponent.DefaultBuildPath">
+            <summary>
+            Retrieves the default build path for the Addressables build.
+            </summary>
+            <remarks>
+            If older 2021.2: Assets/StreamingAssets/aa/[SubPlatform]/[Platform].<br />
+            If newer 2021.2: Library/com.unity.addressables/aa/[SubPlatform]/[Platform].<br />
+            ...
+            </remarks>
+            <returns>Returns the default build path for the Addressables build.</returns>
+        </member>
+        <member name="M:OPS.Obfuscator.Editor.Project.PostAssemblyBuild.Pipeline.Component.Compatibility.AddressableComponent.GetAllBundleFiles(System.String)">
+            <summary>
+            Returns a list of all bundle file infos in the given directory and its subdirectories.
+            </summary>
+            <param name="_BundleDirectory">The directory to search for bundle files.</param>
+            <returns>A list of all bundle file infos in the given directory.</returns>
+        </member>
+        <member name="M:OPS.Obfuscator.Editor.Project.PostAssemblyBuild.Pipeline.Component.Compatibility.AddressableComponent.ObfuscateBundleFiles(System.Collections.Generic.Dictionary{OPS.Obfuscator.Editor.Assembly.Mono.Member.Key.TypeKey,OPS.Obfuscator.Editor.Assembly.Mono.Member.Key.TypeKey})">
+            <summary>
+            Obfuscates all bundle files in the default and custom paths.
+            </summary>
+            <param name="_ObfuscationMapping">The mapping of the original monobehaviour type to the obfuscated monobehaviour type.</param>
+        </member>
+        <member name="M:OPS.Obfuscator.Editor.Project.PostAssemblyBuild.Pipeline.Component.Compatibility.AddressableComponent.ObfuscateBundleFile(System.String,System.Collections.Generic.Dictionary{OPS.Obfuscator.Editor.Assembly.Mono.Member.Key.TypeKey,OPS.Obfuscator.Editor.Assembly.Mono.Member.Key.TypeKey})">
+            <summary>
+            Obfuscates the bundle file with the given obfuscation mapping and overrides the existing bundle file.
+            </summary>
+            <param name="_BundleFilePath">The path to the bundle file to obfuscate.</param>
+            <param name="_ObfuscationMapping">The mapping of the original monobehaviour type to the obfuscated monobehaviour type.</param>
+        </member>
+        <member name="M:OPS.Obfuscator.Editor.Project.PostAssemblyBuild.Pipeline.Component.Compatibility.AddressableComponent.OnPostPipelineProcess(OPS.Editor.Project.Step.IStepOutput)">
+            <summary>
+            On post process get the monobehaviour obfuscation mapping and obfuscate the addressable bundles.
+            </summary>
+            <param name="_StepOutput">The step output of the post assembly build pipeline.</param>
+            <returns>True if the post process was successful, otherwise false.</returns>
+        </member>
+        <member name="T:OPS.Obfuscator.Editor.Project.PostAssemblyBuild.Pipeline.Component.Compatibility.AnimationComponent">
+            <summary>
+            Skips the animation methods found in the anaylse pipeline.
+            </summary>
+        </member>
         <member name="P:OPS.Obfuscator.Editor.Project.PostAssemblyBuild.Pipeline.Component.Compatibility.AnimationComponent.Name">
             <summary>
             Name of the component.
@@ -4388,15 +5057,47 @@
             Short description, descriping short what this component does.
             </summary>
         </member>
+        <member name="F:OPS.Obfuscator.Editor.Project.PostAssemblyBuild.Pipeline.Component.Compatibility.AnimationComponent.CSettingsKey">
+            <summary>
+            The settings key for this component in the obfuscator settings.
+            </summary>
+        </member>
         <member name="P:OPS.Obfuscator.Editor.Project.PostAssemblyBuild.Pipeline.Component.Compatibility.AnimationComponent.SettingsKey">
             <summary>
             The settings key for this component in the obfuscator settings.
+            </summary>
+        </member>
+        <member name="F:OPS.Obfuscator.Editor.Project.PostAssemblyBuild.Pipeline.Component.Compatibility.AnimationComponent.CEnable_Try_Find_Inspector_Animation_Methods">
+            <summary>
+            The settings key to enable the try find inspector animation methods.
+            </summary>
+        </member>
+        <member name="F:OPS.Obfuscator.Editor.Project.PostAssemblyBuild.Pipeline.Component.Compatibility.AnimationComponent.CEnable_Try_Find_Inspector_Animation_Methods_In_Models">
+            <summary>
+            The settings key to enable the try find inspector animation methods in models.
+            </summary>
+        </member>
+        <member name="F:OPS.Obfuscator.Editor.Project.PostAssemblyBuild.Pipeline.Component.Compatibility.AnimationComponent.CEnable_Try_Find_Inspector_Animation_Methods_In_AnimationClips">
+            <summary>
+            The settings key to enable the try find inspector animation methods in animations.
+            </summary>
+        </member>
+        <member name="F:OPS.Obfuscator.Editor.Project.PostAssemblyBuild.Pipeline.Component.Compatibility.AnimationComponent.CEnable_Try_Find_Inspector_Animation_Methods_In_AnimatorControllers">
+            <summary>
+            The settings key to enable the try find inspector animation methods in animator controllers.
             </summary>
         </member>
         <member name="P:OPS.Obfuscator.Editor.Project.PostAssemblyBuild.Pipeline.Component.Compatibility.AnimationComponent.ObfuscatorCategory">
             <summary>
             Category this Component belongs too.
             </summary>
+        </member>
+        <member name="M:OPS.Obfuscator.Editor.Project.PostAssemblyBuild.Pipeline.Component.Compatibility.AnimationComponent.GetGuiContainer(OPS.Editor.Settings.File.ComponentSettings)">
+            <summary>
+            The gui container for this component.
+            </summary>
+            <param name="_ComponentSettings">The component settings.</param>
+            <returns>The gui container for this component.</returns>
         </member>
         <member name="P:OPS.Obfuscator.Editor.Project.PostAssemblyBuild.Pipeline.Component.Compatibility.AnimationComponent.IsActive">
             <summary>
@@ -4412,6 +5113,13 @@
             <summary>
             A list of all references StateMachineBehaviour classes.
             </summary>
+        </member>
+        <member name="M:OPS.Obfuscator.Editor.Project.PostAssemblyBuild.Pipeline.Component.Compatibility.AnimationComponent.OnPrePipelineProcess(OPS.Editor.Project.Step.IStepInput)">
+            <summary>
+            Preprocess the component using the passed step input.
+            </summary>
+            <param name="_StepInput">The step input to preprocess.</param>
+            <returns>True if the preprocessing was successful, otherwise false.</returns>
         </member>
         <member name="M:OPS.Obfuscator.Editor.Project.PostAssemblyBuild.Pipeline.Component.Compatibility.AnimationComponent.OnAnalyse_A_Skip_StateMachineBehaviour_Types(OPS.Obfuscator.Editor.Assembly.AssemblyInfo)">
             <summary>
@@ -4492,15 +5200,42 @@
             Short description, descriping short what this component does.
             </summary>
         </member>
+        <member name="F:OPS.Obfuscator.Editor.Project.PostAssemblyBuild.Pipeline.Component.Compatibility.UnityEventComponent.CSettingsKey">
+            <summary>
+            The settings key for this component in the obfuscator settings.
+            </summary>
+        </member>
         <member name="P:OPS.Obfuscator.Editor.Project.PostAssemblyBuild.Pipeline.Component.Compatibility.UnityEventComponent.SettingsKey">
             <summary>
             The settings key for this component in the obfuscator settings.
+            </summary>
+        </member>
+        <member name="F:OPS.Obfuscator.Editor.Project.PostAssemblyBuild.Pipeline.Component.Compatibility.UnityEventComponent.CEnable_Try_Find_Inspector_Unity_Event_Methods">
+            <summary>
+            The settings key to enable the try find inspector unity event methods.
+            </summary>
+        </member>
+        <member name="F:OPS.Obfuscator.Editor.Project.PostAssemblyBuild.Pipeline.Component.Compatibility.UnityEventComponent.CEnable_Try_Find_Inspector_Unity_Event_Methods_In_Scenes">
+            <summary>
+            The settings key to enable the try find inspector unity event methods in scenes.
+            </summary>
+        </member>
+        <member name="F:OPS.Obfuscator.Editor.Project.PostAssemblyBuild.Pipeline.Component.Compatibility.UnityEventComponent.CEnable_Try_Find_Inspector_Unity_Event_Methods_In_Prefabs">
+            <summary>
+            The settings key to enable the try find inspector unity event methods in prefabs.
             </summary>
         </member>
         <member name="P:OPS.Obfuscator.Editor.Project.PostAssemblyBuild.Pipeline.Component.Compatibility.UnityEventComponent.ObfuscatorCategory">
             <summary>
             Category this Component belongs too.
             </summary>
+        </member>
+        <member name="M:OPS.Obfuscator.Editor.Project.PostAssemblyBuild.Pipeline.Component.Compatibility.UnityEventComponent.GetGuiContainer(OPS.Editor.Settings.File.ComponentSettings)">
+            <summary>
+            The gui container for this component.
+            </summary>
+            <param name="_ComponentSettings">The component settings.</param>
+            <returns>The gui container for this component.</returns>
         </member>
         <member name="P:OPS.Obfuscator.Editor.Project.PostAssemblyBuild.Pipeline.Component.Compatibility.UnityEventComponent.IsActive">
             <summary>
@@ -4514,10 +5249,11 @@
         </member>
         <member name="M:OPS.Obfuscator.Editor.Project.PostAssemblyBuild.Pipeline.Component.Compatibility.UnityEventComponent.OnPrePipelineProcess(OPS.Editor.Project.Step.IStepInput)">
             <summary>
-            Reads the analysed Unity Events assigned in the Pre Build Step.
+            Preprocess the component using the passed step input.
+            Reads the analysed unity event methods from the preprocessing step.
             </summary>
-            <param name="_StepInput"></param>
-            <returns></returns>
+            <param name="_StepInput">The step input to preprocess.</param>
+            <returns>True if the preprocessing was successful, otherwise false.</returns>
         </member>
         <member name="M:OPS.Obfuscator.Editor.Project.PostAssemblyBuild.Pipeline.Component.Compatibility.UnityEventComponent.OnAnalyse_Assemblies(OPS.Obfuscator.Editor.Assembly.AssemblyInfo)">
             <summary>
@@ -4856,6 +5592,13 @@
             The settings key for this component in the obfuscator settings.
             </summary>
         </member>
+        <member name="M:OPS.Obfuscator.Editor.Project.PostAssemblyBuild.Pipeline.Component.Member.Field.FieldObfuscationComponent.GetGuiContainer(OPS.Editor.Settings.File.ComponentSettings)">
+            <summary>
+            Get the GUI container for this component.
+            </summary>
+            <param name="_ComponentSettings">The settings for this component.</param>
+            <returns>The GUI container for this component.</returns>
+        </member>
         <member name="M:OPS.Obfuscator.Editor.Project.PostAssemblyBuild.Pipeline.Component.Member.Field.FieldObfuscationComponent.OnAnalyse_A_FindAllModuleMethodReferences(OPS.Obfuscator.Editor.Assembly.AssemblyInfo)">
             <summary>
             Add the 'GetMemberReferences' in all the Modules of _AssemblyInfo.
@@ -5085,48 +5828,6 @@
             Short description, descriping short what this component does.
             </summary>
         </member>
-        <member name="T:OPS.Obfuscator.Editor.Project.PostAssemblyBuild.Pipeline.Component.Member.Type.AMonoBehaviourObfuscationComponent">
-            <summary>
-            Abstract base class for MonoBehaviour Obfuscation.
-            </summary>
-        </member>
-        <member name="M:OPS.Obfuscator.Editor.Project.PostAssemblyBuild.Pipeline.Component.Member.Type.AMonoBehaviourObfuscationComponent.OnAnalyse_Assemblies(OPS.Obfuscator.Editor.Assembly.AssemblyInfo)">
-            <summary>
-            Validate if MonoBehaviours are obfuscatable in general.
-            </summary>
-            <param name="_AssemblyInfo"></param>
-            <returns></returns>
-        </member>
-        <member name="M:OPS.Obfuscator.Editor.Project.PostAssemblyBuild.Pipeline.Component.Member.Type.AMonoBehaviourObfuscationComponent.OnAnalyse_A_CheckMonoBehaviour(OPS.Obfuscator.Editor.Assembly.AssemblyInfo,OPS.Mono.Cecil.TypeDefinition)">
-            <summary>
-            Check if MonoBehaviours in general should be obfuscated.
-            </summary>
-            <param name="_AssemblyInfo"></param>
-            <param name="_TypeDefinition"></param>
-            <returns></returns>
-        </member>
-        <member name="M:OPS.Obfuscator.Editor.Project.PostAssemblyBuild.Pipeline.Component.Member.Type.AMonoBehaviourObfuscationComponent.OnPostAnalyse_Assemblies(OPS.Obfuscator.Editor.Assembly.AssemblyInfo)">
-            <summary>
-            Validates if the namespace and class name getting obfuscated.
-            Only both together can be obfuscated.
-            </summary>
-            <param name="_AssemblyInfo"></param>
-            <returns></returns>
-        </member>
-        <member name="M:OPS.Obfuscator.Editor.Project.PostAssemblyBuild.Pipeline.Component.Member.Type.AMonoBehaviourObfuscationComponent.OnObfuscate_Assemblies(OPS.Obfuscator.Editor.Assembly.AssemblyInfo)">
-            <summary>
-            Returns just true.
-            </summary>
-            <param name="_AssemblyInfo"></param>
-            <returns></returns>
-        </member>
-        <member name="M:OPS.Obfuscator.Editor.Project.PostAssemblyBuild.Pipeline.Component.Member.Type.AMonoBehaviourObfuscationComponent.OnPostObfuscate_Assemblies(OPS.Obfuscator.Editor.Assembly.AssemblyInfo)">
-            <summary>
-            Returns just true.
-            </summary>
-            <param name="_AssemblyInfo"></param>
-            <returns></returns>
-        </member>
         <member name="T:OPS.Obfuscator.Editor.Project.PostAssemblyBuild.Pipeline.Component.Member.Type.MonoBehaviourRenameObfuscationComponent">
             <summary>
             Obfuscation of MonoBehaviours by renaming. 
@@ -5156,7 +5857,7 @@
         </member>
         <member name="F:OPS.Obfuscator.Editor.Project.PostAssemblyBuild.Pipeline.Component.Member.Type.MonoBehaviourRenameObfuscationComponent.CMonobehaviourObfuscationMapping">
             <summary>
-            The step output data key for the MonobehaviourObfuscationMapping.
+            The step data key for the MonoBehaviour rename mapping.
             </summary>
         </member>
         <member name="F:OPS.Obfuscator.Editor.Project.PostAssemblyBuild.Pipeline.Component.Member.Type.MonoBehaviourRenameObfuscationComponent.MonobehaviourObfuscationMapping">
@@ -5171,6 +5872,14 @@
             <param name="_AssemblyInfo"></param>
             <returns></returns>
         </member>
+        <member name="M:OPS.Obfuscator.Editor.Project.PostAssemblyBuild.Pipeline.Component.Member.Type.MonoBehaviourRenameObfuscationComponent.OnAnalyse_A_CheckMonoBehaviour(OPS.Obfuscator.Editor.Assembly.AssemblyInfo,OPS.Mono.Cecil.TypeDefinition)">
+            <summary>
+            Check if MonoBehaviours in general should be obfuscated.
+            </summary>
+            <param name="_AssemblyInfo"></param>
+            <param name="_TypeDefinition"></param>
+            <returns></returns>
+        </member>
         <member name="M:OPS.Obfuscator.Editor.Project.PostAssemblyBuild.Pipeline.Component.Member.Type.MonoBehaviourRenameObfuscationComponent.OnPostAnalyse_Assemblies(OPS.Obfuscator.Editor.Assembly.AssemblyInfo)">
             <summary>
             Validates if the namespace and class name getting obfuscated.
@@ -5181,7 +5890,7 @@
         </member>
         <member name="M:OPS.Obfuscator.Editor.Project.PostAssemblyBuild.Pipeline.Component.Member.Type.MonoBehaviourRenameObfuscationComponent.OnObfuscate_Assemblies(OPS.Obfuscator.Editor.Assembly.AssemblyInfo)">
             <summary>
-            Returns true.
+            Returns just true.
             </summary>
             <param name="_AssemblyInfo"></param>
             <returns></returns>
@@ -5206,203 +5915,6 @@
             Adds the unobfuscated MonoBehaviours to the obfuscated MonoBehaviours map to the _StepOutput.
             </summary>
             <param name="_StepOutput"></param>
-            <returns></returns>
-        </member>
-        <member name="T:OPS.Obfuscator.Editor.Project.PostAssemblyBuild.Pipeline.Component.Member.Type.MonoBehaviourSubtypeObfuscationComponent">
-            <summary>
-            Obfuscation of MonoBehaviours by renaming and subtype generation.
-            </summary>
-        </member>
-        <member name="P:OPS.Obfuscator.Editor.Project.PostAssemblyBuild.Pipeline.Component.Member.Type.MonoBehaviourSubtypeObfuscationComponent.Name">
-            <summary>
-            Name of the component.
-            </summary>
-        </member>
-        <member name="P:OPS.Obfuscator.Editor.Project.PostAssemblyBuild.Pipeline.Component.Member.Type.MonoBehaviourSubtypeObfuscationComponent.Description">
-            <summary>
-            Description, descriping what this component does.
-            </summary>
-        </member>
-        <member name="P:OPS.Obfuscator.Editor.Project.PostAssemblyBuild.Pipeline.Component.Member.Type.MonoBehaviourSubtypeObfuscationComponent.ShortDescription">
-            <summary>
-            Short description, descriping short what this component does.
-            </summary>
-        </member>
-        <member name="M:OPS.Obfuscator.Editor.Project.PostAssemblyBuild.Pipeline.Component.Member.Type.MonoBehaviourSubtypeObfuscationComponent.CanBeProcessedByComponent(OPS.Obfuscator.Editor.Assembly.AssemblyLoadInfo)">
-            <summary>
-            True: The _AssemblyLoadInfo should be processed by this component.
-            </summary>
-            <param name="_AssemblyLoadInfo"></param>
-            <returns></returns>
-        </member>
-        <member name="F:OPS.Obfuscator.Editor.Project.PostAssemblyBuild.Pipeline.Component.Member.Type.MonoBehaviourSubtypeObfuscationComponent.ReferencedMonoScriptTypeList">
-            <summary>
-            A list of all referenced types of unity mono scripts in the scene and prefabs.
-            </summary>
-        </member>
-        <member name="M:OPS.Obfuscator.Editor.Project.PostAssemblyBuild.Pipeline.Component.Member.Type.MonoBehaviourSubtypeObfuscationComponent.OnPrePipelineProcess(OPS.Editor.Project.Step.IStepInput)">
-            <summary>
-            Reads all the referenced MonoScripts read by PreBuild AnalyseMonoScriptComponent.
-            </summary>
-            <param name="_StepInput"></param>
-            <returns></returns>
-        </member>
-        <member name="M:OPS.Obfuscator.Editor.Project.PostAssemblyBuild.Pipeline.Component.Member.Type.MonoBehaviourSubtypeObfuscationComponent.OnAnalyse_Assemblies(OPS.Obfuscator.Editor.Assembly.AssemblyInfo)">
-            <summary>
-            Evaluate all the obfuscate able MonoBehaviours.
-            </summary>
-            <param name="_AssemblyInfo"></param>
-            <returns></returns>
-        </member>
-        <member name="F:OPS.Obfuscator.Editor.Project.PostAssemblyBuild.Pipeline.Component.Member.Type.MonoBehaviourSubtypeObfuscationComponent.random">
-            <summary>
-            Random class.
-            </summary>
-        </member>
-        <member name="F:OPS.Obfuscator.Editor.Project.PostAssemblyBuild.Pipeline.Component.Member.Type.MonoBehaviourSubtypeObfuscationComponent.allExistingNamespaceList">
-            <summary>
-            List of whole existing namespaces.
-            </summary>
-        </member>
-        <member name="F:OPS.Obfuscator.Editor.Project.PostAssemblyBuild.Pipeline.Component.Member.Type.MonoBehaviourSubtypeObfuscationComponent.allSplitNamespaceList">
-            <summary>
-            List of all split namespaces.
-            </summary>
-        </member>
-        <member name="F:OPS.Obfuscator.Editor.Project.PostAssemblyBuild.Pipeline.Component.Member.Type.MonoBehaviourSubtypeObfuscationComponent.allFirstNamespaceList">
-            <summary>
-            List of all first namespaces.
-            </summary>
-        </member>
-        <member name="F:OPS.Obfuscator.Editor.Project.PostAssemblyBuild.Pipeline.Component.Member.Type.MonoBehaviourSubtypeObfuscationComponent.allTypeNameList">
-            <summary>
-            List of all type names (not generic or abstract ones).
-            </summary>
-        </member>
-        <member name="M:OPS.Obfuscator.Editor.Project.PostAssemblyBuild.Pipeline.Component.Member.Type.MonoBehaviourSubtypeObfuscationComponent.OnAnalyse_A_FindAndUnionNamesInAssembly(OPS.Obfuscator.Editor.Assembly.AssemblyInfo)">
-            <summary>
-            Unions the namespaces and names inside _AssemblyInfo to the lists.
-            </summary>
-            <param name="_AssemblyInfo"></param>
-        </member>
-        <member name="M:OPS.Obfuscator.Editor.Project.PostAssemblyBuild.Pipeline.Component.Member.Type.MonoBehaviourSubtypeObfuscationComponent.FindAllTypeAndNamespaceNamesInAssembly(OPS.Obfuscator.Editor.Assembly.AssemblyInfo,System.Collections.Generic.List{System.String}@,System.Collections.Generic.List{System.String}@,System.Collections.Generic.List{System.String}@,System.Collections.Generic.List{System.String}@)">
-            <summary>
-            Find all kind of names for an assembly.
-            </summary>
-            <param name="_AssemblyInfo"></param>
-            <param name="_FullNamespaceList"></param>
-            <param name="_SplitNamespaceList"></param>
-            <param name="_FirstNamespaceList"></param>
-            <param name="_TypeNameList"></param>
-            <returns></returns>
-        </member>
-        <member name="M:OPS.Obfuscator.Editor.Project.PostAssemblyBuild.Pipeline.Component.Member.Type.MonoBehaviourSubtypeObfuscationComponent.Generate_Random_Namespace">
-            <summary>
-            Returns a namespace with a length of at least 1.
-            The namespace gets randomized based on existing namespaces.
-            </summary>
-            <returns></returns>
-        </member>
-        <member name="M:OPS.Obfuscator.Editor.Project.PostAssemblyBuild.Pipeline.Component.Member.Type.MonoBehaviourSubtypeObfuscationComponent.Generate_Random_Namespace_With_Possible_Length_Of_Zero(System.Collections.Generic.List{System.String})">
-            <summary>
-            Returns a random namespace with length 0 to 5.
-            </summary>
-            <param name="_NamespaceList"></param>
-            <returns></returns>
-        </member>
-        <member name="M:OPS.Obfuscator.Editor.Project.PostAssemblyBuild.Pipeline.Component.Member.Type.MonoBehaviourSubtypeObfuscationComponent.Generate_Random(System.Collections.Generic.List{System.String})">
-            <summary>
-            Return a random name of _NameList.
-            </summary>
-            <param name="_NameList"></param>
-            <returns></returns>
-        </member>
-        <member name="M:OPS.Obfuscator.Editor.Project.PostAssemblyBuild.Pipeline.Component.Member.Type.MonoBehaviourSubtypeObfuscationComponent.Generate_Random_Name">
-            <summary>
-            Return a random type name.
-            </summary>
-            <returns></returns>
-        </member>
-        <member name="F:OPS.Obfuscator.Editor.Project.PostAssemblyBuild.Pipeline.Component.Member.Type.MonoBehaviourSubtypeObfuscationComponent.possibleSubTypeMapping">
-            <summary>
-            A mapping of the possible types that should be obfuscated via subtype.
-            </summary>
-        </member>
-        <member name="M:OPS.Obfuscator.Editor.Project.PostAssemblyBuild.Pipeline.Component.Member.Type.MonoBehaviourSubtypeObfuscationComponent.OnAnalyse_A_ConsiderTypeForSubtypeObfuscation(OPS.Obfuscator.Editor.Assembly.AssemblyInfo,OPS.Mono.Cecil.TypeDefinition)">
-            <summary>
-            True: Type is a MonoBehaviour, not generic, not abstract and in the referenced list!
-            </summary>
-            <param name="_AssemblyInfo"></param>
-            <param name="_TypeDefinition"></param>
-            <returns></returns>
-        </member>
-        <member name="M:OPS.Obfuscator.Editor.Project.PostAssemblyBuild.Pipeline.Component.Member.Type.MonoBehaviourSubtypeObfuscationComponent.OnAnalyse_A_CanObfuscateViaSubtypeObfuscation(OPS.Obfuscator.Editor.Assembly.AssemblyInfo,OPS.Mono.Cecil.TypeDefinition,System.String@)">
-            <summary>
-            Return: True: Is not sealed and has an empty constructor. False: Else.
-            Out: An cause why not obfuscatable.
-            </summary>
-            <param name="_AssemblyInfo"></param>
-            <param name="_TypeDefinition"></param>
-            <param name="_NotObfuscateCause"></param>
-            <returns></returns>
-        </member>
-        <member name="M:OPS.Obfuscator.Editor.Project.PostAssemblyBuild.Pipeline.Component.Member.Type.MonoBehaviourSubtypeObfuscationComponent.OnPostAnalyse_Assemblies(OPS.Obfuscator.Editor.Assembly.AssemblyInfo)">
-            <summary>
-            Validates if the namespace and class name getting obfuscated.
-            Only both together can be obfuscated.
-            </summary>
-            <param name="_AssemblyInfo"></param>
-            <returns></returns>
-        </member>
-        <member name="M:OPS.Obfuscator.Editor.Project.PostAssemblyBuild.Pipeline.Component.Member.Type.MonoBehaviourSubtypeObfuscationComponent.OnObfuscate_Assemblies(OPS.Obfuscator.Editor.Assembly.AssemblyInfo)">
-            <summary>
-            Obfuscate MonoBehaviours.
-            </summary>
-            <param name="_AssemblyInfo"></param>
-            <returns></returns>
-        </member>
-        <member name="M:OPS.Obfuscator.Editor.Project.PostAssemblyBuild.Pipeline.Component.Member.Type.MonoBehaviourSubtypeObfuscationComponent.OnObfuscate_CreateOriginalSubtype(OPS.Obfuscator.Editor.Assembly.AssemblyInfo,OPS.Mono.Cecil.TypeDefinition,OPS.Obfuscator.Editor.Assembly.Mono.Member.Key.TypeKey)">
-            <summary>
-            Create and add _TypeDefinition with _OriginalTypeKey to _AssemblyInfo.
-            </summary>
-            <param name="_AssemblyInfo"></param>
-            <param name="_TypeDefinition"></param>
-            <param name="_OriginalTypeKey"></param>
-            <returns></returns>
-        </member>
-        <member name="M:OPS.Obfuscator.Editor.Project.PostAssemblyBuild.Pipeline.Component.Member.Type.MonoBehaviourSubtypeObfuscationComponent.OnObfuscate_CreateFakeSubtype(OPS.Obfuscator.Editor.Assembly.AssemblyInfo,OPS.Mono.Cecil.TypeDefinition)">
-            <summary>
-            True: Could create and add a fake subtype.
-            False: There is already a type with the same namespace and name.
-            </summary>
-            <param name="_AssemblyInfo"></param>
-            <param name="_TypeDefinition"></param>
-            <returns></returns>
-        </member>
-        <member name="M:OPS.Obfuscator.Editor.Project.PostAssemblyBuild.Pipeline.Component.Member.Type.MonoBehaviourSubtypeObfuscationComponent.OnObfuscate_Helper_IsSubtype_Valid_And_Possible(OPS.Obfuscator.Editor.Assembly.AssemblyInfo,System.String,System.String)">
-            <summary>
-            True: Can use this namespace and name for cloning!
-            </summary>
-            <param name="_AssemblyInfo"></param>
-            <param name="_Namespace"></param>
-            <param name="_Name"></param>
-            <returns></returns>
-        </member>
-        <member name="M:OPS.Obfuscator.Editor.Project.PostAssemblyBuild.Pipeline.Component.Member.Type.MonoBehaviourSubtypeObfuscationComponent.CreateEmptySubType(OPS.Mono.Cecil.TypeDefinition,System.String,System.String)">
-            <summary>
-            Create a sub type for _BaseType with a namespace _SubTypeNamespace and type name _SubTypeName.
-            The created _SubType will be added an empty constructor.
-            </summary>
-            <param name="_BaseType"></param>
-            <param name="_SubTypeNamespace"></param>
-            <param name="_SubTypeName"></param>
-            <returns></returns>
-        </member>
-        <member name="M:OPS.Obfuscator.Editor.Project.PostAssemblyBuild.Pipeline.Component.Member.Type.MonoBehaviourSubtypeObfuscationComponent.OnPostObfuscate_Assemblies(OPS.Obfuscator.Editor.Assembly.AssemblyInfo)">
-            <summary>
-            Returns just true.
-            </summary>
-            <param name="_AssemblyInfo"></param>
             <returns></returns>
         </member>
         <member name="P:OPS.Obfuscator.Editor.Project.PostAssemblyBuild.Pipeline.Component.Member.Type.NamespaceObfuscationComponent.Name">
@@ -5573,8 +6085,10 @@
         </member>
         <member name="M:OPS.Obfuscator.Editor.Project.PostAssemblyBuild.Pipeline.Component.Member.Type.TypeObfuscationComponent.GetGuiContainer(OPS.Editor.Settings.File.ComponentSettings)">
             <summary>
-            Shown gui in the obfuscator settings window.
+            Get the GUI container for this component.
             </summary>
+            <param name="_ComponentSettings">The settings for this component.</param>
+            <returns>The GUI container for this component.</returns>
         </member>
         <member name="M:OPS.Obfuscator.Editor.Project.PostAssemblyBuild.Pipeline.Component.Member.Type.TypeObfuscationComponent.OnAnalyse_A_FindAllModuleTypeReferences(OPS.Obfuscator.Editor.Assembly.AssemblyInfo)">
             <summary>
@@ -5638,7 +6152,7 @@
             <summary>
             Analyse the Types to check if they can be obfuscated.
             </summary>
-            <param name="_AssemblyInfo"></param>
+            <param name="_AssemblyInfo">The assembly to analyse.</param>
         </member>
         <member name="M:OPS.Obfuscator.Editor.Project.PostAssemblyBuild.Pipeline.Component.Member.Type.TypeObfuscationComponent.Analyse_A_Helper_Compatibility_IsTypeRenamingAllowed(OPS.Obfuscator.Editor.Assembly.AssemblyInfo,OPS.Mono.Cecil.TypeDefinition,System.Collections.Generic.List{System.String}@)">
             <summary>
@@ -5681,6 +6195,11 @@
             Category this Component belongs too.
             </summary>
         </member>
+        <member name="T:OPS.Obfuscator.Editor.Project.PostAssemblyBuild.Pipeline.Component.Optional.RenamingComponent">
+            <summary>
+            The renaming component allows to manage the renaming pattern and mapping.
+            </summary>
+        </member>
         <member name="P:OPS.Obfuscator.Editor.Project.PostAssemblyBuild.Pipeline.Component.Optional.RenamingComponent.Name">
             <summary>
             Name of the component.
@@ -5705,6 +6224,20 @@
             <summary>
             Category this Component belongs too.
             </summary>
+        </member>
+        <member name="M:OPS.Obfuscator.Editor.Project.PostAssemblyBuild.Pipeline.Component.Optional.RenamingComponent.OnPrePipelineProcess(OPS.Editor.Project.Step.IStepInput)">
+            <summary>
+            Before the pipeline process, load the renaming pattern and mapping.
+            </summary>
+            <param name="_StepInput">The step input.</param>
+            <returns>The success of the operation.</returns>
+        </member>
+        <member name="M:OPS.Obfuscator.Editor.Project.PostAssemblyBuild.Pipeline.Component.Optional.RenamingComponent.OnPostPipelineProcess(OPS.Editor.Project.Step.IStepOutput)">
+            <summary>
+            After the pipeline process, save the mapping.
+            </summary>
+            <param name="_StepOutput">The step output.</param>
+            <returns>The success of the operation.</returns>
         </member>
         <member name="T:OPS.Obfuscator.Editor.Project.PostAssemblyBuild.Pipeline.Component.Security.AntiTamperingObfuscationComponent">
             <summary>
@@ -6531,9 +7064,9 @@
         </member>
         <member name="M:OPS.Obfuscator.Editor.Project.PostAssemblyBuild.Renaming.ObfuscatorV3Mapping.Deserialize(System.String)">
             <summary>
-            Loads the mapping from a file at _FilePath.
+            Loads the mapping from a file content.
             </summary>
-            <param name="_FilePath"></param>
+            <param name="_FileContent">The content of the file.</param>
         </member>
         <member name="T:OPS.Obfuscator.Editor.Project.PostAssemblyBuild.Renaming.ObfuscatorV4Mapping">
             <summary>
@@ -6727,17 +7260,49 @@
             <param name="_MemberDefinition"></param>
             <returns></returns>
         </member>
+        <member name="M:OPS.Obfuscator.Editor.Project.PostAssemblyBuild.Renaming.RenameManager.LoadMappingFromFile(System.String)">
+            <summary>
+            Load a mapping from a file.
+            </summary>
+            <param name="_FilePath">The full or relative path to the mapping file.</param>
+        </member>
+        <member name="F:OPS.Obfuscator.Editor.Project.PostAssemblyBuild.Renaming.RenameManager.CVersionParameter">
+            <summary>
+            When loading the mapping from an url, the version parameter in the url is replaced with the current version of the app.
+            </summary>
+        </member>
+        <member name="M:OPS.Obfuscator.Editor.Project.PostAssemblyBuild.Renaming.RenameManager.LoadMappingFromUrl(System.String)">
+            <summary>
+            Load a mapping from an url. The url must return the mapping as json.
+            </summary>
+            <param name="_Url">The url to the mapping file.</param>
+            <remarks>
+            You can use optional the {version} parameter in the url to replace it with the current version of the app (Application.version).
+            </remarks>
+        </member>
         <member name="M:OPS.Obfuscator.Editor.Project.PostAssemblyBuild.Renaming.RenameManager.LoadMapping(System.String)">
             <summary>
-            Load a mapping used as reference.
+            Load a mapping from a string.
             </summary>
-            <param name="_FilePath"></param>
+            <param name="_FileContent">The content of the mapping file.</param>
         </member>
-        <member name="M:OPS.Obfuscator.Editor.Project.PostAssemblyBuild.Renaming.RenameManager.SaveMapping(System.String)">
+        <member name="M:OPS.Obfuscator.Editor.Project.PostAssemblyBuild.Renaming.RenameManager.SaveMappingToFile(System.String)">
             <summary>
-            Save the current mapping.
+            Save the current mapping to a file.
             </summary>
-            <param name="_FilePath"></param>
+            <param name="_FilePath">The full or relative path to the mapping file.</param>
+        </member>
+        <member name="M:OPS.Obfuscator.Editor.Project.PostAssemblyBuild.Renaming.RenameManager.SaveMappingToUrl(System.String)">
+            <summary>
+            Save the current mapping to an url. The url must accept a post request with the mapping as json.
+            </summary>
+            <param name="_Url">The url to the mapping file.</param>
+            <exception cref="T:System.Exception">Throws an exception if the request was not successful.</exception>
+        </member>
+        <member name="M:OPS.Obfuscator.Editor.Project.PostAssemblyBuild.Renaming.RenameManager.SaveMappingToTempPath">
+            <summary>
+            Save the current mapping to the temp path.
+            </summary>
         </member>
         <member name="M:OPS.Obfuscator.Editor.Project.PostAssemblyBuild.Renaming.RenameManager.IsNameFree(OPS.Mono.Cecil.IMemberDefinition,OPS.Obfuscator.Editor.Assembly.Mono.Member.EMemberType,System.String)">
             <summary>
@@ -6842,12 +7407,50 @@
             A mapping of the original monobehaviour type to the obfuscated monobehaviour type.
             </summary>
         </member>
-        <member name="M:OPS.Obfuscator.Editor.Project.PostAssetsBuild.Pipeline.Component.MonoBehaviourAssetsComponent.OnPostAssetsBuild_Try_Override_Assets(System.String)">
+        <member name="P:OPS.Obfuscator.Editor.Project.PostAssetsBuild.Pipeline.Component.MonoBehaviourAssetsComponent.AssetsAreBundled">
             <summary>
-            Read an AssetsFile at _Path and override the MonoScripts with the obfuscated one.
+            If the game is compressed, the assets are bundled.
             </summary>
-            <param name="_Path"></param>
-            <returns></returns>
+        </member>
+        <member name="M:OPS.Obfuscator.Editor.Project.PostAssetsBuild.Pipeline.Component.MonoBehaviourAssetsComponent.GetBuildAssetsDirectory_Tmp">
+            <summary>
+            Returns the directory to the build assets in the tmp directory. This is the directory where the globalgamemanagers.assets or data.unity3d file is located.
+            </summary>
+            <returns>The directory to the build assets in the tmp directory.</returns>
+        </member>
+        <member name="M:OPS.Obfuscator.Editor.Project.PostAssetsBuild.Pipeline.Component.MonoBehaviourAssetsComponent.GetBuildAssetsDirectory_Cache">
+            <summary>
+            Returns the directory to the build assets in the library directory. This is the directory where the globalgamemanagers.assets or data.unity3d file is located.
+            </summary>
+            <returns>The directory to the build assets in the library directory.</returns>
+        </member>
+        <member name="M:OPS.Obfuscator.Editor.Project.PostAssetsBuild.Pipeline.Component.MonoBehaviourAssetsComponent.TryOverrideGlobalGameManagersAssets(System.String)">
+            <summary>
+            Tries to override the globalgamemanagers.assets file with the obfuscated MonoBehaviours.
+            </summary>
+            <param name="_Path">The path to the globalgamemanagers.assets file.</param>
+            <returns>True if successful; false otherwise.</returns>
+        </member>
+        <member name="M:OPS.Obfuscator.Editor.Project.PostAssetsBuild.Pipeline.Component.MonoBehaviourAssetsComponent.TryOverrideDataUnity3d(System.String)">
+            <summary>
+            Tries to override the data.unity3d file with the obfuscated MonoBehaviours.
+            </summary>
+            <param name="_Path">The path to the data.unity3d file.</param>
+            <returns>True if successful; false otherwise.</returns>
+        </member>
+        <member name="M:OPS.Obfuscator.Editor.Project.PostAssetsBuild.Pipeline.Component.MonoBehaviourAssetsComponent.OnPrePipelineProcess(OPS.Editor.Project.Step.IStepInput)">
+            <summary>
+            Preprocess the component using the passed step input.
+            Reads the monobehaviour obfuscation mapping from the step input.
+            </summary>
+            <param name="_StepInput">The step input to preprocess.</param>
+            <returns>True if the preprocessing was successful, otherwise false.</returns>
+        </member>
+        <member name="M:OPS.Obfuscator.Editor.Project.PostAssetsBuild.Pipeline.Component.MonoBehaviourAssetsComponent.OnPostAssetsBuild">
+            <summary>
+            Obfuscated the MonoBehaviours in the globalgamemanagers.assets or data.unity3d file.
+            </summary>
+            <returns>True if successful; false otherwise.</returns>
         </member>
         <member name="P:OPS.Obfuscator.Editor.Project.PostAssetsBuild.Pipeline.PostAssetsBuildPipeline.Step">
             <summary>
@@ -7053,39 +7656,74 @@
             A mapping of the original monobehaviour type to the obfuscated monobehaviour type.
             </summary>
         </member>
-        <member name="M:OPS.Obfuscator.Editor.Project.PostBuild.Pipeline.Component.MonoBehaviourAssetsComponent.OnPostBuild_Override_Assets(System.String)">
+        <member name="P:OPS.Obfuscator.Editor.Project.PostBuild.Pipeline.Component.MonoBehaviourAssetsComponent.AssetsAreBundled">
             <summary>
-            Read an AssetsFile at _Path and override the MonoScripts with the obfuscated one.
+            If the game is compressed, the assets are bundled.
             </summary>
-            <param name="_Path"></param>
         </member>
-        <member name="M:OPS.Obfuscator.Editor.Project.PostBuild.Pipeline.Component.MonoBehaviourAssetsComponent.OnPostBuild_GetPathToGlobalGameManagersAssetsStandalone(UnityEditor.Build.Reporting.BuildReport)">
+        <member name="M:OPS.Obfuscator.Editor.Project.PostBuild.Pipeline.Component.MonoBehaviourAssetsComponent.GetBuildAssetsDirectory">
             <summary>
-            Returns the globalgamemanagers.assets file path for _UnityBuildReport.
+            Returns the directory to the build assets. This is the directory where the globalgamemanagers.assets or data.unity3d file is located.
             </summary>
-            <param name="_UnityBuildReport"></param>
-            <returns></returns>
+            <returns>The directory to the build assets.</returns>
         </member>
-        <member name="M:OPS.Obfuscator.Editor.Project.PostBuild.Pipeline.Component.MonoBehaviourAssetsComponent.OnPostBuild_GetPathForMacStandalone(System.String)">
+        <member name="M:OPS.Obfuscator.Editor.Project.PostBuild.Pipeline.Component.MonoBehaviourAssetsComponent.GetBuildAssetsDirectory_Windows">
             <summary>
-            Returns the globalgamemanagers.assets file path if is mac build.
+            Returns the directory to the build assets for windows.
             </summary>
-            <param name="_OutputPath"></param>
-            <returns></returns>
+            <returns>The directory to the build assets for windows.</returns>
         </member>
-        <member name="M:OPS.Obfuscator.Editor.Project.PostBuild.Pipeline.Component.MonoBehaviourAssetsComponent.OnPostBuild_GetPathForWindowsAndLinuxStandalone(System.String)">
+        <member name="M:OPS.Obfuscator.Editor.Project.PostBuild.Pipeline.Component.MonoBehaviourAssetsComponent.GetBuildAssetsDirectory_Linux">
             <summary>
-            Returns the globalgamemanagers.assets file path if is windows or linux build.
+            Returns the directory to the build assets for linux.
             </summary>
-            <param name="_OutputPath"></param>
-            <returns></returns>
+            <returns>The directory to the build assets for linux.</returns>
         </member>
-        <member name="M:OPS.Obfuscator.Editor.Project.PostBuild.Pipeline.Component.MonoBehaviourAssetsComponent.OnPostBuild_GetPathForVisualStudioProjectWindowsAndLinuxStandalone(System.String)">
+        <member name="M:OPS.Obfuscator.Editor.Project.PostBuild.Pipeline.Component.MonoBehaviourAssetsComponent.GetBuildAssetsDirectory_MacOS">
             <summary>
-            Returns the globalgamemanagers.assets file path if is windows or linux visual studio build.
+            Returns the directory to the build assets for mac.
             </summary>
-            <param name="_OutputPath"></param>
-            <returns></returns>
+            <returns>The directory to the build assets for mac.</returns>
+        </member>
+        <member name="M:OPS.Obfuscator.Editor.Project.PostBuild.Pipeline.Component.MonoBehaviourAssetsComponent.GetGlobalGameManagersAssetsPath">
+            <summary>
+            Returns the path to the globalgamemanagers.assets file.
+            </summary>
+            <returns>The path to the globalgamemanagers.assets file.</returns>
+        </member>
+        <member name="M:OPS.Obfuscator.Editor.Project.PostBuild.Pipeline.Component.MonoBehaviourAssetsComponent.GetDataUnity3dPath">
+            <summary>
+            Returns the path to the data.unity3d file.
+            </summary>
+            <returns>The path to the data.unity3d file.</returns>
+        </member>
+        <member name="M:OPS.Obfuscator.Editor.Project.PostBuild.Pipeline.Component.MonoBehaviourAssetsComponent.TryOverrideGlobalGameManagersAssets(System.String)">
+            <summary>
+            Tries to override the globalgamemanagers.assets file with the obfuscated MonoBehaviours.
+            </summary>
+            <param name="_Path">The path to the globalgamemanagers.assets file.</param>
+            <returns>True if successful; false otherwise.</returns>
+        </member>
+        <member name="M:OPS.Obfuscator.Editor.Project.PostBuild.Pipeline.Component.MonoBehaviourAssetsComponent.TryOverrideDataUnity3d(System.String)">
+            <summary>
+            Tries to override the data.unity3d file with the obfuscated MonoBehaviours.
+            </summary>
+            <param name="_Path">The path to the data.unity3d file.</param>
+            <returns>True if successful; false otherwise.</returns>
+        </member>
+        <member name="M:OPS.Obfuscator.Editor.Project.PostBuild.Pipeline.Component.MonoBehaviourAssetsComponent.OnPrePipelineProcess(OPS.Editor.Project.Step.IStepInput)">
+            <summary>
+            Preprocess the component using the passed step input.
+            Reads the monobehaviour obfuscation mapping from the step input.
+            </summary>
+            <param name="_StepInput">The step input to preprocess.</param>
+            <returns>True if the preprocessing was successful, otherwise false.</returns>
+        </member>
+        <member name="M:OPS.Obfuscator.Editor.Project.PostBuild.Pipeline.Component.MonoBehaviourAssetsComponent.OnPostBuild">
+            <summary>
+            Obfuscated the MonoBehaviours in the globalgamemanagers.assets or data.unity3d file.
+            </summary>
+            <returns>True if successful; false otherwise.</returns>
         </member>
         <member name="P:OPS.Obfuscator.Editor.Project.PostBuild.Pipeline.PostBuildPipeline.Step">
             <summary>
@@ -7275,6 +7913,11 @@
             </summary>
             <returns></returns>
         </member>
+        <member name="T:OPS.Obfuscator.Editor.Project.PreBuild.Pipeline.Component.AnalyseAnimationComponent">
+            <summary>
+            Analyse model files, animation clips and controllers for animation methods and classes.
+            </summary>
+        </member>
         <member name="P:OPS.Obfuscator.Editor.Project.PreBuild.Pipeline.Component.AnalyseAnimationComponent.Name">
             <summary>
             Name of the component.
@@ -7330,12 +7973,64 @@
             Extensions of supported controller files.
             </summary>
         </member>
+        <member name="P:OPS.Obfuscator.Editor.Project.PreBuild.Pipeline.Component.AnalyseAnimationComponent.AssetExtensionsToProcess">
+            <summary>
+            Returns all asset extensions to process by this component.
+            </summary>
+        </member>
+        <member name="M:OPS.Obfuscator.Editor.Project.PreBuild.Pipeline.Component.AnalyseAnimationComponent.OnAnalyse_Assets(OPS.Obfuscator.Editor.Assets.Unity.UnityAssetReference)">
+            <summary>
+            Process the asset and search for animation methods.
+            </summary>
+            <param name="_UnityAssetReference">The asset reference to process.</param>
+            <returns>True if the asset was processed successfully; otherwise false.</returns>
+        </member>
+        <member name="M:OPS.Obfuscator.Editor.Project.PreBuild.Pipeline.Component.AnalyseAnimationComponent.OnAnalyse_Assets_ModelFile(OPS.Obfuscator.Editor.Assets.Unity.UnityAssetReference)">
+            <summary>
+            Analyse model files and search for animation methods.
+            </summary>
+            <param name="_UnityAssetReference">The asset reference to process.</param>
+            <returns>True if the asset was processed successfully; otherwise false.</returns>
+        </member>
+        <member name="M:OPS.Obfuscator.Editor.Project.PreBuild.Pipeline.Component.AnalyseAnimationComponent.OnAnalyse_Assets_AnimationClip(OPS.Obfuscator.Editor.Assets.Unity.UnityAssetReference)">
+            <summary>
+            Analyse animation clip files and search for animation methods.
+            </summary>
+            <param name="_UnityAssetReference">The asset reference to process.</param>
+            <returns>True if the asset was processed successfully; otherwise false.</returns>
+        </member>
         <member name="M:OPS.Obfuscator.Editor.Project.PreBuild.Pipeline.Component.AnalyseAnimationComponent.GetMethodsInAnimationClip(UnityEngine.AnimationClip)">
             <summary>
             Returns a duplicate free list of methods in _AnimationClip.
             </summary>
             <param name="_AnimationClip"></param>
             <returns></returns>
+        </member>
+        <member name="M:OPS.Obfuscator.Editor.Project.PreBuild.Pipeline.Component.AnalyseAnimationComponent.OnAnalyse_Assets_AnimationController(OPS.Obfuscator.Editor.Assets.Unity.UnityAssetReference)">
+            <summary>
+            Analyse animation controller files and search for StateMachineBehaviours.
+            </summary>
+            <param name="_UnityAssetReference">The asset reference to process.</param>
+            <returns>True if the asset was processed successfully; otherwise false.</returns>
+        </member>
+        <member name="M:OPS.Obfuscator.Editor.Project.PreBuild.Pipeline.Component.AnalyseAnimationComponent.OnProcess_Assets(OPS.Obfuscator.Editor.Assets.Unity.UnityAssetReference)">
+            <summary>
+            Does nothing.
+            </summary>
+            <param name="_UnityAssetReference">The asset reference to process.</param>
+            <returns>True if the asset was processed successfully; otherwise false.</returns>
+        </member>
+        <member name="M:OPS.Obfuscator.Editor.Project.PreBuild.Pipeline.Component.AnalyseAnimationComponent.OnPostPipelineProcess(OPS.Editor.Project.Step.IStepOutput)">
+            <summary>
+            After the pipeline process, add the found animation methods and the found animator classes to the datacontainer.
+            </summary>
+            <param name="_StepOutput"></param>
+            <returns></returns>
+        </member>
+        <member name="T:OPS.Obfuscator.Editor.Project.PreBuild.Pipeline.Component.IAssetProcessingComponent">
+            <summary>
+            A interface for a component, which processes assets.
+            </summary>
         </member>
         <member name="P:OPS.Obfuscator.Editor.Project.PreBuild.Pipeline.Component.IAssetProcessingComponent.AssetExtensionsToProcess">
             <summary>
@@ -7357,6 +8052,16 @@
         <member name="T:OPS.Obfuscator.Editor.Project.PreBuild.Pipeline.Component.IComponentProcessingComponent">
             <summary>
             Analyse or manipulate a Unity Component pre build.
+            </summary>
+        </member>
+        <member name="P:OPS.Obfuscator.Editor.Project.PreBuild.Pipeline.Component.IComponentProcessingComponent.ProcessScenes">
+            <summary>
+            Get if the component should process scenes.
+            </summary>
+        </member>
+        <member name="P:OPS.Obfuscator.Editor.Project.PreBuild.Pipeline.Component.IComponentProcessingComponent.ProcessPrefabs">
+            <summary>
+            Get if the component should process prefabs.
             </summary>
         </member>
         <member name="M:OPS.Obfuscator.Editor.Project.PreBuild.Pipeline.Component.IComponentProcessingComponent.OnAnalyse_Component(UnityEngine.Component)">
@@ -7384,6 +8089,16 @@
         <member name="P:OPS.Obfuscator.Editor.Project.PreBuild.Pipeline.Component.AnalyseMonoScriptComponent.ShortDescription">
             <summary>
             Short description, descriping short what this component does.
+            </summary>
+        </member>
+        <member name="P:OPS.Obfuscator.Editor.Project.PreBuild.Pipeline.Component.AnalyseMonoScriptComponent.ProcessScenes">
+            <summary>
+            The component is not required at the moment, so it does not need to process scenes.
+            </summary>
+        </member>
+        <member name="P:OPS.Obfuscator.Editor.Project.PreBuild.Pipeline.Component.AnalyseMonoScriptComponent.ProcessPrefabs">
+            <summary>
+            The component is not required at the moment, so it does not need to process prefabs.
             </summary>
         </member>
         <member name="F:OPS.Obfuscator.Editor.Project.PreBuild.Pipeline.Component.AnalyseMonoScriptComponent.CReferencedMonoScriptTypeListKey">
@@ -7426,6 +8141,16 @@
             Does nothing.
             </summary>
             <returns></returns>
+        </member>
+        <member name="P:OPS.Obfuscator.Editor.Project.PreBuild.Pipeline.Component.AnalyseUnityEventComponent.ProcessScenes">
+            <summary>
+            Process scenes for Unity Events if enabled. Default is true.
+            </summary>
+        </member>
+        <member name="P:OPS.Obfuscator.Editor.Project.PreBuild.Pipeline.Component.AnalyseUnityEventComponent.ProcessPrefabs">
+            <summary>
+            Process prefabs for Unity Events if enabled. Default is true.
+            </summary>
         </member>
         <member name="F:OPS.Obfuscator.Editor.Project.PreBuild.Pipeline.Component.AnalyseUnityEventComponent.CReferencedEventMethodHashSet">
             <summary>
@@ -7531,6 +8256,37 @@
             </summary>
             <returns></returns>
         </member>
+        <member name="M:OPS.Obfuscator.Editor.Project.PreBuild.Pipeline.PreBuildPipeline.Process_Assets_Analyse">
+            <summary>
+            The second step of the pipeline is to analyse all assets from the asset cache.
+            </summary>
+            <returns>True if successful, otherwise false.</returns>
+        </member>
+        <member name="M:OPS.Obfuscator.Editor.Project.PreBuild.Pipeline.PreBuildPipeline.Process_Assets_Process">
+            <summary>
+            The third step of the pipeline is to process all assets from the asset cache. Processing means to edit the assets if required for the obfuscation.
+            </summary>
+            <returns>True if successful, otherwise false.</returns>
+        </member>
+        <member name="M:OPS.Obfuscator.Editor.Project.PreBuild.Pipeline.PreBuildPipeline.Process_Component_Analyse_And_Manipulate(System.Collections.Generic.List{UnityEngine.Component})">
+            <summary>
+            Analyse and manipulate all passed components.
+            </summary>
+            <param name="_ComponentList">The list of components to analyse and manipulate.</param>
+            <returns>True if successful, otherwise false.</returns>
+        </member>
+        <member name="M:OPS.Obfuscator.Editor.Project.PreBuild.Pipeline.PreBuildPipeline.Process_Component_IterateBuildSceneComponents">
+            <summary>
+            The fourth step of the pipeline is to iterate all components in the scenes included in the build settings and analyses and edits them, if the obfuscation requires it.
+            </summary>
+            <returns>True if successful, otherwise false.</returns>
+        </member>
+        <member name="M:OPS.Obfuscator.Editor.Project.PreBuild.Pipeline.PreBuildPipeline.Process_Component_IteratePrefabComponents">
+            <summary>
+            The fifth step of the pipeline is to iterate all components in the prefabs in the project and analyses and edits them, if the obfuscation requires it.
+            </summary>
+            <returns>True if successful, otherwise false.</returns>
+        </member>
         <member name="M:OPS.Obfuscator.Editor.Project.PreBuild.Pipeline.PreBuildPipeline.Helper_Scene_GetLoadedScenes">
             <summary>
             Get all scenes currently open in the editor.
@@ -7545,21 +8301,14 @@
             <summary>
             Load multiple scenes in the editor.
             </summary>
-            <param name="_Scenes"></param>
+            <param name="_Scenes">The scenes to load.</param>
         </member>
         <member name="M:OPS.Obfuscator.Editor.Project.PreBuild.Pipeline.PreBuildPipeline.Helper_Scene_GetAllComponentsInScene(UnityEngine.SceneManagement.Scene)">
             <summary>
             Returns a list of all components in _Scene.
             </summary>
-            <param name="_Scene"></param>
-            <returns></returns>
-        </member>
-        <member name="M:OPS.Obfuscator.Editor.Project.PreBuild.Pipeline.PreBuildPipeline.Helper_Prefab_GetAllComponentsInPrefabs(OPS.Obfuscator.Editor.Assets.Unity.Cache.UnityAssetCache)">
-            <summary>
-            Return a list of all components in the prefabs references through _UnityAssetCache.
-            </summary>
-            <param name="_UnityAssetCache"></param>
-            <returns></returns>
+            <param name="_Scene">The scene to get the components from.</param>
+            <returns>A list of all components in _Scene.</returns>
         </member>
         <member name="T:OPS.Obfuscator.Editor.Project.PreBuild.PreBuildInput">
             <summary>
@@ -7745,21 +8494,6 @@
             Helper class for Unity SerializedProperties.
             </summary>
         </member>
-        <member name="T:OPS.Obfuscator.Editor.Serialization.Unity.Helper.SerializedPropertyHelper.CacheItem">
-            <summary>
-            Type and Path cache.
-            </summary>
-        </member>
-        <member name="T:OPS.Obfuscator.Editor.Serialization.Unity.Helper.SerializedPropertyHelper.FieldInfoCache">
-            <summary>
-            Matches 
-            </summary>
-        </member>
-        <member name="F:OPS.Obfuscator.Editor.Serialization.Unity.Helper.SerializedPropertyHelper.fieldInfoFromPropertyPathCache">
-            <summary>
-            Matches Type and PropertyPath to FieldInfo and FielType.
-            </summary>
-        </member>
         <member name="M:OPS.Obfuscator.Editor.Serialization.Unity.Helper.SerializedPropertyHelper.GetAllMonoScriptReferences(UnityEngine.Object)">
             <summary>
             Returns all MonoScript references in _Object without duplicates.
@@ -7773,38 +8507,6 @@
             Returns found MonoScripts.
             </summary>
             <param name="_Object"></param>
-            <returns></returns>
-        </member>
-        <member name="M:OPS.Obfuscator.Editor.Serialization.Unity.Helper.SerializedPropertyHelper.OLD_SearchVariablesWithSerializedObject(UnityEngine.Object)">
-            <summary>
-            Search through variables of an object with SerializedObject.
-            Returns found MonoScripts.
-            </summary>
-            <param name="_Object"></param>
-            <returns></returns>
-        </member>
-        <member name="M:OPS.Obfuscator.Editor.Serialization.Unity.Helper.SerializedPropertyHelper.GetFieldInfoAndStaticTypeFromProperty(UnityEditor.SerializedProperty,System.Type@)">
-            <summary>
-            Get the FieldInfo and _FieldType for _Property.
-            </summary>
-            <param name="_Property"></param>
-            <param name="_FieldType"></param>
-            <returns></returns>
-        </member>
-        <member name="M:OPS.Obfuscator.Editor.Serialization.Unity.Helper.SerializedPropertyHelper.GetScriptTypeFromProperty(UnityEditor.SerializedProperty)">
-            <summary>
-            Returns the script type the _Property belongs too.
-            </summary>
-            <param name="_Property"></param>
-            <returns></returns>
-        </member>
-        <member name="M:OPS.Obfuscator.Editor.Serialization.Unity.Helper.SerializedPropertyHelper.GetFieldInfoFromPropertyPath(System.Type,System.String,System.Type@)">
-            <summary>
-            Returns the FieldInfo and _FieldType of _Host at _PropertyPath.
-            </summary>
-            <param name="_Host"></param>
-            <param name="_PropertyPath"></param>
-            <param name="_FieldType"></param>
             <returns></returns>
         </member>
         <member name="P:OPS.Obfuscator.Editor.Settings.ObfuscatorSettings.Version">
@@ -7879,7 +8581,17 @@
         </member>
         <member name="P:OPS.Obfuscator.Editor.Settings.Unity.Build.BuildSettings.IsStandaloneBuildTarget">
             <summary>
-            Returns if is a standalone build target.
+            Returns if is a standalone build target (Windows, Linux, OSX).
+            </summary>
+        </member>
+        <member name="P:OPS.Obfuscator.Editor.Settings.Unity.Build.BuildSettings.IsMobileBuildTarget">
+            <summary>
+            Returns if is a mobile build target (Android, iOS).
+            </summary>
+        </member>
+        <member name="P:OPS.Obfuscator.Editor.Settings.Unity.Build.BuildSettings.IsIOSBuildTarget">
+            <summary>
+            Returns if is an iOS build target.
             </summary>
         </member>
         <member name="P:OPS.Obfuscator.Editor.Settings.Unity.Build.BuildSettings.BuildPlatform">

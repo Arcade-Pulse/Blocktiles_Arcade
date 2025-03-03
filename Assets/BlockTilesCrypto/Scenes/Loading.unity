@@ -652,6 +652,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 59fb1f1b9889b2244a30eae39d2f0de4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isBannerLoaded: 0
+  isInterLoaded: 0
+  isRewardedLoaded: 0
 --- !u!4 &574154676
 Transform:
   m_ObjectHideFlags: 0
@@ -736,7 +739,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &895537901
 Transform:
   m_ObjectHideFlags: 0
@@ -776,8 +779,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3660a7bdad08a0e4aba3127fb0f7ba63, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isAdLoaded: 0
-  adRewarded: 0
 --- !u!114 &895537904
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -790,8 +791,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 08c5a556a1ce31f458b26af2397e8410, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isAdLoaded: 0
-  inGameRequest: 0
 --- !u!114 &895537905
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -804,7 +803,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6dbdc0f1e2734394cae5f7f20638e684, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isAdLoaded: 0
 --- !u!114 &895537906
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -817,7 +815,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 76f950fef2beaa04dbbf9135d5d6fa53, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  collapsible: 0
 --- !u!114 &895537907
 MonoBehaviour:
   m_ObjectHideFlags: 0

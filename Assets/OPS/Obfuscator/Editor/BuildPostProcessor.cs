@@ -37,7 +37,7 @@ namespace OPS.Obfuscator
             var_BuildSettings.BuildTargetGroup = UnityEditor.EditorUserBuildSettings.selectedBuildTargetGroup;
             var_BuildSettings.UnityBuildReport = _Report;
             var_BuildSettings.IsIL2CPPBuild = PlayerSettings.GetScriptingBackend(UnityEditor.EditorUserBuildSettings.selectedBuildTargetGroup) == ScriptingImplementation.IL2CPP;
-            var_BuildSettings.IsCompressed = !typeof(UnityEditor.EditorUserBuildSettings).GetMethod("GetCompressionType", System.Reflection.BindingFlags.NonPublic | System.Reflection.BindingFlags.Static).Invoke(null, new object[] { UnityEditor.EditorUserBuildSettings.selectedBuildTargetGroup }).ToString().Equals("None");
+            var_BuildSettings.Compression = (OPS.Editor.Settings.Unity.Build.CompressionType) typeof(UnityEditor.EditorUserBuildSettings).GetMethod("GetCompressionType", System.Reflection.BindingFlags.NonPublic | System.Reflection.BindingFlags.Static).Invoke(null, new object[] { UnityEditor.EditorUserBuildSettings.selectedBuildTargetGroup });
             var_BuildSettings.BuildIntoProject = (UnityEditor.EditorUserBuildSettings.activeBuildTarget == BuildTarget.StandaloneOSX && UnityEditor.EditorUserBuildSettings.GetPlatformSettings("OSXUniversal", "CreateXcodeProject").Equals("true"))
                 || (UnityEditor.EditorUserBuildSettings.activeBuildTarget == BuildTarget.StandaloneWindows && UnityEditor.EditorUserBuildSettings.GetPlatformSettings("Standalone", "CreateSolution").Equals("true"))
                 || (UnityEditor.EditorUserBuildSettings.activeBuildTarget == BuildTarget.StandaloneWindows64 && UnityEditor.EditorUserBuildSettings.GetPlatformSettings("Standalone", "CreateSolution").Equals("true"))

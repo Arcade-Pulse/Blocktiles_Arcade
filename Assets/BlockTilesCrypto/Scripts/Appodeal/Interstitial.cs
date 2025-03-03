@@ -1,108 +1,134 @@
-// using System;
 // using System.Collections;
 // using System.Collections.Generic;
 // using AppodealAds.Unity.Api;
 // using AppodealAds.Unity.Common;
+// using Firebase.Analytics;
 // using UnityEngine;
 //
-// public class Interstitial : MonoBehaviour,IInterstitialAdListener
+// public class Interstitial : MonoBehaviour, IInterstitialAdListener, IAdRevenueListener
 // {
 //     public static Interstitial Instance { get; private set; }
-//
-//
+//     private float lastInterstitialTime = 0f;  // Tracks last interstitial time
+//     private const float interstitialCooldown = 90f; // 90 seconds cooldown
 //     public bool isAdLoaded;
-//     public void ShowAd()
-//     {          
-//         if(Appodeal.isLoaded(Appodeal.INTERSTITIAL)) {
-//             Appodeal.show(Appodeal.INTERSTITIAL);
-//         }
-//         else
-//         {
-//             LoadInterstitialAd();
-//         }
-//     }
-//
-//     private void OnEnable()
-//     {
-//         Appodeal.setInterstitialCallbacks(this);
-//
-//     }
 //
 //     private void Awake()
 //     {
-//         // If there is an instance, and it's not me, delete myself.
-//
 //         if (Instance != null && Instance != this)
 //         {
 //             Destroy(this);
+//             return;
+//         }
+//
+//         Instance = this;
+//         DontDestroyOnLoad(this);
+//
+//         // Register ad callbacks (Only once)
+//         Appodeal.setInterstitialCallbacks(this);
+//         Appodeal.setAdRevenueCallback(this);
+//
+//         // Preload the first ad
+//         LoadInterstitialAd();
+//     }
+//
+//     public void ShowAd()
+//     {          
+//         if (Time.time - lastInterstitialTime < interstitialCooldown)
+//         {
+//             Debug.Log("Interstitial cooldown is active, skipping ad request.");
+//             return;
+//         }
+//
+//         if (Appodeal.isLoaded(Appodeal.INTERSTITIAL)) 
+//         {
+//             Appodeal.show(Appodeal.INTERSTITIAL);
+//             lastInterstitialTime = Time.time; // Update cooldown time
 //         }
 //         else
 //         {
-//             Instance = this;
+//             Debug.Log("Interstitial not loaded. Caching now...");
+//             LoadInterstitialAd();
 //         }
-//
-//         DontDestroyOnLoad(this);
-//
-//
 //     }
 //
 //     public void LoadInterstitialAd()
 //     {
 //         if (!Appodeal.isLoaded(Appodeal.INTERSTITIAL))
 //         {
-//             // Ad is not loaded, so we need to load it
 //             Appodeal.cache(Appodeal.INTERSTITIAL);
-//             Debug.Log("Interstitial Ad is being loaded.");
+//             Debug.Log("🔄 Interstitial Ad is being loaded.");
 //         }
 //         else
 //         {
-//             // Ad is already loaded
-//             Debug.Log("Interstitial Ad is already loaded.");
+//             Debug.Log("✅ Interstitial Ad is already loaded.");
 //         }
 //     }
 //     
 //     #region Interstitial callback handlers
 //
-// // Called when interstitial was loaded (precache flag shows if the loaded ad is precache)
 //     public void onInterstitialLoaded(bool isPrecache)
 //     {
-//         Debug.Log("Interstitial loaded");
+//         Debug.Log("✅ Interstitial loaded.");
+//         isAdLoaded = true;
 //     }
 //
-// // Called when interstitial failed to load
 //     public void onInterstitialFailedToLoad()
 //     {
-//         Debug.Log("Interstitial failed to load");
+//         Debug.Log("❌ Interstitial failed to load.");
+//         isAdLoaded = false;
+//         StartCoroutine(RetryLoadInterstitial()); // Retry after delay
 //     }
 //
-// // Called when interstitial was loaded, but cannot be shown (internal network errors, placement settings, etc.)
 //     public void onInterstitialShowFailed()
 //     {
-//         Debug.Log("Interstitial show failed");
+//         Debug.Log("❌ Interstitial show failed.");
 //     }
 //
-// // Called when interstitial is shown
 //     public void onInterstitialShown()
 //     {
-//         Debug.Log("Interstitial shown");
+//         Debug.Log("▶️ Interstitial shown.");
+//         isAdLoaded = false;
 //     }
 //
-// // Called when interstitial is closed
 //     public void onInterstitialClosed()
 //     {
-//         Debug.Log("Interstitial closed");
+//         Debug.Log("🔙 Interstitial closed. Preloading next ad.");
+//         LoadInterstitialAd(); // Load next ad after closing
 //     }
 //
-// // Called when interstitial is clicked
 //     public void onInterstitialClicked()
 //     {
-//         Debug.Log("Interstitial clicked");
+//         Debug.Log("🖱️ Interstitial clicked.");
 //     }
 //
-// // Called when interstitial is expired and can not be shown
 //     public void onInterstitialExpired()
 //     {
-//         Debug.Log("Interstitial expired");
+//         Debug.Log("⏳ Interstitial expired, reloading...");
+//         isAdLoaded = false;
+//         LoadInterstitialAd();
+//     }
+//
+//     public void onAdRevenueReceived(AppodealAdRevenue adRevenue)
+//     {
+//         Debug.Log($"💰 Ad Revenue Received: {adRevenue.Revenue} {adRevenue.Currency}");
+//
+//         FirebaseAnalytics.LogEvent("custom_ad_impression", new Parameter[]
+//         {
+//             new Parameter("ad_platform", "Appodeal"),
+//             new Parameter("ad_source", adRevenue.NetworkName),
+//             new Parameter("ad_format", adRevenue.AdUnitName),
+//             new Parameter("ad_placement", adRevenue.Placement),
+//             new Parameter("ad_revenue", adRevenue.Revenue),
+//             new Parameter("currency", adRevenue.Currency),
+//             new Parameter("precision", adRevenue.RevenuePrecision) 
+//         });
+//     }
+//
+//     IEnumerator RetryLoadInterstitial()
+//     {
+//         Debug.Log("⏳ Retrying interstitial load in 15 seconds...");
+//         yield return new WaitForSeconds(15);
+//         LoadInterstitialAd();
 //     }
 //
 //     #endregion

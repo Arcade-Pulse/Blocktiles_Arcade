@@ -17,18 +17,22 @@ public class CoinsChecker : MonoBehaviour
     public TextMeshProUGUI coinsValue;
 
     public TextMeshProUGUI textMessage;
+
+    public TextMeshProUGUI buttonText;
     // Start is called before the first frame update
     void OnEnable()
     {
         if (PlayfabDataManager.Instance.GetGameSocCoins()>=subtractedAmount)
         {
             claimButton.interactable = true;
-            textMessage.text = "Press Claim button to get reward!";
+            textMessage.text = "Exchange 20K coins for 3 lives?";
+            buttonText.text = "YES";
         }
         else
         {
             claimButton.interactable = false;
             textMessage.text = "Please collect 20000 coins to get reward";
+            buttonText.text = "CLAIM REWARD";
 
         }
     }
@@ -68,7 +72,7 @@ public class CoinsChecker : MonoBehaviour
             },
             GeneratePlayStreamEvent = true
         };
-
+        
         PlayFabClientAPI.ExecuteCloudScript(request, OnCloudScriptSuccess, OnError);
     }
 

@@ -49,15 +49,18 @@ public class MainMenuManager : MonoBehaviour
             PlayfabDataManager.Instance.timesEnteredWithNoLives++;
 
             // Get the maximum number of times a player can enter with no lives
-            int maxEnters = FirebaseSettings.Instance.numberItCanEnterWithNoLives;
+            int maxEnters = 2;
 
             // If the player has exceeded the allowed number of entries with no lives
             if (PlayfabDataManager.Instance.timesEnteredWithNoLives > maxEnters)
             {
                 // Show an error message prompting the player to get more lives
-                MessageManager.OnErrorShowMessage?.Invoke("You have 0 lives, please press the 'Get Lives' button");
-
-                // Re-enable the button so the player can press it again
+              //  MessageManager.OnErrorShowMessage?.Invoke("You have 0 lives, please press the 'Get Lives' button");
+               //RewardedInterstitialAdController.Instance.ShowAd();
+               //Rewarded.Instance.ShowAd();
+               AdLevelPlay.Instance.ShowRewarded();
+               SceneManager.LoadSceneAsync("GameScene");
+               // Re-enable the button so the player can press it again
                 SetButtonInteractable(true);
 
                 // Exit the function to prevent loading the game scene
@@ -67,25 +70,34 @@ public class MainMenuManager : MonoBehaviour
             // Optionally, show an ad when the player has no lives left (commented out in your original code)
             // ShowAdIfLoaded();
 
-            if (InterstitialAdController.Instance.isAdLoaded)
+            // if (Interstitial.Instance.isAdLoaded)
+            // {
+            //     Interstitial.Instance.ShowAd();
+            // }
+            // else
+            // {
+            //     //InterstitialAdController.Instance.LoadAd();
+            //     if (Rewarded.Instance.isAdLoaded)
+            //     {
+            //         Rewarded.Instance.ShowAd();
+            //     }
+            // }
+
+            if (AdLevelPlay.Instance.isInterLoaded)
             {
-                InterstitialAdController.Instance.ShowAd();
+                AdLevelPlay.Instance.ShowInterstitial();
             }
             else
             {
-                InterstitialAdController.Instance.LoadAd();
-                if (RewardedInterstitialAdController.Instance.isAdLoaded)
-                {
-                    RewardedInterstitialAdController.Instance.ShowAd();
-                }
+                AdLevelPlay.Instance.ShowRewarded();
             }
 
   
 
-            if (!BannerViewController.Instance.isBannerLoaded)
-            {
-                BannerViewController.Instance.LoadAd();
-            }
+            // if (!Banner.Instance.isBannerLoaded)
+            // {
+            //     AdLevelPlay.Instance.ShowBannerAd();
+            // }
 
      
             // Load the game scene even if the player has no lives left
@@ -98,16 +110,10 @@ public class MainMenuManager : MonoBehaviour
         // If the player has lives, subtract one life
         VirtualCurrency.Instance.SubtractLife(1);
 
-        if (InterstitialAdController.Instance.isAdLoaded)
-        {
-            InterstitialAdController.Instance.ShowAd();
-
-        }
-        else
-        {
-            RewardedInterstitialAdController.Instance.ShowAd();
-            InterstitialAdController.Instance.LoadAd();
-        }
+     
+        AdLevelPlay.Instance.ShowInterstitial();
+        //Interstitial.Instance.ShowAd();
+            
 
         // Load the game scene
         SceneManager.LoadSceneAsync("GameScene");
