@@ -205,5 +205,6 @@ public class PlayIntegrityManager : MonoBehaviour
         // **Disconnect player and return to main menu or login screen**
         PlayFabClientAPI.ForgetAllCredentials();
         Application.Quit();
+        
     }
 }

@@ -35,7 +35,551 @@
 [Debug][OPS.OBF][OnAnalyse_Assets] Found methods in model file at path 'Packages/com.unity.2d.psdimporter/Editor/Assets/pivot.fbx' (0):
 
 [Info][OPS.OBF][OnProcess_Assets] Process component Analyse Unity Animation Methods
-[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Iterate components in loaded build scene 'Assets/BlockTilesCrypto/Scenes/MainMenuScene.unity'.
+[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Iterate components in loaded build scene 'Assets/BlockTilesCrypto/Scenes/Loading.unity'.
+[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Found 12 Root GameObjects in Scene Assets/BlockTilesCrypto/Scenes/Loading.unity
+[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Found 229 Components in Scene Assets/BlockTilesCrypto/Scenes/Loading.unity
+[Info][OPS.OBF][OnAnalyse_Component_Scenes] Process component Analyse Unity Event Component
+[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'DebugManager' of type 'UnityEngine.Transform'.
+[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'DebugManager' of type 'DebugManager'.
+[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'DevelopmentManager' of type 'UnityEngine.Transform'.
+[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'GoogleMobileAdsController' of type 'UnityEngine.Transform'.
+[Warning][OPS.OBF][OnAnalyse_Component_Scenes] Failed to process current iterated Component at index 4 with Exception: System.NullReferenceException: Object reference not set to an instance of an object
+  at OPS.Obfuscator.Editor.Project.PreBuild.Pipeline.Component.AnalyseUnityEventComponent.OnAnalyse_Component (UnityEngine.Component _Component) [0x00005] in <12eb0d1e9ae24aa2b48f4643b196b2e9>:0 
+  at OPS.Obfuscator.Editor.Project.PreBuild.Pipeline.PreBuildPipeline.Process_Component_Analyse_And_Manipulate (System.Collections.Generic.List`1[T] _ComponentList) [0x00086] in <12eb0d1e9ae24aa2b48f4643b196b2e9>:0 
+[Warning][OPS.OBF][OnAnalyse_Component_Scenes] Failed to process current iterated Component at index 5 with Exception: System.NullReferenceException: Object reference not set to an instance of an object
+  at OPS.Obfuscator.Editor.Project.PreBuild.Pipeline.Component.AnalyseUnityEventComponent.OnAnalyse_Component (UnityEngine.Component _Component) [0x00005] in <12eb0d1e9ae24aa2b48f4643b196b2e9>:0 
+  at OPS.Obfuscator.Editor.Project.PreBuild.Pipeline.PreBuildPipeline.Process_Component_Analyse_And_Manipulate (System.Collections.Generic.List`1[T] _ComponentList) [0x00086] in <12eb0d1e9ae24aa2b48f4643b196b2e9>:0 
+[Warning][OPS.OBF][OnAnalyse_Component_Scenes] Failed to process current iterated Component at index 6 with Exception: System.NullReferenceException: Object reference not set to an instance of an object
+  at OPS.Obfuscator.Editor.Project.PreBuild.Pipeline.Component.AnalyseUnityEventComponent.OnAnalyse_Component (UnityEngine.Component _Component) [0x00005] in <12eb0d1e9ae24aa2b48f4643b196b2e9>:0 
+  at OPS.Obfuscator.Editor.Project.PreBuild.Pipeline.PreBuildPipeline.Process_Component_Analyse_And_Manipulate (System.Collections.Generic.List`1[T] _ComponentList) [0x00086] in <12eb0d1e9ae24aa2b48f4643b196b2e9>:0 
+[Warning][OPS.OBF][OnAnalyse_Component_Scenes] Failed to process current iterated Component at index 7 with Exception: System.NullReferenceException: Object reference not set to an instance of an object
+  at OPS.Obfuscator.Editor.Project.PreBuild.Pipeline.Component.AnalyseUnityEventComponent.OnAnalyse_Component (UnityEngine.Component _Component) [0x00005] in <12eb0d1e9ae24aa2b48f4643b196b2e9>:0 
+  at OPS.Obfuscator.Editor.Project.PreBuild.Pipeline.PreBuildPipeline.Process_Component_Analyse_And_Manipulate (System.Collections.Generic.List`1[T] _ComponentList) [0x00086] in <12eb0d1e9ae24aa2b48f4643b196b2e9>:0 
+[Warning][OPS.OBF][OnAnalyse_Component_Scenes] Failed to process current iterated Component at index 8 with Exception: System.NullReferenceException: Object reference not set to an instance of an object
+  at OPS.Obfuscator.Editor.Project.PreBuild.Pipeline.Component.AnalyseUnityEventComponent.OnAnalyse_Component (UnityEngine.Component _Component) [0x00005] in <12eb0d1e9ae24aa2b48f4643b196b2e9>:0 
+  at OPS.Obfuscator.Editor.Project.PreBuild.Pipeline.PreBuildPipeline.Process_Component_Analyse_And_Manipulate (System.Collections.Generic.List`1[T] _ComponentList) [0x00086] in <12eb0d1e9ae24aa2b48f4643b196b2e9>:0 
+[Warning][OPS.OBF][OnAnalyse_Component_Scenes] Failed to process current iterated Component at index 9 with Exception: System.NullReferenceException: Object reference not set to an instance of an object
+  at OPS.Obfuscator.Editor.Project.PreBuild.Pipeline.Component.AnalyseUnityEventComponent.OnAnalyse_Component (UnityEngine.Component _Component) [0x00005] in <12eb0d1e9ae24aa2b48f4643b196b2e9>:0 
+  at OPS.Obfuscator.Editor.Project.PreBuild.Pipeline.PreBuildPipeline.Process_Component_Analyse_And_Manipulate (System.Collections.Generic.List`1[T] _ComponentList) [0x00086] in <12eb0d1e9ae24aa2b48f4643b196b2e9>:0 
+[Warning][OPS.OBF][OnAnalyse_Component_Scenes] Failed to process current iterated Component at index 10 with Exception: System.NullReferenceException: Object reference not set to an instance of an object
+  at OPS.Obfuscator.Editor.Project.PreBuild.Pipeline.Component.AnalyseUnityEventComponent.OnAnalyse_Component (UnityEngine.Component _Component) [0x00005] in <12eb0d1e9ae24aa2b48f4643b196b2e9>:0 
+  at OPS.Obfuscator.Editor.Project.PreBuild.Pipeline.PreBuildPipeline.Process_Component_Analyse_And_Manipulate (System.Collections.Generic.List`1[T] _ComponentList) [0x00086] in <12eb0d1e9ae24aa2b48f4643b196b2e9>:0 
+[Warning][OPS.OBF][OnAnalyse_Component_Scenes] Failed to process current iterated Component at index 11 with Exception: System.NullReferenceException: Object reference not set to an instance of an object
+  at OPS.Obfuscator.Editor.Project.PreBuild.Pipeline.Component.AnalyseUnityEventComponent.OnAnalyse_Component (UnityEngine.Component _Component) [0x00005] in <12eb0d1e9ae24aa2b48f4643b196b2e9>:0 
+  at OPS.Obfuscator.Editor.Project.PreBuild.Pipeline.PreBuildPipeline.Process_Component_Analyse_And_Manipulate (System.Collections.Generic.List`1[T] _ComponentList) [0x00086] in <12eb0d1e9ae24aa2b48f4643b196b2e9>:0 
+[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'SceneManager' of type 'UnityEngine.Transform'.
+[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'AppUpdateManager' of type 'UnityEngine.Transform'.
+[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'AppUpdateManager' of type 'InAppUpdateManager'.
+[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'Canvas' of type 'UnityEngine.RectTransform'.
+[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'Canvas' of type 'UnityEngine.Canvas'.
+[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'Canvas' of type 'UnityEngine.UI.CanvasScaler'.
+[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'Canvas' of type 'UnityEngine.UI.GraphicRaycaster'.
+[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'BG' of type 'UnityEngine.RectTransform'.
+[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'BG' of type 'UnityEngine.CanvasRenderer'.
+[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'BG' of type 'UnityEngine.UI.Image'.
+[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'Logo' of type 'UnityEngine.RectTransform'.
+[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'Logo' of type 'UnityEngine.CanvasRenderer'.
+[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'Logo' of type 'UnityEngine.UI.Image'.
+[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'Loading' of type 'UnityEngine.RectTransform'.
+[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'Loading' of type 'UnityEngine.CanvasRenderer'.
+[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'Loading' of type 'UnityEngine.UI.Image'.
+[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'Process1' of type 'UnityEngine.RectTransform'.
+[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'Process1' of type 'UnityEngine.CanvasRenderer'.
+[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'Process1' of type 'UnityEngine.UI.Image'.
+[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'Process2' of type 'UnityEngine.RectTransform'.
+[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'Process2' of type 'UnityEngine.CanvasRenderer'.
+[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'Process2' of type 'UnityEngine.UI.Image'.
+[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'UpdatePanel' of type 'UnityEngine.RectTransform'.
+[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'Background' of type 'UnityEngine.RectTransform'.
+[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'Background' of type 'UnityEngine.CanvasRenderer'.
+[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'Background' of type 'UnityEngine.UI.Image'.
+[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'Background (1)' of type 'UnityEngine.RectTransform'.
+[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'Background (1)' of type 'UnityEngine.CanvasRenderer'.
+[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'Background (1)' of type 'UnityEngine.UI.Image'.
+[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'Text (TMP)' of type 'UnityEngine.RectTransform'.
+[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'Text (TMP)' of type 'UnityEngine.CanvasRenderer'.
+[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'Text (TMP)' of type 'TMPro.TextMeshProUGUI'.
+[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'Text (TMP) (1)' of type 'UnityEngine.RectTransform'.
+[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'Text (TMP) (1)' of type 'UnityEngine.CanvasRenderer'.
+[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'Text (TMP) (1)' of type 'TMPro.TextMeshProUGUI'.
+[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'UpdateButton' of type 'UnityEngine.RectTransform'.
+[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'UpdateButton' of type 'UnityEngine.CanvasRenderer'.
+[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'UpdateButton' of type 'UnityEngine.UI.Image'.
+[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'UpdateButton' of type 'UnityEngine.UI.Button'.
+[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'EventSystem' of type 'UnityEngine.Transform'.
+[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'EventSystem' of type 'UnityEngine.EventSystems.EventSystem'.
+[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'EventSystem' of type 'ClickSystem'.
+[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'EventSystem' of type 'UnityEngine.EventSystems.StandaloneInputModule'.
+[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'Firebase' of type 'UnityEngine.Transform'.
+[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'Firebase' of type 'FirebaseSettings'.
+[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'IngameDebugConsole' of type 'UnityEngine.RectTransform'.
+[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'IngameDebugConsole' of type 'UnityEngine.Canvas'.
+[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'IngameDebugConsole' of type 'UnityEngine.UI.CanvasScaler'.
+[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'IngameDebugConsole' of type 'UnityEngine.UI.GraphicRaycaster'.
+[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'IngameDebugConsole' of type 'IngameDebugConsole.DebugLogManager'.
+[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'IngameDebugConsole' of type 'IngameDebugConsole.EventSystemHandler'.
+[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'DebugLogWindow' of type 'UnityEngine.RectTransform'.
+[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'DebugLogWindow' of type 'UnityEngine.CanvasRenderer'.
+[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'DebugLogWindow' of type 'UnityEngine.UI.Image'.
+[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'DebugLogWindow' of type 'UnityEngine.CanvasGroup'.
+[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'Buttons' of type 'UnityEngine.RectTransform'.
+[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'Buttons' of type 'UnityEngine.CanvasRenderer'.
+[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'Buttons' of type 'UnityEngine.UI.Image'.
+[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'Buttons' of type 'UnityEngine.UI.HorizontalLayoutGroup'.
+[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'ClearButton' of type 'UnityEngine.RectTransform'.
+[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'ClearButton' of type 'UnityEngine.CanvasRenderer'.
+[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'ClearButton' of type 'UnityEngine.UI.Image'.
+[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'ClearButton' of type 'UnityEngine.UI.Button'.
+[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'Image' of type 'UnityEngine.RectTransform'.
+[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'Image' of type 'UnityEngine.CanvasRenderer'.
+[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'Image' of type 'UnityEngine.UI.Image'.
+[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'CollapseButton' of type 'UnityEngine.RectTransform'.
+[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'CollapseButton' of type 'UnityEngine.CanvasRenderer'.
+[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'CollapseButton' of type 'UnityEngine.UI.Image'.
+[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'CollapseButton' of type 'UnityEngine.UI.Button'.
+[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'Image' of type 'UnityEngine.RectTransform'.
+[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'Image' of type 'UnityEngine.CanvasRenderer'.
+[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'Image' of type 'UnityEngine.UI.Image'.
+[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'SearchbarSlotTop' of type 'UnityEngine.RectTransform'.
+[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'SearchbarSlotTop' of type 'UnityEngine.CanvasRenderer'.
+[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'SearchbarSlotTop' of type 'UnityEngine.UI.Image'.
+[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'SearchbarSlotTop' of type 'UnityEngine.UI.LayoutElement'.
+[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'Searchbar' of type 'UnityEngine.RectTransform'.
+[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'Searchbar' of type 'IngameDebugConsole.InputFieldWarningsFixer'.
+[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'Searchbar' of type 'UnityEngine.CanvasRenderer'.
+[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'Searchbar' of type 'UnityEngine.UI.Image'.
+[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'Searchbar' of type 'UnityEngine.UI.InputField'.
+[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'Icon' of type 'UnityEngine.RectTransform'.
+[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'Icon' of type 'UnityEngine.CanvasRenderer'.
+[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'Icon' of type 'UnityEngine.UI.Image'.
+[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'Placeholder' of type 'UnityEngine.RectTransform'.
+[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'Placeholder' of type 'UnityEngine.CanvasRenderer'.
+[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'Placeholder' of type 'UnityEngine.UI.Text'.
+[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'Text' of type 'UnityEngine.RectTransform'.
+[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'Text' of type 'UnityEngine.CanvasRenderer'.
+[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'Text' of type 'UnityEngine.UI.Text'.
+[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'FilterLogButton' of type 'UnityEngine.RectTransform'.
+[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'FilterLogButton' of type 'UnityEngine.CanvasRenderer'.
+[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'FilterLogButton' of type 'UnityEngine.UI.Image'.
+[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'FilterLogButton' of type 'UnityEngine.UI.Button'.
+[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'Image' of type 'UnityEngine.RectTransform'.
+[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'Image' of type 'UnityEngine.CanvasRenderer'.
+[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'Image' of type 'UnityEngine.UI.Image'.
+[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'LogCount' of type 'UnityEngine.RectTransform'.
+[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'LogCount' of type 'UnityEngine.CanvasRenderer'.
+[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'LogCount' of type 'UnityEngine.UI.Text'.
+[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'FilterWarningButton' of type 'UnityEngine.RectTransform'.
+[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'FilterWarningButton' of type 'UnityEngine.CanvasRenderer'.
+[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'FilterWarningButton' of type 'UnityEngine.UI.Image'.
+[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'FilterWarningButton' of type 'UnityEngine.UI.Button'.
+[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'Image' of type 'UnityEngine.RectTransform'.
+[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'Image' of type 'UnityEngine.CanvasRenderer'.
+[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'Image' of type 'UnityEngine.UI.Image'.
+[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'WarningCount' of type 'UnityEngine.RectTransform'.
+[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'WarningCount' of type 'UnityEngine.CanvasRenderer'.
+[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'WarningCount' of type 'UnityEngine.UI.Text'.
+[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'FilterErrorButton' of type 'UnityEngine.RectTransform'.
+[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'FilterErrorButton' of type 'UnityEngine.CanvasRenderer'.
+[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'FilterErrorButton' of type 'UnityEngine.UI.Image'.
+[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'FilterErrorButton' of type 'UnityEngine.UI.Button'.
+[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'Image' of type 'UnityEngine.RectTransform'.
+[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'Image' of type 'UnityEngine.CanvasRenderer'.
+[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'Image' of type 'UnityEngine.UI.Image'.
+[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'ErrorCount' of type 'UnityEngine.RectTransform'.
+[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'ErrorCount' of type 'UnityEngine.CanvasRenderer'.
+[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'ErrorCount' of type 'UnityEngine.UI.Text'.
+[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'HideButton' of type 'UnityEngine.RectTransform'.
+[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'HideButton' of type 'UnityEngine.CanvasRenderer'.
+[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'HideButton' of type 'UnityEngine.UI.Image'.
+[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'HideButton' of type 'UnityEngine.UI.Button'.
+[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'Image' of type 'UnityEngine.RectTransform'.
+[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'Image' of type 'UnityEngine.CanvasRenderer'.
+[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'Image' of type 'UnityEngine.UI.Image'.
+[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'SearchbarSlotBottom' of type 'UnityEngine.RectTransform'.
+[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'SearchbarSlotBottom' of type 'UnityEngine.CanvasRenderer'.
+[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'SearchbarSlotBottom' of type 'UnityEngine.UI.Image'.
+[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'Debugs' of type 'UnityEngine.RectTransform'.
+[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'Debugs' of type 'UnityEngine.UI.ScrollRect'.
+[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'Debugs' of type 'UnityEngine.CanvasRenderer'.
+[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'Debugs' of type 'UnityEngine.UI.Image'.
+[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'Debugs' of type 'IngameDebugConsole.DebugsOnScrollListener'.
+[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'Viewport' of type 'UnityEngine.RectTransform'.
+[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'Viewport' of type 'UnityEngine.UI.RectMask2D'.
+[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'LogsContainer' of type 'UnityEngine.RectTransform'.
+[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'LogsContainer' of type 'IngameDebugConsole.DebugLogRecycledListView'.
+[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'SnapToBottom' of type 'UnityEngine.RectTransform'.
+[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'SnapToBottom' of type 'UnityEngine.CanvasRenderer'.
+[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'SnapToBottom' of type 'UnityEngine.UI.Image'.
+[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'SnapToBottom' of type 'UnityEngine.UI.Button'.
+[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'Image' of type 'UnityEngine.RectTransform'.
+[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'Image' of type 'UnityEngine.CanvasRenderer'.
+[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'Image' of type 'UnityEngine.UI.Image'.
+[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'Scrollbar Vertical' of type 'UnityEngine.RectTransform'.
+[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'Scrollbar Vertical' of type 'UnityEngine.CanvasRenderer'.
+[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'Scrollbar Vertical' of type 'UnityEngine.UI.Image'.
+[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'Scrollbar Vertical' of type 'UnityEngine.UI.Scrollbar'.
+[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'Scrollbar Vertical' of type 'UnityEngine.EventSystems.EventTrigger'.
+[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Found unity event methods in component 'Scrollbar Vertical' (1):
+  - OnScrollbarDragStart
+
+[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Found unity event methods in component 'Scrollbar Vertical' (1):
+  - OnScrollbarDragEnd
+
+[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'Sliding Area' of type 'UnityEngine.RectTransform'.
+[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'Handle' of type 'UnityEngine.RectTransform'.
+[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'Handle' of type 'UnityEngine.CanvasRenderer'.
+[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'Handle' of type 'UnityEngine.UI.Image'.
+[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'CommandSuggestions' of type 'UnityEngine.RectTransform'.
+[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'CommandSuggestions' of type 'UnityEngine.UI.HorizontalLayoutGroup'.
+[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'CommandSuggestionsContainer' of type 'UnityEngine.RectTransform'.
+[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'CommandSuggestionsContainer' of type 'UnityEngine.CanvasRenderer'.
+[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'CommandSuggestionsContainer' of type 'UnityEngine.UI.Image'.
+[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'CommandSuggestionsContainer' of type 'UnityEngine.UI.VerticalLayoutGroup'.
+[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'CommandInputField' of type 'UnityEngine.RectTransform'.
+[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'CommandInputField' of type 'IngameDebugConsole.InputFieldWarningsFixer'.
+[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'CommandInputField' of type 'UnityEngine.CanvasRenderer'.
+[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'CommandInputField' of type 'UnityEngine.UI.Image'.
+[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'CommandInputField' of type 'UnityEngine.UI.InputField'.
+[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'Placeholder' of type 'UnityEngine.RectTransform'.
+[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'Placeholder' of type 'UnityEngine.CanvasRenderer'.
+[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'Placeholder' of type 'UnityEngine.UI.Text'.
+[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'Text' of type 'UnityEngine.RectTransform'.
+[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'Text' of type 'UnityEngine.CanvasRenderer'.
+[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'Text' of type 'UnityEngine.UI.Text'.
+[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'DebugLogWindowResize' of type 'UnityEngine.RectTransform'.
+[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'DebugLogWindowResize' of type 'UnityEngine.CanvasRenderer'.
+[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'DebugLogWindowResize' of type 'UnityEngine.UI.Image'.
+[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'DebugLogWindowResize' of type 'IngameDebugConsole.DebugLogResizeListener'.
+[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'Image' of type 'UnityEngine.RectTransform'.
+[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'Image' of type 'UnityEngine.CanvasRenderer'.
+[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'Image' of type 'UnityEngine.UI.Image'.
+[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'DebugLogPopup' of type 'UnityEngine.RectTransform'.
+[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'DebugLogPopup' of type 'UnityEngine.CanvasRenderer'.
+[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'DebugLogPopup' of type 'UnityEngine.UI.Image'.
+[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'DebugLogPopup' of type 'IngameDebugConsole.DebugLogPopup'.
+[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'DebugLogPopup' of type 'UnityEngine.CanvasGroup'.
+[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'InfoImage' of type 'UnityEngine.RectTransform'.
+[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'InfoImage' of type 'UnityEngine.CanvasRenderer'.
+[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'InfoImage' of type 'UnityEngine.UI.Image'.
+[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'WarningImage' of type 'UnityEngine.RectTransform'.
+[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'WarningImage' of type 'UnityEngine.CanvasRenderer'.
+[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'WarningImage' of type 'UnityEngine.UI.Image'.
+[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'ErrorImage' of type 'UnityEngine.RectTransform'.
+[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'ErrorImage' of type 'UnityEngine.CanvasRenderer'.
+[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'ErrorImage' of type 'UnityEngine.UI.Image'.
+[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'NewInfoCount' of type 'UnityEngine.RectTransform'.
+[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'NewInfoCount' of type 'UnityEngine.CanvasRenderer'.
+[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'NewInfoCount' of type 'UnityEngine.UI.Text'.
+[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'NewWarningCount' of type 'UnityEngine.RectTransform'.
+[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'NewWarningCount' of type 'UnityEngine.CanvasRenderer'.
+[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'NewWarningCount' of type 'UnityEngine.UI.Text'.
+[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'NewErrorCount' of type 'UnityEngine.RectTransform'.
+[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'NewErrorCount' of type 'UnityEngine.CanvasRenderer'.
+[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'NewErrorCount' of type 'UnityEngine.UI.Text'.
+[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'EventSystem' of type 'UnityEngine.Transform'.
+[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'EventSystem' of type 'UnityEngine.EventSystems.EventSystem'.
+[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'EventSystem' of type 'UnityEngine.EventSystems.StandaloneInputModule'.
+[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'EventSystem' of type 'UnityEngine.EventSystems.BaseInput'.
+[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'BackTrace' of type 'UnityEngine.Transform'.
+[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'BackTrace' of type 'Backtrace.Unity.BacktraceClient'.
+[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'BackTrace' of type 'BackTraceTest'.
+[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'APPODEAL' of type 'UnityEngine.Transform'.
+[Warning][OPS.OBF][OnAnalyse_Component_Scenes] Failed to process current iterated Component at index 223 with Exception: System.NullReferenceException: Object reference not set to an instance of an object
+  at OPS.Obfuscator.Editor.Project.PreBuild.Pipeline.Component.AnalyseUnityEventComponent.OnAnalyse_Component (UnityEngine.Component _Component) [0x00005] in <12eb0d1e9ae24aa2b48f4643b196b2e9>:0 
+  at OPS.Obfuscator.Editor.Project.PreBuild.Pipeline.PreBuildPipeline.Process_Component_Analyse_And_Manipulate (System.Collections.Generic.List`1[T] _ComponentList) [0x00086] in <12eb0d1e9ae24aa2b48f4643b196b2e9>:0 
+[Warning][OPS.OBF][OnAnalyse_Component_Scenes] Failed to process current iterated Component at index 224 with Exception: System.NullReferenceException: Object reference not set to an instance of an object
+  at OPS.Obfuscator.Editor.Project.PreBuild.Pipeline.Component.AnalyseUnityEventComponent.OnAnalyse_Component (UnityEngine.Component _Component) [0x00005] in <12eb0d1e9ae24aa2b48f4643b196b2e9>:0 
+  at OPS.Obfuscator.Editor.Project.PreBuild.Pipeline.PreBuildPipeline.Process_Component_Analyse_And_Manipulate (System.Collections.Generic.List`1[T] _ComponentList) [0x00086] in <12eb0d1e9ae24aa2b48f4643b196b2e9>:0 
+[Warning][OPS.OBF][OnAnalyse_Component_Scenes] Failed to process current iterated Component at index 225 with Exception: System.NullReferenceException: Object reference not set to an instance of an object
+  at OPS.Obfuscator.Editor.Project.PreBuild.Pipeline.Component.AnalyseUnityEventComponent.OnAnalyse_Component (UnityEngine.Component _Component) [0x00005] in <12eb0d1e9ae24aa2b48f4643b196b2e9>:0 
+  at OPS.Obfuscator.Editor.Project.PreBuild.Pipeline.PreBuildPipeline.Process_Component_Analyse_And_Manipulate (System.Collections.Generic.List`1[T] _ComponentList) [0x00086] in <12eb0d1e9ae24aa2b48f4643b196b2e9>:0 
+[Warning][OPS.OBF][OnAnalyse_Component_Scenes] Failed to process current iterated Component at index 226 with Exception: System.NullReferenceException: Object reference not set to an instance of an object
+  at OPS.Obfuscator.Editor.Project.PreBuild.Pipeline.Component.AnalyseUnityEventComponent.OnAnalyse_Component (UnityEngine.Component _Component) [0x00005] in <12eb0d1e9ae24aa2b48f4643b196b2e9>:0 
+  at OPS.Obfuscator.Editor.Project.PreBuild.Pipeline.PreBuildPipeline.Process_Component_Analyse_And_Manipulate (System.Collections.Generic.List`1[T] _ComponentList) [0x00086] in <12eb0d1e9ae24aa2b48f4643b196b2e9>:0 
+[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'LevelPlay' of type 'UnityEngine.Transform'.
+[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'LevelPlay' of type 'AdLevelPlay'.
+[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Iterate components in not loaded build scene Assets/BlockTilesCrypto/Scenes/AuthenticationScene.unity.
+[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Found 7 Root GameObjects in Scene Assets/BlockTilesCrypto/Scenes/AuthenticationScene.unity
+[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Found 277 Components in Scene Assets/BlockTilesCrypto/Scenes/AuthenticationScene.unity
+[Info][OPS.OBF][OnAnalyse_Component_Scenes] Process component Analyse Unity Event Component
+[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'AuthenticationManager' of type 'UnityEngine.Transform'.
+[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'AuthenticationManager' of type 'PlayFabPersonal.Authentications.PlayfabAuthentication'.
+[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'AuthenticationManager' of type 'AccountRecovery'.
+[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'AuthenticationManager' of type 'PlayFabPersonal.Authentications.GuestAuthentication'.
+[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'UserManager' of type 'UnityEngine.Transform'.
+[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'UserManager' of type 'PlayFabPersonal.Users.UserAccount'.
+[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'PlayfabDataManager' of type 'UnityEngine.Transform'.
+[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'PlayfabDataManager' of type 'PlayFabPersonal.Managers.PlayfabDataManager'.
+[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'PlayfabDataManager' of type 'PlayFabPersonal.Economy.VirtualCurrency'.
+[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'GameSceneManager' of type 'UnityEngine.Transform'.
+[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'GameSceneManager' of type 'GameSceneManager'.
+[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'Canvas' of type 'UnityEngine.RectTransform'.
+[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'Canvas' of type 'UnityEngine.Canvas'.
+[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'Canvas' of type 'UnityEngine.UI.CanvasScaler'.
+[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'Canvas' of type 'UnityEngine.UI.GraphicRaycaster'.
+[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'LoginPanel' of type 'UnityEngine.RectTransform'.
+[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'LoginPanel' of type 'UnityEngine.CanvasRenderer'.
+[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'LoginPanel' of type 'UnityEngine.UI.Image'.
+[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'Container' of type 'UnityEngine.RectTransform'.
+[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'Container' of type 'UnityEngine.UI.VerticalLayoutGroup'.
+[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'Image' of type 'UnityEngine.RectTransform'.
+[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'Image' of type 'UnityEngine.CanvasRenderer'.
+[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'Image' of type 'UnityEngine.UI.Image'.
+[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'LoginFieldContainer' of type 'UnityEngine.RectTransform'.
+[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'LoginFieldContainer' of type 'UnityEngine.UI.VerticalLayoutGroup'.
+[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'LoginFieldContainer' of type 'UnityEngine.UI.ContentSizeFitter'.
+[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'EmailLabelText' of type 'UnityEngine.RectTransform'.
+[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'EmailLabelText' of type 'UnityEngine.CanvasRenderer'.
+[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'EmailLabelText' of type 'TMPro.TextMeshProUGUI'.
+[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'InputFieldEmailAddress' of type 'UnityEngine.RectTransform'.
+[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'InputFieldEmailAddress' of type 'UnityEngine.CanvasRenderer'.
+[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'InputFieldEmailAddress' of type 'UnityEngine.UI.Image'.
+[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'InputFieldEmailAddress' of type 'TMPro.TMP_InputField'.
+[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'Text Area' of type 'UnityEngine.RectTransform'.
+[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'Text Area' of type 'UnityEngine.UI.RectMask2D'.
+[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'Placeholder' of type 'UnityEngine.RectTransform'.
+[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'Placeholder' of type 'UnityEngine.CanvasRenderer'.
+[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'Placeholder' of type 'TMPro.TextMeshProUGUI'.
+[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'Placeholder' of type 'UnityEngine.UI.LayoutElement'.
+[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'Text' of type 'UnityEngine.RectTransform'.
+[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'Text' of type 'UnityEngine.CanvasRenderer'.
+[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'Text' of type 'TMPro.TextMeshProUGUI'.
+[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'PasswordLabelText' of type 'UnityEngine.RectTransform'.
+[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'PasswordLabelText' of type 'UnityEngine.CanvasRenderer'.
+[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'PasswordLabelText' of type 'TMPro.TextMeshProUGUI'.
+[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'InputFieldPassword' of type 'UnityEngine.RectTransform'.
+[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'InputFieldPassword' of type 'UnityEngine.CanvasRenderer'.
+[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'InputFieldPassword' of type 'UnityEngine.UI.Image'.
+[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'InputFieldPassword' of type 'TMPro.TMP_InputField'.
+[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'Text Area' of type 'UnityEngine.RectTransform'.
+[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'Text Area' of type 'UnityEngine.UI.RectMask2D'.
+[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'Placeholder' of type 'UnityEngine.RectTransform'.
+[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'Placeholder' of type 'UnityEngine.CanvasRenderer'.
+[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'Placeholder' of type 'TMPro.TextMeshProUGUI'.
+[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'Placeholder' of type 'UnityEngine.UI.LayoutElement'.
+[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'Text' of type 'UnityEngine.RectTransform'.
+[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'Text' of type 'UnityEngine.CanvasRenderer'.
+[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'Text' of type 'TMPro.TextMeshProUGUI'.
+[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'ForgetPasswordButton' of type 'UnityEngine.RectTransform'.
+[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'ForgetPasswordButton' of type 'UnityEngine.CanvasRenderer'.
+[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'ForgetPasswordButton' of type 'UnityEngine.UI.Image'.
+[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'ForgetPasswordButton' of type 'UnityEngine.UI.Button'.
+[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'Text (TMP)' of type 'UnityEngine.RectTransform'.
+[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'Text (TMP)' of type 'UnityEngine.CanvasRenderer'.
+[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'Text (TMP)' of type 'TMPro.TextMeshProUGUI'.
+[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'ErrorMessage' of type 'UnityEngine.RectTransform'.
+[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'ErrorMessage' of type 'UnityEngine.CanvasRenderer'.
+[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'ErrorMessage' of type 'TMPro.TextMeshProUGUI'.
+[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'Login/RegisterButtonContainer' of type 'UnityEngine.RectTransform'.
+[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'Login/RegisterButtonContainer' of type 'UnityEngine.UI.VerticalLayoutGroup'.
+[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'PlayfabLoginButton' of type 'UnityEngine.RectTransform'.
+[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'PlayfabLoginButton' of type 'UnityEngine.CanvasRenderer'.
+[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'PlayfabLoginButton' of type 'UnityEngine.UI.Image'.
+[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'PlayfabLoginButton' of type 'UnityEngine.UI.Button'.
+[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'PlayfabRegisterPanelButton' of type 'UnityEngine.RectTransform'.
+[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'PlayfabRegisterPanelButton' of type 'UnityEngine.CanvasRenderer'.
+[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'PlayfabRegisterPanelButton' of type 'UnityEngine.UI.Image'.
+[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'PlayfabRegisterPanelButton' of type 'UnityEngine.UI.Button'.
+[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'ContainerHorizontal' of type 'UnityEngine.RectTransform'.
+[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'ContainerHorizontal' of type 'UnityEngine.UI.HorizontalLayoutGroup'.
+[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'Text (TMP)' of type 'UnityEngine.RectTransform'.
+[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'Text (TMP)' of type 'UnityEngine.CanvasRenderer'.
+[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'Text (TMP)' of type 'TMPro.TextMeshProUGUI'.
+[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'LoginProviderContainer' of type 'UnityEngine.RectTransform'.
+[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'LoginProviderContainer' of type 'UnityEngine.UI.VerticalLayoutGroup'.
+[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'LoginProviderContainer' of type 'UnityEngine.CanvasRenderer'.
+[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'LoginProviderContainer' of type 'UnityEngine.UI.Image'.
+[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'Apple/GoogleContainer' of type 'UnityEngine.RectTransform'.
+[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'Apple/GoogleContainer' of type 'UnityEngine.UI.HorizontalLayoutGroup'.
+[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'AppleButton' of type 'UnityEngine.RectTransform'.
+[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'AppleButton' of type 'UnityEngine.CanvasRenderer'.
+[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'AppleButton' of type 'UnityEngine.UI.Image'.
+[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'AppleButton' of type 'UnityEngine.UI.Button'.
+[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'GoogleButton' of type 'UnityEngine.RectTransform'.
+[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'GoogleButton' of type 'UnityEngine.CanvasRenderer'.
+[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'GoogleButton' of type 'UnityEngine.UI.Image'.
+[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'GoogleButton' of type 'UnityEngine.UI.Button'.
+[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'Facebook/GuestContainer' of type 'UnityEngine.RectTransform'.
+[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'Facebook/GuestContainer' of type 'UnityEngine.UI.HorizontalLayoutGroup'.
+[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'FacebookButton' of type 'UnityEngine.RectTransform'.
+[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'FacebookButton' of type 'UnityEngine.CanvasRenderer'.
+[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'FacebookButton' of type 'UnityEngine.UI.Image'.
+[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'FacebookButton' of type 'UnityEngine.UI.Button'.
+[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'GuestButton' of type 'UnityEngine.RectTransform'.
+[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'GuestButton' of type 'UnityEngine.CanvasRenderer'.
+[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'GuestButton' of type 'UnityEngine.UI.Image'.
+[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'GuestButton' of type 'UnityEngine.UI.Button'.
+[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'PlayfabRegisterPanel' of type 'UnityEngine.RectTransform'.
+[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'PlayfabRegisterPanel' of type 'UnityEngine.CanvasRenderer'.
+[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'PlayfabRegisterPanel' of type 'UnityEngine.UI.Image'.
+[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'GameTitle' of type 'UnityEngine.RectTransform'.
+[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'GameTitle' of type 'UnityEngine.CanvasRenderer'.
+[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'GameTitle' of type 'UnityEngine.UI.Image'.
+[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'RegistrationTitleText' of type 'UnityEngine.RectTransform'.
+[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'RegistrationTitleText' of type 'UnityEngine.CanvasRenderer'.
+[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'RegistrationTitleText' of type 'TMPro.TextMeshProUGUI'.
+[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'RegistrationFieldContainer' of type 'UnityEngine.RectTransform'.
+[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'RegistrationFieldContainer' of type 'UnityEngine.UI.VerticalLayoutGroup'.
+[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'InputFieldFullName' of type 'UnityEngine.RectTransform'.
+[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'InputFieldFullName' of type 'UnityEngine.CanvasRenderer'.
+[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'InputFieldFullName' of type 'UnityEngine.UI.Image'.
+[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'InputFieldFullName' of type 'TMPro.TMP_InputField'.
+[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'Text Area' of type 'UnityEngine.RectTransform'.
+[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'Text Area' of type 'UnityEngine.UI.RectMask2D'.
+[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'Placeholder' of type 'UnityEngine.RectTransform'.
+[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'Placeholder' of type 'UnityEngine.CanvasRenderer'.
+[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'Placeholder' of type 'TMPro.TextMeshProUGUI'.
+[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'Placeholder' of type 'UnityEngine.UI.LayoutElement'.
+[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'Text' of type 'UnityEngine.RectTransform'.
+[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'Text' of type 'UnityEngine.CanvasRenderer'.
+[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'Text' of type 'TMPro.TextMeshProUGUI'.
+[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'InputFieldEmailAddress' of type 'UnityEngine.RectTransform'.
+[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'InputFieldEmailAddress' of type 'UnityEngine.CanvasRenderer'.
+[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'InputFieldEmailAddress' of type 'UnityEngine.UI.Image'.
+[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'InputFieldEmailAddress' of type 'TMPro.TMP_InputField'.
+[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'Text Area' of type 'UnityEngine.RectTransform'.
+[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'Text Area' of type 'UnityEngine.UI.RectMask2D'.
+[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'Placeholder' of type 'UnityEngine.RectTransform'.
+[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'Placeholder' of type 'UnityEngine.CanvasRenderer'.
+[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'Placeholder' of type 'TMPro.TextMeshProUGUI'.
+[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'Placeholder' of type 'UnityEngine.UI.LayoutElement'.
+[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'Text' of type 'UnityEngine.RectTransform'.
+[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'Text' of type 'UnityEngine.CanvasRenderer'.
+[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'Text' of type 'TMPro.TextMeshProUGUI'.
+[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'InputFieldPassword' of type 'UnityEngine.RectTransform'.
+[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'InputFieldPassword' of type 'UnityEngine.CanvasRenderer'.
+[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'InputFieldPassword' of type 'UnityEngine.UI.Image'.
+[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'InputFieldPassword' of type 'TMPro.TMP_InputField'.
+[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'Text Area' of type 'UnityEngine.RectTransform'.
+[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'Text Area' of type 'UnityEngine.UI.RectMask2D'.
+[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'Placeholder' of type 'UnityEngine.RectTransform'.
+[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'Placeholder' of type 'UnityEngine.CanvasRenderer'.
+[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'Placeholder' of type 'TMPro.TextMeshProUGUI'.
+[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'Placeholder' of type 'UnityEngine.UI.LayoutElement'.
+[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'Text' of type 'UnityEngine.RectTransform'.
+[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'Text' of type 'UnityEngine.CanvasRenderer'.
+[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'Text' of type 'TMPro.TextMeshProUGUI'.
+[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'InputFieldPasswordAgain' of type 'UnityEngine.RectTransform'.
+[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'InputFieldPasswordAgain' of type 'UnityEngine.CanvasRenderer'.
+[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'InputFieldPasswordAgain' of type 'UnityEngine.UI.Image'.
+[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'InputFieldPasswordAgain' of type 'TMPro.TMP_InputField'.
+[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'Text Area' of type 'UnityEngine.RectTransform'.
+[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'Text Area' of type 'UnityEngine.UI.RectMask2D'.
+[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'Placeholder' of type 'UnityEngine.RectTransform'.
+[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'Placeholder' of type 'UnityEngine.CanvasRenderer'.
+[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'Placeholder' of type 'TMPro.TextMeshProUGUI'.
+[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'Placeholder' of type 'UnityEngine.UI.LayoutElement'.
+[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'Text' of type 'UnityEngine.RectTransform'.
+[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'Text' of type 'UnityEngine.CanvasRenderer'.
+[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'Text' of type 'TMPro.TextMeshProUGUI'.
+[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'AddSpace' of type 'UnityEngine.RectTransform'.
+[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'ErrorMessage' of type 'UnityEngine.RectTransform'.
+[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'ErrorMessage' of type 'UnityEngine.CanvasRenderer'.
+[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'ErrorMessage' of type 'TMPro.TextMeshProUGUI'.
+[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'Submit/BackButtonContainer' of type 'UnityEngine.RectTransform'.
+[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'Submit/BackButtonContainer' of type 'UnityEngine.UI.HorizontalLayoutGroup'.
+[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'RegisterAccountButton' of type 'UnityEngine.RectTransform'.
+[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'RegisterAccountButton' of type 'UnityEngine.CanvasRenderer'.
+[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'RegisterAccountButton' of type 'UnityEngine.UI.Image'.
+[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'RegisterAccountButton' of type 'UnityEngine.UI.Button'.
+[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'Text (TMP)' of type 'UnityEngine.RectTransform'.
+[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'Text (TMP)' of type 'UnityEngine.CanvasRenderer'.
+[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'Text (TMP)' of type 'TMPro.TextMeshProUGUI'.
+[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'BackButton' of type 'UnityEngine.RectTransform'.
+[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'BackButton' of type 'UnityEngine.CanvasRenderer'.
+[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'BackButton' of type 'UnityEngine.UI.Image'.
+[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'BackButton' of type 'UnityEngine.UI.Button'.
+[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'Text (TMP)' of type 'UnityEngine.RectTransform'.
+[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'Text (TMP)' of type 'UnityEngine.CanvasRenderer'.
+[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'Text (TMP)' of type 'TMPro.TextMeshProUGUI'.
+[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'RecoveryEmailPanel' of type 'UnityEngine.RectTransform'.
+[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'RecoveryEmailPanel' of type 'UnityEngine.CanvasRenderer'.
+[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'RecoveryEmailPanel' of type 'UnityEngine.UI.Image'.
+[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'GameTitle' of type 'UnityEngine.RectTransform'.
+[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'GameTitle' of type 'UnityEngine.CanvasRenderer'.
+[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'GameTitle' of type 'UnityEngine.UI.Image'.
+[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'ResetPassTitleText' of type 'UnityEngine.RectTransform'.
+[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'ResetPassTitleText' of type 'UnityEngine.CanvasRenderer'.
+[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'ResetPassTitleText' of type 'TMPro.TextMeshProUGUI'.
+[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'RecoveryFieldsContainer' of type 'UnityEngine.RectTransform'.
+[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'RecoveryFieldsContainer' of type 'UnityEngine.UI.VerticalLayoutGroup'.
+[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'InputFieldEmailAddress' of type 'UnityEngine.RectTransform'.
+[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'InputFieldEmailAddress' of type 'UnityEngine.CanvasRenderer'.
+[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'InputFieldEmailAddress' of type 'UnityEngine.UI.Image'.
+[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'InputFieldEmailAddress' of type 'TMPro.TMP_InputField'.
+[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'Text Area' of type 'UnityEngine.RectTransform'.
+[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'Text Area' of type 'UnityEngine.UI.RectMask2D'.
+[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'Placeholder' of type 'UnityEngine.RectTransform'.
+[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'Placeholder' of type 'UnityEngine.CanvasRenderer'.
+[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'Placeholder' of type 'TMPro.TextMeshProUGUI'.
+[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'Placeholder' of type 'UnityEngine.UI.LayoutElement'.
+[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'Text' of type 'UnityEngine.RectTransform'.
+[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'Text' of type 'UnityEngine.CanvasRenderer'.
+[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'Text' of type 'TMPro.TextMeshProUGUI'.
+[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'AddSpace' of type 'UnityEngine.RectTransform'.
+[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'Reset/BackButtonContainer' of type 'UnityEngine.RectTransform'.
+[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'Reset/BackButtonContainer' of type 'UnityEngine.UI.HorizontalLayoutGroup'.
+[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'ResetButton' of type 'UnityEngine.RectTransform'.
+[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'ResetButton' of type 'UnityEngine.CanvasRenderer'.
+[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'ResetButton' of type 'UnityEngine.UI.Image'.
+[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'ResetButton' of type 'UnityEngine.UI.Button'.
+[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'Text (TMP)' of type 'UnityEngine.RectTransform'.
+[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'Text (TMP)' of type 'UnityEngine.CanvasRenderer'.
+[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'Text (TMP)' of type 'TMPro.TextMeshProUGUI'.
+[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'BackButton' of type 'UnityEngine.RectTransform'.
+[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'BackButton' of type 'UnityEngine.CanvasRenderer'.
+[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'BackButton' of type 'UnityEngine.UI.Image'.
+[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'BackButton' of type 'UnityEngine.UI.Button'.
+[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'Text (TMP)' of type 'UnityEngine.RectTransform'.
+[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'Text (TMP)' of type 'UnityEngine.CanvasRenderer'.
+[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'Text (TMP)' of type 'TMPro.TextMeshProUGUI'.
+[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'LoadingPanel' of type 'UnityEngine.RectTransform'.
+[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'LoadingPanel' of type 'UnityEngine.CanvasRenderer'.
+[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'LoadingPanel' of type 'UnityEngine.UI.Image'.
+[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'LoadingPanel' of type 'UnityEngine.Animator'.
+[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'LoadingPanel' of type 'LoadingPanel'.
+[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'Container' of type 'UnityEngine.RectTransform'.
+[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'TitleImage' of type 'UnityEngine.RectTransform'.
+[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'TitleImage' of type 'UnityEngine.CanvasRenderer'.
+[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'TitleImage' of type 'UnityEngine.UI.Image'.
+[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'BlueRingImage' of type 'UnityEngine.RectTransform'.
+[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'BlueRingImage' of type 'UnityEngine.CanvasRenderer'.
+[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'BlueRingImage' of type 'UnityEngine.UI.Image'.
+[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'GoldenRingImage' of type 'UnityEngine.RectTransform'.
+[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'GoldenRingImage' of type 'UnityEngine.CanvasRenderer'.
+[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'GoldenRingImage' of type 'UnityEngine.UI.Image'.
+[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'LoadingText' of type 'UnityEngine.RectTransform'.
+[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'LoadingText' of type 'UnityEngine.CanvasRenderer'.
+[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'LoadingText' of type 'TMPro.TextMeshProUGUI'.
+[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'PercentageText' of type 'UnityEngine.RectTransform'.
+[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'PercentageText' of type 'UnityEngine.CanvasRenderer'.
+[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'PercentageText' of type 'TMPro.TextMeshProUGUI'.
+[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'Loading' of type 'UnityEngine.RectTransform'.
+[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'Loading' of type 'UnityEngine.CanvasRenderer'.
+[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'Loading' of type 'UnityEngine.UI.Image'.
+[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'Loading' of type 'UnityEngine.Animator'.
+[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'Container' of type 'UnityEngine.RectTransform'.
+[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'TitleImage' of type 'UnityEngine.RectTransform'.
+[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'TitleImage' of type 'UnityEngine.CanvasRenderer'.
+[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'TitleImage' of type 'UnityEngine.UI.Image'.
+[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'BlueRingImage' of type 'UnityEngine.RectTransform'.
+[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'BlueRingImage' of type 'UnityEngine.CanvasRenderer'.
+[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'BlueRingImage' of type 'UnityEngine.UI.Image'.
+[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'GoldenRingImage' of type 'UnityEngine.RectTransform'.
+[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'GoldenRingImage' of type 'UnityEngine.CanvasRenderer'.
+[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'GoldenRingImage' of type 'UnityEngine.UI.Image'.
+[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'LoadingText' of type 'UnityEngine.RectTransform'.
+[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'LoadingText' of type 'UnityEngine.CanvasRenderer'.
+[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'LoadingText' of type 'TMPro.TextMeshProUGUI'.
+[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'PercentageText' of type 'UnityEngine.RectTransform'.
+[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'PercentageText' of type 'UnityEngine.CanvasRenderer'.
+[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'PercentageText' of type 'TMPro.TextMeshProUGUI'.
+[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'Main Camera' of type 'UnityEngine.Transform'.
+[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'Main Camera' of type 'UnityEngine.Camera'.
+[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'Main Camera' of type 'UnityEngine.AudioListener'.
+[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'Directional Light' of type 'UnityEngine.Transform'.
+[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'Directional Light' of type 'UnityEngine.Light'.
+[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Iterate components in not loaded build scene Assets/BlockTilesCrypto/Scenes/MainMenuScene.unity.
 [Debug][OPS.OBF][OnAnalyse_Component_Scenes] Found 12 Root GameObjects in Scene Assets/BlockTilesCrypto/Scenes/MainMenuScene.unity
 [Debug][OPS.OBF][OnAnalyse_Component_Scenes] Found 699 Components in Scene Assets/BlockTilesCrypto/Scenes/MainMenuScene.unity
 [Info][OPS.OBF][OnAnalyse_Component_Scenes] Process component Analyse Unity Event Component
@@ -823,550 +1367,6 @@
 [Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'Text' of type 'TMPro.TextMeshProUGUI'.
 [Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'integrity' of type 'UnityEngine.Transform'.
 [Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'integrity' of type 'PlayIntegrityManager'.
-[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Iterate components in not loaded build scene Assets/BlockTilesCrypto/Scenes/Loading.unity.
-[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Found 12 Root GameObjects in Scene Assets/BlockTilesCrypto/Scenes/Loading.unity
-[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Found 229 Components in Scene Assets/BlockTilesCrypto/Scenes/Loading.unity
-[Info][OPS.OBF][OnAnalyse_Component_Scenes] Process component Analyse Unity Event Component
-[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'DebugManager' of type 'UnityEngine.Transform'.
-[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'DebugManager' of type 'DebugManager'.
-[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'DevelopmentManager' of type 'UnityEngine.Transform'.
-[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'GoogleMobileAdsController' of type 'UnityEngine.Transform'.
-[Warning][OPS.OBF][OnAnalyse_Component_Scenes] Failed to process current iterated Component at index 4 with Exception: System.NullReferenceException: Object reference not set to an instance of an object
-  at OPS.Obfuscator.Editor.Project.PreBuild.Pipeline.Component.AnalyseUnityEventComponent.OnAnalyse_Component (UnityEngine.Component _Component) [0x00005] in <12eb0d1e9ae24aa2b48f4643b196b2e9>:0 
-  at OPS.Obfuscator.Editor.Project.PreBuild.Pipeline.PreBuildPipeline.Process_Component_Analyse_And_Manipulate (System.Collections.Generic.List`1[T] _ComponentList) [0x00086] in <12eb0d1e9ae24aa2b48f4643b196b2e9>:0 
-[Warning][OPS.OBF][OnAnalyse_Component_Scenes] Failed to process current iterated Component at index 5 with Exception: System.NullReferenceException: Object reference not set to an instance of an object
-  at OPS.Obfuscator.Editor.Project.PreBuild.Pipeline.Component.AnalyseUnityEventComponent.OnAnalyse_Component (UnityEngine.Component _Component) [0x00005] in <12eb0d1e9ae24aa2b48f4643b196b2e9>:0 
-  at OPS.Obfuscator.Editor.Project.PreBuild.Pipeline.PreBuildPipeline.Process_Component_Analyse_And_Manipulate (System.Collections.Generic.List`1[T] _ComponentList) [0x00086] in <12eb0d1e9ae24aa2b48f4643b196b2e9>:0 
-[Warning][OPS.OBF][OnAnalyse_Component_Scenes] Failed to process current iterated Component at index 6 with Exception: System.NullReferenceException: Object reference not set to an instance of an object
-  at OPS.Obfuscator.Editor.Project.PreBuild.Pipeline.Component.AnalyseUnityEventComponent.OnAnalyse_Component (UnityEngine.Component _Component) [0x00005] in <12eb0d1e9ae24aa2b48f4643b196b2e9>:0 
-  at OPS.Obfuscator.Editor.Project.PreBuild.Pipeline.PreBuildPipeline.Process_Component_Analyse_And_Manipulate (System.Collections.Generic.List`1[T] _ComponentList) [0x00086] in <12eb0d1e9ae24aa2b48f4643b196b2e9>:0 
-[Warning][OPS.OBF][OnAnalyse_Component_Scenes] Failed to process current iterated Component at index 7 with Exception: System.NullReferenceException: Object reference not set to an instance of an object
-  at OPS.Obfuscator.Editor.Project.PreBuild.Pipeline.Component.AnalyseUnityEventComponent.OnAnalyse_Component (UnityEngine.Component _Component) [0x00005] in <12eb0d1e9ae24aa2b48f4643b196b2e9>:0 
-  at OPS.Obfuscator.Editor.Project.PreBuild.Pipeline.PreBuildPipeline.Process_Component_Analyse_And_Manipulate (System.Collections.Generic.List`1[T] _ComponentList) [0x00086] in <12eb0d1e9ae24aa2b48f4643b196b2e9>:0 
-[Warning][OPS.OBF][OnAnalyse_Component_Scenes] Failed to process current iterated Component at index 8 with Exception: System.NullReferenceException: Object reference not set to an instance of an object
-  at OPS.Obfuscator.Editor.Project.PreBuild.Pipeline.Component.AnalyseUnityEventComponent.OnAnalyse_Component (UnityEngine.Component _Component) [0x00005] in <12eb0d1e9ae24aa2b48f4643b196b2e9>:0 
-  at OPS.Obfuscator.Editor.Project.PreBuild.Pipeline.PreBuildPipeline.Process_Component_Analyse_And_Manipulate (System.Collections.Generic.List`1[T] _ComponentList) [0x00086] in <12eb0d1e9ae24aa2b48f4643b196b2e9>:0 
-[Warning][OPS.OBF][OnAnalyse_Component_Scenes] Failed to process current iterated Component at index 9 with Exception: System.NullReferenceException: Object reference not set to an instance of an object
-  at OPS.Obfuscator.Editor.Project.PreBuild.Pipeline.Component.AnalyseUnityEventComponent.OnAnalyse_Component (UnityEngine.Component _Component) [0x00005] in <12eb0d1e9ae24aa2b48f4643b196b2e9>:0 
-  at OPS.Obfuscator.Editor.Project.PreBuild.Pipeline.PreBuildPipeline.Process_Component_Analyse_And_Manipulate (System.Collections.Generic.List`1[T] _ComponentList) [0x00086] in <12eb0d1e9ae24aa2b48f4643b196b2e9>:0 
-[Warning][OPS.OBF][OnAnalyse_Component_Scenes] Failed to process current iterated Component at index 10 with Exception: System.NullReferenceException: Object reference not set to an instance of an object
-  at OPS.Obfuscator.Editor.Project.PreBuild.Pipeline.Component.AnalyseUnityEventComponent.OnAnalyse_Component (UnityEngine.Component _Component) [0x00005] in <12eb0d1e9ae24aa2b48f4643b196b2e9>:0 
-  at OPS.Obfuscator.Editor.Project.PreBuild.Pipeline.PreBuildPipeline.Process_Component_Analyse_And_Manipulate (System.Collections.Generic.List`1[T] _ComponentList) [0x00086] in <12eb0d1e9ae24aa2b48f4643b196b2e9>:0 
-[Warning][OPS.OBF][OnAnalyse_Component_Scenes] Failed to process current iterated Component at index 11 with Exception: System.NullReferenceException: Object reference not set to an instance of an object
-  at OPS.Obfuscator.Editor.Project.PreBuild.Pipeline.Component.AnalyseUnityEventComponent.OnAnalyse_Component (UnityEngine.Component _Component) [0x00005] in <12eb0d1e9ae24aa2b48f4643b196b2e9>:0 
-  at OPS.Obfuscator.Editor.Project.PreBuild.Pipeline.PreBuildPipeline.Process_Component_Analyse_And_Manipulate (System.Collections.Generic.List`1[T] _ComponentList) [0x00086] in <12eb0d1e9ae24aa2b48f4643b196b2e9>:0 
-[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'SceneManager' of type 'UnityEngine.Transform'.
-[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'AppUpdateManager' of type 'UnityEngine.Transform'.
-[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'AppUpdateManager' of type 'InAppUpdateManager'.
-[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'Canvas' of type 'UnityEngine.RectTransform'.
-[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'Canvas' of type 'UnityEngine.Canvas'.
-[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'Canvas' of type 'UnityEngine.UI.CanvasScaler'.
-[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'Canvas' of type 'UnityEngine.UI.GraphicRaycaster'.
-[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'BG' of type 'UnityEngine.RectTransform'.
-[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'BG' of type 'UnityEngine.CanvasRenderer'.
-[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'BG' of type 'UnityEngine.UI.Image'.
-[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'Logo' of type 'UnityEngine.RectTransform'.
-[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'Logo' of type 'UnityEngine.CanvasRenderer'.
-[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'Logo' of type 'UnityEngine.UI.Image'.
-[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'Loading' of type 'UnityEngine.RectTransform'.
-[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'Loading' of type 'UnityEngine.CanvasRenderer'.
-[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'Loading' of type 'UnityEngine.UI.Image'.
-[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'Process1' of type 'UnityEngine.RectTransform'.
-[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'Process1' of type 'UnityEngine.CanvasRenderer'.
-[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'Process1' of type 'UnityEngine.UI.Image'.
-[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'Process2' of type 'UnityEngine.RectTransform'.
-[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'Process2' of type 'UnityEngine.CanvasRenderer'.
-[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'Process2' of type 'UnityEngine.UI.Image'.
-[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'UpdatePanel' of type 'UnityEngine.RectTransform'.
-[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'Background' of type 'UnityEngine.RectTransform'.
-[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'Background' of type 'UnityEngine.CanvasRenderer'.
-[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'Background' of type 'UnityEngine.UI.Image'.
-[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'Background (1)' of type 'UnityEngine.RectTransform'.
-[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'Background (1)' of type 'UnityEngine.CanvasRenderer'.
-[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'Background (1)' of type 'UnityEngine.UI.Image'.
-[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'Text (TMP)' of type 'UnityEngine.RectTransform'.
-[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'Text (TMP)' of type 'UnityEngine.CanvasRenderer'.
-[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'Text (TMP)' of type 'TMPro.TextMeshProUGUI'.
-[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'Text (TMP) (1)' of type 'UnityEngine.RectTransform'.
-[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'Text (TMP) (1)' of type 'UnityEngine.CanvasRenderer'.
-[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'Text (TMP) (1)' of type 'TMPro.TextMeshProUGUI'.
-[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'UpdateButton' of type 'UnityEngine.RectTransform'.
-[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'UpdateButton' of type 'UnityEngine.CanvasRenderer'.
-[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'UpdateButton' of type 'UnityEngine.UI.Image'.
-[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'UpdateButton' of type 'UnityEngine.UI.Button'.
-[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'EventSystem' of type 'UnityEngine.Transform'.
-[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'EventSystem' of type 'UnityEngine.EventSystems.EventSystem'.
-[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'EventSystem' of type 'ClickSystem'.
-[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'EventSystem' of type 'UnityEngine.EventSystems.StandaloneInputModule'.
-[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'Firebase' of type 'UnityEngine.Transform'.
-[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'Firebase' of type 'FirebaseSettings'.
-[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'IngameDebugConsole' of type 'UnityEngine.RectTransform'.
-[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'IngameDebugConsole' of type 'UnityEngine.Canvas'.
-[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'IngameDebugConsole' of type 'UnityEngine.UI.CanvasScaler'.
-[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'IngameDebugConsole' of type 'UnityEngine.UI.GraphicRaycaster'.
-[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'IngameDebugConsole' of type 'IngameDebugConsole.DebugLogManager'.
-[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'IngameDebugConsole' of type 'IngameDebugConsole.EventSystemHandler'.
-[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'DebugLogWindow' of type 'UnityEngine.RectTransform'.
-[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'DebugLogWindow' of type 'UnityEngine.CanvasRenderer'.
-[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'DebugLogWindow' of type 'UnityEngine.UI.Image'.
-[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'DebugLogWindow' of type 'UnityEngine.CanvasGroup'.
-[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'Buttons' of type 'UnityEngine.RectTransform'.
-[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'Buttons' of type 'UnityEngine.CanvasRenderer'.
-[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'Buttons' of type 'UnityEngine.UI.Image'.
-[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'Buttons' of type 'UnityEngine.UI.HorizontalLayoutGroup'.
-[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'ClearButton' of type 'UnityEngine.RectTransform'.
-[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'ClearButton' of type 'UnityEngine.CanvasRenderer'.
-[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'ClearButton' of type 'UnityEngine.UI.Image'.
-[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'ClearButton' of type 'UnityEngine.UI.Button'.
-[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'Image' of type 'UnityEngine.RectTransform'.
-[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'Image' of type 'UnityEngine.CanvasRenderer'.
-[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'Image' of type 'UnityEngine.UI.Image'.
-[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'CollapseButton' of type 'UnityEngine.RectTransform'.
-[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'CollapseButton' of type 'UnityEngine.CanvasRenderer'.
-[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'CollapseButton' of type 'UnityEngine.UI.Image'.
-[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'CollapseButton' of type 'UnityEngine.UI.Button'.
-[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'Image' of type 'UnityEngine.RectTransform'.
-[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'Image' of type 'UnityEngine.CanvasRenderer'.
-[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'Image' of type 'UnityEngine.UI.Image'.
-[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'SearchbarSlotTop' of type 'UnityEngine.RectTransform'.
-[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'SearchbarSlotTop' of type 'UnityEngine.CanvasRenderer'.
-[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'SearchbarSlotTop' of type 'UnityEngine.UI.Image'.
-[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'SearchbarSlotTop' of type 'UnityEngine.UI.LayoutElement'.
-[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'Searchbar' of type 'UnityEngine.RectTransform'.
-[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'Searchbar' of type 'IngameDebugConsole.InputFieldWarningsFixer'.
-[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'Searchbar' of type 'UnityEngine.CanvasRenderer'.
-[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'Searchbar' of type 'UnityEngine.UI.Image'.
-[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'Searchbar' of type 'UnityEngine.UI.InputField'.
-[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'Icon' of type 'UnityEngine.RectTransform'.
-[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'Icon' of type 'UnityEngine.CanvasRenderer'.
-[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'Icon' of type 'UnityEngine.UI.Image'.
-[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'Placeholder' of type 'UnityEngine.RectTransform'.
-[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'Placeholder' of type 'UnityEngine.CanvasRenderer'.
-[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'Placeholder' of type 'UnityEngine.UI.Text'.
-[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'Text' of type 'UnityEngine.RectTransform'.
-[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'Text' of type 'UnityEngine.CanvasRenderer'.
-[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'Text' of type 'UnityEngine.UI.Text'.
-[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'FilterLogButton' of type 'UnityEngine.RectTransform'.
-[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'FilterLogButton' of type 'UnityEngine.CanvasRenderer'.
-[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'FilterLogButton' of type 'UnityEngine.UI.Image'.
-[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'FilterLogButton' of type 'UnityEngine.UI.Button'.
-[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'Image' of type 'UnityEngine.RectTransform'.
-[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'Image' of type 'UnityEngine.CanvasRenderer'.
-[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'Image' of type 'UnityEngine.UI.Image'.
-[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'LogCount' of type 'UnityEngine.RectTransform'.
-[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'LogCount' of type 'UnityEngine.CanvasRenderer'.
-[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'LogCount' of type 'UnityEngine.UI.Text'.
-[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'FilterWarningButton' of type 'UnityEngine.RectTransform'.
-[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'FilterWarningButton' of type 'UnityEngine.CanvasRenderer'.
-[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'FilterWarningButton' of type 'UnityEngine.UI.Image'.
-[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'FilterWarningButton' of type 'UnityEngine.UI.Button'.
-[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'Image' of type 'UnityEngine.RectTransform'.
-[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'Image' of type 'UnityEngine.CanvasRenderer'.
-[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'Image' of type 'UnityEngine.UI.Image'.
-[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'WarningCount' of type 'UnityEngine.RectTransform'.
-[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'WarningCount' of type 'UnityEngine.CanvasRenderer'.
-[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'WarningCount' of type 'UnityEngine.UI.Text'.
-[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'FilterErrorButton' of type 'UnityEngine.RectTransform'.
-[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'FilterErrorButton' of type 'UnityEngine.CanvasRenderer'.
-[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'FilterErrorButton' of type 'UnityEngine.UI.Image'.
-[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'FilterErrorButton' of type 'UnityEngine.UI.Button'.
-[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'Image' of type 'UnityEngine.RectTransform'.
-[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'Image' of type 'UnityEngine.CanvasRenderer'.
-[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'Image' of type 'UnityEngine.UI.Image'.
-[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'ErrorCount' of type 'UnityEngine.RectTransform'.
-[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'ErrorCount' of type 'UnityEngine.CanvasRenderer'.
-[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'ErrorCount' of type 'UnityEngine.UI.Text'.
-[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'HideButton' of type 'UnityEngine.RectTransform'.
-[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'HideButton' of type 'UnityEngine.CanvasRenderer'.
-[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'HideButton' of type 'UnityEngine.UI.Image'.
-[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'HideButton' of type 'UnityEngine.UI.Button'.
-[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'Image' of type 'UnityEngine.RectTransform'.
-[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'Image' of type 'UnityEngine.CanvasRenderer'.
-[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'Image' of type 'UnityEngine.UI.Image'.
-[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'SearchbarSlotBottom' of type 'UnityEngine.RectTransform'.
-[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'SearchbarSlotBottom' of type 'UnityEngine.CanvasRenderer'.
-[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'SearchbarSlotBottom' of type 'UnityEngine.UI.Image'.
-[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'Debugs' of type 'UnityEngine.RectTransform'.
-[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'Debugs' of type 'UnityEngine.UI.ScrollRect'.
-[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'Debugs' of type 'UnityEngine.CanvasRenderer'.
-[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'Debugs' of type 'UnityEngine.UI.Image'.
-[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'Debugs' of type 'IngameDebugConsole.DebugsOnScrollListener'.
-[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'Viewport' of type 'UnityEngine.RectTransform'.
-[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'Viewport' of type 'UnityEngine.UI.RectMask2D'.
-[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'LogsContainer' of type 'UnityEngine.RectTransform'.
-[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'LogsContainer' of type 'IngameDebugConsole.DebugLogRecycledListView'.
-[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'SnapToBottom' of type 'UnityEngine.RectTransform'.
-[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'SnapToBottom' of type 'UnityEngine.CanvasRenderer'.
-[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'SnapToBottom' of type 'UnityEngine.UI.Image'.
-[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'SnapToBottom' of type 'UnityEngine.UI.Button'.
-[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'Image' of type 'UnityEngine.RectTransform'.
-[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'Image' of type 'UnityEngine.CanvasRenderer'.
-[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'Image' of type 'UnityEngine.UI.Image'.
-[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'Scrollbar Vertical' of type 'UnityEngine.RectTransform'.
-[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'Scrollbar Vertical' of type 'UnityEngine.CanvasRenderer'.
-[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'Scrollbar Vertical' of type 'UnityEngine.UI.Image'.
-[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'Scrollbar Vertical' of type 'UnityEngine.UI.Scrollbar'.
-[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'Scrollbar Vertical' of type 'UnityEngine.EventSystems.EventTrigger'.
-[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Found unity event methods in component 'Scrollbar Vertical' (1):
-  - OnScrollbarDragStart
-
-[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Found unity event methods in component 'Scrollbar Vertical' (1):
-  - OnScrollbarDragEnd
-
-[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'Sliding Area' of type 'UnityEngine.RectTransform'.
-[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'Handle' of type 'UnityEngine.RectTransform'.
-[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'Handle' of type 'UnityEngine.CanvasRenderer'.
-[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'Handle' of type 'UnityEngine.UI.Image'.
-[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'CommandSuggestions' of type 'UnityEngine.RectTransform'.
-[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'CommandSuggestions' of type 'UnityEngine.UI.HorizontalLayoutGroup'.
-[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'CommandSuggestionsContainer' of type 'UnityEngine.RectTransform'.
-[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'CommandSuggestionsContainer' of type 'UnityEngine.CanvasRenderer'.
-[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'CommandSuggestionsContainer' of type 'UnityEngine.UI.Image'.
-[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'CommandSuggestionsContainer' of type 'UnityEngine.UI.VerticalLayoutGroup'.
-[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'CommandInputField' of type 'UnityEngine.RectTransform'.
-[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'CommandInputField' of type 'IngameDebugConsole.InputFieldWarningsFixer'.
-[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'CommandInputField' of type 'UnityEngine.CanvasRenderer'.
-[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'CommandInputField' of type 'UnityEngine.UI.Image'.
-[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'CommandInputField' of type 'UnityEngine.UI.InputField'.
-[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'Placeholder' of type 'UnityEngine.RectTransform'.
-[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'Placeholder' of type 'UnityEngine.CanvasRenderer'.
-[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'Placeholder' of type 'UnityEngine.UI.Text'.
-[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'Text' of type 'UnityEngine.RectTransform'.
-[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'Text' of type 'UnityEngine.CanvasRenderer'.
-[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'Text' of type 'UnityEngine.UI.Text'.
-[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'DebugLogWindowResize' of type 'UnityEngine.RectTransform'.
-[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'DebugLogWindowResize' of type 'UnityEngine.CanvasRenderer'.
-[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'DebugLogWindowResize' of type 'UnityEngine.UI.Image'.
-[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'DebugLogWindowResize' of type 'IngameDebugConsole.DebugLogResizeListener'.
-[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'Image' of type 'UnityEngine.RectTransform'.
-[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'Image' of type 'UnityEngine.CanvasRenderer'.
-[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'Image' of type 'UnityEngine.UI.Image'.
-[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'DebugLogPopup' of type 'UnityEngine.RectTransform'.
-[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'DebugLogPopup' of type 'UnityEngine.CanvasRenderer'.
-[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'DebugLogPopup' of type 'UnityEngine.UI.Image'.
-[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'DebugLogPopup' of type 'IngameDebugConsole.DebugLogPopup'.
-[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'DebugLogPopup' of type 'UnityEngine.CanvasGroup'.
-[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'InfoImage' of type 'UnityEngine.RectTransform'.
-[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'InfoImage' of type 'UnityEngine.CanvasRenderer'.
-[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'InfoImage' of type 'UnityEngine.UI.Image'.
-[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'WarningImage' of type 'UnityEngine.RectTransform'.
-[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'WarningImage' of type 'UnityEngine.CanvasRenderer'.
-[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'WarningImage' of type 'UnityEngine.UI.Image'.
-[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'ErrorImage' of type 'UnityEngine.RectTransform'.
-[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'ErrorImage' of type 'UnityEngine.CanvasRenderer'.
-[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'ErrorImage' of type 'UnityEngine.UI.Image'.
-[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'NewInfoCount' of type 'UnityEngine.RectTransform'.
-[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'NewInfoCount' of type 'UnityEngine.CanvasRenderer'.
-[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'NewInfoCount' of type 'UnityEngine.UI.Text'.
-[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'NewWarningCount' of type 'UnityEngine.RectTransform'.
-[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'NewWarningCount' of type 'UnityEngine.CanvasRenderer'.
-[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'NewWarningCount' of type 'UnityEngine.UI.Text'.
-[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'NewErrorCount' of type 'UnityEngine.RectTransform'.
-[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'NewErrorCount' of type 'UnityEngine.CanvasRenderer'.
-[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'NewErrorCount' of type 'UnityEngine.UI.Text'.
-[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'EventSystem' of type 'UnityEngine.Transform'.
-[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'EventSystem' of type 'UnityEngine.EventSystems.EventSystem'.
-[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'EventSystem' of type 'UnityEngine.EventSystems.StandaloneInputModule'.
-[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'EventSystem' of type 'UnityEngine.EventSystems.BaseInput'.
-[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'BackTrace' of type 'UnityEngine.Transform'.
-[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'BackTrace' of type 'Backtrace.Unity.BacktraceClient'.
-[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'BackTrace' of type 'BackTraceTest'.
-[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'APPODEAL' of type 'UnityEngine.Transform'.
-[Warning][OPS.OBF][OnAnalyse_Component_Scenes] Failed to process current iterated Component at index 223 with Exception: System.NullReferenceException: Object reference not set to an instance of an object
-  at OPS.Obfuscator.Editor.Project.PreBuild.Pipeline.Component.AnalyseUnityEventComponent.OnAnalyse_Component (UnityEngine.Component _Component) [0x00005] in <12eb0d1e9ae24aa2b48f4643b196b2e9>:0 
-  at OPS.Obfuscator.Editor.Project.PreBuild.Pipeline.PreBuildPipeline.Process_Component_Analyse_And_Manipulate (System.Collections.Generic.List`1[T] _ComponentList) [0x00086] in <12eb0d1e9ae24aa2b48f4643b196b2e9>:0 
-[Warning][OPS.OBF][OnAnalyse_Component_Scenes] Failed to process current iterated Component at index 224 with Exception: System.NullReferenceException: Object reference not set to an instance of an object
-  at OPS.Obfuscator.Editor.Project.PreBuild.Pipeline.Component.AnalyseUnityEventComponent.OnAnalyse_Component (UnityEngine.Component _Component) [0x00005] in <12eb0d1e9ae24aa2b48f4643b196b2e9>:0 
-  at OPS.Obfuscator.Editor.Project.PreBuild.Pipeline.PreBuildPipeline.Process_Component_Analyse_And_Manipulate (System.Collections.Generic.List`1[T] _ComponentList) [0x00086] in <12eb0d1e9ae24aa2b48f4643b196b2e9>:0 
-[Warning][OPS.OBF][OnAnalyse_Component_Scenes] Failed to process current iterated Component at index 225 with Exception: System.NullReferenceException: Object reference not set to an instance of an object
-  at OPS.Obfuscator.Editor.Project.PreBuild.Pipeline.Component.AnalyseUnityEventComponent.OnAnalyse_Component (UnityEngine.Component _Component) [0x00005] in <12eb0d1e9ae24aa2b48f4643b196b2e9>:0 
-  at OPS.Obfuscator.Editor.Project.PreBuild.Pipeline.PreBuildPipeline.Process_Component_Analyse_And_Manipulate (System.Collections.Generic.List`1[T] _ComponentList) [0x00086] in <12eb0d1e9ae24aa2b48f4643b196b2e9>:0 
-[Warning][OPS.OBF][OnAnalyse_Component_Scenes] Failed to process current iterated Component at index 226 with Exception: System.NullReferenceException: Object reference not set to an instance of an object
-  at OPS.Obfuscator.Editor.Project.PreBuild.Pipeline.Component.AnalyseUnityEventComponent.OnAnalyse_Component (UnityEngine.Component _Component) [0x00005] in <12eb0d1e9ae24aa2b48f4643b196b2e9>:0 
-  at OPS.Obfuscator.Editor.Project.PreBuild.Pipeline.PreBuildPipeline.Process_Component_Analyse_And_Manipulate (System.Collections.Generic.List`1[T] _ComponentList) [0x00086] in <12eb0d1e9ae24aa2b48f4643b196b2e9>:0 
-[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'LevelPlay' of type 'UnityEngine.Transform'.
-[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'LevelPlay' of type 'AdLevelPlay'.
-[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Iterate components in not loaded build scene Assets/BlockTilesCrypto/Scenes/AuthenticationScene.unity.
-[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Found 7 Root GameObjects in Scene Assets/BlockTilesCrypto/Scenes/AuthenticationScene.unity
-[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Found 277 Components in Scene Assets/BlockTilesCrypto/Scenes/AuthenticationScene.unity
-[Info][OPS.OBF][OnAnalyse_Component_Scenes] Process component Analyse Unity Event Component
-[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'AuthenticationManager' of type 'UnityEngine.Transform'.
-[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'AuthenticationManager' of type 'PlayFabPersonal.Authentications.PlayfabAuthentication'.
-[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'AuthenticationManager' of type 'AccountRecovery'.
-[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'AuthenticationManager' of type 'PlayFabPersonal.Authentications.GuestAuthentication'.
-[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'UserManager' of type 'UnityEngine.Transform'.
-[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'UserManager' of type 'PlayFabPersonal.Users.UserAccount'.
-[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'PlayfabDataManager' of type 'UnityEngine.Transform'.
-[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'PlayfabDataManager' of type 'PlayFabPersonal.Managers.PlayfabDataManager'.
-[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'PlayfabDataManager' of type 'PlayFabPersonal.Economy.VirtualCurrency'.
-[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'GameSceneManager' of type 'UnityEngine.Transform'.
-[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'GameSceneManager' of type 'GameSceneManager'.
-[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'Canvas' of type 'UnityEngine.RectTransform'.
-[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'Canvas' of type 'UnityEngine.Canvas'.
-[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'Canvas' of type 'UnityEngine.UI.CanvasScaler'.
-[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'Canvas' of type 'UnityEngine.UI.GraphicRaycaster'.
-[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'LoginPanel' of type 'UnityEngine.RectTransform'.
-[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'LoginPanel' of type 'UnityEngine.CanvasRenderer'.
-[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'LoginPanel' of type 'UnityEngine.UI.Image'.
-[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'Container' of type 'UnityEngine.RectTransform'.
-[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'Container' of type 'UnityEngine.UI.VerticalLayoutGroup'.
-[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'Image' of type 'UnityEngine.RectTransform'.
-[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'Image' of type 'UnityEngine.CanvasRenderer'.
-[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'Image' of type 'UnityEngine.UI.Image'.
-[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'LoginFieldContainer' of type 'UnityEngine.RectTransform'.
-[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'LoginFieldContainer' of type 'UnityEngine.UI.VerticalLayoutGroup'.
-[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'LoginFieldContainer' of type 'UnityEngine.UI.ContentSizeFitter'.
-[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'EmailLabelText' of type 'UnityEngine.RectTransform'.
-[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'EmailLabelText' of type 'UnityEngine.CanvasRenderer'.
-[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'EmailLabelText' of type 'TMPro.TextMeshProUGUI'.
-[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'InputFieldEmailAddress' of type 'UnityEngine.RectTransform'.
-[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'InputFieldEmailAddress' of type 'UnityEngine.CanvasRenderer'.
-[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'InputFieldEmailAddress' of type 'UnityEngine.UI.Image'.
-[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'InputFieldEmailAddress' of type 'TMPro.TMP_InputField'.
-[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'Text Area' of type 'UnityEngine.RectTransform'.
-[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'Text Area' of type 'UnityEngine.UI.RectMask2D'.
-[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'Placeholder' of type 'UnityEngine.RectTransform'.
-[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'Placeholder' of type 'UnityEngine.CanvasRenderer'.
-[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'Placeholder' of type 'TMPro.TextMeshProUGUI'.
-[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'Placeholder' of type 'UnityEngine.UI.LayoutElement'.
-[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'Text' of type 'UnityEngine.RectTransform'.
-[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'Text' of type 'UnityEngine.CanvasRenderer'.
-[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'Text' of type 'TMPro.TextMeshProUGUI'.
-[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'PasswordLabelText' of type 'UnityEngine.RectTransform'.
-[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'PasswordLabelText' of type 'UnityEngine.CanvasRenderer'.
-[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'PasswordLabelText' of type 'TMPro.TextMeshProUGUI'.
-[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'InputFieldPassword' of type 'UnityEngine.RectTransform'.
-[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'InputFieldPassword' of type 'UnityEngine.CanvasRenderer'.
-[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'InputFieldPassword' of type 'UnityEngine.UI.Image'.
-[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'InputFieldPassword' of type 'TMPro.TMP_InputField'.
-[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'Text Area' of type 'UnityEngine.RectTransform'.
-[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'Text Area' of type 'UnityEngine.UI.RectMask2D'.
-[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'Placeholder' of type 'UnityEngine.RectTransform'.
-[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'Placeholder' of type 'UnityEngine.CanvasRenderer'.
-[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'Placeholder' of type 'TMPro.TextMeshProUGUI'.
-[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'Placeholder' of type 'UnityEngine.UI.LayoutElement'.
-[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'Text' of type 'UnityEngine.RectTransform'.
-[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'Text' of type 'UnityEngine.CanvasRenderer'.
-[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'Text' of type 'TMPro.TextMeshProUGUI'.
-[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'ForgetPasswordButton' of type 'UnityEngine.RectTransform'.
-[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'ForgetPasswordButton' of type 'UnityEngine.CanvasRenderer'.
-[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'ForgetPasswordButton' of type 'UnityEngine.UI.Image'.
-[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'ForgetPasswordButton' of type 'UnityEngine.UI.Button'.
-[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'Text (TMP)' of type 'UnityEngine.RectTransform'.
-[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'Text (TMP)' of type 'UnityEngine.CanvasRenderer'.
-[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'Text (TMP)' of type 'TMPro.TextMeshProUGUI'.
-[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'ErrorMessage' of type 'UnityEngine.RectTransform'.
-[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'ErrorMessage' of type 'UnityEngine.CanvasRenderer'.
-[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'ErrorMessage' of type 'TMPro.TextMeshProUGUI'.
-[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'Login/RegisterButtonContainer' of type 'UnityEngine.RectTransform'.
-[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'Login/RegisterButtonContainer' of type 'UnityEngine.UI.VerticalLayoutGroup'.
-[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'PlayfabLoginButton' of type 'UnityEngine.RectTransform'.
-[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'PlayfabLoginButton' of type 'UnityEngine.CanvasRenderer'.
-[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'PlayfabLoginButton' of type 'UnityEngine.UI.Image'.
-[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'PlayfabLoginButton' of type 'UnityEngine.UI.Button'.
-[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'PlayfabRegisterPanelButton' of type 'UnityEngine.RectTransform'.
-[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'PlayfabRegisterPanelButton' of type 'UnityEngine.CanvasRenderer'.
-[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'PlayfabRegisterPanelButton' of type 'UnityEngine.UI.Image'.
-[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'PlayfabRegisterPanelButton' of type 'UnityEngine.UI.Button'.
-[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'ContainerHorizontal' of type 'UnityEngine.RectTransform'.
-[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'ContainerHorizontal' of type 'UnityEngine.UI.HorizontalLayoutGroup'.
-[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'Text (TMP)' of type 'UnityEngine.RectTransform'.
-[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'Text (TMP)' of type 'UnityEngine.CanvasRenderer'.
-[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'Text (TMP)' of type 'TMPro.TextMeshProUGUI'.
-[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'LoginProviderContainer' of type 'UnityEngine.RectTransform'.
-[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'LoginProviderContainer' of type 'UnityEngine.UI.VerticalLayoutGroup'.
-[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'LoginProviderContainer' of type 'UnityEngine.CanvasRenderer'.
-[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'LoginProviderContainer' of type 'UnityEngine.UI.Image'.
-[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'Apple/GoogleContainer' of type 'UnityEngine.RectTransform'.
-[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'Apple/GoogleContainer' of type 'UnityEngine.UI.HorizontalLayoutGroup'.
-[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'AppleButton' of type 'UnityEngine.RectTransform'.
-[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'AppleButton' of type 'UnityEngine.CanvasRenderer'.
-[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'AppleButton' of type 'UnityEngine.UI.Image'.
-[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'AppleButton' of type 'UnityEngine.UI.Button'.
-[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'GoogleButton' of type 'UnityEngine.RectTransform'.
-[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'GoogleButton' of type 'UnityEngine.CanvasRenderer'.
-[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'GoogleButton' of type 'UnityEngine.UI.Image'.
-[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'GoogleButton' of type 'UnityEngine.UI.Button'.
-[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'Facebook/GuestContainer' of type 'UnityEngine.RectTransform'.
-[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'Facebook/GuestContainer' of type 'UnityEngine.UI.HorizontalLayoutGroup'.
-[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'FacebookButton' of type 'UnityEngine.RectTransform'.
-[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'FacebookButton' of type 'UnityEngine.CanvasRenderer'.
-[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'FacebookButton' of type 'UnityEngine.UI.Image'.
-[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'FacebookButton' of type 'UnityEngine.UI.Button'.
-[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'GuestButton' of type 'UnityEngine.RectTransform'.
-[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'GuestButton' of type 'UnityEngine.CanvasRenderer'.
-[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'GuestButton' of type 'UnityEngine.UI.Image'.
-[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'GuestButton' of type 'UnityEngine.UI.Button'.
-[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'PlayfabRegisterPanel' of type 'UnityEngine.RectTransform'.
-[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'PlayfabRegisterPanel' of type 'UnityEngine.CanvasRenderer'.
-[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'PlayfabRegisterPanel' of type 'UnityEngine.UI.Image'.
-[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'GameTitle' of type 'UnityEngine.RectTransform'.
-[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'GameTitle' of type 'UnityEngine.CanvasRenderer'.
-[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'GameTitle' of type 'UnityEngine.UI.Image'.
-[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'RegistrationTitleText' of type 'UnityEngine.RectTransform'.
-[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'RegistrationTitleText' of type 'UnityEngine.CanvasRenderer'.
-[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'RegistrationTitleText' of type 'TMPro.TextMeshProUGUI'.
-[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'RegistrationFieldContainer' of type 'UnityEngine.RectTransform'.
-[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'RegistrationFieldContainer' of type 'UnityEngine.UI.VerticalLayoutGroup'.
-[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'InputFieldFullName' of type 'UnityEngine.RectTransform'.
-[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'InputFieldFullName' of type 'UnityEngine.CanvasRenderer'.
-[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'InputFieldFullName' of type 'UnityEngine.UI.Image'.
-[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'InputFieldFullName' of type 'TMPro.TMP_InputField'.
-[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'Text Area' of type 'UnityEngine.RectTransform'.
-[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'Text Area' of type 'UnityEngine.UI.RectMask2D'.
-[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'Placeholder' of type 'UnityEngine.RectTransform'.
-[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'Placeholder' of type 'UnityEngine.CanvasRenderer'.
-[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'Placeholder' of type 'TMPro.TextMeshProUGUI'.
-[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'Placeholder' of type 'UnityEngine.UI.LayoutElement'.
-[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'Text' of type 'UnityEngine.RectTransform'.
-[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'Text' of type 'UnityEngine.CanvasRenderer'.
-[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'Text' of type 'TMPro.TextMeshProUGUI'.
-[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'InputFieldEmailAddress' of type 'UnityEngine.RectTransform'.
-[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'InputFieldEmailAddress' of type 'UnityEngine.CanvasRenderer'.
-[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'InputFieldEmailAddress' of type 'UnityEngine.UI.Image'.
-[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'InputFieldEmailAddress' of type 'TMPro.TMP_InputField'.
-[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'Text Area' of type 'UnityEngine.RectTransform'.
-[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'Text Area' of type 'UnityEngine.UI.RectMask2D'.
-[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'Placeholder' of type 'UnityEngine.RectTransform'.
-[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'Placeholder' of type 'UnityEngine.CanvasRenderer'.
-[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'Placeholder' of type 'TMPro.TextMeshProUGUI'.
-[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'Placeholder' of type 'UnityEngine.UI.LayoutElement'.
-[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'Text' of type 'UnityEngine.RectTransform'.
-[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'Text' of type 'UnityEngine.CanvasRenderer'.
-[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'Text' of type 'TMPro.TextMeshProUGUI'.
-[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'InputFieldPassword' of type 'UnityEngine.RectTransform'.
-[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'InputFieldPassword' of type 'UnityEngine.CanvasRenderer'.
-[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'InputFieldPassword' of type 'UnityEngine.UI.Image'.
-[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'InputFieldPassword' of type 'TMPro.TMP_InputField'.
-[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'Text Area' of type 'UnityEngine.RectTransform'.
-[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'Text Area' of type 'UnityEngine.UI.RectMask2D'.
-[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'Placeholder' of type 'UnityEngine.RectTransform'.
-[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'Placeholder' of type 'UnityEngine.CanvasRenderer'.
-[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'Placeholder' of type 'TMPro.TextMeshProUGUI'.
-[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'Placeholder' of type 'UnityEngine.UI.LayoutElement'.
-[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'Text' of type 'UnityEngine.RectTransform'.
-[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'Text' of type 'UnityEngine.CanvasRenderer'.
-[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'Text' of type 'TMPro.TextMeshProUGUI'.
-[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'InputFieldPasswordAgain' of type 'UnityEngine.RectTransform'.
-[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'InputFieldPasswordAgain' of type 'UnityEngine.CanvasRenderer'.
-[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'InputFieldPasswordAgain' of type 'UnityEngine.UI.Image'.
-[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'InputFieldPasswordAgain' of type 'TMPro.TMP_InputField'.
-[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'Text Area' of type 'UnityEngine.RectTransform'.
-[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'Text Area' of type 'UnityEngine.UI.RectMask2D'.
-[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'Placeholder' of type 'UnityEngine.RectTransform'.
-[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'Placeholder' of type 'UnityEngine.CanvasRenderer'.
-[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'Placeholder' of type 'TMPro.TextMeshProUGUI'.
-[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'Placeholder' of type 'UnityEngine.UI.LayoutElement'.
-[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'Text' of type 'UnityEngine.RectTransform'.
-[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'Text' of type 'UnityEngine.CanvasRenderer'.
-[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'Text' of type 'TMPro.TextMeshProUGUI'.
-[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'AddSpace' of type 'UnityEngine.RectTransform'.
-[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'ErrorMessage' of type 'UnityEngine.RectTransform'.
-[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'ErrorMessage' of type 'UnityEngine.CanvasRenderer'.
-[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'ErrorMessage' of type 'TMPro.TextMeshProUGUI'.
-[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'Submit/BackButtonContainer' of type 'UnityEngine.RectTransform'.
-[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'Submit/BackButtonContainer' of type 'UnityEngine.UI.HorizontalLayoutGroup'.
-[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'RegisterAccountButton' of type 'UnityEngine.RectTransform'.
-[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'RegisterAccountButton' of type 'UnityEngine.CanvasRenderer'.
-[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'RegisterAccountButton' of type 'UnityEngine.UI.Image'.
-[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'RegisterAccountButton' of type 'UnityEngine.UI.Button'.
-[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'Text (TMP)' of type 'UnityEngine.RectTransform'.
-[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'Text (TMP)' of type 'UnityEngine.CanvasRenderer'.
-[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'Text (TMP)' of type 'TMPro.TextMeshProUGUI'.
-[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'BackButton' of type 'UnityEngine.RectTransform'.
-[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'BackButton' of type 'UnityEngine.CanvasRenderer'.
-[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'BackButton' of type 'UnityEngine.UI.Image'.
-[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'BackButton' of type 'UnityEngine.UI.Button'.
-[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'Text (TMP)' of type 'UnityEngine.RectTransform'.
-[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'Text (TMP)' of type 'UnityEngine.CanvasRenderer'.
-[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'Text (TMP)' of type 'TMPro.TextMeshProUGUI'.
-[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'RecoveryEmailPanel' of type 'UnityEngine.RectTransform'.
-[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'RecoveryEmailPanel' of type 'UnityEngine.CanvasRenderer'.
-[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'RecoveryEmailPanel' of type 'UnityEngine.UI.Image'.
-[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'GameTitle' of type 'UnityEngine.RectTransform'.
-[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'GameTitle' of type 'UnityEngine.CanvasRenderer'.
-[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'GameTitle' of type 'UnityEngine.UI.Image'.
-[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'ResetPassTitleText' of type 'UnityEngine.RectTransform'.
-[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'ResetPassTitleText' of type 'UnityEngine.CanvasRenderer'.
-[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'ResetPassTitleText' of type 'TMPro.TextMeshProUGUI'.
-[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'RecoveryFieldsContainer' of type 'UnityEngine.RectTransform'.
-[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'RecoveryFieldsContainer' of type 'UnityEngine.UI.VerticalLayoutGroup'.
-[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'InputFieldEmailAddress' of type 'UnityEngine.RectTransform'.
-[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'InputFieldEmailAddress' of type 'UnityEngine.CanvasRenderer'.
-[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'InputFieldEmailAddress' of type 'UnityEngine.UI.Image'.
-[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'InputFieldEmailAddress' of type 'TMPro.TMP_InputField'.
-[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'Text Area' of type 'UnityEngine.RectTransform'.
-[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'Text Area' of type 'UnityEngine.UI.RectMask2D'.
-[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'Placeholder' of type 'UnityEngine.RectTransform'.
-[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'Placeholder' of type 'UnityEngine.CanvasRenderer'.
-[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'Placeholder' of type 'TMPro.TextMeshProUGUI'.
-[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'Placeholder' of type 'UnityEngine.UI.LayoutElement'.
-[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'Text' of type 'UnityEngine.RectTransform'.
-[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'Text' of type 'UnityEngine.CanvasRenderer'.
-[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'Text' of type 'TMPro.TextMeshProUGUI'.
-[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'AddSpace' of type 'UnityEngine.RectTransform'.
-[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'Reset/BackButtonContainer' of type 'UnityEngine.RectTransform'.
-[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'Reset/BackButtonContainer' of type 'UnityEngine.UI.HorizontalLayoutGroup'.
-[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'ResetButton' of type 'UnityEngine.RectTransform'.
-[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'ResetButton' of type 'UnityEngine.CanvasRenderer'.
-[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'ResetButton' of type 'UnityEngine.UI.Image'.
-[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'ResetButton' of type 'UnityEngine.UI.Button'.
-[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'Text (TMP)' of type 'UnityEngine.RectTransform'.
-[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'Text (TMP)' of type 'UnityEngine.CanvasRenderer'.
-[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'Text (TMP)' of type 'TMPro.TextMeshProUGUI'.
-[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'BackButton' of type 'UnityEngine.RectTransform'.
-[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'BackButton' of type 'UnityEngine.CanvasRenderer'.
-[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'BackButton' of type 'UnityEngine.UI.Image'.
-[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'BackButton' of type 'UnityEngine.UI.Button'.
-[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'Text (TMP)' of type 'UnityEngine.RectTransform'.
-[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'Text (TMP)' of type 'UnityEngine.CanvasRenderer'.
-[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'Text (TMP)' of type 'TMPro.TextMeshProUGUI'.
-[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'LoadingPanel' of type 'UnityEngine.RectTransform'.
-[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'LoadingPanel' of type 'UnityEngine.CanvasRenderer'.
-[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'LoadingPanel' of type 'UnityEngine.UI.Image'.
-[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'LoadingPanel' of type 'UnityEngine.Animator'.
-[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'LoadingPanel' of type 'LoadingPanel'.
-[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'Container' of type 'UnityEngine.RectTransform'.
-[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'TitleImage' of type 'UnityEngine.RectTransform'.
-[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'TitleImage' of type 'UnityEngine.CanvasRenderer'.
-[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'TitleImage' of type 'UnityEngine.UI.Image'.
-[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'BlueRingImage' of type 'UnityEngine.RectTransform'.
-[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'BlueRingImage' of type 'UnityEngine.CanvasRenderer'.
-[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'BlueRingImage' of type 'UnityEngine.UI.Image'.
-[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'GoldenRingImage' of type 'UnityEngine.RectTransform'.
-[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'GoldenRingImage' of type 'UnityEngine.CanvasRenderer'.
-[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'GoldenRingImage' of type 'UnityEngine.UI.Image'.
-[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'LoadingText' of type 'UnityEngine.RectTransform'.
-[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'LoadingText' of type 'UnityEngine.CanvasRenderer'.
-[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'LoadingText' of type 'TMPro.TextMeshProUGUI'.
-[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'PercentageText' of type 'UnityEngine.RectTransform'.
-[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'PercentageText' of type 'UnityEngine.CanvasRenderer'.
-[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'PercentageText' of type 'TMPro.TextMeshProUGUI'.
-[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'Loading' of type 'UnityEngine.RectTransform'.
-[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'Loading' of type 'UnityEngine.CanvasRenderer'.
-[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'Loading' of type 'UnityEngine.UI.Image'.
-[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'Loading' of type 'UnityEngine.Animator'.
-[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'Container' of type 'UnityEngine.RectTransform'.
-[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'TitleImage' of type 'UnityEngine.RectTransform'.
-[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'TitleImage' of type 'UnityEngine.CanvasRenderer'.
-[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'TitleImage' of type 'UnityEngine.UI.Image'.
-[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'BlueRingImage' of type 'UnityEngine.RectTransform'.
-[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'BlueRingImage' of type 'UnityEngine.CanvasRenderer'.
-[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'BlueRingImage' of type 'UnityEngine.UI.Image'.
-[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'GoldenRingImage' of type 'UnityEngine.RectTransform'.
-[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'GoldenRingImage' of type 'UnityEngine.CanvasRenderer'.
-[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'GoldenRingImage' of type 'UnityEngine.UI.Image'.
-[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'LoadingText' of type 'UnityEngine.RectTransform'.
-[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'LoadingText' of type 'UnityEngine.CanvasRenderer'.
-[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'LoadingText' of type 'TMPro.TextMeshProUGUI'.
-[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'PercentageText' of type 'UnityEngine.RectTransform'.
-[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'PercentageText' of type 'UnityEngine.CanvasRenderer'.
-[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'PercentageText' of type 'TMPro.TextMeshProUGUI'.
-[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'Main Camera' of type 'UnityEngine.Transform'.
-[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'Main Camera' of type 'UnityEngine.Camera'.
-[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'Main Camera' of type 'UnityEngine.AudioListener'.
-[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'Directional Light' of type 'UnityEngine.Transform'.
-[Debug][OPS.OBF][OnAnalyse_Component_Scenes] Find unity event methods in component 'Directional Light' of type 'UnityEngine.Light'.
 [Debug][OPS.OBF][OnAnalyse_Component_Scenes] Iterate components in not loaded build scene Assets/BlockTilesCrypto/Scenes/GameScene.unity.
 [Debug][OPS.OBF][OnAnalyse_Component_Scenes] Found 9 Root GameObjects in Scene Assets/BlockTilesCrypto/Scenes/GameScene.unity
 [Debug][OPS.OBF][OnAnalyse_Component_Scenes] Found 534 Components in Scene Assets/BlockTilesCrypto/Scenes/GameScene.unity

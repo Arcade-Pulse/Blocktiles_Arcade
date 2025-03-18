@@ -184,7 +184,7 @@
         {
           "Type" : "Bool",
           "Key" : "Obfuscate_Classes",
-          "Value" : "False",
+          "Value" : "True",
           "Values" : null
         },
         {

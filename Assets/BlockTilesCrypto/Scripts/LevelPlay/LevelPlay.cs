@@ -33,6 +33,7 @@ public class AdLevelPlay : MonoBehaviour
         // IronSource.Agent.setMetaData("is_test_suite", "enable"); 
         // IronSource.Agent.setAdaptersDebug(true);
 
+        IronSource.Agent.setConsent(true);
         IronSource.Agent.setMetaData("is_test_suite", "enable"); 
 
         IronSource.Agent.init(appKey, IronSourceAdUnits.REWARDED_VIDEO, IronSourceAdUnits.INTERSTITIAL, IronSourceAdUnits.BANNER);
@@ -117,6 +118,7 @@ public class AdLevelPlay : MonoBehaviour
         else
         {
             isRewardedLoaded = false;
+            IronSource.Agent.loadRewardedVideo();
         }
     }
 

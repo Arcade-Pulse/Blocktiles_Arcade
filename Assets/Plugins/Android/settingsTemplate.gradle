@@ -25,6 +25,9 @@ dependencyResolutionManagement {
             url "https://maven.google.com/" // Assets/LevelPlay/Editor/IronSourceSDKDependencies.xml:12, Assets/LevelPlay/Editor/ISAdMobAdapterDependencies.xml:8, Assets/LevelPlay/Editor/ISAppLovinAdapterDependencies.xml:12, Assets/LevelPlay/Editor/ISFacebookAdapterDependencies.xml:8, Assets/LevelPlay/Editor/ISInMobiAdapterDependencies.xml:19, Assets/LevelPlay/Editor/ISMintegralAdapterDependencies.xml:15, Packages/com.unity.ads/Editor/Source/Dependencies.xml:7
         }
         maven {
+            url "https://cboost.jfrog.io/artifactory/chartboost-ads/" // Assets/LevelPlay/Editor/ISChartboostAdapterDependencies.xml:12
+        }
+        maven {
             url "https://repo.maven.apache.org/maven2/" // Assets/LevelPlay/Editor/ISInMobiAdapterDependencies.xml:12
         }
         maven {

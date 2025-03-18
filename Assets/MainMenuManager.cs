@@ -49,7 +49,7 @@ public class MainMenuManager : MonoBehaviour
             PlayfabDataManager.Instance.timesEnteredWithNoLives++;
 
             // Get the maximum number of times a player can enter with no lives
-            int maxEnters = 2;
+            int maxEnters = 1;
 
             // If the player has exceeded the allowed number of entries with no lives
             if (PlayfabDataManager.Instance.timesEnteredWithNoLives > maxEnters)
