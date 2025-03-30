@@ -3374,22 +3374,3 @@
 [Debug][OPS.OBF][OnPostAssetsBuild] Unload Obfuscator Settings
 [Debug][OPS.OBF][OnPostAssetsBuild] Unload DataContainer
 [Info][OPS.OBF][OnPostAssetsBuild] Finished PostAssetsBuild!
-[Info][OPS.OBF][Setup] Active Editor Platform: WindowsEditorPlatform
-[Info][OPS.OBF][Setup] Active Build Platform: DefaultBuildPlatform
-[Info][OPS.OBF][Setup] Start 'PostBuild' process.
-[Info][OPS.OBF][Setup] Load Project
-[Debug][OPS.OBF][Setup] Load DataContainer
-[Debug][OPS.OBF][Setup] Load Obfuscator Settings
-[Debug][OPS.OBF][Setup] Load Pipeline Components
-[Debug][OPS.OBF][Setup] Found Components (1):
-  - Post Process Unity MonoBehaviour Assets (Post Process Unity MonoBehaviour Assets)
-
-[Debug][OPS.OBF][Setup] Load Pipeline
-[Warning][OPS.OBF][Setup] No MonoBehaviour obfuscation mapping found.
-[Info][OPS.OBF][OnPostBuild] Process component Post Process Unity MonoBehaviour Assets
-[Info][OPS.OBF][OnPostBuild] Unload Project
-[Debug][OPS.OBF][OnPostBuild] Unload Pipeline
-[Debug][OPS.OBF][OnPostBuild] Unload Pipeline Components
-[Debug][OPS.OBF][OnPostBuild] Unload Obfuscator Settings
-[Debug][OPS.OBF][OnPostBuild] Unload DataContainer
-[Info][OPS.OBF][OnPostBuild] Finished PostBuild!

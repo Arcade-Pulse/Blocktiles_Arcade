@@ -104,7 +104,7 @@ public class MenuPanel : MonoBehaviour
                     }
                     else
                     {
-                        Debug.Log("PlayerUIManager.Instance is null.");
+                        //Debug.Log("PlayerUIManager.Instance is null.");
                     }
 
                     if (PlayfabDataManager.Instance != null)
@@ -121,11 +121,11 @@ public class MenuPanel : MonoBehaviour
         }
         catch (NullReferenceException ex)
         {
-            Debug.Log("NullReferenceException in MenuPanel.OnEnable: " + ex.Message);
+            //Debug.Log("NullReferenceException in MenuPanel.OnEnable: " + ex.Message);
         }
         catch (Exception ex)
         {
-            Debug.Log("Unexpected error in MenuPanel.OnEnable: " + ex.Message);
+            //Debug.Log("Unexpected error in MenuPanel.OnEnable: " + ex.Message);
         }
     }
 }

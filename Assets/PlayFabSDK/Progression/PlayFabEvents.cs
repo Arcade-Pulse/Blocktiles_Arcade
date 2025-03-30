@@ -29,8 +29,6 @@ namespace PlayFab.Events
         public event PlayFabResultEvent<GetEntityLeaderboardResponse> OnProgressionGetLeaderboardForEntitiesResultEvent;
         public event PlayFabRequestEvent<GetStatisticDefinitionRequest> OnProgressionGetStatisticDefinitionRequestEvent;
         public event PlayFabResultEvent<GetStatisticDefinitionResponse> OnProgressionGetStatisticDefinitionResultEvent;
-        public event PlayFabRequestEvent<GetStatisticDefinitionsRequest> OnProgressionGetStatisticDefinitionsRequestEvent;
-        public event PlayFabResultEvent<GetStatisticDefinitionsResponse> OnProgressionGetStatisticDefinitionsResultEvent;
         public event PlayFabRequestEvent<GetStatisticsRequest> OnProgressionGetStatisticsRequestEvent;
         public event PlayFabResultEvent<GetStatisticsResponse> OnProgressionGetStatisticsResultEvent;
         public event PlayFabRequestEvent<GetStatisticsForEntitiesRequest> OnProgressionGetStatisticsForEntitiesRequestEvent;
@@ -45,8 +43,12 @@ namespace PlayFab.Events
         public event PlayFabResultEvent<ListStatisticDefinitionsResponse> OnProgressionListStatisticDefinitionsResultEvent;
         public event PlayFabRequestEvent<UnlinkLeaderboardFromStatisticRequest> OnProgressionUnlinkLeaderboardFromStatisticRequestEvent;
         public event PlayFabResultEvent<EmptyResponse> OnProgressionUnlinkLeaderboardFromStatisticResultEvent;
+        public event PlayFabRequestEvent<UpdateLeaderboardDefinitionRequest> OnProgressionUpdateLeaderboardDefinitionRequestEvent;
+        public event PlayFabResultEvent<EmptyResponse> OnProgressionUpdateLeaderboardDefinitionResultEvent;
         public event PlayFabRequestEvent<UpdateLeaderboardEntriesRequest> OnProgressionUpdateLeaderboardEntriesRequestEvent;
         public event PlayFabResultEvent<EmptyResponse> OnProgressionUpdateLeaderboardEntriesResultEvent;
+        public event PlayFabRequestEvent<UpdateStatisticDefinitionRequest> OnProgressionUpdateStatisticDefinitionRequestEvent;
+        public event PlayFabResultEvent<EmptyResponse> OnProgressionUpdateStatisticDefinitionResultEvent;
         public event PlayFabRequestEvent<UpdateStatisticsRequest> OnProgressionUpdateStatisticsRequestEvent;
         public event PlayFabResultEvent<UpdateStatisticsResponse> OnProgressionUpdateStatisticsResultEvent;
     }

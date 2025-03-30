@@ -40,8 +40,8 @@ public class CoinsChecker : MonoBehaviour
     public void ClaimButtonPressed()
     {
         claimButton.interactable = false;
-        Debug.Log("lives are "+PlayfabDataManager.Instance.GetTotalPlayerLives());
-        Debug.Log("lives 2 are "+PlayfabDataManager.Instance.lives);
+        //Debug.Log("lives are "+PlayfabDataManager.Instance.GetTotalPlayerLives());
+        //Debug.Log("lives 2 are "+PlayfabDataManager.Instance.lives);
         if (PlayfabDataManager.Instance.lives<=7)
         {
             VirtualCurrency.Instance.AddLife(3);
@@ -86,20 +86,20 @@ public class CoinsChecker : MonoBehaviour
                // Debug.Log($"New balance: {functionResult["balance"]}");
              //   OnChangeVirtualCurrencyAmount?.Invoke(this, new VirtualCurrency.OnAddSubstractAmountEventArgs { currencyValue = currentGameSocCoin });
             }
-            Debug.Log("success remove of coins");
+            //Debug.Log("success remove of coins");
             LoadPlayerInventory2(); // Refresh the local balance from the server
 
         }
         else
         {
-            Debug.LogWarning("No result returned from cloud script.");
+           // Debug.LogWarning("No result returned from cloud script.");
         }
         gameObject.SetActive(false);
     }
 
     private void OnError(PlayFabError error)
     {
-        Debug.LogError($"Error calling Cloud Script: {error.GenerateErrorReport()}");
+      //  Debug.LogError($"Error calling Cloud Script: {error.GenerateErrorReport()}");
     }
     
     

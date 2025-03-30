@@ -1,5 +1,6 @@
 ﻿using System;
 using CodeStage.AntiCheat.ObscuredTypes;
+using Firebase.Analytics;
 using PlayFab;
 using PlayFab.ClientModels;
 using PlayFabPersonal.Managers;
@@ -134,6 +135,11 @@ namespace PlayFabPersonal.Economy
             OnChangeVirtualCurrencyAmount?.Invoke(this, new OnAddSubstractAmountEventArgs { currencyValue = currentGameSocCoin });
             PlayfabDataManager.Instance.LoadPlayerInventory2(); // Refresh the local balance from the server
 
+            FirebaseAnalytics.LogEvent(FirebaseAnalytics.EventEarnVirtualCurrency, new Parameter[]
+            {
+                new Parameter(FirebaseAnalytics.ParameterValue, 50), // Amount earned
+                new Parameter(FirebaseAnalytics.ParameterVirtualCurrencyName, "coins") // Currency name
+            });
         }
 
         private void OnErrorAddCurrency(PlayFabError error)

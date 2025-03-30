@@ -131,7 +131,7 @@ namespace PlayFabPersonal.Managers
             //Debug.Log("got transaction Data");
             if (result == null || result.FunctionResult == null) 
             {
-                Debug.LogError("ExecuteCloudScriptResult or FunctionResult is null.");
+                //Debug.LogError("ExecuteCloudScriptResult or FunctionResult is null.");
                 return;
             }
             

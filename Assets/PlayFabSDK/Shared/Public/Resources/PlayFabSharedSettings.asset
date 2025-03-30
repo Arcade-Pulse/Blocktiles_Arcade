@@ -15,7 +15,7 @@ MonoBehaviour:
   TitleId: D979C
   DeveloperSecretKey: 6W7RYQ7NOABE17FQRSUFQXIFQB8UMIG73XH9YWRQJR45CYXUBG
   ProductionEnvironmentUrl: 
-  RequestType: 0
+  RequestType: 2
   DisableDeviceInfo: 0
   DisableFocusTimeCollection: 0
   RequestTimeout: 2000

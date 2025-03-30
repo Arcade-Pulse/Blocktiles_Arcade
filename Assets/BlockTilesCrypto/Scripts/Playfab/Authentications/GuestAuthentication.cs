@@ -31,7 +31,7 @@ namespace PlayFabPersonal.Authentications
             {
                 if (connected)
                 {
-                    Debug.Log("Starting guest login");
+                 //   Debug.Log("Starting guest login");
                     LoginWithDevice();
                 }
                 else
@@ -49,7 +49,7 @@ namespace PlayFabPersonal.Authentications
             if (!string.IsNullOrEmpty(android_id))
             {
                 // Attempt login with Android Device ID
-                Debug.Log("Attempting login with Android Device ID: " + android_id);
+              //  Debug.Log("Attempting login with Android Device ID: " + android_id);
                 PlayFabClientAPI.LoginWithAndroidDeviceID(new LoginWithAndroidDeviceIDRequest()
                 {
                     CreateAccount = true,
@@ -62,7 +62,7 @@ namespace PlayFabPersonal.Authentications
             else if (!string.IsNullOrEmpty(ios_id))
             {
                 // Attempt login with iOS Device ID
-                Debug.Log("Attempting login with iOS Device ID: " + ios_id);
+              //  Debug.Log("Attempting login with iOS Device ID: " + ios_id);
                 PlayFabClientAPI.LoginWithIOSDeviceID(new LoginWithIOSDeviceIDRequest()
                 {
                     CreateAccount = true,
@@ -92,7 +92,7 @@ namespace PlayFabPersonal.Authentications
 
         private void OnLoginSuccess(LoginResult result)
         {
-            Debug.Log("Login successful.");
+          //  Debug.Log("Login successful.");
             retryCount = 0; // Reset the retry count on success
             GameSceneManager.Instance.HideLoadingPanel();
             UserAccount.OnLoginSuccess?.Invoke(PlayerPrefNameString.GUEST);

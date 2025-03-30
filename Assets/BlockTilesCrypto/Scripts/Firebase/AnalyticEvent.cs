@@ -5,6 +5,6 @@ public class AnalyticEvent : MonoBehaviour
 {
     private void Start()
     {
-        FirebaseAnalytics.LogEvent(FirebaseAnalytics.EventEarnVirtualCurrency);
+       // FirebaseAnalytics.LogEvent(FirebaseAnalytics.EventEarnVirtualCurrency);
     }
 }

@@ -4,6 +4,7 @@ using System.Security.Cryptography;
 using System.Collections;
 using System.Collections.Generic;
 using System.IO;
+using CodeStage.AntiCheat.ObscuredTypes;
 using UnityEngine;
 using UnityEngine.Networking;
 using PlayFab;
@@ -52,7 +53,8 @@ public class PlayIntegrityManager : MonoBehaviour
 #else
         if (!File.Exists(path))
         {
-            Debug.LogError($"[PlayIntegrity] ERROR: Configuration file not found at path: {path}");
+          //
+          //Debug.LogError($"[PlayIntegrity] ERROR: Configuration file not found at path: {path}");
             yield break;
         }
 
@@ -63,12 +65,12 @@ public class PlayIntegrityManager : MonoBehaviour
         cloudProjectNumber = config.cloudProjectNumber;
         playFabFunctionUrl = config.playFabFunctionUrl;
 
-        Debug.Log($"[PlayIntegrity] Configuration Loaded ✅ | Cloud Project: {cloudProjectNumber} | PlayFab URL: {playFabFunctionUrl}");
+       // Debug.Log($"[PlayIntegrity] Configuration Loaded ✅ | Cloud Project: {cloudProjectNumber} | PlayFab URL: {playFabFunctionUrl}");
 
 #if UNITY_ANDROID && !UNITY_EDITOR
         StartCoroutine(PrepareIntegrityTokenCoroutine());
 #else
-        Debug.LogWarning("[PlayIntegrity] WARNING: Token Request can only be performed on an Android device.");
+      //  Debug.LogWarning("[PlayIntegrity] WARNING: Token Request can only be performed on an Android device.");
 #endif
     }
 
@@ -86,7 +88,7 @@ public class PlayIntegrityManager : MonoBehaviour
 
     private IEnumerator PrepareIntegrityTokenCoroutine()
     {
-        Debug.Log("[PlayIntegrity] Preparing Integrity Token...");
+       // Debug.Log("[PlayIntegrity] Preparing Integrity Token...");
 
         var standardIntegrityManager = new StandardIntegrityManager();
         var integrityTokenProviderOperation = standardIntegrityManager.PrepareIntegrityToken(
@@ -96,12 +98,12 @@ public class PlayIntegrityManager : MonoBehaviour
 
         if (integrityTokenProviderOperation.Error != StandardIntegrityErrorCode.NoError)
         {
-            Debug.LogError($"[PlayIntegrity] ERROR: Token Provider Preparation Failed - {integrityTokenProviderOperation.Error}");
+          //  Debug.LogError($"[PlayIntegrity] ERROR: Token Provider Preparation Failed - {integrityTokenProviderOperation.Error}");
             yield break;
         }
 
         integrityTokenProvider = integrityTokenProviderOperation.GetResult();
-        Debug.Log("[PlayIntegrity] ✅ Token Provider Prepared Successfully!");
+       // Debug.Log("[PlayIntegrity] ✅ Token Provider Prepared Successfully!");
 
         StartCoroutine(RequestIntegrityTokenCoroutine(PlayfabDataManager.Instance.currentPlayerID));
     }
@@ -123,11 +125,11 @@ public class PlayIntegrityManager : MonoBehaviour
 
     private IEnumerator RequestIntegrityTokenCoroutine(string playFabId)
     {
-        Debug.Log($"[PlayIntegrity] Requesting Integrity Token for PlayFab ID: {playFabId}");
+      //  Debug.Log($"[PlayIntegrity] Requesting Integrity Token for PlayFab ID: {playFabId}");
 
         if (integrityTokenProvider == null)
         {
-            Debug.LogError("[PlayIntegrity] ERROR: TokenProvider is not prepared.");
+        //    Debug.LogError("[PlayIntegrity] ERROR: TokenProvider is not prepared.");
             yield break;
         }
 
@@ -138,20 +140,20 @@ public class PlayIntegrityManager : MonoBehaviour
 
         if (integrityTokenOperation.Error != StandardIntegrityErrorCode.NoError)
         {
-            Debug.LogError($"[PlayIntegrity] ERROR: Token Request Failed - {integrityTokenOperation.Error}");
+          //  Debug.LogError($"[PlayIntegrity] ERROR: Token Request Failed - {integrityTokenOperation.Error}");
             yield break;
         }
 
         var integrityToken = integrityTokenOperation.GetResult();
         string tokenString = integrityToken.Token;
 
-        Debug.Log($"[PlayIntegrity] ✅ Integrity Token Retrieved Successfully! Token Length: {tokenString.Length}");
+     //   Debug.Log($"[PlayIntegrity] ✅ Integrity Token Retrieved Successfully! Token Length: {tokenString.Length}");
         SendTokenToPlayFab(tokenString);
     }
 
     private void SendTokenToPlayFab(string token)
     {
-        Debug.Log($"[PlayIntegrity] Sending Token to PlayFab: {token.Substring(0, 20)}... (truncated)");
+      //  Debug.Log($"[PlayIntegrity] Sending Token to PlayFab: {token.Substring(0, 20)}... (truncated)");
 
         var request = new ExecuteCloudScriptRequest
         {
@@ -166,7 +168,7 @@ public class PlayIntegrityManager : MonoBehaviour
 
     private void OnCloudScriptSuccess(ExecuteCloudScriptResult result)
     {
-        Debug.Log($"[PlayIntegrity] ✅ PlayFab Cloud Script Executed Successfully!");
+       // Debug.Log($"[PlayIntegrity] ✅ PlayFab Cloud Script Executed Successfully!");
         
         if (result.Error != null)
         {
@@ -175,7 +177,7 @@ public class PlayIntegrityManager : MonoBehaviour
         }
 
         var functionResultJson = JsonUtility.ToJson(result.FunctionResult);
-        Debug.Log($"[PlayIntegrity] Cloud Script Function Result: {functionResultJson}");
+       // Debug.Log($"[PlayIntegrity] Cloud Script Function Result: {functionResultJson}");
 
         var response = (JsonObject)result.FunctionResult;
 
@@ -188,23 +190,54 @@ public class PlayIntegrityManager : MonoBehaviour
         else
         {
             var successMessage = response.ContainsKey("message") ? response["message"].ToString() : "Operation successful";
-            Debug.Log($"[PlayIntegrity] ✅ Server Response Success: {successMessage}");
+         //   Debug.Log($"[PlayIntegrity] ✅ Server Response Success: {successMessage}");
         }
     }
 
     private void OnCloudScriptFailure(PlayFabError error)
     {
-        Debug.LogError($"[PlayIntegrity] ERROR: PlayFab Cloud Script Execution Failed - {error.GenerateErrorReport()}");
+      //  Debug.LogError($"[PlayIntegrity] ERROR: PlayFab Cloud Script Execution Failed - {error.GenerateErrorReport()}");
     }
     
     
     private void KickPlayer()
     {
-        Debug.LogError("[PlayIntegrity] 🚨 Player integrity check failed! Kicking player...");
+        //Debug.LogError("[PlayIntegrity] 🚨 Player integrity check failed! Kicking player...");
     
         // **Disconnect player and return to main menu or login screen**
-        PlayFabClientAPI.ForgetAllCredentials();
-        Application.Quit();
+        banUser();
+
         
+    }
+    
+    
+    public void banUser() {
+        
+        ObscuredString funcName1 = "banUser";
+        var requestCurrentChallenge = new ExecuteCloudScriptRequest
+        {
+            FunctionName = funcName1,
+            GeneratePlayStreamEvent = true,
+            RevisionSelection = PlayfabDataManager.Instance.GetCloudRevision()
+        };
+        
+        PlayFabClientAPI.ExecuteCloudScript(requestCurrentChallenge, result => {
+            // if (result.Error != null) {
+            //     Debug.LogError(result.Error.Message);
+            //     return;
+            // }
+
+            var functionResult = JsonUtility.FromJson<FunctionResult>(result.FunctionResult.ToString());
+            if (functionResult.expression != null) {
+                PlayFabClientAPI.ForgetAllCredentials();
+                Application.Quit();
+            } else {
+                PlayFabClientAPI.ForgetAllCredentials();
+                Application.Quit();
+            }
+        }, error => {
+            PlayFabClientAPI.ForgetAllCredentials();
+            Application.Quit();
+        });
     }
 }

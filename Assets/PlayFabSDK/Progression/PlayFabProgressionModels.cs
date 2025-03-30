@@ -51,7 +51,7 @@ namespace PlayFab.ProgressionModels
         /// </summary>
         public string EntityType;
         /// <summary>
-        /// Name of the statistic. Must be less than 50 characters. Restricted to a-Z, 0-9, '(', ')', '_', '-' and '.'.
+        /// Name of the statistic. Must be less than 150 characters. Restricted to a-Z, 0-9, '(', ')', '_', '-' and '.'.
         /// </summary>
         public string Name;
         /// <summary>
@@ -261,9 +261,17 @@ namespace PlayFab.ProgressionModels
     public class GetEntityLeaderboardResponse : PlayFabResultCommon
     {
         /// <summary>
-        /// Leaderboard columns describing the sort directions,
+        /// Leaderboard columns describing the sort directions.
         /// </summary>
         public List<LeaderboardColumn> Columns;
+        /// <summary>
+        /// The number of entries on the leaderboard.
+        /// </summary>
+        public uint EntryCount;
+        /// <summary>
+        /// The time the next scheduled reset will occur. Null if the leaderboard does not reset on a schedule.
+        /// </summary>
+        public DateTime? NextReset;
         /// <summary>
         /// Individual entity rankings in the leaderboard, in sorted order by rank.
         /// </summary>
@@ -419,7 +427,7 @@ namespace PlayFab.ProgressionModels
         /// </summary>
         public Dictionary<string,string> CustomTags;
         /// <summary>
-        /// Name of the statistic. Must be less than 50 characters.
+        /// Name of the statistic. Must be less than 150 characters.
         /// </summary>
         public string Name;
     }
@@ -459,24 +467,6 @@ namespace PlayFab.ProgressionModels
         /// The version reset configuration for the leaderboard definition.
         /// </summary>
         public VersionConfiguration VersionConfiguration;
-    }
-
-    [Serializable]
-    public class GetStatisticDefinitionsRequest : PlayFabRequestCommon
-    {
-        /// <summary>
-        /// The optional custom tags associated with the request (e.g. build number, external trace identifiers, etc.).
-        /// </summary>
-        public Dictionary<string,string> CustomTags;
-    }
-
-    [Serializable]
-    public class GetStatisticDefinitionsResponse : PlayFabResultCommon
-    {
-        /// <summary>
-        /// List of statistic definitions for the title.
-        /// </summary>
-        public List<StatisticDefinition> StatisticDefinitions;
     }
 
     [Serializable]
@@ -841,6 +831,27 @@ namespace PlayFab.ProgressionModels
     }
 
     [Serializable]
+    public class UpdateLeaderboardDefinitionRequest : PlayFabRequestCommon
+    {
+        /// <summary>
+        /// The optional custom tags associated with the request (e.g. build number, external trace identifiers, etc.).
+        /// </summary>
+        public Dictionary<string,string> CustomTags;
+        /// <summary>
+        /// The name of the leaderboard to update the definition for.
+        /// </summary>
+        public string Name;
+        /// <summary>
+        /// Maximum number of entries on this leaderboard
+        /// </summary>
+        public int? SizeLimit;
+        /// <summary>
+        /// The version reset configuration for the leaderboard definition.
+        /// </summary>
+        public VersionConfiguration VersionConfiguration;
+    }
+
+    [Serializable]
     public class UpdateLeaderboardEntriesRequest : PlayFabRequestCommon
     {
         /// <summary>
@@ -858,6 +869,23 @@ namespace PlayFab.ProgressionModels
     }
 
     [Serializable]
+    public class UpdateStatisticDefinitionRequest : PlayFabRequestCommon
+    {
+        /// <summary>
+        /// The optional custom tags associated with the request (e.g. build number, external trace identifiers, etc.).
+        /// </summary>
+        public Dictionary<string,string> CustomTags;
+        /// <summary>
+        /// Name of the statistic. Must be less than 150 characters. Restricted to a-Z, 0-9, '(', ')', '_', '-' and '.'.
+        /// </summary>
+        public string Name;
+        /// <summary>
+        /// The version reset configuration for the statistic definition.
+        /// </summary>
+        public VersionConfiguration VersionConfiguration;
+    }
+
+    [Serializable]
     public class UpdateStatisticsRequest : PlayFabRequestCommon
     {
         /// <summary>
@@ -872,6 +900,11 @@ namespace PlayFab.ProgressionModels
         /// Collection of statistics to update, maximum 50.
         /// </summary>
         public List<StatisticUpdate> Statistics;
+        /// <summary>
+        /// Optional transactionId of this update which can be used to ensure idempotence. Using this field is still in testing
+        /// stage.
+        /// </summary>
+        public string TransactionId;
     }
 
     [Serializable]

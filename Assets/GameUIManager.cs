@@ -45,12 +45,12 @@ public class GameUIManager : MonoBehaviour
 
     public void ShowPlayerStats()
     {
-        Debug.Log("executing Show player stats");
+        //Debug.Log("executing Show player stats");
         try
         {
             if (playfabDataManager == null)
             {
-                Debug.Log("playfabDataManager is null in ShowPlayerStats");
+                //Debug.Log("playfabDataManager is null in ShowPlayerStats");
                 return;
             }
 
@@ -62,18 +62,18 @@ public class GameUIManager : MonoBehaviour
             }
             else
             {
-                Debug.LogError("lifeText is null in ShowPlayerStats");
+                //Debug.LogError("lifeText is null in ShowPlayerStats");
             }
 
             if (gameSocCoinText != null)
             {
                 gameSocCoinText.text = playfabDataManager.GetGameSocCoins().ToString();
-                Debug.Log("updated coins"+playfabDataManager.GetGameSocCoins().ToString());
+               // Debug.Log("updated coins"+playfabDataManager.GetGameSocCoins().ToString());
 
             }
             else
             {
-                Debug.Log("gameSocCoinText is null in ShowPlayerStats");
+              //  Debug.Log("gameSocCoinText is null in ShowPlayerStats");
             }
         }
         catch (ArgumentOutOfRangeException ex)

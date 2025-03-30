@@ -285,7 +285,7 @@ namespace PlayFab.ServerModels
         /// </summary>
         public string Reason;
         /// <summary>
-        /// The family type of the suer that is included in the ban.
+        /// The family type of the user that is included in the ban.
         /// </summary>
         public string UserFamilyType;
     }
@@ -1104,6 +1104,19 @@ namespace PlayFab.ServerModels
         ZWD
     }
 
+    [Serializable]
+    public class CustomPropertyDetails : PlayFabBaseModel
+    {
+        /// <summary>
+        /// The custom property's name.
+        /// </summary>
+        public string Name;
+        /// <summary>
+        /// The custom property's value.
+        /// </summary>
+        public object Value;
+    }
+
     /// <summary>
     /// This function will delete the specified character from the list allowed by the user, and will also delete any inventory
     /// or VC currently held by that character. It will NOT delete any statistics associated for this character, in order to
@@ -1134,6 +1147,62 @@ namespace PlayFab.ServerModels
     [Serializable]
     public class DeleteCharacterFromUserResult : PlayFabResultCommon
     {
+    }
+
+    [Serializable]
+    public class DeletedPropertyDetails : PlayFabBaseModel
+    {
+        /// <summary>
+        /// The name of the property which was requested to be deleted.
+        /// </summary>
+        public string Name;
+        /// <summary>
+        /// Indicates whether or not the property was deleted. If false, no property with that name existed.
+        /// </summary>
+        public bool WasDeleted;
+    }
+
+    /// <summary>
+    /// Deletes custom properties for the specified player. The list of provided property names must be non-empty.
+    /// </summary>
+    [Serializable]
+    public class DeletePlayerCustomPropertiesRequest : PlayFabRequestCommon
+    {
+        /// <summary>
+        /// The optional custom tags associated with the request (e.g. build number, external trace identifiers, etc.).
+        /// </summary>
+        public Dictionary<string,string> CustomTags;
+        /// <summary>
+        /// Optional field used for concurrency control. One can ensure that the delete operation will only be performed if the
+        /// player's properties have not been updated by any other clients since the last version.
+        /// </summary>
+        public int? ExpectedPropertiesVersion;
+        /// <summary>
+        /// Unique PlayFab assigned ID of the user on whom the operation will be performed.
+        /// </summary>
+        public string PlayFabId;
+        /// <summary>
+        /// A list of property names denoting which properties should be deleted.
+        /// </summary>
+        public List<string> PropertyNames;
+    }
+
+    [Serializable]
+    public class DeletePlayerCustomPropertiesResult : PlayFabResultCommon
+    {
+        /// <summary>
+        /// The list of properties requested to be deleted.
+        /// </summary>
+        public List<DeletedPropertyDetails> DeletedProperties;
+        /// <summary>
+        /// PlayFab unique identifier of the user whose properties were deleted.
+        /// </summary>
+        public string PlayFabId;
+        /// <summary>
+        /// Indicates the current version of a player's properties that have been set. This is incremented after updates and
+        /// deletes. This version can be provided in update and delete calls for concurrency control.
+        /// </summary>
+        public int PropertiesVersion;
     }
 
     /// <summary>
@@ -1390,7 +1459,7 @@ namespace PlayFab.ServerModels
     public class FriendInfo : PlayFabBaseModel
     {
         /// <summary>
-        /// Available Facebook information (if the user and PlayFab friend are also connected in Facebook).
+        /// Available Facebook information (if the user and connected Facebook friend both have PlayFab Accounts in the same title).
         /// </summary>
         public UserFacebookInfo FacebookInfo;
         /// <summary>
@@ -1398,7 +1467,8 @@ namespace PlayFab.ServerModels
         /// </summary>
         public string FriendPlayFabId;
         /// <summary>
-        /// Available Game Center information (if the user and PlayFab friend are also connected in Game Center).
+        /// Available Game Center information (if the user and connected Game Center friend both have PlayFab Accounts in the same
+        /// title).
         /// </summary>
         public UserGameCenterInfo GameCenterInfo;
         /// <summary>
@@ -1406,12 +1476,12 @@ namespace PlayFab.ServerModels
         /// </summary>
         public PlayerProfileModel Profile;
         /// <summary>
-        /// Available PlayStation :tm: Network information, if the user and PlayFab friend are both connected to PlayStation :tm:
-        /// Network.
+        /// Available PlayStation :tm: Network information, if the user connected PlayStation :tm Network friend both have PlayFab
+        /// Accounts in the same title.
         /// </summary>
         public UserPsnInfo PSNInfo;
         /// <summary>
-        /// Available Steam information (if the user and PlayFab friend are also connected in Steam).
+        /// Available Steam information (if the user and connected Steam friend both have PlayFab Accounts in the same title).
         /// </summary>
         public UserSteamInfo SteamInfo;
         /// <summary>
@@ -1427,7 +1497,7 @@ namespace PlayFab.ServerModels
         /// </summary>
         public string Username;
         /// <summary>
-        /// Available Xbox information, if the user and PlayFab friend are both connected to Xbox Live.
+        /// Available Xbox information, (if the user and connected Xbox Live friend both have PlayFab Accounts in the same title).
         /// </summary>
         public UserXboxInfo XboxInfo;
     }
@@ -2012,9 +2082,16 @@ namespace PlayFab.ServerModels
         MultipleLinkedStatisticsNotAllowed,
         DuplicateLinkedStatisticColumnNameFound,
         AggregationTypeNotAllowedForMultiColumnStatistic,
-        MaxQueryableVerionsValueNotAllowedForTier,
+        MaxQueryableVersionsValueNotAllowedForTier,
         StatisticDefinitionHasNullOrEmptyVersionConfiguration,
         StatisticColumnLengthMismatch,
+        InvalidExternalEntityId,
+        UpdatingStatisticsUsingTransactionIdNotAvailableForFreeTier,
+        TransactionAlreadyApplied,
+        ReportDataNotRetrievedSuccessfully,
+        ResetIntervalCannotBeModified,
+        VersionIncrementRateExceeded,
+        InvalidSteamUsername,
         MatchmakingEntityInvalid,
         MatchmakingPlayerAttributesInvalid,
         MatchmakingQueueNotFound,
@@ -2148,6 +2225,7 @@ namespace PlayFab.ServerModels
         AnalyticsSegmentCountOverLimit,
         SnapshotNotFound,
         InventoryApiNotImplemented,
+        InventoryCollectionDeletionDisallowed,
         LobbyDoesNotExist,
         LobbyRateLimitExceeded,
         LobbyPlayerAlreadyJoined,
@@ -2281,6 +2359,10 @@ namespace PlayFab.ServerModels
         TrueSkillInvalidPlayerId,
         TrueSkillInvalidSquadSize,
         TrueSkillConditionSetNotInModel,
+        TrueSkillModelStateInvalidForOperation,
+        TrueSkillScenarioContainsActiveModel,
+        TrueSkillInvalidConditionRank,
+        TrueSkillTotalScenarioLimitExceeded,
         GameSaveManifestNotFound,
         GameSaveManifestVersionAlreadyExists,
         GameSaveConflictUpdatingManifest,
@@ -2290,6 +2372,12 @@ namespace PlayFab.ServerModels
         GameSaveUnknownFileInManifest,
         GameSaveFileExceededReportedSize,
         GameSaveFileNotUploaded,
+        GameSaveBadRequest,
+        GameSaveOperationNotAllowed,
+        GameSaveDataStorageQuotaExceeded,
+        GameSaveNewerManifestExists,
+        GameSaveBaseVersionNotAvailable,
+        GameSaveManifestVersionQuarantined,
         StateShareForbidden,
         StateShareTitleNotInFlight,
         StateShareStateNotFound,
@@ -2956,6 +3044,37 @@ namespace PlayFab.ServerModels
         public Dictionary<string,VirtualCurrencyRechargeTime> UserVirtualCurrencyRechargeTimes;
     }
 
+    [Serializable]
+    public class GetPlayerCustomPropertyRequest : PlayFabRequestCommon
+    {
+        /// <summary>
+        /// Unique PlayFab assigned ID of the user on whom the operation will be performed.
+        /// </summary>
+        public string PlayFabId;
+        /// <summary>
+        /// Specific property name to search for in the player's properties.
+        /// </summary>
+        public string PropertyName;
+    }
+
+    [Serializable]
+    public class GetPlayerCustomPropertyResult : PlayFabResultCommon
+    {
+        /// <summary>
+        /// PlayFab unique identifier of the user whose properties are being returned.
+        /// </summary>
+        public string PlayFabId;
+        /// <summary>
+        /// Indicates the current version of a player's properties that have been set. This is incremented after updates and
+        /// deletes. This version can be provided in update and delete calls for concurrency control.
+        /// </summary>
+        public int PropertiesVersion;
+        /// <summary>
+        /// Player specific property and its corresponding value.
+        /// </summary>
+        public CustomPropertyDetails Property;
+    }
+
     /// <summary>
     /// This API allows for access to details regarding a user in the PlayFab service, usually for purposes of customer support.
     /// Note that data returned may be Personally Identifying Information (PII), such as email address, and so care should be
@@ -3349,6 +3468,28 @@ namespace PlayFab.ServerModels
         /// Mapping of Steam identifiers to PlayFab identifiers.
         /// </summary>
         public List<SteamPlayFabIdPair> Data;
+    }
+
+    [Serializable]
+    public class GetPlayFabIDsFromSteamNamesRequest : PlayFabRequestCommon
+    {
+        /// <summary>
+        /// Array of unique Steam identifiers for which the title needs to get PlayFab identifiers. The array cannot exceed 2,000 in
+        /// length.
+        /// </summary>
+        public List<string> SteamNames;
+    }
+
+    /// <summary>
+    /// For Steam identifiers which have not been linked to PlayFab accounts, null will be returned.
+    /// </summary>
+    [Serializable]
+    public class GetPlayFabIDsFromSteamNamesResult : PlayFabResultCommon
+    {
+        /// <summary>
+        /// Mapping of Steam identifiers to PlayFab identifiers.
+        /// </summary>
+        public List<SteamNamePlayFabIdPair> Data;
     }
 
     [Serializable]
@@ -4350,6 +4491,33 @@ namespace PlayFab.ServerModels
     {
     }
 
+    [Serializable]
+    public class ListPlayerCustomPropertiesRequest : PlayFabRequestCommon
+    {
+        /// <summary>
+        /// Unique PlayFab assigned ID of the user on whom the operation will be performed.
+        /// </summary>
+        public string PlayFabId;
+    }
+
+    [Serializable]
+    public class ListPlayerCustomPropertiesResult : PlayFabResultCommon
+    {
+        /// <summary>
+        /// PlayFab unique identifier of the user whose properties are being returned.
+        /// </summary>
+        public string PlayFabId;
+        /// <summary>
+        /// Player specific properties and their corresponding values for this title.
+        /// </summary>
+        public List<CustomPropertyDetails> Properties;
+        /// <summary>
+        /// Indicates the current version of a player's properties that have been set. This is incremented after updates and
+        /// deletes. This version can be provided in update and delete calls for concurrency control.
+        /// </summary>
+        public int PropertiesVersion;
+    }
+
     /// <summary>
     /// Returns a list of every character that currently belongs to a user.
     /// </summary>
@@ -4436,7 +4604,8 @@ namespace PlayFab.ServerModels
         Apple,
         NintendoSwitchAccount,
         GooglePlayGames,
-        XboxMobileStore
+        XboxMobileStore,
+        King
     }
 
     /// <summary>
@@ -4908,6 +5077,10 @@ namespace PlayFab.ServerModels
         /// Player record created
         /// </summary>
         public DateTime? Created;
+        /// <summary>
+        /// Dictionary of player's custom properties.
+        /// </summary>
+        public Dictionary<string,object> CustomProperties;
         /// <summary>
         /// Player Display Name
         /// </summary>
@@ -5783,7 +5956,7 @@ namespace PlayFab.ServerModels
         /// </summary>
         public DateTime? LastLoginTime;
         /// <summary>
-        /// True if the account was newly created on this login.
+        /// True if the master_player_account was newly created on this login.
         /// </summary>
         public bool NewlyCreated;
         /// <summary>
@@ -5999,6 +6172,19 @@ namespace PlayFab.ServerModels
         /// for updates to an existing statistic value for a player, the version of the statistic when it was loaded
         /// </summary>
         public uint Version;
+    }
+
+    [Serializable]
+    public class SteamNamePlayFabIdPair : PlayFabBaseModel
+    {
+        /// <summary>
+        /// Unique PlayFab identifier for a user, or null if no PlayFab account is linked to the Steam identifier.
+        /// </summary>
+        public string PlayFabId;
+        /// <summary>
+        /// Unique Steam identifier for a user, also known as Steam persona name.
+        /// </summary>
+        public string SteamName;
     }
 
     [Serializable]
@@ -6566,6 +6752,47 @@ namespace PlayFab.ServerModels
     }
 
     /// <summary>
+    /// Performs an additive update of the custom properties for the specified player. In updating the player's custom
+    /// properties, properties which already exist will have their values overwritten. No other properties will be changed apart
+    /// from those specified in the call.
+    /// </summary>
+    [Serializable]
+    public class UpdatePlayerCustomPropertiesRequest : PlayFabRequestCommon
+    {
+        /// <summary>
+        /// The optional custom tags associated with the request (e.g. build number, external trace identifiers, etc.).
+        /// </summary>
+        public Dictionary<string,string> CustomTags;
+        /// <summary>
+        /// Optional field used for concurrency control. One can ensure that the update operation will only be performed if the
+        /// player's properties have not been updated by any other clients since last the version.
+        /// </summary>
+        public int? ExpectedPropertiesVersion;
+        /// <summary>
+        /// Unique PlayFab assigned ID of the user on whom the operation will be performed.
+        /// </summary>
+        public string PlayFabId;
+        /// <summary>
+        /// Collection of properties to be set for a player.
+        /// </summary>
+        public List<UpdateProperty> Properties;
+    }
+
+    [Serializable]
+    public class UpdatePlayerCustomPropertiesResult : PlayFabResultCommon
+    {
+        /// <summary>
+        /// PlayFab unique identifier of the user whose properties were updated.
+        /// </summary>
+        public string PlayFabId;
+        /// <summary>
+        /// Indicates the current version of a player's properties that have been set. This is incremented after updates and
+        /// deletes. This version can be provided in update and delete calls for concurrency control.
+        /// </summary>
+        public int PropertiesVersion;
+    }
+
+    /// <summary>
     /// This operation is additive. Statistics not currently defined will be added, while those already defined will be updated
     /// with the given values. All other user statistics will remain unchanged.
     /// </summary>
@@ -6594,6 +6821,19 @@ namespace PlayFab.ServerModels
     [Serializable]
     public class UpdatePlayerStatisticsResult : PlayFabResultCommon
     {
+    }
+
+    [Serializable]
+    public class UpdateProperty : PlayFabBaseModel
+    {
+        /// <summary>
+        /// Name of the custom property. Can contain Unicode letters and digits. They are limited in size.
+        /// </summary>
+        public string Name;
+        /// <summary>
+        /// Value of the custom property. Limited to booleans, numbers, and strings.
+        /// </summary>
+        public object Value;
     }
 
     /// <summary>
@@ -7056,7 +7296,9 @@ namespace PlayFab.ServerModels
         Apple,
         NintendoSwitchAccount,
         GooglePlayGames,
-        XboxMobileStore
+        XboxMobileStore,
+        King,
+        BattleNet
     }
 
     [Serializable]
